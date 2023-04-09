@@ -24,6 +24,7 @@ Arrows
 .slick-dots
 {
     position: absolute;
+    top: 95%;
     bottom: -25px;
 
     display: block;

@@ -13,26 +13,65 @@ const Carousel = () => {
         infinite: true,
         speed: 900,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />
+
+      };
+    
+      function CustomNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={`${className} meu-next-arrow`}
+            style={{ ...style, display: "block" }}
+            onClick={onClick}
+          />
+        );
+      }
+    
+      function CustomPrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={`${className} meu-prev-arrow`}
+            style={{ ...style}}
+            onClick={onClick}
+          />
+        );
+
+
       }
   return (
 
-    <Grid display="flex" justifyContent="center" alignItems="center" >
+    <Grid display="flex" justifyContent="center" alignItems="center" position="relative" >
         
         <Slider {...settings} >
             <div>
                 <img
                 src={slide1}
-                style={{width: '100%', height:'300px'}}
+                style={{maxWidth:"1860px", minWidth:"600px", position: "absolute"}}
                 >
 
                 </img>
             </div>
             <div>
-                <h3>Slide 2</h3>
+            <img
+                src={slide1}
+                style={{maxWidth:"1860px", minWidth:"600px",  position: "absolute"}}
+                >
+
+                </img>
             </div>
             <div>
-                <h3>Slide 3</h3>
+            <img
+                src={slide1}
+                style={{maxWidth:"1860px", minWidth:"600px",  position: "absolute"}}
+                >
+
+                </img>
             </div>
         </Slider>
 
