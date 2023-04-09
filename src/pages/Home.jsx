@@ -13,8 +13,8 @@ const Home = () => {
         flexDirection: 'column'
 
       }}>
-      <Content />
       <Carousel/>
+      <Content />
 
       </Box>
       <Footer />
