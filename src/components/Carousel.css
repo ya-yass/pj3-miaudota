@@ -1,11 +1,10 @@
 /* Slider */
-.slick-slider
-{
+.slick-slider {
     position: relative;
 
     display: block;
     box-sizing: border-box;
- 
+
     /* -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -18,9 +17,8 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.slick-list
-{
-    min-width:600px;
+.slick-list {
+    min-width: 600px;
     max-width: 1860px;
     height: 600px;
     position: relative;
@@ -31,12 +29,12 @@
     margin: 0;
     padding: 0;
 }
-.slick-list:focus
-{
+
+.slick-list:focus {
     outline: none;
 }
-.slick-list.dragging
-{
+
+.slick-list.dragging {
     cursor: pointer;
     cursor: hand;
 }
@@ -51,8 +49,7 @@
             transform: translate3d(0, 0, 0);
 } */
 
-.slick-track
-{
+.slick-track {
     position: relative;
     top: 0;
     left: 0;
@@ -61,6 +58,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 /* .slick-track:before,
 .slick-track:after
 {
@@ -77,15 +75,15 @@
     visibility: hidden;
 } */
 
-.slick-slide
-{
+.slick-slide {
     display: none;
     float: left;
 
     height: 100%;
     min-height: 1px;
-    
+
 }
+
 /* [dir='rtl'] .slick-slide
 {
     float: right;
@@ -98,14 +96,14 @@
 {
     display: none;
 } */
-.slick-slide.dragging img
-{
+.slick-slide.dragging img {
     pointer-events: none;
 }
-.slick-initialized .slick-slide
-{
+
+.slick-initialized .slick-slide {
     display: block;
 }
+
 /* .slick-loading .slick-slide
 {
     visibility: hidden;
@@ -129,13 +127,13 @@
 
 .meu-next-arrow::after {
     content: "Próximo";
-  }
-  
-  .meu-prev-arrow::before {
+}
+
+.meu-prev-arrow::before {
     content: "Anterior";
-  }
-  
-  .meu-prev-arrow {
+}
+
+.meu-prev-arrow {
     margin-top: 15%;
     /* margin-left: 15%; */
     position: absolute;
@@ -147,9 +145,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     font-size: 14px;
-  }
+    z-index: 1;
+}
 
-  .meu-next-arrow{
+.meu-next-arrow {
     margin-top: -15%;
     /* position: absolute; */
     float: right;
@@ -161,6 +160,5 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     font-size: 14px;
-  }
-
-
+    z-index: 1;
+}

@@ -1,10 +1,16 @@
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
+import CardPet from '../components/Card-pet'
+import Carousel from '../components/Carousel';
+
 
 const Content = () => {
 
   return (
-    <Box sx>
-      <h1>Content</h1>
+    <Box sx={{
+      margin: '0 70px',
+    }}>
+      <Carousel />
+      <CardPet />
     </Box>
   )
 }

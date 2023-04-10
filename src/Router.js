@@ -1,10 +1,10 @@
-import {Route, Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import PerfilUsuario from './pages/PerfilUsuario'
 import Error404 from './pages/Error404'
 
 const Router = () => {
-    return( 
+    return (
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/user" element={<PerfilUsuario />} />

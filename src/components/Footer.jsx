@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import './Footer.css'
-import logo from './assets/img/logo-imp.avif'
+import logo from './assets/img/miaudota-logo.png'
 
 const Footer = () => {
   return (

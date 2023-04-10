@@ -1,7 +1,6 @@
-import Box from '@mui/material/Box'
-import Navbar from '../components/Navbar'
-import Content from '../components/Content'
-import Carousel from '../components/Carousel'
+import Box from '@mui/material/Box';
+import Navbar from '../components/Navbar';
+import Content from '../components/Content';
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -13,8 +12,8 @@ const Home = () => {
         flexDirection: 'column'
 
       }}>
-      <Carousel/>
-      <Content />
+        {/* <Carousel /> */}
+        <Content />
 
       </Box>
       <Footer />
