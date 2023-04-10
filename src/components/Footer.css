@@ -14,7 +14,7 @@
 }
 
 .endereco,
-.integrantes {
+.integrante {
   color: #bdbdbd;
   display: flex;
   flex-direction: column;

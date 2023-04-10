@@ -13,7 +13,7 @@ const Footer = () => {
           <span>(00) 0 0000-0000 | (00) 0 0000-0000</span>
         </div>
 
-        <div className="integrantes">
+        <div className="integrante">
           <span>Anita Cristina, email@domain.com</span>
           <span>Fernanda Sayuri Kano, email@domain.com</span>
           <span>Maria Eduarda Fabris, email@domain.com</span>
