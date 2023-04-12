@@ -3,7 +3,6 @@ import Slider from 'react-slick'
 import "../components/Carousel.css"; 
 import "../components/Carousel-theme.css";
 import slide1 from './assets/img/slide1.png'
-//TODO npm i react-slick   
 
 
 const Carousel = () => {
