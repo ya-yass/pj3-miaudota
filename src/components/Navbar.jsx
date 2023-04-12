@@ -9,25 +9,24 @@ import Home from '../pages/Home'
 
 const Navbar = () => {
 
-    return (
-        <Box component='navbar'>
-            
-            <a href={Home}><img src={logo} className='logo' alt='logo do MiauDota'/></a>
-            <div>
-                <Link to='/adocao'>
-                    <button type="button" className="btn btn-info">Quero adotar</button>
-                </Link>
-            </div>
+	return (
+		<Box component='navbar'>
+				
+			<a href={Home}>
+				<img src={logo} className='logo1' alt='logo do MiauDota'/>
+			</a>
 
-            <button type="button" class="btn btn-secundary">
-                Achei um pet
-            </button>
-
-            <div>
-                <User/>
-            </div>
-        </Box>
-    )
+			<div className="botoes">
+				<Link to='/adocao'>
+					<button className='botao adotar'>Quero adotar</button>
+				</Link>
+				<button className='botao achei'>Achei um pet</button> 
+				<div>
+					<User/>
+				</div>
+			</div>
+		</Box>
+	)
     
 }
 

@@ -1,13 +1,20 @@
-header {
-    background: #000;
-    padding: 20px;
+navbar, .botoes{
+  display: flex;
+  align-items: center;
 }
 
-header h3{
-    color: #FFF;
-    margin: 0;
+.logo1 {
+  height: 60px;
 }
 
-.logo {
-    padding: 20px;
+navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.botao {
+  margin: 0;
+  height: 20px;
 }
