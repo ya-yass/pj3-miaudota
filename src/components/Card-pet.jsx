@@ -1,186 +1,208 @@
 import Box from '@mui/material/Box';
 import Foto from './assets/img/pet1.jpg';
 import './Card-pet.css' //para importar jsx sempre é com letra maíuscula
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import {
-  FaVenus as Femea,
-  // FaMars as Macho,
-  FaHeart as Idade,
-  FaSyringe as Vacina,
-  FaPaw as Raca,
-  FaClinicMedical as Castrado
+	FaVenus as Femea,
+	// FaMars as Macho,
+	FaHeart as Idade,
+	FaSyringe as Vacina,
+	FaPaw as Raca,
+	FaClinicMedical as Castrado
 } from 'react-icons/fa'
 
 const CardPet = () => {
-  return (
-    <Box>
-      <h1>Pets para adoção</h1>
-      <div className="slide">
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+	const responsive = { //para editar a responsividade do carousel
+		desktop: {
+			breakpoint: { max: 2500, min: 1700 },
+			items: 6,
+			slidesToSlide: 2
+		},
+		tablet: {
+			breakpoint: { max: 1699, min: 780 },
+			items: 4,
+			slidesToSlide: 2
+		},
+		mobile: {
+			breakpoint: { max: 779, min: 0 },
+			items: 3,
+			slidesToSlide: 2
+		}
+	};
 
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+	return (
+		<Box>
+			<h1>Pets para adoção</h1>
+			<Carousel
+			responsive={responsive}
+			ssr={true} // means to render carousel on server-side.
+			>
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
 
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
 
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
 
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
 
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
 
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
 
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
 
-        <div className="card">
-          <img src={Foto} alt="pet" className='pet' />
-          <div className="info">
-            <div className="cardHeader">
-              <h3 className="nome">Nana</h3>
-              <Femea className='femea' />
-              {/* <Macho className='macho' /> */}
-            </div>
-            <div className="detalhes">
-              <span className="idade"><Idade />03 meses</span>
-              <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-              <span><Raca />Sem raça definida</span>
-              <span><Castrado />Castrado</span>
-            </div>
-            <button>SOBRE O PET</button>
-          </div>
-        </div>
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
 
-      </div>
-    </Box>
-  )
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<button>SOBRE O PET</button>
+					</div>
+				</div>
+			</Carousel >
+		</Box>
+	)
 }
 
 export default CardPet
