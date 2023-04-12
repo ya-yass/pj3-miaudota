@@ -1,3 +1,6 @@
 {
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  "editor.wordWrap": "on",
+  "editor.mouseWheelZoom": true,
+  "editor.tabSize": 2
 }
