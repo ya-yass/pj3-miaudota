@@ -1,81 +1,39 @@
-import Grid from '@mui/material/Grid'
-import Slider from 'react-slick'
-import "../components/Carousel.css"; 
-import "../components/Carousel-theme.css";
+import Carousel from 'react-bootstrap/Carousel'
 import slide1 from './assets/img/slide1.png'
+import slide2 from './assets/img/slide2.png'
 
-
-const Carousel = () => {
-    
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 900,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        prevArrow: <CustomPrevArrow />,
-        nextArrow: <CustomNextArrow />
-
-      };
-    
-      function CustomNextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={`${className} meu-next-arrow`}
-            style={{ ...style, display: "block" }}
-            onClick={onClick}
-          />
-        );
-      }
-    
-      function CustomPrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={`${className} meu-prev-arrow`}
-            style={{ ...style}}
-            onClick={onClick}
-          />
-        );
-
-
-      }
+//TODO react-bootstrap
+function CarouselSlide() {
   return (
+    <Carousel>
+      <Carousel.Item interval={500}>
+        <img
+          className="d-block w-100"
+          src= {slide1}
+          alt="First slide"
+        />
+      </Carousel.Item>
 
-    <Grid display="flex" justifyContent="center" alignItems="center" position="relative" >
-        
-        <Slider {...settings} >
-            <div>
-                <img
-                src={slide1}
-                style={{maxWidth:"1860px", minWidth:"600px", position: "absolute"}}
-                >
+      <Carousel.Item interval={500}>
+        <img
+          className="d-block w-100"
+          src= {slide2}
+          alt="Second slide"
+        />
 
-                </img>
-            </div>
-            <div>
-            <img
-                src={slide1}
-                style={{maxWidth:"1860px", minWidth:"600px",  position: "absolute"}}
-                >
+      </Carousel.Item>
 
-                </img>
-            </div>
-            <div>
-            <img
-                src={slide1}
-                style={{maxWidth:"1860px", minWidth:"600px",  position: "absolute"}}
-                >
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src= {slide1}
+          alt="Third slide"
+        />
+       
+      </Carousel.Item>
 
-                </img>
-            </div>
-        </Slider>
-
-    </Grid>
-  )
+    </Carousel>
+  );
 }
 
-export default Carousel
+export default CarouselSlide;

@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import CardPet from '../components/Card-pet'
-import Carousel from '../components/Carousel';
+import CarouselSlide from '../components/Carousel';
 
 
 const Content = () => {
@@ -9,7 +9,7 @@ const Content = () => {
     <Box sx={{
       margin: '0 70px',
     }}>
-      <Carousel />
+      <CarouselSlide />
       <CardPet />
     </Box>
   )
