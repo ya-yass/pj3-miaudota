@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import { FaUserAlt as User } from 'react-icons/fa'
 import Home from '../pages/Home'
 
+
 //TODO perguntar para o prof sobre a rota da logo retornar para Home
 
 const Navbar = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
 				</Link>
 				<button className='botao achei'>Achei um pet</button> 
 				<div>
-					<User/>
+					<Link to='/user	'><User/></Link>
 				</div>
 			</div>
 		</Box>
