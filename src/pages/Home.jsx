@@ -16,7 +16,6 @@ const Home = () => {
         flexDirection: 'column'
 
       }}>
-        {/* <Carousel /> */}
         <Content />
 
       </Box>
