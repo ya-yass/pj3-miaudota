@@ -74,3 +74,6 @@ button {
   color: #FFF;
   font-weight: bold;
 }
+button:hover{
+  color: #575353;
+}
