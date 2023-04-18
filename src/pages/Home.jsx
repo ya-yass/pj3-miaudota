@@ -11,11 +11,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Box sx={{
-        display: 'flex',
-        flexDirection: 'column'
-
-      }}>
+      <Box>
         <Content />
 
       </Box>

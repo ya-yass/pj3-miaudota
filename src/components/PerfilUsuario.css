@@ -1,16 +1,16 @@
-
+/* 
 .MuiBox-root{
   margin: 0px
 }
 .MuiBox-root .css-12z84rh{
   margin: 0px;
-}
-.capa{
+} */
+.capa {
   width: 100%;
-   height: 100%;
+  height: 100%;
 }
 
-.fotoperfil{
+.fotoperfil {
   width: 150px;
   z-index: 100;
   margin-left: 30px;
@@ -18,39 +18,47 @@
 
   border-radius: 50%;
 }
-.informacaoUsuario{
+
+.informacaoUsuario {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   margin: 0;
 
 }
-.informacaoUsuario p{
+
+.informacaoUsuario p {
   margin-top: -10px;
 }
-.userAndPet{
+
+.userAndPet {
   display: flex;
   align-items: baseline;
   gap: 60px;
 }
-.iconPet{
+
+.iconPet {
   display: flex;
 }
-.iconPet p{
+
+.iconPet p {
   margin-top: -5px;
 }
 
 /* modal */
 
-#modal-modal-title{
+#modal-modal-title {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-#modal-modal-title h3{
+
+
+#modal-modal-title h3 {
   color: #F6823F;
 }
-#modal-modal-title .logoModal{
+
+#modal-modal-title .logoModal {
   width: 150px;
   margin-bottom: 10px;
 
@@ -61,23 +69,22 @@
 
 }
 
-.css-ix1f03-MuiTypography-root{
+.css-ix1f03-MuiTypography-root {
   display: flex;
   flex-direction: column;
 }
 
-#botaoEnviar{
+#botaoEnviar {
   background-color: #F6823F;
   width: 50%;
   align-items: center;
 }
 
-.botaoCancelModal{
+.botaoCancelModal {
   float: right;
   color: rgba(128, 128, 128, 0.733);
 }
 
-.botaoCancelModal:hover{
+.botaoCancelModal:hover {
   color: gray;
 }
-

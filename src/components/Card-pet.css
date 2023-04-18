@@ -13,7 +13,7 @@ h1 {
   width: 250px;
   background-color: #FFF;
   border: 1px solid #E7E7E7;
-  border-radius: 34px;
+  border-radius: 34px !important;
   display: inline-block;
 }
 
@@ -68,12 +68,13 @@ span svg {
 button {
   background: #F6823F;
   border: none;
-  padding: 15px 62px;
-  margin-top: 15px;
-  border-radius: 24px;
+  padding: 15px 20px;
+  margin-top: 15px !important;
   color: #FFF;
   font-weight: bold;
+  border-radius: 30px !important;
 }
-button:hover{
+
+button:hover {
   color: #575353;
 }

@@ -8,14 +8,8 @@ const PerfilUsuario = () => {
   return (
     <>
       <Navbar />
-      <Box sx={{
-        display: 'flex',
-        flexDirection: 'column'
-
-      }}>
+      <Box>
         <ContentPerfil />
-
-
       </Box>
       <Footer />
     </>

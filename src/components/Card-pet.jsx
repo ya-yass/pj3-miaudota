@@ -36,8 +36,8 @@ const CardPet = () => {
 		<Box>
 			<h1>Pets para adoção</h1>
 			<Carousel
-			responsive={responsive}
-			ssr={true} // means to render carousel on server-side.
+				responsive={responsive}
+				ssr={true} // means to render carousel on server-side.
 			>
 				<div className="card">
 					<img src={Foto} alt="pet" className='pet' />
@@ -53,7 +53,7 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<button >SOBRE O PET</button>
 					</div>
 				</div>
 
@@ -107,7 +107,7 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<button >SOBRE O PET</button>
 					</div>
 				</div>
 
@@ -125,7 +125,7 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<button >SOBRE O PET</button>
 					</div>
 				</div>
 
@@ -143,7 +143,7 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<button >SOBRE O PET</button>
 					</div>
 				</div>
 
@@ -161,7 +161,7 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<button >SOBRE O PET</button>
 					</div>
 				</div>
 
@@ -179,7 +179,7 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<button >SOBRE O PET</button>
 					</div>
 				</div>
 
@@ -197,7 +197,7 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<button >SOBRE O PET</button>
 					</div>
 				</div>
 			</Carousel >

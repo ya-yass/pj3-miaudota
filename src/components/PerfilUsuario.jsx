@@ -55,32 +55,33 @@ const PerfilUsuario = () => {
         aria-describedby="modal-modal-description">
 
         <Box sx={styles.Modal}>
-          <Cancel className='botaoCancelModal' onClick={handleClose}/>
+          <Cancel className='botaoCancelModal' onClick={handleClose} />
           <Typography id="modal-modal-title">
             <img src={logo} className='logoModal' alt='Logo do Modal'></img>
             <h3>Editar Perfil</h3>
           </Typography>
 
           <Typography id="modal-modal-description"
-           sx={{ mt: 2,
-             '& fieldset': {
-            display: 'none',
-            },
-            '& legend': {
-              display: 'none',
+            sx={{
+              mt: 2,
+              '& fieldset': {
+                display: 'none',
+              },
+              '& legend': {
+                display: 'none',
               }
-           }}>
+            }}>
             <TextField
-             label="Nome:"
-            sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom:'15px'}}
+              label="Nome:"
+              sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
               placeholder='Nome Sobrenome'
               type="text"
               InputLabelProps={{ shrink: true }}
 
             // onChange={handleFileChange}
             />
-            <TextField 
-            sx={{marginTop:'15px'}}
+            <TextField
+              sx={{ marginTop: '15px' }}
               label="Nome De Usuário:"
               placeholder='@user123'
               type="text"
@@ -90,7 +91,7 @@ const PerfilUsuario = () => {
             />
 
             <TextField
-            sx={{marginTop:'-10px'}}
+              sx={{ marginTop: '-10px' }}
               label="Quantidade de Pets que possui:"
               placeholder='ex: 1'
               type="text"
@@ -100,13 +101,13 @@ const PerfilUsuario = () => {
             />
 
             <TextField
-            sx={{marginTop:'-10px'}}
+              sx={{ marginTop: '-10px' }}
               label="Foto"
               type="file"
               InputLabelProps={{ shrink: true }}
 
 
-              
+
             // onChange={handleFileChange}
             />
             <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar>
@@ -154,6 +155,6 @@ const styles = {
   }
 
 
-} 
+}
 
 export default PerfilUsuario
