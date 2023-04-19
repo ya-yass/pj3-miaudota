@@ -32,51 +32,58 @@ const Navbar = () => {
 	return (
 		<Box component='navbar'>
 
-			<a href={Home}>
-				<img src={logo} id='logo1' alt='logo do MiauDota' />
-			</a>
+			<div className="sec1">
+				<a href={Home}>
+					<img src={logo} id='logo1' alt='logo do MiauDota' />
+				</a>
 
-			<div id="botoes">
-				<Link to='/adocao'>
-					<button id='botao adotar'>Quero adotar</button>
-				</Link>
-				<button id='botao achei'>Achei um pet</button>
+				<div className="links">
+					<a href='/' to={'/'} className='pgInicial ativo'>Página inicial</a >
+					<a href='*' className='encontrePet'>Encontre seu pet</a>
+				</div>
 			</div>
 
-
-
-			<Box sx={{ flexGrow: 0 }} component='icon'>
-				<Tooltip title="Open settings">
-					<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-						<Avatar src="/broken-image.jpg" />
-					</IconButton>
-				</Tooltip>
-				<Menu
-					sx={{ mt: '45px' }}
-					id="menu-appbar"
-					anchorEl={anchorElUser}
-					anchorOrigin={{
-						vertical: 'top',
-						horizontal: 'right',
-					}}
-					keepMounted
-					transformOrigin={{
-						vertical: 'top',
-						horizontal: 'right',
-					}}
-					open={Boolean(anchorElUser)}
-					onClose={handleCloseUserMenu}
-				>
-					{settings.map((setting) => (
-						<MenuItem key={setting} onClick={handleCloseUserMenu}>
-							<Typography textAlign="center">{setting}</Typography>
-						</MenuItem>
-					))}
-				</Menu>
-			</Box>
-
-
-
+			<div id="botoes">
+				<Link to=''>
+					<button className='botao' id='cadastrarPet'>Cadastrar um pet</button>
+				</Link>
+				<Link>
+					<button className='botao' id='adotar'>Quero adotar</button>
+				</Link>
+				<Box sx={{ flexGrow: 0 }} component='icon'>
+					<Tooltip title="Open settings">
+						<IconButton onClick={handleOpenUserMenu}
+							className='avatar'
+							sx={{
+								p: 0,
+							}}>
+							<Avatar src="/broken-image.jpg" />
+						</IconButton>
+					</Tooltip>
+					<Menu
+						sx={{ mt: '45px' }}
+						id="menu-appbar"
+						anchorEl={anchorElUser}
+						anchorOrigin={{
+							vertical: 'top',
+							horizontal: 'right',
+						}}
+						keepMounted
+						transformOrigin={{
+							vertical: 'top',
+							horizontal: 'right',
+						}}
+						open={Boolean(anchorElUser)}
+						onClose={handleCloseUserMenu}
+					>
+						{settings.map((setting) => (
+							<MenuItem key={setting} onClick={handleCloseUserMenu}>
+								<Typography textAlign="center">{setting}</Typography>
+							</MenuItem>
+						))}
+					</Menu>
+				</Box>
+			</div>
 		</Box>
 	);
 }

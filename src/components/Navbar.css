@@ -1,22 +1,54 @@
+.ativo {
+  font-weight: bold !important;
+}
+
+a:hover {
+  color: #F6823F !important;
+}
+
 navbar,
 #botoes {
   display: flex;
   align-items: center;
 }
 
+.avatar {
+  margin: 0 0 0 10px !important;
+}
+
 #logo1 {
-  height: 60px;
+  height: 45px;
+  margin-right: 30px;
+}
+
+.sec1 {
+  display: flex;
+  align-items: center;
 }
 
 navbar {
-  background-color: #fff;
+  background-color: #434343;
   display: flex;
   justify-content: space-between;
-  padding: 20px 70px;
+  padding: 10px 70px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#botao {
-  margin: 0;
-  height: 50px;
+.botao {
+  border-radius: 10px !important;
+  padding: 8px 30px;
+  margin: 0 0 0 10px !important;
+}
+
+.pgInicial,
+.encontrePet {
+  color: #FFF;
+  text-decoration: none;
+  margin-right: 25px;
+}
+
+#cadastrarPet {
+  background-color: #ffffff67;
+  border: 2px solid #FFF;
+  font-weight: 400;
 }
