@@ -1,0 +1,12 @@
+.cards {
+  display: flex;
+}
+
+.btnAdocao,
+.btnEncontrei {
+  background-color: none;
+}
+
+.imagemPet {
+  height: 450px;
+}

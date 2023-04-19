@@ -1,8 +1,16 @@
+import Box from "@mui/material/Box"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
+import AnunciarPet from "../components/AnunciarPet"
 
 const CadastroPet = () => {
   return (
     <>
-      <h2>Página para cadastrar os pets</h2>
+      <Box>
+        < Navbar />
+        <AnunciarPet />
+        <Footer></Footer>
+      </Box>
     </>
   )
 }
