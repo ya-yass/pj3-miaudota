@@ -1,3 +1,7 @@
+* {
+  box-sizing: revert !important;
+}
+
 h1 {
   text-transform: uppercase;
   color: #F6823F;
