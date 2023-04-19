@@ -1,7 +1,6 @@
 import './Navbar.css'
 import Box from '@mui/material/Box'
 import logo from './assets/img/miaudota-logotipo.png'
-import { Link } from 'react-router-dom'
 // import { FaUserAlt as User } from 'react-icons/fa'
 import Home from '../pages/Home'
 
@@ -44,12 +43,12 @@ const Navbar = () => {
 			</div>
 
 			<div id="botoes">
-				<Link to=''>
+				<a href='/cadastrar-pet'>
 					<button className='botao' id='cadastrarPet'>Cadastrar um pet</button>
-				</Link>
-				<Link>
+				</a>
+				<a href='/'>
 					<button className='botao' id='adotar'>Quero adotar</button>
-				</Link>
+				</a>
 				<Box sx={{ flexGrow: 0 }} component='icon'>
 					<Tooltip title="Open settings">
 						<IconButton onClick={handleOpenUserMenu}
