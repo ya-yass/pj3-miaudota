@@ -21,13 +21,13 @@ const CardPet = () => {
 			slidesToSlide: 2
 		},
 		tablet: {
-			breakpoint: { max: 1699, min: 780 },
-			items: 4,
+			breakpoint: { max: 1699, min: 1450 },
+			items: 5,
 			slidesToSlide: 2
 		},
 		mobile: {
-			breakpoint: { max: 779, min: 0 },
-			items: 3,
+			breakpoint: { max: 1449, min: 0 },
+			items: 4,
 			slidesToSlide: 2
 		}
 	};
@@ -53,7 +53,9 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button >SOBRE O PET</button>
+						<div className="sobre">
+							<button>SOBRE O PET</button>
+						</div>
 					</div>
 				</div>
 
@@ -71,7 +73,66 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<div className="sobre">
+							<button>SOBRE O PET</button>
+						</div>					</div>
+				</div>
+
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<div className="sobre">
+							<button>SOBRE O PET</button>
+						</div>					</div>
+				</div>
+
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<div className="sobre">
+							<button>SOBRE O PET</button>
+						</div>					</div>
+				</div>
+
+				<div className="card">
+					<img src={Foto} alt="pet" className='pet' />
+					<div className="info">
+						<div className="cardHeader">
+							<h3 className="nome">Nana</h3>
+							<Femea className='femea' />
+							{/* <Macho className='macho' /> */}
+						</div>
+						<div className="detalhes">
+							<span className="idade"><Idade />03 meses</span>
+							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
+							<span><Raca />Sem raça definida</span>
+							<span><Castrado />Castrado</span>
+						</div>
+						<div className="sobre">
+							<button>SOBRE O PET</button>
+						</div>
 					</div>
 				</div>
 
@@ -89,7 +150,9 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button>SOBRE O PET</button>
+						<div className="sobre">
+							<button>SOBRE O PET</button>
+						</div>
 					</div>
 				</div>
 
@@ -107,7 +170,9 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button >SOBRE O PET</button>
+						<div className="sobre">
+							<button>SOBRE O PET</button>
+						</div>
 					</div>
 				</div>
 
@@ -125,7 +190,9 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button >SOBRE O PET</button>
+						<div className="sobre">
+							<button>SOBRE O PET</button>
+						</div>
 					</div>
 				</div>
 
@@ -143,61 +210,9 @@ const CardPet = () => {
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
-						<button >SOBRE O PET</button>
-					</div>
-				</div>
-
-				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Nana</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
+						<div className="sobre">
+							<button>SOBRE O PET</button>
 						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />03 meses</span>
-							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-							<span><Raca />Sem raça definida</span>
-							<span><Castrado />Castrado</span>
-						</div>
-						<button >SOBRE O PET</button>
-					</div>
-				</div>
-
-				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Nana</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />03 meses</span>
-							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-							<span><Raca />Sem raça definida</span>
-							<span><Castrado />Castrado</span>
-						</div>
-						<button >SOBRE O PET</button>
-					</div>
-				</div>
-
-				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Nana</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />03 meses</span>
-							<span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-							<span><Raca />Sem raça definida</span>
-							<span><Castrado />Castrado</span>
-						</div>
-						<button >SOBRE O PET</button>
 					</div>
 				</div>
 			</Carousel >

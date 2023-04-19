@@ -72,7 +72,7 @@ span svg {
 button {
   background: #F6823F;
   border: none;
-  padding: 15px 20px;
+  padding: 15px 40px;
   margin-top: 15px !important;
   color: #FFF;
   font-weight: bold;
@@ -81,4 +81,10 @@ button {
 
 button:hover {
   color: #575353;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
