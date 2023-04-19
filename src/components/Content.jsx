@@ -6,7 +6,10 @@ import './Content.css'
 const Content = () => {
 
   return (
-    <Box>
+    <Box
+      sx={{
+        margin: '0 70px'
+      }}>
       <CarouselSlide />
       <CardPet />
     </Box>
