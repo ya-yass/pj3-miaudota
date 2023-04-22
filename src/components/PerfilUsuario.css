@@ -1,14 +1,14 @@
-/* 
-.MuiBox-root{
-  margin: 0px
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  font-family: 'Poppins';
 }
-.MuiBox-root .css-12z84rh{
-  margin: 0px;
-} */
 .capa {
   width: 100%;
   height: 100%;
 }
+
+/*perfil*/
 
 .fotoperfil {
   width: 150px;
@@ -39,10 +39,12 @@
 
 .iconPet {
   display: flex;
+  align-items: center;
+
 }
 
 .iconPet p {
-  margin-top: -5px;
+  margin: 0px;
 }
 
 /* modal */
@@ -56,6 +58,9 @@
 
 #modal-modal-title h3 {
   color: #F6823F;
+  text-transform: uppercase;
+  font-weight: bolder;
+
 }
 
 #modal-modal-title .logoModal {
@@ -64,9 +69,9 @@
 
 }
 
-.MuiInputBase-root {
-  margin-bottom: 20px;
-
+#modal-modal-description{
+  display: flex;
+  flex-direction: column;
 }
 
 .css-ix1f03-MuiTypography-root {
@@ -74,17 +79,88 @@
   flex-direction: column;
 }
 
-#botaoEnviar {
-  background-color: #F6823F;
-  width: 50%;
-  align-items: center;
-}
 
 .botaoCancelModal {
   float: right;
-  color: rgba(128, 128, 128, 0.733);
-}
+  color: #F6823F;
+  cursor: pointer;
 
+}
 .botaoCancelModal:hover {
   color: gray;
 }
+
+ /*campo input*/
+#modal-modal-description .input{
+  border: 1px solid rgb(228, 224, 224);
+  border-radius: 10px;
+  margin: 14px;
+  margin-left: 0px;
+
+}
+
+/*Label*/
+
+.titulocampo{
+  font-size: 15px;
+  margin-bottom: -5px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.divTituloCampo{
+  display: flex;
+  margin: 0px;
+  margin-bottom: -20px;
+
+}
+.divTituloCampo p{
+  color: red;
+}
+
+/*botão editar*/
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  padding: 10px 10px !important;
+}
+#botaoEnviar{
+  background-color:#F6823F !important;
+  width: 150px;
+  margin-left: 240px;
+  border-radius: 30px;
+  font-weight: bolder;
+  margin-top: 20px;
+
+}
+#botaoEnviar:hover{
+  color: white;
+  background-color: #d47239 !important;
+}
+
+/*botão de adicionar foto*/
+.tituloFile{
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 110px;
+  background-color: #D7D7D7;
+  color: #808080;
+  text-align: center;
+  margin-left: -5px;
+  margin-top: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+ input[type="file"] {
+  opacity: 0;
+
+  cursor: pointer;
+  z-index: 2;
+  margin-top: -35px;
+  margin-left: -140px;
+}
+
+
+
+
+

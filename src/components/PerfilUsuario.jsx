@@ -7,15 +7,15 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import ButtonEnviar from '@mui/material/Button';
 
-//compónentes e files
-import CardPet from '../components/Card-pet'
+//componentes e files
+import CardPetPerfil from '../components/Card-pet-perfil'
 import './PerfilUsuario.css'
 //imagens e icones
 import logo from './assets/img/miaudota-logo.png'
 import capaexemplo from './assets/img/capaexemplo.png'
 import fotoperfil from './assets/img/fotoperfil.png'
 import { FaPaw as Raca } from 'react-icons/fa'
-import { ImCancelCircle as Cancel } from 'react-icons/im'
+import { BsXLg as Cancel } from 'react-icons/bs'
 
 
 //arrumar cards
@@ -71,52 +71,63 @@ const PerfilUsuario = () => {
                 display: 'none',
               }
             }}>
+          <div className='divTituloCampo'>
+            <label className='titulocampo'>Nome</label>
+            <p>*</p>
+          </div>
             <TextField
-              label="Nome:"
               sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
               placeholder='Nome Sobrenome'
               type="text"
+              className='input'
               InputLabelProps={{ shrink: true }}
 
             // onChange={handleFileChange}
             />
+            <div className='divTituloCampo'>
+              <label className='titulocampo'>Usuário</label>
+              <p>*</p>
+            </div>
             <TextField
               sx={{ marginTop: '15px' }}
-              label="Nome De Usuário:"
               placeholder='@user123'
               type="text"
+              className='input'
+
               InputLabelProps={{ shrink: true }}
 
             // onChange={handleFileChange}
             />
-
+           <div className='divTituloCampo'>
+            <label className='titulocampo'>Quantidade de pets que possui</label>
+            <p>*</p>
+          </div>
             <TextField
               sx={{ marginTop: '-10px' }}
-              label="Quantidade de Pets que possui:"
               placeholder='ex: 1'
               type="text"
+              className='input'
+
               InputLabelProps={{ shrink: true }}
 
             // onChange={handleFileChange}
             />
 
-            <TextField
-              sx={{ marginTop: '-10px' }}
-              label="Foto"
-              type="file"
-              InputLabelProps={{ shrink: true }}
-
-
-
-            // onChange={handleFileChange}
-            />
+          <div className='divTituloCampo'>
+            <label className='titulocampo'>Foto de Perfil</label>
+            <p>*</p>
+          </div>
+            
+          <label className='tituloFile'>Adicionar foto</label>
+          <input type="file" />
+            
             <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar>
 
           </Typography>
         </Box>
       </Modal>
 
-      <CardPet />
+      <CardPetPerfil />
 
     </Box>
   )
@@ -125,8 +136,10 @@ const PerfilUsuario = () => {
 
 const styles = {
   Button: {
+    backgroundColor:'#F6823F',
     float: 'right',
-    marginTop: '-176px',
+    color: 'white',
+    marginTop: '-178px',
     marginRight: '30px',
     position: 'relative',
     width: '80px',
@@ -134,11 +147,10 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: '5%',
+    borderRadius: '20px',
     fontSize: '15px',
-    '&:hover': {
-      color: '#40D6FF'
-    }
+    border: 'none'
+    
   },
 
   Modal: {
@@ -149,9 +161,10 @@ const styles = {
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',
-    border: '2px solid #000',
+    border: 'none',
     boxShadow: 24,
     p: 4,
+    borderRadius: '20px',
   }
 
 
