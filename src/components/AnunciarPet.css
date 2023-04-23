@@ -1,12 +1,60 @@
+/*BOX*/
 .cards {
   display: flex;
+  margin: 120px 450px 120px 450px;
+  justify-content: space-evenly;
+  border-radius: 20px;
 }
 
 .btnAdocao,
 .btnEncontrei {
-  background-color: none;
+  padding: 0;
+  border: none;
+  background-color: #fff;
 }
 
 .imagemPet {
   height: 450px;
+  width: 100%;
+  border-radius: 20px;
+
+}
+.imagemPetEncontrado{
+  width: 305px;
+}
+.mask{
+   position: absolute;
+    background-color: #00000036;
+    height: 450px;
+    width: 305px;
+    padding: 0;
+    border-radius: 20px;
+
+}
+.mask:hover{
+  background-color: #00000000;
+
+}
+
+.btnAdocao p{
+  width: 305px;
+  color: #FFF;
+  font-weight: 600;
+  position: absolute;
+  font-size: 30px;
+  margin-top: 15px;
+  text-transform: uppercase;
+
+}
+
+.btnEncontrei p{
+  width: 305px;
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  font-size: 35px;
+  margin-top: 15px;
+  text-transform: uppercase;
+
+
 }
