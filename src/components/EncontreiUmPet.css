@@ -1,0 +1,86 @@
+.btnEncontrei {
+  padding: 0;
+  border: none;
+  background-color: #fff;
+}
+
+.imagemPet {
+  height: 450px;
+  width: 100%;
+  border-radius: 20px;
+
+}
+
+.imagemPetEncontrado{
+  width: 305px;
+}
+
+.mask{
+  position: absolute;
+   background-color: #00000036;
+   height: 450px;
+   width: 305px;
+   padding: 0;
+   border-radius: 20px;
+
+}
+.mask:hover{
+ background-color: #00000000;
+
+}
+
+.btnEncontrei p{
+  width: 305px;
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  font-size: 35px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+/*Modal*/
+
+#modal-modal-title div{
+  margin-top: 10px;
+}
+
+#modal-modal-title p{
+  font-size: 14px;
+  
+}
+.logoModal{
+  width: 200px !important;
+}
+/*Radio modal*/
+.labelCachorro, .labelGato{
+  border: 1px  solid rgb(228, 224, 224);
+  border-radius: 10px;
+  margin-top: 15px;
+  /* margin-right: 100px !important; */
+
+}
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
+  color: #f6823f !important;
+}
+
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
+    margin-right: 10px;
+    margin-left: -11px;
+}
+/*Campo nome*/
+.tituloCampoNome p{
+  color: #f6823f;
+  font-size: small;
+  margin: 0px;
+  margin-left: 2px;
+  
+}
+.titulocampoNome{
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.input{
+  width: 290px !important;
+}
