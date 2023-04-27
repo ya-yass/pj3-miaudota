@@ -18,7 +18,7 @@ import { FaPaw as Raca } from 'react-icons/fa'
 import { BsXLg as Cancel } from 'react-icons/bs'
 
 
-//arrumar cards
+//Ajeitar posição dass informações do perfil 
 //estilizar formulário modal
 
 
@@ -35,18 +35,25 @@ const PerfilUsuario = () => {
       margin: '0px',
     }}>
       <img src={capaexemplo} className='capa' alt='Foto de capa'></img>
+
       <div className='informacaoUsuario'>
-        <img src={fotoperfil} className='fotoperfil' alt='Foto de perfil'></img>
-        <h2 className='nomeusuario'>Maria Fabris</h2>
-        <div className='userAndPet'>
-          <p>@mariafabris</p>
-          <div className='iconPet'>
-            <p>1</p>
-            <Raca />
+          <img src={fotoperfil} className='fotoperfil' alt='Foto de perfil'></img>
+          <div className='infoNameUserIcon'>
+            <div className='editarENome'>
+
+              <h2 className='nomeusuario'>Maria Fabris</h2>
+              <button style={styles.Button} onClick={handleOpen} >Editar</button>
+            </div>
+
+              <div className='userAndPet'>
+                <p>@mariafabris</p>
+                <div className='iconPet'>
+                  <p>1</p>
+                  <Raca />
+                </div>
+              </div>
           </div>
-        </div>
       </div>
-      <button style={styles.Button} onClick={handleOpen} >Editar</button>
 
       <Modal
         open={open}
@@ -137,10 +144,9 @@ const PerfilUsuario = () => {
 const styles = {
   Button: {
     backgroundColor:'#F6823F',
+    marginLeft: '15px',
     float: 'right',
     color: 'white',
-    marginTop: '-178px',
-    marginRight: '30px',
     position: 'relative',
     width: '80px',
     height: '30px',
@@ -150,6 +156,7 @@ const styles = {
     borderRadius: '20px',
     fontSize: '15px',
     border: 'none'
+
     
   },
 

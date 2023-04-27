@@ -11,7 +11,8 @@
 /*perfil*/
 
 .fotoperfil {
-  width: 150px;
+  width: 165px;
+  height: 165px;
   z-index: 100;
   margin-left: 30px;
   margin-top: -65px;
@@ -19,27 +20,35 @@
   border-radius: 50%;
 }
 
-.informacaoUsuario {
+ .informacaoUsuario {
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  margin: 0;
+  margin-left: 40px;
 
 }
 
 .informacaoUsuario p {
   margin-top: -10px;
-}
+} 
 
 .userAndPet {
+  display: flex !important;
+  align-items: baseline !important;
+}
+
+.infoNameUserIcon{
   display: flex;
-  align-items: baseline;
-  gap: 60px;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.editarENome{
+  display: flex;
 }
 
 .iconPet {
   display: flex;
   align-items: center;
+  margin-left: 10px;
 
 }
 
