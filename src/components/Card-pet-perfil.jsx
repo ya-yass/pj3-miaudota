@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Foto from './assets/img/pet1.jpg';
-import './Card-pet-perfil.css' 
+import './Card-pet-perfil.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -33,7 +33,7 @@ const CardPetPerfil = () => {
 	};
 
 	return (
-		<Box sx={{marginTop: '35px'}}>
+		<Box sx={{ marginTop: '50px' }}>
 			<h1>Pets divulgados</h1>
 			<Carousel
 				responsive={responsive}

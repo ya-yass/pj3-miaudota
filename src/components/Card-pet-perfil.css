@@ -4,7 +4,8 @@
 
 h1 {
   /* text-transform: uppercase; */
-  color: #434343;
+  color: #F6823F;
+  font-weight: bold !important;
   font-size: 30px !important;
   margin-bottom: 16px !important;
 }
@@ -21,6 +22,12 @@ h1 {
   border: 1px solid #E7E7E7;
   border-radius: 34px !important;
   display: inline-block;
+  transition: 0.1s;
+}
+
+.card:hover {
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
 }
 
 .card .pet {
@@ -53,6 +60,7 @@ h1 {
 .cardHeader .nome {
   text-transform: uppercase;
   margin: 0.5em 0em;
+  font-weight: bold;
 }
 
 .detalhes {
@@ -91,7 +99,7 @@ button:hover {
   align-items: center;
 }
 
-.css-wmurvm{
+.css-wmurvm {
   margin-bottom: 100px;
   margin-top: 50px !important;
 }

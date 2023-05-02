@@ -1,3 +1,9 @@
+.link {
+  color: #FFF;
+  text-decoration: none;
+  margin-right: 25px;
+}
+
 .ativo {
   font-weight: bold !important;
 }
@@ -40,15 +46,16 @@ navbar {
   margin: 0 0 0 10px !important;
 }
 
-.pgInicial,
-.encontrePet {
-  color: #FFF;
-  text-decoration: none;
-  margin-right: 25px;
-}
-
-#cadastrarPet {
+#cadastrarPet,
+#login {
   background-color: #ffffff67;
   border: 2px solid #FFF;
   font-weight: 400;
+}
+
+#adotar,
+#cadastrarSe {
+  background-color: #F6823F;
+  color: #fff;
+  border: none;
 }
