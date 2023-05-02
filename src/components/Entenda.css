@@ -1,0 +1,45 @@
+.container {
+  border: 1px solid #F6823F;
+  border-radius: 50px;
+  padding: 27px;
+  width: 90%;
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
+
+#titulo {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #40D6FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#subtitulo {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #F6823F;
+}
+
+#texto {
+  width: 254px;
+  text-align: center;
+}
+
+.topicos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.topico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagem {
+  height: 100px;
+  width: auto;
+}
