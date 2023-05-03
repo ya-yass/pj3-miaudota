@@ -33,9 +33,10 @@ const CardPet = () => {
 	};
 
 	return (
-		<Box>
+		<Box className='div'>
 			<h1>Pets para adoção</h1>
 			<Carousel
+				className='carrossel'
 				responsive={responsive}
 				ssr={true} // means to render carousel on server-side.
 			>

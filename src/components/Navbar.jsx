@@ -41,7 +41,7 @@ const Navbar = () => {
 					{/* <a href='*' className='encontrePet'>Encontre seu pet</a> */}
 					<a href="/" className='resgatados link'>Resgatados</a>
 					<a href="/" className='adocao link'>Adoção</a>
-					<a href="cadastrar-pet" className='cadastroPet link'>Cadastrat um pet</a>
+					<a href="cadastrar-pet" className='cadastroPet link'>Cadastrar um pet</a>
 				</div>
 			</div>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
 					{/* <button className='botao' id='cadastrarPet'>Cadastrar um pet</button> */}
 				</a>
 				<a href='/'>
-					<button className='botao' id='cadastrarSe'>Cadastrat-se</button>
+					<button className='botao' id='cadastrarSe'>Cadastrar-se</button>
 					{/* <button className='botao' id='adotar'>Quero adotar</button> */}
 				</a>
 				<Box sx={{ flexGrow: 0 }} component='icon'>
