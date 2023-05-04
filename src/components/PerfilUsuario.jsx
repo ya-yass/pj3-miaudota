@@ -37,22 +37,22 @@ const PerfilUsuario = () => {
       <img src={capaexemplo} className='capa' alt='Foto de capa'></img>
 
       <div className='informacaoUsuario'>
-          <img src={fotoperfil} className='fotoperfil' alt='Foto de perfil'></img>
-          <div className='infoNameUserIcon'>
-            <div className='editarENome'>
+        <img src={fotoperfil} className='fotoperfil' alt='Foto de perfil'></img>
+        <div className='infoNameUserIcon'>
+          <div className='editarENome'>
 
-              <h2 className='nomeusuario'>Maria Fabris</h2>
-              <button style={styles.Button} onClick={handleOpen} >Editar</button>
-            </div>
-
-              <div className='userAndPet'>
-                <p>@mariafabris</p>
-                <div className='iconPet'>
-                  <p>1</p>
-                  <Raca />
-                </div>
-              </div>
+            <h2 className='nomeusuario'>Maria Fabris</h2>
+            <button style={styles.Button} onClick={handleOpen} >Editar</button>
           </div>
+
+          <div className='userAndPet'>
+            <p>@mariafabris</p>
+            <div className='iconPet'>
+              <Raca />
+              <p>1</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Modal
@@ -61,12 +61,13 @@ const PerfilUsuario = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description">
 
-        <Box sx={styles.Modal}>
+        <Box sx={styles.Modal} className='selecionaTudo'>
           <Cancel className='botaoCancelModal' onClick={handleClose} />
           <Typography id="modal-modal-title">
             <img src={logo} className='logoModal' alt='Logo do Modal'></img>
-            <h3>Editar Perfil</h3>
           </Typography>
+          <span><h4>Editar Perfil</h4></span>
+          <hr />
 
           <Typography id="modal-modal-description"
             sx={{
@@ -78,57 +79,131 @@ const PerfilUsuario = () => {
                 display: 'none',
               }
             }}>
-          <div className='divTituloCampo'>
-            <label className='titulocampo'>Nome</label>
-            <p>*</p>
-          </div>
-            <TextField
-              sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
-              placeholder='Nome Sobrenome'
-              type="text"
-              className='input'
-              InputLabelProps={{ shrink: true }}
 
-            // onChange={handleFileChange}
-            />
+            <div className='BotõesImgs'>
+              <div className=' botãoFotoPerfil'>
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Foto de Perfil</label>
+                  <p>*</p>
+                </div>
+                <label className='tituloFile'>Adicionar foto</label>
+                <input type="file" />
+              </div>
+              <div className='botãoCapaPerfil'>
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Foto de Perfil</label>
+                  <p>*</p>
+                </div>
+                <label className='tituloFile'>Adicionar foto</label>
+                <input type="file" />
+              </div>
+            </div>
+
+
+            <div className='nomePerfilUsuario'>
+              <div className='nome'>
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Nome</label>
+                  <p>*</p>
+                </div>
+                <TextField
+                  sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
+                  placeholder='Nome Sobrenome'
+                  type="text"
+                  className='input'
+                  InputLabelProps={{ shrink: true }}
+                // onChange={handleFileChange}
+                />
+              </div>
+              <div className='usuario'>
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Usuário</label>
+                  <p>*</p>
+                </div>
+                <TextField
+                  sx={{ marginTop: '15px' }}
+                  placeholder='@user123'
+                  type="text"
+                  className='input'
+
+                  InputLabelProps={{ shrink: true }}
+
+                // onChange={handleFileChange}
+                />
+              </div>
+            </div>
+
             <div className='divTituloCampo'>
-              <label className='titulocampo'>Usuário</label>
+              <label className='titulocampo'>E-mail</label>
               <p>*</p>
             </div>
             <TextField
-              sx={{ marginTop: '15px' }}
-              placeholder='@user123'
+              sx={{ marginTop: '-10px' }}
+              placeholder='fulano2021@gmail.com'
               type="text"
-              className='input'
+              id='inputEmail'
 
               InputLabelProps={{ shrink: true }}
 
             // onChange={handleFileChange}
             />
-           <div className='divTituloCampo'>
-            <label className='titulocampo'>Quantidade de pets que possui</label>
-            <p>*</p>
-          </div>
+
+            <div className='divTituloCampo labelSenha'>
+              <label className='titulocampo'>Senha</label>
+              <p>*</p>
+            </div>
             <TextField
               sx={{ marginTop: '-10px' }}
-              placeholder='ex: 1'
-              type="text"
-              className='input'
+              placeholder='******'
+              type="password"
+              id='inputPass'
 
               InputLabelProps={{ shrink: true }}
 
             // onChange={handleFileChange}
             />
+            <div className='idadeQtdAnimais'>
 
-          <div className='divTituloCampo'>
-            <label className='titulocampo'>Foto de Perfil</label>
-            <p>*</p>
-          </div>
-            
-          <label className='tituloFile'>Adicionar foto</label>
-          <input type="file" />
-            
-            <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar>
+              <div className='IdadeUser'>
+                <div className='divTituloCampo '>
+                  <label className='titulocampo'>Idade</label>
+                  <p>*</p>
+                </div>
+                <TextField
+                  sx={{ marginTop: '-10px' }}
+                  placeholder='Ex 23'
+                  type="text"
+                  id='idadeCampo'
+
+                  InputLabelProps={{ shrink: true }}
+
+                // onChange={handleFileChange}
+                />
+               </div>
+            <div className='QtdAnimais'>
+                <div className='divTituloCampo '>
+                  <label className='titulocampo'>Quantos animais?</label>
+                  <p>*</p>
+                </div>
+                <TextField
+                  sx={{ marginTop: '-10px' }}
+                  placeholder='03'
+                  type="text"
+                  id='qtdAnimaisCampo'
+
+                  InputLabelProps={{ shrink: true }}
+
+                // onChange={handleFileChange}
+                />
+            </div>
+
+            </div>
+
+
+            <div className='Botoesmodal'>
+              <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar>
+              <p className='botãoCancelarEditar' onClick={handleClose} >Cancelar</p>
+            </div>
 
           </Typography>
         </Box>
@@ -143,7 +218,7 @@ const PerfilUsuario = () => {
 
 const styles = {
   Button: {
-    backgroundColor:'#F6823F',
+    backgroundColor: '#F6823F',
     marginLeft: '15px',
     float: 'right',
     color: 'white',
@@ -157,7 +232,7 @@ const styles = {
     fontSize: '15px',
     border: 'none'
 
-    
+
   },
 
   Modal: {

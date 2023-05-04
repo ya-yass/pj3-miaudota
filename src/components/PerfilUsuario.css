@@ -54,9 +54,14 @@
 
 .iconPet p {
   margin: 0px;
+  margin-top: 1px;
+  margin-left:  5px;
 }
 
 /* modal */
+.css-bxoys4{
+  width: 450px !important; 
+}
 
 #modal-modal-title {
   display: flex;
@@ -65,7 +70,9 @@
 }
 
 
-#modal-modal-title h3 {
+span h4 {
+  margin-top: 10px;
+  margin-bottom: -8px;
   color: #F6823F;
   text-transform: uppercase;
   font-weight: bolder;
@@ -99,19 +106,43 @@
   color: gray;
 }
 
- /*campo input*/
+ /*campo input geral*/
 #modal-modal-description .input{
   border: 1px solid rgb(228, 224, 224);
   border-radius: 10px;
   margin: 14px;
   margin-left: 0px;
+  width: 200px !important;
+
+}
+/* Input email*/
+
+#inputEmail{
+  width: 400px !important;
+  border: 1px solid rgb(228, 224, 224);
+  border-radius: 10px;
+  margin-left: 0;
+  margin-top: 24px;
 
 }
 
-/*Label*/
+/* Input e label senha*/
+
+#inputPass{
+  width: 400px !important;
+  border: 1px solid rgb(228, 224, 224);
+  border-radius: 10px;
+  margin-left: 0;
+  margin-top: 24px;
+}
+
+.labelSenha{
+  margin-top: 13px !important;
+}
+/*Label geral*/
 
 .titulocampo{
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: -5px;
   margin-top: 5px;
   font-weight: 600;
@@ -126,6 +157,32 @@
   color: red;
 }
 
+/*Idade campos*/
+
+#idadeCampo{
+  border: 1px solid rgb(228, 224, 224);
+  border-radius: 10px;
+  margin: 14px;
+  margin-left: 0px;
+  width: 50px !important;
+}
+/*quantidade de animais*/
+
+#qtdAnimaisCampo{
+  border: 1px solid rgb(228, 224, 224);
+  border-radius: 10px;
+  margin: 14px;
+  margin-left: 0px;
+  width: 50px !important;
+
+}
+/*Quantidade de animais e idade juntos*/
+
+.idadeQtdAnimais{
+  display: flex;
+  margin-top: 15px;
+}
+
 /*botão editar*/
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
@@ -134,18 +191,31 @@
 #botaoEnviar{
   background-color:#F6823F !important;
   width: 150px;
-  margin-left: 240px;
   border-radius: 30px;
   font-weight: bolder;
   margin-top: 20px;
+  margin: auto;
 
 }
 #botaoEnviar:hover{
   color: white;
   background-color: #d47239 !important;
 }
+/*Apenas botão cancelar*/
+.botãoCancelarEditar{
+  margin-top: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+/*Botão div cancelar e editar*/
+.Botoesmodal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*botão de adicionar foto*/
+
 .tituloFile{
   padding: 10px;
   border-radius: 20px;
@@ -167,6 +237,28 @@
   z-index: 2;
   margin-top: -35px;
   margin-left: -140px;
+}
+.BotõesImgs{
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 7px;
+
+}
+.botãoFotoPerfil{
+  display: flex;
+  flex-direction: column;
+}
+.botãoCapaPerfil{
+  display: flex;
+  flex-direction: column;
+  margin-left: -60px;
+
+}
+/*Nome e usuário*/
+
+.nomePerfilUsuario{
+  display: flex;
+  margin-top: 10px;
 }
 
 
