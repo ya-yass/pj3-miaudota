@@ -10,6 +10,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import Autocomplete from '@mui/material/Autocomplete';
 //imagens e files
 import AchadoFoto from './assets/img/achado-foto.png';
 import './EncontreiUmPet.css'
@@ -29,8 +30,6 @@ const EncontreiUmPet = () => {
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-
-
 
   return (
     <Box>
@@ -53,15 +52,15 @@ const EncontreiUmPet = () => {
 
         <Box sx={styles.Modal}>
           <Cancel className='botaoCancelModal' onClick={handleClose} />
-          <Typography id="modal-modal-title">
+          <Typography id="modal-modal-title" component="div">
             <img src={logo} className='logoModal' alt='Logo do Modal'></img>
             <div>
               <h3>Encontrei um pet</h3>
-              <p>Anuncie um pet que você encontrou perdido na rua para que ele volte ao lar</p>
+              <p>Anuncie um pet que você encontrou perdido na rua para que ele volte ao lar. </p>
             </div>
           </Typography>
 
-           {/* teste */}
+          {/* teste */}
 
           <FormControl >
             <RadioGroup
@@ -79,7 +78,7 @@ const EncontreiUmPet = () => {
             </RadioGroup>
           </FormControl>
 
-          <Typography id="modal-modal-description"
+          <Typography id="modal-modal-description" component="div"
             sx={{
               mt: 2,
               '& fieldset': {
@@ -102,13 +101,13 @@ const EncontreiUmPet = () => {
 
             // onChange={handleFileChange}
             />
-            <div className='divTituloCampo'>
-              <label className='titulocampo'>Idade</label>
-              <p>*</p>
+            <div className='divTituloCampo tituloCampoNome'>
+              <label className='titulocampoNome'>Idade</label>
+              <p>(Opcional)</p>
             </div>
             <TextField
               sx={{ marginTop: '15px' }}
-              placeholder='@user123'
+              placeholder='Ex: 4 meses'
               type="text"
               className='input'
 
@@ -116,13 +115,14 @@ const EncontreiUmPet = () => {
 
             // onChange={handleFileChange}
             />
-            <div className='divTituloCampo'>
-              <label className='titulocampo'>Quantidade de pets que possui</label>
-              <p>*</p>
+
+            <div className='divTituloCampo tituloCampoNome'>
+              <label className='titulocampoNome'>Raça</label>
+              <p>(Opcional)</p>
             </div>
             <TextField
-              sx={{ marginTop: '-10px' }}
-              placeholder='ex: 1'
+              sx={{ marginTop: '15px' }}
+              placeholder='Ex: Sem Raça'
               type="text"
               className='input'
 
@@ -131,13 +131,61 @@ const EncontreiUmPet = () => {
             // onChange={handleFileChange}
             />
 
+            <FormControl >
+              <RadioGroup
+                aria-labelledby="demo-controlled-radio-buttons-group"
+                name="controlled-radio-buttons-group"
+                value={value}
+                onChange={handleChange}
+              >
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Sexo</label>
+                  <p>*</p>
+                </div>
+
+                <div>
+                  <FormControlLabel value="femea" control={<Radio />} label="Fêmea" className='labelFemea' />
+                  <FormControlLabel value="macho" control={<Radio />} label="Macho" className='labelMacho' />
+                </div>
+              </RadioGroup>
+            </FormControl>
+
+            <FormControl >
+              <RadioGroup
+                aria-labelledby="demo-controlled-radio-buttons-group"
+                name="controlled-radio-buttons-group"
+                value={value}
+                onChange={handleChange}
+              >
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Porte</label>
+                  <p>*</p>
+                </div>
+
+                <div>
+                  <FormControlLabel value="pequeno" control={<Radio />} label="Pequeno" className='labelPequeno' />
+                  <FormControlLabel value="medio" control={<Radio />} label="Médio" className='labelMedio' />
+                  <FormControlLabel value="grande" control={<Radio />} label="Grande" className='labelGrande' />
+                </div>
+              </RadioGroup>
+            </FormControl>
+
+
             <div className='divTituloCampo'>
-              <label className='titulocampo'>Foto de Perfil</label>
+              <label className='titulocampo'>Foto do Pet</label>
               <p>*</p>
             </div>
 
             <label className='tituloFile'>Adicionar foto</label>
             <input type="file" />
+
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={bairros}
+              sx={{ width: 300 }}
+              renderInput={(params) => <TextField {...params} label="Bairros" />}
+            />
 
             <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar>
 
@@ -148,6 +196,74 @@ const EncontreiUmPet = () => {
     </Box>
   )
 }
+
+const bairros = [
+  { label: 'Balneário California' },
+  { label: 'Balneário Copacabana' },
+  { label: 'Balneário Golfinhos' },
+  { label: 'Balneário Forest' },
+  { label: 'Balneário Recando do Sol' },
+  { label: 'Barranco Alto' },
+  { label: 'Benfica' },
+  { label: 'Canta Galo' },
+  { label: 'Capricónio' },
+  { label: 'Caputera' },
+  { label: 'Centro' },
+  { label: 'Cidade Jardim' },
+  { label: 'Costa Nova' },
+  { label: 'Delfim Verde' },
+  { label: "Estrela D'Alva" },
+  { label: 'Getuba' },
+  { label: 'Indaiá' },
+  { label: 'Ipiranga' },
+  { label: 'Itaúna' },
+  { label: 'Jaraguá' },
+  { label: 'Jaraguazinho' },
+  { label: 'Jardim Aruan' },
+  { label: 'Jardim Britânia' },
+  { label: 'Jardim Califórnia' },
+  { label: 'Jardim Capricórnio' },
+  { label: 'Jardim Casa Branca' },
+  { label: 'Jardim das Gaivotas' },
+  { label: 'Jardim Jaqueira' },
+  { label: 'Jardim Manari' },
+  { label: 'Jardim Mariella' },
+  { label: 'Jardim Maristela' },
+  { label: 'Jardim Olaria' },
+  { label: 'Jardim Primavera' },
+  { label: 'Jardim Rio Santos' },
+  { label: 'Jardim Santa Rosa' },
+  { label: 'Jardim Tarumãs' },
+  { label: 'Jardim Terralão' },
+  { label: 'Mar Azul' },
+  { label: 'Martim de Sá' },
+  { label: 'Massaguaçu' },
+  { label: 'Mirante da Orla' },
+  { label: 'Morro do Algodão' },
+  { label: 'Park Imperial' },
+  { label: 'Parque Balneário Poiares' },
+  { label: 'Pegorelli' },
+  { label: 'Perequê Mirim' },
+  { label: 'Poiares' },
+  { label: 'Pontal de Santa Marina' },
+  { label: 'Ponte Seca' },
+  { label: 'Portal da Fazendinha' },
+  { label: 'Porto Novo' },
+  { label: 'Praia da Cocanha' },
+  { label: 'Praia da Mococa' },
+  { label: 'Praia das Palmeiras' },
+  { label: 'Prainha' },
+  { label: 'Recanto Som do Mar' },
+  { label: 'Rio Claro' },
+  { label: 'Rio do Ouro' },
+  { label: 'Sumaré' },
+  { label: 'Tabatinga' },
+  { label: 'Tinga' },
+  { label: 'Travessão' },
+  { label: 'Vapapesca' },
+  { label: 'Vila Nossa Senhora Aparecida' },
+  { label: 'Vila Ponte Seca' },
+];
 
 const styles = {
   Modal: {

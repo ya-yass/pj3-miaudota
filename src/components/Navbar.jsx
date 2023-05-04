@@ -2,7 +2,6 @@ import './Navbar.css'
 import Box from '@mui/material/Box'
 import logo from './assets/img/miaudota-logotipo.png'
 // import { FaUserAlt as User } from 'react-icons/fa'
-import Home from '../pages/Home'
 
 import * as React from 'react';
 import IconButton from '@mui/material/IconButton';
@@ -11,6 +10,7 @@ import Menu from '@mui/material/Menu';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom'
 
 
 const settings = ['Entre', 'Cadastre-se'];
@@ -29,12 +29,12 @@ const Navbar = () => {
 
 
 	return (
-		<Box component='navbar'>
+		<Box component='nav'>
 
 			<div className="sec1">
-				<a href={Home}>
+				<Link to="/">
 					<img src={logo} id='logo1' alt='logo do MiauDota' />
-				</a>
+				</Link>
 
 				<div className="links">
 					<a href='/' to={'/'} className='pgInicial ativo link'>Página inicial</a >
@@ -54,7 +54,7 @@ const Navbar = () => {
 					<button className='botao' id='cadastrarSe'>Cadastrar-se</button>
 					{/* <button className='botao' id='adotar'>Quero adotar</button> */}
 				</a>
-				<Box sx={{ flexGrow: 0 }} component='icon'>
+				<Box sx={{ flexGrow: 0 }}>
 					<Tooltip title="Open settings">
 						<IconButton onClick={handleOpenUserMenu}
 							className='avatar'
@@ -88,7 +88,7 @@ const Navbar = () => {
 					</Menu>
 				</Box>
 			</div>
-		</Box>
+		</Box >
 	);
 }
 export default Navbar;
