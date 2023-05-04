@@ -12,7 +12,7 @@ a:hover {
   color: #F6823F !important;
 }
 
-navbar,
+nav,
 #botoes {
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ navbar,
   align-items: center;
 }
 
-navbar {
+nav {
   background-color: #434343;
   display: flex;
   justify-content: space-between;
