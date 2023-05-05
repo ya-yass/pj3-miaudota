@@ -40,7 +40,10 @@
 }
 
 /*Modal*/
-
+.css-4nrv91{
+  overflow-y: scroll;
+  height: 700px;
+}
 #modal-modal-title div{
   margin-top: 10px;
 }
@@ -52,12 +55,12 @@
 .logoModal{
   width: 200px !important;
 }
+
 /*Radio modal*/
 .labelCachorro, .labelGato{
   border: 1px  solid rgb(228, 224, 224);
   border-radius: 10px;
   margin-top: 15px;
-  /* margin-right: 100px !important; */
 
 }
 .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
