@@ -37,11 +37,11 @@ const Navbar = () => {
 				</Link>
 
 				<div className="links">
-					<a href='/' to={'/'} className='pgInicial ativo link'>Página inicial</a >
+				<Link to="/" className='pgInicial ativo link' >Página inicial</Link>
 					{/* <a href='*' className='encontrePet'>Encontre seu pet</a> */}
-					<a href="/" className='resgatados link'>Resgatados</a>
-					<a href="/" className='adocao link'>Adoção</a>
-					<a href="cadastrar-pet" className='cadastroPet link'>Cadastrar um pet</a>
+					<Link to="/resgatados" className='resgatados link'>Resgatados</Link>
+					<Link to="/adocao" className='adocao link'>Adoção</Link>
+					<Link to="/cadastrar-pet" className='cadastroPet link'>Cadastrar um pet</Link>
 				</div>
 			</div>
 
