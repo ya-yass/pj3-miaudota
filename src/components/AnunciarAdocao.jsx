@@ -18,15 +18,20 @@ import { BsXLg as Cancel } from 'react-icons/bs'
 
 
 
+
 const AnunciaraAdocao = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [value, setValue] = React.useState('female');
+  const [sexo, setValue1] = React.useState('');
+  const [tipoAnimal, setValue2] = React.useState('');
+  const [castrado, setValue3] = React.useState('');
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    setValue1(event.target.sexo);
+    setValue2(event.target.tipoAnimal);
+    setValue3(event.target.castrado);
   };
 
   return (
@@ -61,8 +66,8 @@ const AnunciaraAdocao = () => {
           <FormControl >
             <RadioGroup
               aria-labelledby="demo-controlled-radio-buttons-group"
-              name="controlled-radio-buttons-group"
-              value={value}
+              name="tipoAnimal"
+              value={tipoAnimal}
               onChange={handleChange}
             >
               <div className='divTituloCampo'>
@@ -91,7 +96,7 @@ const AnunciaraAdocao = () => {
 
             <div className='divTituloCampo tituloCampoNome'>
               <label className='titulocampoNome'>Nome</label>
-              <p>(Opcional)</p>
+              <p>*</p>
             </div>
             <TextField
               sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
@@ -134,7 +139,7 @@ const AnunciaraAdocao = () => {
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
                 name="controlled-radio-buttons-group"
-                value={value}
+                // value={value}
                 onChange={handleChange}
               >
                 <div className='divTituloCampo'>
@@ -143,7 +148,7 @@ const AnunciaraAdocao = () => {
                 </div>
 
                 <div>
-                  <FormControlLabel value="v3" control={<Radio />} label="V3" className='labelV3' />
+                <FormControlLabel value="v3" control={<Radio />} label="V3" className='labelV3' />
                   <FormControlLabel value="v4" control={<Radio />} label="V4" className='labelV4' />
                   <FormControlLabel value="v5" control={<Radio />} label="V5" className='labelV5' />
                   <FormControlLabel value="v8" control={<Radio />} label="V8" className='labelV38' />
@@ -161,7 +166,7 @@ const AnunciaraAdocao = () => {
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
                 name="controlled-radio-buttons-group"
-                value={value}
+                value={sexo}
                 onChange={handleChange}
               >
                 <div className='divTituloCampo'>
@@ -180,7 +185,7 @@ const AnunciaraAdocao = () => {
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
                 name="controlled-radio-buttons-group"
-                value={value}
+                value={castrado}
                 onChange={handleChange}
               >
                 <div className='divTituloCampo'>
