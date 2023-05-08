@@ -10,6 +10,8 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import FormGroup from '@mui/material/FormGroup';
+import Checkbox from '@mui/material/Checkbox';
 //imagens e files
 import AdocaoFoto from './assets/img/card-pet-adotar.png'
 import logo from './assets/img/miaudota-logo.png'
@@ -33,6 +35,8 @@ const AnunciaraAdocao = () => {
     setValue2(event.target.tipoAnimal);
     setValue3(event.target.castrado);
   };
+
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   return (
     <Box>
@@ -135,37 +139,28 @@ const AnunciaraAdocao = () => {
 
             // onChange={handleFileChange}
             />
-            <FormControl >
-              <RadioGroup
-                aria-labelledby="demo-controlled-radio-buttons-group"
-                name="controlled-radio-buttons-group"
-                // value={value}
-                onChange={handleChange}
-              >
+
+            <FormGroup>
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Vacinas</label>
                   <p>*</p>
                 </div>
-
-                <div>
-                <FormControlLabel value="v3" control={<Radio />} label="V3" className='labelV3' />
-                  <FormControlLabel value="v4" control={<Radio />} label="V4" className='labelV4' />
-                  <FormControlLabel value="v5" control={<Radio />} label="V5" className='labelV5' />
-                  <FormControlLabel value="v8" control={<Radio />} label="V8" className='labelV38' />
-                  <FormControlLabel value="v10" control={<Radio />} label="V10" className='labelV10' />
-                  <FormControlLabel value="raiva" control={<Radio />} label="Raiva" className='labelRaiva' />
-                  <FormControlLabel value="giárdia" control={<Radio />} label="Giárdia" className='labelGiardia' />
-                  <FormControlLabel value="gripe canina" control={<Radio />} label="Gripe canina" className='labelGripeCanina' />
-                  <FormControlLabel value="não vacinado" control={<Radio />} label="Não vacinado" className='labelNaoVacinado' />
-                  <FormControlLabel value="outro" control={<Radio />} label="Outro" className='labelOutro' />
-                </div>
-              </RadioGroup>
-            </FormControl>
+                <FormControlLabel control={<Checkbox  />} label="V3" className='labelV3'/>
+                <FormControlLabel control={<Checkbox  />} label="V4" className='labelV4'/>
+                <FormControlLabel control={<Checkbox  />} label="V5" className='labelV5'/>
+                <FormControlLabel control={<Checkbox  />} label="V8" className='labelV8'/>
+                <FormControlLabel control={<Checkbox  />} label="V10" className='labelV10'/>
+                <FormControlLabel control={<Checkbox  />} label="Raiva" className='labelRaiva'/>
+                <FormControlLabel control={<Checkbox  />} label="Giárdia" className='labelGiardia'/>
+                <FormControlLabel control={<Checkbox  />} label="Gripe canina" className='labelGripeCanina'/>
+                <FormControlLabel control={<Checkbox  />} label="Não vacinado" className='labelNaoVacinado'/>
+                <FormControlLabel control={<Checkbox />} label="Outro" className='labelOutro'/>
+            </FormGroup>
 
             <FormControl >
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
-                name="controlled-radio-buttons-group"
+                name="sexoAnimal"
                 value={sexo}
                 onChange={handleChange}
               >
