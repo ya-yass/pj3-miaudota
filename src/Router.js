@@ -4,6 +4,7 @@ import PerfilUsuario from './pages/PerfilUsuario'
 import Error404 from './pages/Error404'
 import Adocao from './pages/Adocao'
 import CadastroPet from './pages/CadastroPet'
+import Resgatados from './pages/Resgatados'
 
 const Router = () => {
     return (
@@ -13,6 +14,7 @@ const Router = () => {
             <Route path="*" element={<Error404 />} />
             <Route path="/adocao" element={<Adocao />} />
             <Route path="/cadastrar-pet" element={<CadastroPet />} />
+            <Route path="/resgatados" element={<Resgatados />} />
         </Routes>
     )
 }
