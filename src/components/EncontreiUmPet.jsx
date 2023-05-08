@@ -27,8 +27,15 @@ const EncontreiUmPet = () => {
 
   const [value, setValue] = React.useState('female');
 
+  const [sexoPet, setValue1] = React.useState('');
+  const [tipoPet, setValue2] = React.useState('');
+  const [portePet, setValue3] = React.useState('');
+
   const handleChange = (event) => {
     setValue(event.target.value);
+    setValue1(event.target.tipoPet);
+    setValue2(event.target.sexoPet);
+    setValue3(event.target.portePet);
   };
 
   return (
@@ -65,8 +72,8 @@ const EncontreiUmPet = () => {
           <FormControl >
             <RadioGroup
               aria-labelledby="demo-controlled-radio-buttons-group"
-              name="controlled-radio-buttons-group"
-              value={value}
+              name="tipoPet"
+              value={tipoPet}
               onChange={handleChange}
             >
               <label className='titulocampo'>Qual o animal você encontrou?</label>
@@ -134,8 +141,8 @@ const EncontreiUmPet = () => {
             <FormControl >
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
-                name="controlled-radio-buttons-group"
-                value={value}
+                name="sexoPet"
+                value={sexoPet}
                 onChange={handleChange}
               >
                 <div className='divTituloCampo'>
@@ -153,8 +160,8 @@ const EncontreiUmPet = () => {
             <FormControl >
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
-                name="controlled-radio-buttons-group"
-                value={value}
+                name="portePet"
+                value={portePet}
                 onChange={handleChange}
               >
                 <div className='divTituloCampo'>
@@ -187,7 +194,7 @@ const EncontreiUmPet = () => {
               renderInput={(params) => <TextField {...params} label="Bairros" />}
             />
 
-            <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar>
+            <ButtonEnviar variant="contained" id='botaoEnviar' >Cadastrar</ButtonEnviar>
 
           </Typography>
         </Box>
