@@ -25,7 +25,7 @@ const EncontreiUmPet = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [value, setValue] = React.useState('female');
+  const [setValue] = React.useState('female');
 
   const [sexoPet, setValue1] = React.useState('');
   const [tipoPet, setValue2] = React.useState('');

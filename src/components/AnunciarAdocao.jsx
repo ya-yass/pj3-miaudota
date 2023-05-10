@@ -36,8 +36,6 @@ const AnunciaraAdocao = () => {
     setValue3(event.target.castrado);
   };
 
-  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
   return (
     <Box>
       <div className='cards'>
@@ -141,20 +139,20 @@ const AnunciaraAdocao = () => {
             />
 
             <FormGroup>
-                <div className='divTituloCampo'>
-                  <label className='titulocampo'>Vacinas</label>
-                  <p>*</p>
-                </div>
-                <FormControlLabel control={<Checkbox  />} label="V3" className='labelV3'/>
-                <FormControlLabel control={<Checkbox  />} label="V4" className='labelV4'/>
-                <FormControlLabel control={<Checkbox  />} label="V5" className='labelV5'/>
-                <FormControlLabel control={<Checkbox  />} label="V8" className='labelV8'/>
-                <FormControlLabel control={<Checkbox  />} label="V10" className='labelV10'/>
-                <FormControlLabel control={<Checkbox  />} label="Raiva" className='labelRaiva'/>
-                <FormControlLabel control={<Checkbox  />} label="Giárdia" className='labelGiardia'/>
-                <FormControlLabel control={<Checkbox  />} label="Gripe canina" className='labelGripeCanina'/>
-                <FormControlLabel control={<Checkbox  />} label="Não vacinado" className='labelNaoVacinado'/>
-                <FormControlLabel control={<Checkbox />} label="Outro" className='labelOutro'/>
+              <div className='divTituloCampo'>
+                <label className='titulocampo'>Vacinas</label>
+                <p>*</p>
+              </div>
+              <FormControlLabel control={<Checkbox />} label="V3" className='labelV3' />
+              <FormControlLabel control={<Checkbox />} label="V4" className='labelV4' />
+              <FormControlLabel control={<Checkbox />} label="V5" className='labelV5' />
+              <FormControlLabel control={<Checkbox />} label="V8" className='labelV8' />
+              <FormControlLabel control={<Checkbox />} label="V10" className='labelV10' />
+              <FormControlLabel control={<Checkbox />} label="Raiva" className='labelRaiva' />
+              <FormControlLabel control={<Checkbox />} label="Giárdia" className='labelGiardia' />
+              <FormControlLabel control={<Checkbox />} label="Gripe canina" className='labelGripeCanina' />
+              <FormControlLabel control={<Checkbox />} label="Não vacinado" className='labelNaoVacinado' />
+              <FormControlLabel control={<Checkbox />} label="Outro" className='labelOutro' />
             </FormGroup>
 
             <FormControl >
