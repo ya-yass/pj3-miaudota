@@ -18,10 +18,6 @@ import { FaPaw as Raca } from 'react-icons/fa'
 import { BsXLg as Cancel } from 'react-icons/bs'
 
 
-//Ajeitar posição dass informações do perfil 
-//estilizar formulário modal
-
-
 const PerfilUsuario = () => {
 
 
