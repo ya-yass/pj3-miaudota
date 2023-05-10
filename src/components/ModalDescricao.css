@@ -1,0 +1,38 @@
+.fotoPet{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+
+.femea,
+.macho {
+  background: #F6823F;
+  padding: 5px;
+  border-radius: 20px;
+  color: #FFF;
+  margin-left: 15px;
+}
+.nomeIcon{
+  display: flex;
+  align-items: baseline;
+
+}
+.infopet{
+  display: flex;
+  
+}
+.infopet .nomepet{
+  color: #F6823F;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.descPet{
+  display: flex;
+  flex-direction: column;
+}
+.textpet{
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
