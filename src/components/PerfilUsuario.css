@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-*{
+* {
   font-family: 'Poppins';
 }
+
 .capa {
   width: 100%;
   height: 100%;
@@ -20,7 +21,7 @@
   border-radius: 50%;
 }
 
- .informacaoUsuario {
+.informacaoUsuario {
   display: flex;
   margin-left: 40px;
 
@@ -28,20 +29,21 @@
 
 .informacaoUsuario p {
   margin-top: -10px;
-} 
+}
 
 .userAndPet {
   display: flex !important;
   align-items: baseline !important;
 }
 
-.infoNameUserIcon{
+.infoNameUserIcon {
   display: flex;
   flex-direction: column;
   margin-left: 40px;
   margin-top: 20px;
 }
-.editarENome{
+
+.editarENome {
   display: flex;
 }
 
@@ -55,12 +57,12 @@
 .iconPet p {
   margin: 0px;
   margin-top: 1px;
-  margin-left:  5px;
+  margin-left: 5px;
 }
 
 /* modal */
-.css-bxoys4{
-  width: 450px !important; 
+.css-bxoys4 {
+  width: 450px !important;
 }
 
 #modal-modal-title {
@@ -85,7 +87,7 @@ span h4 {
 
 }
 
-#modal-modal-description{
+#modal-modal-description {
   display: flex;
   flex-direction: column;
 }
@@ -100,14 +102,19 @@ span h4 {
   float: right;
   color: #F6823F;
   cursor: pointer;
-
+  padding: 7px;
+  transition: 0.2s;
+  font-weight: bold;
 }
+
 .botaoCancelModal:hover {
+  background-color: #e6e6e6;
+  border-radius: 20px;
   color: gray;
 }
 
- /*campo input geral*/
-#modal-modal-description .input{
+/*campo input geral*/
+#modal-modal-description .input {
   border: 1px solid rgb(228, 224, 224);
   border-radius: 10px;
   margin: 14px;
@@ -115,9 +122,10 @@ span h4 {
   width: 200px !important;
 
 }
+
 /* Input email*/
 
-#inputEmail{
+#inputEmail {
   width: 400px !important;
   border: 1px solid rgb(228, 224, 224);
   border-radius: 10px;
@@ -128,7 +136,7 @@ span h4 {
 
 /* Input e label senha*/
 
-#inputPass{
+#inputPass {
   width: 400px !important;
   border: 1px solid rgb(228, 224, 224);
   border-radius: 10px;
@@ -136,39 +144,43 @@ span h4 {
   margin-top: 24px;
 }
 
-.labelSenha{
+.labelSenha {
   margin-top: 13px !important;
 }
+
 /*Label geral*/
 
-.titulocampo{
+.titulocampo {
   font-size: 13px;
   margin-bottom: -5px;
   margin-top: 5px;
   font-weight: 600;
 }
-.divTituloCampo{
+
+.divTituloCampo {
   display: flex;
   margin: 0px;
   margin-bottom: -20px;
 
 }
-.divTituloCampo p{
+
+.divTituloCampo p {
   color: red;
 }
 
 /*Idade campos*/
 
-#idadeCampo{
+#idadeCampo {
   border: 1px solid rgb(228, 224, 224);
   border-radius: 10px;
   margin: 14px;
   margin-left: 0px;
   width: 50px !important;
 }
+
 /*quantidade de animais*/
 
-#qtdAnimaisCampo{
+#qtdAnimaisCampo {
   border: 1px solid rgb(228, 224, 224);
   border-radius: 10px;
   margin: 14px;
@@ -176,20 +188,22 @@ span h4 {
   width: 50px !important;
 
 }
+
 /*Quantidade de animais e idade juntos*/
 
-.idadeQtdAnimais{
+.idadeQtdAnimais {
   display: flex;
   margin-top: 15px;
 }
 
 /*botão editar*/
 
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
   padding: 10px 10px !important;
 }
-#botaoEnviar{
-  background-color:#F6823F !important;
+
+#botaoEnviar {
+  background-color: #F6823F !important;
   width: 150px;
   border-radius: 30px;
   font-weight: bolder;
@@ -197,18 +211,21 @@ span h4 {
   margin: auto;
 
 }
-#botaoEnviar:hover{
+
+#botaoEnviar:hover {
   color: white;
   background-color: #d47239 !important;
 }
+
 /*Apenas botão cancelar*/
-.botãoCancelarEditar{
+.botãoCancelarEditar {
   margin-top: 10px;
   font-size: 13px;
   cursor: pointer;
 }
+
 /*Botão div cancelar e editar*/
-.Botoesmodal{
+.Botoesmodal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +233,7 @@ span h4 {
 
 /*botão de adicionar foto*/
 
-.tituloFile{
+.tituloFile {
   padding: 10px;
   border-radius: 20px;
   font-size: 14px;
@@ -230,7 +247,7 @@ span h4 {
   z-index: 1;
 }
 
- input[type="file"] {
+input[type="file"] {
   opacity: 0;
 
   cursor: pointer;
@@ -238,30 +255,29 @@ span h4 {
   margin-top: -35px;
   margin-left: -140px;
 }
-.BotõesImgs{
+
+.BotõesImgs {
   display: flex;
   margin-bottom: 20px;
   margin-top: 7px;
 
 }
-.botãoFotoPerfil{
+
+.botãoFotoPerfil {
   display: flex;
   flex-direction: column;
 }
-.botãoCapaPerfil{
+
+.botãoCapaPerfil {
   display: flex;
   flex-direction: column;
   margin-left: -60px;
 
 }
+
 /*Nome e usuário*/
 
-.nomePerfilUsuario{
+.nomePerfilUsuario {
   display: flex;
   margin-top: 10px;
 }
-
-
-
-
-
