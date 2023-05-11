@@ -1,8 +1,10 @@
-.fotoPet{
-  width: 200px;
-  height: 200px;
+.fotoPet {
+  width: 180px;
+  height: 180px;
   border-radius: 100px;
+  object-fit: cover;
 }
+
 
 .femea,
 .macho {
@@ -12,96 +14,160 @@
   color: #FFF;
   margin-left: 15px;
 }
-.nomeIcon{
-  display: flex;
-  align-items: baseline;
 
-}
-.infopet{
+.nomeIcon {
   display: flex;
-  
+  align-items: center;
 }
-.infopet .nomepet{
+
+.infopet {
+  display: flex;
+}
+
+.infopet .nomepet {
   color: #F6823F;
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;
+  margin: 0;
 }
-.descPet{
+
+.descPet {
   display: flex;
   flex-direction: column;
 }
-.textpet{
+
+.textpet {
   margin-left: 25px;
   display: flex;
   flex-direction: column;
 }
-.fotoAnunciante{
+
+.fotoAnunciante {
   border-radius: 100px;
   width: 40px;
   height: 40px;
 }
-.infoAnunciante{
+
+.infoAnunciante {
   display: flex;
   flex-direction: column;
   margin-bottom: 2px;
   margin-left: 10px;
 }
-.nomeAnunciante{
+
+.nomeAnunciante {
   margin-top: -20px;
 
 }
-.tituloAnunciante{
+
+.tituloAnunciante {
   font-weight: bold;
 }
-.quemAnunciou{
+
+.quemAnunciou {
   display: flex;
   margin-top: 20px;
   margin-left: 25px;
 }
-.infoPeteUser{
+
+.infoPeteUser {
   display: flex;
+  align-items: center;
+
 }
-.infoDopet{
+
+.infoDopet {
   display: flex;
-}
-.infoDopet span{
-  margin-left: 10px;
-}
-.Iconsinfo{
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
-}
-.localPet{
+  flex-wrap: wrap;
   margin-left: 8px;
 }
-#botaoEncontrei{
-  background-color:#F6823F !important;
-  width: 200px;
-  border-radius: 30px;
-  padding: 10px;
-  margin-top: 20px;
+
+.infoDopet span {
+  margin-right: 25px;
 }
-.maisFotos img{
+
+.infoDopet svg {
+  color: #434343;
+}
+
+.Iconsinfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 21px;
+}
+
+button.btnEncontrei {
+  background-color: #F6823F;
+  color: #FFF;
+  font-weight: bold;
+  width: 195px;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+button.btnEncontrei:hover {
+  background-color: #e9671b;
+  color: #FFF;
+  font-weight: bold;
+  width: 195px;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.maisFotos img {
   width: 140px;
   height: 100px;
   margin: 10px;
   border-radius: 10px;
-
+  object-fit: cover;
+  width: 158px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 18px;
+  object-fit: cover;
 }
-.maisFotos{
+
+.maisFotos {
   display: flex;
-  justify-content: space-around;
-
+  justify-content: space-between;
 }
-.botaoChild{
+
+.botaoChild {
   float: right;
   display: flex;
-  align-items: baseline;
-
-  
+  margin-top: 19px;
 }
-.botaoChild span{
+
+.botaoChild span {
   margin-right: 10px;
+}
+
+.btnCancelar {
+  cursor: pointer;
+}
+
+
+
+
+
+
+.modalContato {
+  width: 460px;
+  height: 570px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #FFF;
+  transform: translate(-50%, -50%);
+
+  border-radius: 20px;
+}
+
+#inputEmailContato {
+  width: 100%;
+  border: 1px solid #F6823F;
 }

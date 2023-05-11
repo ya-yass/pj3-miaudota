@@ -45,8 +45,9 @@ nav {
 #cadastrarPet,
 #login {
   background-color: #ffffff67;
-  border: 2px solid #FFF;
+  border: 1px solid #FFF;
   font-weight: 400;
+  color: #FFF;
 }
 
 #adotar,
