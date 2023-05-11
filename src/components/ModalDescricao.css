@@ -1,6 +1,6 @@
 .fotoPet{
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 100px;
 }
 
@@ -35,4 +35,73 @@
   margin-left: 25px;
   display: flex;
   flex-direction: column;
+}
+.fotoAnunciante{
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+.infoAnunciante{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+.nomeAnunciante{
+  margin-top: -20px;
+
+}
+.tituloAnunciante{
+  font-weight: bold;
+}
+.quemAnunciou{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+.infoPeteUser{
+  display: flex;
+}
+.infoDopet{
+  display: flex;
+}
+.infoDopet span{
+  margin-left: 10px;
+}
+.Iconsinfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.localPet{
+  margin-left: 8px;
+}
+#botaoEncontrei{
+  background-color:#F6823F !important;
+  width: 200px;
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.maisFotos img{
+  width: 140px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 10px;
+
+}
+.maisFotos{
+  display: flex;
+  justify-content: space-around;
+
+}
+.botaoChild{
+  float: right;
+  display: flex;
+  align-items: baseline;
+
+  
+}
+.botaoChild span{
+  margin-right: 10px;
 }

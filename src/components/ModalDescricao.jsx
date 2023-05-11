@@ -5,27 +5,36 @@ import * as React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+
 //files
 import './ModalDescricao.css'
 
 //icons e imagens
 import fotoPerfilCao from './assets/img/fotoPerfilCao.jpg'
+import fotoAnunciante from './assets/img/fotoAnunciante.jpg'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
 	FaVenus as Femea,
+  FaHeart as Idade,
+  FaPaw as Raca,
+
 } from 'react-icons/fa'
 
+import{
+  MdLocationOn as Local
+}from 'react-icons/md'
 
 
 
 
 const ModalDescricao = () => {
 
-   //abrir e fechar o modal
+   //abrir e fechar o modal principal
    const [open, setOpen] = React.useState(false);
-   const handleOpen = () => setOpen(true);
-   const handleClose = () => setOpen(false);
+   const handleOpen1 = () => setOpen(true);
+   const handleClose1 = () => setOpen(false);
 
+    //Modal Child
    function ChildModal() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
@@ -37,7 +46,11 @@ const ModalDescricao = () => {
   
     return (
       <React.Fragment>
-        <Button onClick={handleOpen} variant="contained" id='botaoEnviar'>Open Child Modal</Button>
+        <div className="botaoChild">
+          <span onClick={handleClose1}>Cancelar</span>
+          <Button onClick={handleOpen} variant="contained" id='botaoEncontrei'>ENCONTREI MEU PET</Button>
+
+        </div>
         <Modal
           open={open}
           onClose={handleClose}
@@ -45,29 +58,27 @@ const ModalDescricao = () => {
           aria-describedby="child-modal-description"
         >
           <Box sx={{ ...style, width: 200 }}>
-            <h2 id="child-modal-title">Text in a child modal</h2>
-            <p id="child-modal-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </p>
+            
             <Button onClick={handleClose}>Close Child Modal</Button>
           </Box>
         </Modal>
       </React.Fragment>
     );
-  }
+  }//funcao modal child fechamento
+
 
   return (
     <>
       <Box>
-        <button onClick={handleOpen}>Abrir modal</button>
+        <button onClick={handleOpen1}>Abrir modal</button>
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose={handleClose1}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description">
 
         <Box sx={styles.Modal} className='selecionaTudo'>
-          <Cancel className='botaoCancelModal' onClick={handleClose} />
+          <Cancel className='botaoCancelModal' onClick={handleClose1} />
       
           <Typography id="modal-modal-description"
             sx={{
@@ -80,7 +91,7 @@ const ModalDescricao = () => {
               }
             }}>
 
-            
+        <div className="infoModal">
           <div className="infopet">
             <img src={fotoPerfilCao} alt="FotoPet" className="fotoPet"/>
             <div className="textpet">
@@ -91,14 +102,35 @@ const ModalDescricao = () => {
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio aperiam nulla, eaque ipsum in quibusdam placeat aspernatur cum asperiores dolorum odio reiciendis vitae eius hic animi error dolore rerum quos.</p>
               </div>
           </div>
+          <div className="infoPeteUser">
+            <div className="quemAnunciou">
+              <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
+              <div className="infoAnunciante">
+                <p className="tituloAnunciante">Anunciante</p>
+                <p className="nomeAnunciante">Ana Luiza</p>
+              </div>
+            </div>
 
-          <div>
-            <img src="" alt="Foto Anunciante" />
-            <div>
-              <p>Anunciante</p>
-              <p>João Vitor</p>
+            <div className="Iconsinfo">
+              <div className="infoDopet">
+                <span className="idade"><Idade />03 meses</span>
+                <span><Raca />Sem raça definida</span>
+                <span> <Femea/> Fêmea</span>
+              </div>
+                <span className="localPet"><Local/> Foi encontrado na Martim de Sá</span>
             </div>
           </div>
+          <div className="maisFotos"> 
+            <img src={fotoPerfilCao} alt="" />
+            <img src={fotoPerfilCao} alt="" />
+            <img src={fotoPerfilCao} alt="" />
+            <img src={fotoPerfilCao} alt="" />
+    
+          </div>
+
+
+        </div>
+
 
 
 
@@ -114,23 +146,6 @@ const ModalDescricao = () => {
 }
 
 const styles = {
-  Button: {
-    backgroundColor: '#F6823F',
-    marginLeft: '15px',
-    float: 'right',
-    color: 'white',
-    position: 'relative',
-    width: '80px',
-    height: '30px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '20px',
-    fontSize: '15px',
-    border: 'none'
-
-
-  },
 
   Modal: {
 
@@ -138,7 +153,7 @@ const styles = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 673,
     bgcolor: 'background.paper',
     border: 'none',
     boxShadow: 24,
