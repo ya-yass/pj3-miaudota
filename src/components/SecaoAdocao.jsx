@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import Foto from './assets/img/pet1.jpg';
 import './Card-pet.css' //para importar jsx sempre é com letra maíuscula
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import * as React from 'react';
 import Button from '@mui/material/Button';
