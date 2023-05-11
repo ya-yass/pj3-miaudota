@@ -138,6 +138,21 @@ const EncontreiUmPet = () => {
             // onChange={handleFileChange}
             />
 
+            <div className='divTituloCampo'>
+              <label className='titulocampo'>Sobre o pet</label>
+              <p>*</p>
+            </div>
+            <TextField
+              sx={{ marginTop: '-10px' }}
+              placeholder='Ex: Encontrei esse cachorro próximo do supermercado Silva Indaía, estava assustado tentando atravessar a rua, ainda estava com a guia de passeio.'
+              type="text"
+              className='input'
+
+              InputLabelProps={{ shrink: true }}
+
+            // onChange={handleFileChange}
+            />
+
             <FormControl >
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"

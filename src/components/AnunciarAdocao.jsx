@@ -138,6 +138,21 @@ const AnunciaraAdocao = () => {
             // onChange={handleFileChange}
             />
 
+            <div className='divTituloCampo'>
+              <label className='titulocampo'>Sobre o pet</label>
+              <p>*</p>
+            </div>
+            <TextField
+              sx={{ marginTop: '-10px' }}
+              placeholder='Ex: O pet é calmo, não tem costume em ficar sozinho em casa, fica assustado com uma grande quantidade de pessoas dentro de casa...'
+              type="text"
+              className='input'
+
+              InputLabelProps={{ shrink: true }}
+
+            // onChange={handleFileChange}
+            />
+
             <FormGroup>
               <div className='divTituloCampo'>
                 <label className='titulocampo'>Vacinas</label>
