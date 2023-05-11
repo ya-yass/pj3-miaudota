@@ -1,0 +1,90 @@
+.conteudo {
+  display: flex;
+}
+
+.pets {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-right: 39px;
+  margin-bottom: 30px;
+}
+
+.opcoes {
+  display: flex;
+}
+
+.busca {
+  width: 466px;
+  height: 100%;
+  background: #F4FDFF;
+  border: 1px solid #40D6FF;
+  border-radius: 40px;
+  padding: 40px;
+  position: sticky;
+  top: 50px;
+  color: #434343;
+}
+
+.labelName {
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: -8px;
+}
+
+.tituloBusca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #40D6FF;
+  font-weight: bold;
+}
+
+button.filtro {
+  background-color: #40D6FF;
+  color: #FFF;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 30px;
+  width: 190px;
+}
+
+button.filtro:hover {
+  background-color: #19C0EE;
+}
+
+.botaoos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17px;
+}
+
+.gatoCachorroBtn {
+  margin: 60px 0 20px 0;
+}
+
+button.btnGato {
+  background-color: #F6823F;
+  color: #FFF;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 30px;
+  width: 170px;
+  font-size: 21px;
+  box-shadow: none;
+}
+
+button.btnCachorro {
+  background-color: #FFF;
+  color: #434343;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 30px;
+  width: 170px;
+  font-size: 21px;
+  box-shadow: none;
+  border: 1px solid #434343;
+}

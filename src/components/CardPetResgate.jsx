@@ -8,7 +8,7 @@ import {
 	FaVenus as Femea,
 	// FaMars as Macho,
 	FaHeart as Idade,
-  FaMapMarkerAlt as Local, //https://react-icons.github.io/react-icons/icons?name=fa
+	FaMapMarkerAlt as Local, //https://react-icons.github.io/react-icons/icons?name=fa
 	FaPaw as Raca,
 } from 'react-icons/fa'
 
@@ -58,7 +58,7 @@ const CardPetResgate = () => {
 					</div>
 				</div>
 
-        <div className="card">
+				<div className="card">
 					<img src={Fera} alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
@@ -77,7 +77,7 @@ const CardPetResgate = () => {
 					</div>
 				</div>
 
-        <div className="card">
+				<div className="card">
 					<img src={Fera} alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
@@ -96,7 +96,7 @@ const CardPetResgate = () => {
 					</div>
 				</div>
 
-        <div className="card">
+				<div className="card">
 					<img src={Fera} alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
@@ -115,7 +115,7 @@ const CardPetResgate = () => {
 					</div>
 				</div>
 
-        <div className="card">
+				<div className="card">
 					<img src={Fera} alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
@@ -134,7 +134,7 @@ const CardPetResgate = () => {
 					</div>
 				</div>
 
-        <div className="card">
+				<div className="card">
 					<img src={Fera} alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
@@ -153,7 +153,7 @@ const CardPetResgate = () => {
 					</div>
 				</div>
 
-        <div className="card">
+				<div className="card">
 					<img src={Fera} alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">

@@ -37,7 +37,7 @@ const Navbar = () => {
 				</Link>
 
 				<div className="links">
-				<Link to="/" className='pgInicial ativo link' >Página inicial</Link>
+					<Link to="/" className='pgInicial link' >Página inicial</Link>
 					{/* <a href='*' className='encontrePet'>Encontre seu pet</a> */}
 					<Link to="/resgatados" className='resgatados link'>Resgatados</Link>
 					<Link to="/adocao" className='adocao link'>Adoção</Link>

@@ -9,7 +9,7 @@ function CarouselSlide() {
       <Carousel.Item interval={500}>
         <img
           className="d-block w-100"
-          src= {slide1}
+          src={slide1}
           alt="First slide"
         />
       </Carousel.Item>
@@ -17,7 +17,7 @@ function CarouselSlide() {
       <Carousel.Item interval={500}>
         <img
           className="d-block w-100"
-          src= {slide2}
+          src={slide2}
           alt="Second slide"
         />
 
@@ -26,10 +26,10 @@ function CarouselSlide() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src= {slide1}
+          src={slide1}
           alt="Third slide"
         />
-       
+
       </Carousel.Item>
 
     </Carousel>
