@@ -15,7 +15,7 @@ import Checkbox from '@mui/material/Checkbox';
 //imagens e files
 import AdocaoFoto from './assets/img/card-pet-adotar.png'
 import logo from './assets/img/miaudota-logo.png'
-import './EncontreiUmPet.css'
+// import './EncontreiUmPet.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 
 
@@ -40,7 +40,7 @@ const AnunciaraAdocao = () => {
     <Box>
       <div className='cards'>
 
-        <button className="btnEncontrei" onClick={handleOpen}>
+        <button className="cardAdocao" onClick={handleOpen}>
           <div className='mask'></div>
           <p>Colocar um pet para adoção</p>
           <img src={AdocaoFoto} alt="Anuncie um animal para adoção" className='imagemPet imagemPetEncontrado ' />
@@ -58,8 +58,8 @@ const AnunciaraAdocao = () => {
           <Typography id="modal-modal-title" component="div">
             <img src={logo} className='logoModal' alt='Logo do Modal'></img>
             <div>
-              <h3>COLOQUE PARA ADOÇÃO</h3>
-              <p>Nos ajude, tente ser específico nos campos do formulário para facilitar a adoção do pet.</p>
+              <h3 className='tituloModal'>COLOQUE PARA ADOÇÃO</h3>
+              <span className='informativo'>Nos ajude, tente ser específico nos campos do formulário para facilitar a adoção do pet.</span>
             </div>
           </Typography>
 
@@ -77,7 +77,7 @@ const AnunciaraAdocao = () => {
                 <p>*</p>
               </div>
 
-              <div>
+              <div className='radioBtn'>
                 <FormControlLabel value="cachorro" control={<Radio />} label="Cachorro" className='labelCachorro' />
 
                 <FormControlLabel value="gato" className='labelGato' control={<Radio />} label="Gato" />
@@ -96,47 +96,57 @@ const AnunciaraAdocao = () => {
               }
             }}>
 
-            <div className='divTituloCampo tituloCampoNome'>
-              <label className='titulocampoNome'>Nome</label>
-              <p>*</p>
+            <div className="camposTextos">
+
+              <div className="nomePet">
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Nome</label>
+                  <p>*</p>
+                </div>
+                <TextField
+                  placeholder='Digite aqui o nome do pet'
+                  type="text"
+                  className='inputAdocao'
+                  InputLabelProps={{ shrink: true }}
+
+                // onChange={handleFileChange}
+                />
+              </div>
+
+              <div className="idadePet">
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Idade</label>
+                  <p>*</p>
+                </div>
+                <TextField
+                  sx={{ width: '157px', }}
+                  placeholder='Ex: 4 meses'
+                  type="text"
+                  className='inputAdocao'
+
+                  InputLabelProps={{ shrink: true }}
+
+                // onChange={handleFileChange}
+                />
+              </div>
+
+              <div className="racaPet">
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Raça</label>
+                  <p>*</p>
+                </div>
+                <TextField
+                  placeholder='Ex: Sem raça'
+                  type="text"
+                  className='inputAdocao'
+
+                  InputLabelProps={{ shrink: true }}
+
+                // onChange={handleFileChange}
+                />
+              </div>
+
             </div>
-            <TextField
-              sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
-              placeholder='Digite aqui o nome do pet'
-              type="text"
-              className='input'
-              InputLabelProps={{ shrink: true }}
-
-            // onChange={handleFileChange}
-            />
-            <div className='divTituloCampo'>
-              <label className='titulocampo'>Idade</label>
-              <p>*</p>
-            </div>
-            <TextField
-              sx={{ marginTop: '15px' }}
-              placeholder='Ex: 4 meses'
-              type="text"
-              className='input'
-
-              InputLabelProps={{ shrink: true }}
-
-            // onChange={handleFileChange}
-            />
-            <div className='divTituloCampo'>
-              <label className='titulocampo'>Raça</label>
-              <p>*</p>
-            </div>
-            <TextField
-              sx={{ marginTop: '-10px' }}
-              placeholder='Ex: Sem raça'
-              type="text"
-              className='input'
-
-              InputLabelProps={{ shrink: true }}
-
-            // onChange={handleFileChange}
-            />
 
             <div className='divTituloCampo'>
               <label className='titulocampo'>Sobre o pet</label>
@@ -146,7 +156,7 @@ const AnunciaraAdocao = () => {
               sx={{ marginTop: '-10px' }}
               placeholder='Ex: O pet é calmo, não tem costume em ficar sozinho em casa, fica assustado com uma grande quantidade de pessoas dentro de casa...'
               type="text"
-              className='input'
+              className='inputAdocao'
 
               InputLabelProps={{ shrink: true }}
 
