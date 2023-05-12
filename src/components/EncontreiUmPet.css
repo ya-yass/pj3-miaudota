@@ -1,89 +1,97 @@
-.btnEncontrei {
+.cardEncontrei {
   padding: 0;
   border: none;
   background-color: #fff;
+}
+
+.cardEncontrei p {
+  width: 305px;
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  font-size: 30px;
+  margin-top: 15px;
+  text-transform: uppercase;
 }
 
 .imagemPet {
   height: 450px;
   width: 100%;
   border-radius: 20px;
-
+  object-fit: cover;
 }
 
-.imagemPetEncontrado{
+.imagemPetEncontrado {
   width: 305px;
 }
 
-.mask{
+.mask {
   position: absolute;
-   background-color: #00000036;
-   height: 450px;
-   width: 305px;
-   padding: 0;
-   border-radius: 20px;
-
-}
-.mask:hover{
- background-color: #00000000;
-
-}
-
-.btnEncontrei p{
+  background-color: #00000036;
+  height: 450px;
   width: 305px;
-  color: #fff;
-  font-weight: 600;
-  position: absolute;
-  font-size: 35px;
-  margin-top: 15px;
-  text-transform: uppercase;
+  padding: 0;
+  border-radius: 20px;
+
+}
+
+.mask:hover {
+  background-color: #00000000;
+
 }
 
 /*Modal*/
-.css-4nrv91{
+.css-4nrv91 {
   overflow-y: scroll;
   height: 700px;
 }
-#modal-modal-title div{
+
+#modal-modal-title div {
   margin-top: 10px;
 }
 
-#modal-modal-title p{
+#modal-modal-title p {
   font-size: 14px;
-  
+
 }
-.logoModal{
+
+.logoModal {
   width: 200px !important;
 }
 
 /*Radio modal*/
-.labelCachorro, .labelGato{
-  border: 1px  solid rgb(228, 224, 224);
+.labelCachorro,
+.labelGato {
+  border: 1px solid rgb(228, 224, 224);
   border-radius: 10px;
   margin-top: 15px;
 
 }
-.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
   color: #f6823f !important;
 }
 
 .css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
-    margin-right: 10px;
-    margin-left: -11px;
+  margin-right: 10px;
+  margin-left: -11px;
 }
+
 /*Campo nome*/
-.tituloCampoNome p{
+.tituloCampoNome p {
   color: #f6823f;
   font-size: small;
   margin: 0px;
   margin-left: 2px;
-  
+
 }
-.titulocampoNome{
+
+.titulocampoNome {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 15px;
 }
-.input{
+
+.input {
   width: 290px !important;
 }

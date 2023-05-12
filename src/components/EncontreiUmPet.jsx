@@ -42,9 +42,9 @@ const EncontreiUmPet = () => {
     <Box>
       <div className='cards'>
 
-        <button className="btnEncontrei" onClick={handleOpen}>
+        <button className="cardEncontrei" onClick={handleOpen}>
           <div className='mask'></div>
-          <p>Encontrei um pet</p>
+          <p>Encontrei um <br /> pet</p>
           <img src={AchadoFoto} alt="Anuncie um animal para adoção" className='imagemPet ' />
         </button>
       </div>
@@ -62,7 +62,7 @@ const EncontreiUmPet = () => {
           <Typography id="modal-modal-title" component="div">
             <img src={logo} className='logoModal' alt='Logo do Modal'></img>
             <div>
-              <h3>Encontrei um pet</h3>
+              <h3 className='tituloModal'>Encontrei um pet</h3>
               <p>Anuncie um pet que você encontrou perdido na rua para que ele volte ao lar. </p>
             </div>
           </Typography>

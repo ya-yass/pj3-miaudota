@@ -1,31 +1,39 @@
-.btnAdocao{
+.tituloModal {
+  text-transform: uppercase;
+  color: #F6823F;
+  font-weight: bold;
+}
+
+.cardAdocao {
   padding: 0;
   border: none;
   background-color: #fff;
+  margin-right: 45px;
 }
 
 .imagemPet {
   height: 450px;
   width: 305px;
   border-radius: 20px;
-
+  object-fit: cover;
 }
 
-.mask{
+.mask {
   position: absolute;
-   background-color: #00000036;
-   height: 450px;
-   width: 305px;
-   padding: 0;
-   border-radius: 20px;
-
-}
-.mask:hover{
- background-color: #00000000;
-
+  background-color: #00000036;
+  height: 450px;
+  width: 305px;
+  padding: 0;
+  border-radius: 20px;
+  transition: 0.1s;
 }
 
-.btnAdocao p{
+.mask:hover {
+  background-color: #00000000;
+
+}
+
+.cardAdocao p {
   width: 305px;
   color: #FFF;
   font-weight: 600;
@@ -34,4 +42,26 @@
   margin-top: 15px;
   text-transform: uppercase;
 
+}
+
+.labelCachorro,
+.labelGato {
+  margin: 0 20px 0 0 !important;
+}
+
+.camposTextos {
+  display: flex;
+}
+
+.racaPet,
+.idadePet,
+.nomePet {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputAdocao {
+  border: 1px solid rgb(228, 224, 224) !important;
+  border-radius: 10px !important;
+  margin-left: 0px;
 }
