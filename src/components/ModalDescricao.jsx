@@ -48,7 +48,6 @@ const ModalDescricao = () => {
         <div className="botaoChild">
           <span onClick={handleClose1} className="btnCancelar">Cancelar</span>
           <Button onClick={handleOpen} variant="contained" className="btnEncontrei">ENCONTREI MEU PET</Button>
-
         </div>
         <Modal
           open={open}
@@ -56,11 +55,10 @@ const ModalDescricao = () => {
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
         >
-          <Box sx={styles.Modal} className='selecionaTudo'>
+          <Box className='modalContato'>
             <Cancel className='botaoCancelModal' onClick={handleClose} />
-            <span><h4>Editar Perfil</h4></span>
-            <hr />
-
+            <span><h4 className="entrarContato">Entrar em contatos</h4></span>
+            <span className="informativo">Para a segurança dos usuários, não compartilhamos informações pessoais.</span>
             <Typography id="modal-modal-description"
               sx={{
                 mt: 2,
@@ -72,116 +70,16 @@ const ModalDescricao = () => {
                 }
               }}>
 
-              <div className='BotõesImgs'>
-                <div className=' botãoFotoPerfil'>
+              <div className='Campos'>
+                <div className='emailUsuario'>
                   <div className='divTituloCampo'>
-                    <label className='titulocampo'>Foto de Perfil</label>
-                    <p>*</p>
-                  </div>
-                  <label className='tituloFile'>Adicionar foto</label>
-                  <input type="file" />
-                </div>
-                <div className='botãoCapaPerfil'>
-                  <div className='divTituloCampo'>
-                    <label className='titulocampo'>Foto de Perfil</label>
-                    <p>*</p>
-                  </div>
-                  <label className='tituloFile'>Adicionar foto</label>
-                  <input type="file" />
-                </div>
-              </div>
-
-
-              <div className='nomePerfilUsuario'>
-                <div className='nome'>
-                  <div className='divTituloCampo'>
-                    <label className='titulocampo'>Nome</label>
+                    <label className='titulocampo'>E-mail</label>
                     <p>*</p>
                   </div>
                   <TextField
-                    sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
-                    placeholder='Nome Sobrenome'
+                    placeholder='Digite seu e-mail'
                     type="text"
-                    className='input'
-                    InputLabelProps={{ shrink: true }}
-                  // onChange={handleFileChange}
-                  />
-                </div>
-                <div className='usuario'>
-                  <div className='divTituloCampo'>
-                    <label className='titulocampo'>Usuário</label>
-                    <p>*</p>
-                  </div>
-                  <TextField
-                    sx={{ marginTop: '15px' }}
-                    placeholder='@user123'
-                    type="text"
-                    className='input'
-
-                    InputLabelProps={{ shrink: true }}
-
-                  // onChange={handleFileChange}
-                  />
-                </div>
-              </div>
-
-              <div className='divTituloCampo'>
-                <label className='titulocampo'>E-mail</label>
-                <p>*</p>
-              </div>
-              <TextField
-                sx={{ marginTop: '-10px' }}
-                placeholder='fulano2021@gmail.com'
-                type="text"
-                id='inputEmail'
-
-                InputLabelProps={{ shrink: true }}
-
-              // onChange={handleFileChange}
-              />
-
-              <div className='divTituloCampo labelSenha'>
-                <label className='titulocampo'>Senha</label>
-                <p>*</p>
-              </div>
-              <TextField
-                sx={{ marginTop: '-10px' }}
-                placeholder='******'
-                type="password"
-                id='inputPass'
-
-                InputLabelProps={{ shrink: true }}
-
-              // onChange={handleFileChange}
-              />
-              <div className='idadeQtdAnimais'>
-
-                <div className='IdadeUser'>
-                  <div className='divTituloCampo '>
-                    <label className='titulocampo'>Idade</label>
-                    <p>*</p>
-                  </div>
-                  <TextField
-                    sx={{ marginTop: '-10px' }}
-                    placeholder='Ex 23'
-                    type="text"
-                    id='idadeCampo'
-
-                    InputLabelProps={{ shrink: true }}
-
-                  // onChange={handleFileChange}
-                  />
-                </div>
-                <div className='QtdAnimais'>
-                  <div className='divTituloCampo '>
-                    <label className='titulocampo'>Quantos animais?</label>
-                    <p>*</p>
-                  </div>
-                  <TextField
-                    sx={{ marginTop: '-10px' }}
-                    placeholder='03'
-                    type="text"
-                    id='qtdAnimaisCampo'
+                    className='inputContato'
 
                     InputLabelProps={{ shrink: true }}
 
@@ -189,11 +87,46 @@ const ModalDescricao = () => {
                   />
                 </div>
 
+                <div className='nomeUsuario'>
+                  <div className='divTituloCampo'>
+                    <label className='titulocampo'>Seu nome</label>
+                    <p>*</p>
+                  </div>
+                  <TextField
+                    placeholder='Digite seu nome completo'
+                    type="text"
+                    className='inputContato'
+
+                    InputLabelProps={{ shrink: true }}
+
+                  // onChange={handleFileChange}
+                  />
+                </div>
+
+                <div className='descricaoUsuario'>
+                  <div className='divTituloCampo divDescricao'>
+                    <div className="tituloDescricao">
+                      <label className='titulocampo'>Descrição</label>
+                      <p>*</p>
+                    </div>
+                    <span className="informativo">Conte um pouco sobre você.</span>
+                  </div>
+                  <TextField
+                    sx={{ height: '123px' }}
+                    placeholder='“Olá! Vi o Mali para adoção e estou interessado em adotá-lo"'
+                    type="text"
+                    className='inputContato'
+
+                    InputLabelProps={{ shrink: true }}
+
+                  // onChange={handleFileChange}
+                  />
+                </div>
               </div>
 
 
-              <div className='Botoesmodal'>
-                <p className='botãoCancelarEditar' onClick={handleClose} >Cancelar</p>
+              <div className='btnContatos'>
+                <Button onClick={handleOpen} variant="contained" className="btnEncontrei">ENVIAR</Button>
               </div>
 
             </Typography>
