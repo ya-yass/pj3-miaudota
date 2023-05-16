@@ -15,18 +15,23 @@ import {
 const CardPetResgate = () => {
 	const responsive = { //para editar a responsividade do carousel
 		desktop: {
-			breakpoint: { max: 2500, min: 1700 },
-			items: 6,
-			slidesToSlide: 2
+			breakpoint: { max: 2500, min: 1501 },
+			items: 5,
+			slidesToSlide: 3
 		},
 		tablet: {
-			breakpoint: { max: 1699, min: 1450 },
-			items: 5,
-			slidesToSlide: 2
+			breakpoint: { max: 1500, min: 1101 },
+			items: 4,
+			slidesToSlide: 3
+		},
+		tablet2: {
+			breakpoint: { max: 1100, min: 801 },
+			items: 3,
+			slidesToSlide: 3
 		},
 		mobile: {
-			breakpoint: { max: 1449, min: 0 },
-			items: 4,
+			breakpoint: { max: 800, min: 0 },
+			items: 2,
 			slidesToSlide: 2
 		}
 	};
