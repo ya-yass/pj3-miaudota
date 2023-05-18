@@ -196,7 +196,7 @@ button.btnEncontrei:hover {
 .divTituloCampo,
 #modal-modal-description,
 #modal-modal-description .input {
-  margin: 0 !important;
+  margin: 15px 0 0 0 !important;
 }
 
 .btnContatos {
@@ -204,4 +204,13 @@ button.btnEncontrei:hover {
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
+}
+
+.divVacinas {
+  display: flex;
+}
+
+.camposVacinas {
+  display: flex;
+  flex-direction: column;
 }

@@ -15,7 +15,7 @@ const Content = () => {
       <CarouselSlide />
       <CardPet />
       <Entenda />
-      <CardPetResgate/>
+      <CardPetResgate />
     </Box>
   )
 }

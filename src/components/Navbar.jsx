@@ -21,53 +21,53 @@ const settings = ['Entre', 'Cadastre-se'];
 
 const Navbar = () => {
 
-	//abrir e fechar o modal
-	const [open, setOpen] = React.useState(false);
-	const handleOpen = () => setOpen(true);
-	const handleClose = () => setOpen(false);
+  //abrir e fechar o modal
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-	// const handleOpenLogin = () => setOpen(true);
-	// const handleCloseLogin = () => setOpen(false);
-
-
-	const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-	const handleOpenUserMenu = (event) => {
-		setAnchorElUser(event.currentTarget);
-	};
-
-	const handleCloseUserMenu = () => {
-		setAnchorElUser(null);
-	};
+  // const handleOpenLogin = () => setOpen(true);
+  // const handleCloseLogin = () => setOpen(false);
 
 
-	return (
-		<Box component='nav'>
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-			<div className="sec1">
-				<Link to="/">
-					<img src={logo} id='logo1' alt='logo do MiauDota' />
-				</Link>
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
-				<div className="links">
-					<Link to="/" className='pgInicial link' >Página inicial</Link>
-					{/* <a href='*' className='encontrePet'>Encontre seu pet</a> */}
-					<Link to="/resgatados" className='resgatados link'>Resgatados</Link>
-					<Link to="/adocao" className='adocao link'>Adoção</Link>
-					<Link to="/cadastrar-pet" className='cadastroPet link'>Cadastrar um pet</Link>
-				</div>
-			</div>
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
-			<div id="botoes">
-				<button style={styles.Button} onClick={handleOpenLogin} >Login</button>
-					{/* <button className='botao' id='cadastrarPet'>Cadastrar um pet</button> */}
-				<button style={styles.Button} onClick={handleOpen} >Cadastrar-se</button>
-					{/* <button className='botao' id='adotar'>Quero adotar</button> */}
-			
-				{/* Modal Cadastrar-se */}
-			</div>
 
-				<Modal
+  return (
+    <Box component='nav'>
+
+      <div className="sec1">
+        <Link to="/">
+          <img src={logo} id='logo1' alt='logo do MiauDota' />
+        </Link>
+
+        <div className="links">
+          <Link to="/" className='pgInicial link' >Página inicial</Link>
+          {/* <a href='*' className='encontrePet'>Encontre seu pet</a> */}
+          <Link to="/resgatados" className='resgatados link'>Resgatados</Link>
+          <Link to="/adocao" className='adocao link'>Adoção</Link>
+          <Link to="/cadastrar-pet" className='cadastroPet link'>Cadastrar um pet</Link>
+        </div>
+      </div>
+
+      <div id="botoes">
+        {/* <button style={styles.Button} onClick={handleOpenLogin} >Login</button> */}
+        {/* <button className='botao' id='cadastrarPet'>Cadastrar um pet</button> */}
+        <button style={styles.Button} onClick={handleOpen} >Cadastrar-se</button>
+        {/* <button className='botao' id='adotar'>Quero adotar</button> */}
+
+        {/* Modal Cadastrar-se */}
+      </div>
+
+      <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -83,20 +83,20 @@ const Navbar = () => {
             </div>
           </Typography>
 
-          
-					<div className='divTituloCampo tituloCampoNome'>
-              <label className='titulocampoNome'>Nome</label>
-              <p>*</p>
-            </div>
-            <TextField
-              sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
-              placeholder='Digite seu nome'
-              type="text"
-              className='input'
-              InputLabelProps={{ shrink: true }}
 
-            // onChange={handleFileChange}
-            />
+          <div className='divTituloCampo tituloCampoNome'>
+            <label className='titulocampoNome'>Nome</label>
+            <p>*</p>
+          </div>
+          <TextField
+            sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
+            placeholder='Digite seu nome'
+            type="text"
+            className='input'
+            InputLabelProps={{ shrink: true }}
+
+          // onChange={handleFileChange}
+          />
 
           <Typography id="modal-modal-description" component="div"
             sx={{
@@ -160,46 +160,46 @@ const Navbar = () => {
           </Typography>
         </Box>
 
-				
 
 
-			{/* Modal Avatar */}
+
+        {/* Modal Avatar */}
       </Modal>
-				<Box sx={{ flexGrow: 0 }}>
-					<Tooltip title="Open settings">
-						<IconButton onClick={handleOpenUserMenu}
-							className='avatar'
-							sx={{
-								p: 0,
-							}}>
-							<Avatar src="/broken-image.jpg" />
-						</IconButton>
-					</Tooltip>
-					<Menu
-						sx={{ mt: '45px' }}
-						id="menu-appbar"
-						anchorEl={anchorElUser}
-						anchorOrigin={{
-							vertical: 'top',
-							horizontal: 'right',
-						}}
-						keepMounted
-						transformOrigin={{
-							vertical: 'top',
-							horizontal: 'right',
-						}}
-						open={Boolean(anchorElUser)}
-						onClose={handleCloseUserMenu}
-					>
-						{settings.map((setting) => (
-							<MenuItem key={setting} onClick={handleCloseUserMenu}>
-								<Typography textAlign="center">{setting}</Typography>
-							</MenuItem>
-						))}
-					</Menu>
-				</Box>
-		</Box >
-	);
+      <Box sx={{ flexGrow: 0 }}>
+        <Tooltip title="Open settings">
+          <IconButton onClick={handleOpenUserMenu}
+            className='avatar'
+            sx={{
+              p: 0,
+            }}>
+            <Avatar src="/broken-image.jpg" />
+          </IconButton>
+        </Tooltip>
+        <Menu
+          sx={{ mt: '45px' }}
+          id="menu-appbar"
+          anchorEl={anchorElUser}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          keepMounted
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          open={Boolean(anchorElUser)}
+          onClose={handleCloseUserMenu}
+        >
+          {settings.map((setting) => (
+            <MenuItem key={setting} onClick={handleCloseUserMenu}>
+              <Typography textAlign="center">{setting}</Typography>
+            </MenuItem>
+          ))}
+        </Menu>
+      </Box>
+    </Box >
+  );
 }
 const styles = {
 
