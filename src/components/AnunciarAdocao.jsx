@@ -108,7 +108,9 @@ const AnunciaraAdocao = () => {
                   type="text"
                   className='inputAdocao'
                   InputLabelProps={{ shrink: true }}
-
+                  sx={{
+                    marginRight: '10px',
+                  }}
                 // onChange={handleFileChange}
                 />
               </div>
@@ -119,13 +121,11 @@ const AnunciaraAdocao = () => {
                   <p>*</p>
                 </div>
                 <TextField
-                  sx={{ width: '157px', }}
+                  sx={{ width: '157px', marginRight: '10px', }}
                   placeholder='Ex: 4 meses'
                   type="text"
                   className='inputAdocao'
-
                   InputLabelProps={{ shrink: true }}
-
                 // onChange={handleFileChange}
                 />
               </div>
@@ -148,36 +148,45 @@ const AnunciaraAdocao = () => {
 
             </div>
 
-            <div className='divTituloCampo'>
-              <label className='titulocampo'>Sobre o pet</label>
-              <p>*</p>
+            <div className='sobrePet'>
+              <div className="divTituloCampo">
+                <label className='titulocampo'>Sobre o pet</label>
+                <p>*</p>
+              </div>
+              <TextField
+                sx={{ width: '100%', height: '200px' }}
+                placeholder='Ex: O pet é calmo, não tem costume em ficar sozinho em casa, fica assustado com uma grande quantidade de pessoas dentro de casa...'
+                type="text"
+                className='inputAdocao'
+
+                InputLabelProps={{ shrink: true }}
+
+              // onChange={handleFileChange}
+              />
             </div>
-            <TextField
-              sx={{ marginTop: '-10px' }}
-              placeholder='Ex: O pet é calmo, não tem costume em ficar sozinho em casa, fica assustado com uma grande quantidade de pessoas dentro de casa...'
-              type="text"
-              className='inputAdocao'
-
-              InputLabelProps={{ shrink: true }}
-
-            // onChange={handleFileChange}
-            />
-
-            <FormGroup>
+            <FormGroup className='vacinasPet'>
               <div className='divTituloCampo'>
                 <label className='titulocampo'>Vacinas</label>
                 <p>*</p>
               </div>
-              <FormControlLabel control={<Checkbox />} label="V3" className='labelV3' />
-              <FormControlLabel control={<Checkbox />} label="V4" className='labelV4' />
-              <FormControlLabel control={<Checkbox />} label="V5" className='labelV5' />
-              <FormControlLabel control={<Checkbox />} label="V8" className='labelV8' />
-              <FormControlLabel control={<Checkbox />} label="V10" className='labelV10' />
-              <FormControlLabel control={<Checkbox />} label="Raiva" className='labelRaiva' />
-              <FormControlLabel control={<Checkbox />} label="Giárdia" className='labelGiardia' />
-              <FormControlLabel control={<Checkbox />} label="Gripe canina" className='labelGripeCanina' />
-              <FormControlLabel control={<Checkbox />} label="Não vacinado" className='labelNaoVacinado' />
-              <FormControlLabel control={<Checkbox />} label="Outro" className='labelOutro' />
+              <div className="divVacinas">
+                <div className="camposVacinas">
+                  <FormControlLabel control={<Checkbox />} label="V3" className='labelV3' />
+                  <FormControlLabel control={<Checkbox />} label="V4" className='labelV4' />
+                  <FormControlLabel control={<Checkbox />} label="V5" className='labelV5' />
+                  <FormControlLabel control={<Checkbox />} label="V8" className='labelV8' />
+                  <FormControlLabel control={<Checkbox />} label="V10" className='labelV10' />
+                </div>
+
+                <div className="camposVacinas">
+                  <FormControlLabel control={<Checkbox />} label="Raiva" className='labelRaiva' />
+                  <FormControlLabel control={<Checkbox />} label="Giárdia" className='labelGiardia' />
+                  <FormControlLabel control={<Checkbox />} label="Gripe canina" className='labelGripeCanina' />
+                  <FormControlLabel control={<Checkbox />} label="Não vacinado" className='labelNaoVacinado' />
+                  <FormControlLabel control={<Checkbox />} label="Outro" className='labelOutro' />
+                </div>
+              </div>
+
             </FormGroup>
 
             <FormControl >

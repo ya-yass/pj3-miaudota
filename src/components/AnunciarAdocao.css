@@ -65,3 +65,8 @@
   border-radius: 10px !important;
   margin-left: 0px;
 }
+
+.input:checked {
+  border: none;
+  outline: 2px solid deeppink;
+}
