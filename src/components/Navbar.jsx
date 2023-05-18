@@ -14,20 +14,53 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom'
 import { BsXLg as Cancel } from 'react-icons/bs'
+import { useState } from 'react'
 
 
 const settings = ['Entre', 'Cadastre-se'];
 
 
 const Navbar = () => {
-
+  const login = useAuthStore((state) => state.login)
 	//abrir e fechar o modal
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 
-	// const handleOpenLogin = () => setOpen(true);
-	// const handleCloseLogin = () => setOpen(false);
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const handleSubmit = async (event) => {
+        event.preventDefault() 
+
+        const email = event.target.email.value
+        const pass = event.target.pass.value
+        const user = {email, pass}
+        try {
+          const response = await fetch('http://localhost:3100/auth/login',
+          {
+            method: 'POST',
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user), 
+          })
+          const data = await response.json()
+          
+          console.log(data)
+          if(response.status === 200) {
+            //logar
+            login(data.token, data.user)
+            localStorage.setItem('token', data.token)
+            localStorage.setItem('user', JSON.stringify(data.user))
+            setModalOpen(false)
+          } else{
+            alert(data.message)
+          }
+          
+        } catch (error) {
+          console.log(error)
+        }
+      }
 
 
 	const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -59,7 +92,7 @@ const Navbar = () => {
 			</div>
 
 			<div id="botoes">
-				<button style={styles.Button} onClick={handleOpenLogin} >Login</button>
+				<button style={styles.Button} onClick={handleSubmit} >Login</button>
 					{/* <button className='botao' id='cadastrarPet'>Cadastrar um pet</button> */}
 				<button style={styles.Button} onClick={handleOpen} >Cadastrar-se</button>
 					{/* <button className='botao' id='adotar'>Quero adotar</button> */}
@@ -160,7 +193,40 @@ const Navbar = () => {
           </Typography>
         </Box>
 
-				
+        {modalOpen && 
+              <Box className="bgModal" onClick={(event) => {
+                if(event.target.className.includes('bgModal')) {
+                  setModalOpen(false)
+                }
+              }} sx={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: '#000000A0',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                zIndex: 9
+                }}>
+                  <Box sx={{
+                    width: '500px',
+                    height: '300px',
+                    background: '#FFF',
+                    borderRadius: '10px',
+                    padding: '20px',
+                  }}>
+                    <h1>Logar</h1>
+                    <form onSubmit={handleSubmit}>
+                      <input type="text" name="email" placeholder="Email" /><br />
+                      <input type="password" name="pass" placeholder="Senha" /><br />
+                      <br />
+                      <button type="submit">Logar</button>
+                    </form>
+                  </Box> 
+              </Box>
+            }
 
 
 			{/* Modal Avatar */}
