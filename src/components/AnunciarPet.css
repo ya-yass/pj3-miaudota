@@ -19,24 +19,27 @@
   border-radius: 20px;
 
 }
-.imagemPetEncontrado{
+
+.imagemPetEncontrado {
   width: 305px;
 }
-.mask{
-   position: absolute;
-    background-color: #00000036;
-    height: 450px;
-    width: 305px;
-    padding: 0;
-    border-radius: 20px;
+
+.mask {
+  position: absolute;
+  background-color: #00000036;
+  height: 450px;
+  width: 305px;
+  padding: 0;
+  border-radius: 20px;
 
 }
-.mask:hover{
+
+.mask:hover {
   background-color: #00000000;
 
 }
 
-.btnAdocao p{
+.btnAdocao p {
   width: 305px;
   color: #FFF;
   font-weight: 600;
@@ -47,7 +50,7 @@
 
 }
 
-.btnEncontrei p{
+.btnEncontrei p {
   width: 305px;
   color: #fff;
   font-weight: 600;
@@ -55,6 +58,4 @@
   font-size: 35px;
   margin-top: 15px;
   text-transform: uppercase;
-
-
 }

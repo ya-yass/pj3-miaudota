@@ -164,6 +164,7 @@ const AnunciaraAdocao = () => {
               // onChange={handleFileChange}
               />
             </div>
+
             <FormGroup className='vacinasPet'>
               <div className='divTituloCampo'>
                 <label className='titulocampo'>Vacinas</label>
@@ -201,7 +202,7 @@ const AnunciaraAdocao = () => {
                   <p>*</p>
                 </div>
 
-                <div>
+                <div className='radioSelect'>
                   <FormControlLabel value="femea" control={<Radio />} label="Fêmea" className='labelFemea' />
                   <FormControlLabel value="macho" control={<Radio />} label="Macho" className='labelMacho' />
                 </div>
@@ -220,7 +221,7 @@ const AnunciaraAdocao = () => {
                   <p>*</p>
                 </div>
 
-                <div>
+                <div className='radioSelect'>
                   <FormControlLabel value="sim" control={<Radio />} label="Sim" className='labelNao' />
                   <FormControlLabel value="nao" control={<Radio />} label="Não" className='labelSim' />
                 </div>

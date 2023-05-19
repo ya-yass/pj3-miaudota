@@ -78,12 +78,11 @@
 }
 
 /*Campo nome*/
-.tituloCampoNome p {
+.camposTextos p {
   color: #f6823f;
   font-size: small;
-  margin: 0px;
   margin-left: 2px;
-
+  margin-top: 7px;
 }
 
 .titulocampoNome {
@@ -94,4 +93,34 @@
 
 .input {
   width: 290px !important;
+}
+
+.inputResgate {
+  border: 1px solid rgb(228, 224, 224) !important;
+  border-radius: 10px !important;
+  margin-left: 0px;
+}
+
+.css-6ffsbr-MuiAutocomplete-root .MuiOutlinedInput-root {
+  padding: 6px 0px 6px 6px !important;
+}
+
+#btnAnunciarResgate {
+  font-weight: bold;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  background-color: #F6823F !important;
+  width: 150px;
+  border-radius: 30px;
+  font-weight: bolder;
+  margin-top: 20px;
+  margin: auto;
+  left: 36%;
+}
+
+#btnAnunciarResgate:hover {
+  color: white;
+  background-color: #f07a35 !important;
 }

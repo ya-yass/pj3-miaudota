@@ -98,7 +98,7 @@ button.btnEncontrei {
 }
 
 button.btnEncontrei:hover {
-  background-color: #e9671b;
+  background-color: #f07a35 !important;
   color: #FFF;
   font-weight: bold;
   width: 195px;

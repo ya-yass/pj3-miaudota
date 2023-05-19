@@ -209,12 +209,12 @@ span h4 {
   font-weight: bolder;
   margin-top: 20px;
   margin: auto;
-
+  left: 36%;
 }
 
 #botaoEnviar:hover {
   color: white;
-  background-color: #d47239 !important;
+  background-color: #f07a35 !important;
 }
 
 /*Apenas botão cancelar*/

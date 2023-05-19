@@ -70,3 +70,7 @@
   border: none;
   outline: 2px solid deeppink;
 }
+
+.radioSelect {
+  margin-top: -10px !important;
+}
