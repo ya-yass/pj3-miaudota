@@ -43,16 +43,38 @@ nav {
 }
 
 #cadastrarPet,
-#login {
+.btnLogin {
   background-color: #ffffff67;
   border: 1px solid #FFF;
   font-weight: 400;
   color: #FFF;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: 0.2s;
+}
+
+#cadastrarPet:hover,
+.btnLogin:hover {
+  background-color: #ffffff85;
+  color: #FFF;
 }
 
 #adotar,
-#cadastrarSe {
+.btnCadastrarSe {
   background-color: #F6823F;
   color: #fff;
   border: none;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+#adotar:hover,
+.btnCadastrarSe:hover {
+  background-color: #f07a35 !important;
+  color: #FFF;
 }

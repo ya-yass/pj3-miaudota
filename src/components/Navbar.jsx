@@ -20,10 +20,17 @@ const settings = ['Entre', 'Cadastre-se'];
 
 
 const Navbar = () => {
-  //abrir e fechar o modal
+
+  //abrir e fechar o modal de login
+  const [openLogin, setOpenLogin] = React.useState(false);
+  const handleOpenLogin = () => setOpenLogin(true);
+  const handleCloseLogin = () => setOpenLogin(false);
+
+
+  //abrir e fechar o modal de cadastro
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpenSignUp = () => setOpen(true);
+  const handleCloseSignUp = () => setOpen(false);
 
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -54,21 +61,21 @@ const Navbar = () => {
       </div>
 
       <div id="botoes">
-        <button style={styles.Button} >Login</button>
+        <button className='btnLogin' onClick={handleOpenLogin}>Login</button>
         {/* <button className='botao' id='cadastrarPet'>Cadastrar um pet</button> */}
-        <button style={styles.Button} onClick={handleOpen} >Cadastrar-se</button>
+        <button className='btnCadastrarSe' onClick={handleOpenSignUp} >Cadastrar-se</button>
         {/* <button className='botao' id='adotar'>Quero adotar</button> */}
 
         {/* Modal Cadastrar-se */}
 
         <Modal
           open={open}
-          onClose={handleClose}
+          onClose={handleCloseSignUp}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description">
 
           <Box sx={styles.Modal}>
-            <Cancel className='botaoCancelModal' onClick={handleClose} />
+            <Cancel className='botaoCancelModal' onClick={handleCloseSignUp} />
             <Typography id="modal-modal-title" component="div">
               <img src={logo} className='logoModal' alt='Logo do Modal'></img>
               <div>
@@ -148,7 +155,76 @@ const Navbar = () => {
 
               <div className='Botoesmodal'>
                 <ButtonEnviar variant="contained" id='botaoEnviar' >Cadastrar</ButtonEnviar>
-                <p className='botãoCancelarEditar' onClick={handleClose} >Cancelar</p>
+                <p className='botãoCancelarEditar' onClick={handleCloseSignUp} >Cancelar</p>
+              </div>
+
+            </Typography>
+          </Box>
+
+          {/* Modal Avatar */}
+        </Modal>
+
+        <Modal
+          open={openLogin}
+          onClose={handleCloseLogin}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description">
+
+          <Box sx={styles.Modal}>
+            <Cancel className='botaoCancelModal' onClick={handleCloseLogin} />
+            <Typography id="modal-modal-title" component="div">
+              <img src={logo} className='logoModal' alt='MiauDota'></img>
+            </Typography>
+            <div>
+              <h3 className='tituloModal'>Login</h3>
+              <span>Não tem uma conta? Cadastre-se</span>
+            </div>
+            <hr />
+
+            <Typography id="modal-modal-description" component="div"
+              sx={{
+                mt: 2,
+                '& fieldset': {
+                  display: 'none',
+                },
+                '& legend': {
+                  display: 'none',
+                }
+              }}>
+
+              <div className="loginEmailUser">
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>E-mail ou usuário</label>
+                </div>
+                <TextField
+                  placeholder='Digite seu e-mail ou usuário'
+                  type="text"
+                  className='inputLogin'
+                  InputLabelProps={{ shrink: true }}
+                  sx={{
+                    width: '100%',
+                  }}
+                />
+              </div>
+
+              <div className="loginSenha">
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Senha</label>
+                </div>
+                <TextField
+                  placeholder='Digite sua senha'
+                  type="text"
+                  className='inputLogin'
+                  InputLabelProps={{ shrink: true }}
+                  sx={{
+                    width: '100%',
+                  }}
+                />
+              </div>
+
+              <div className='BotoesModal'>
+                <button className='btnLogar' variant="contained" >Login</button>
+                <p className='btnCancelarLogin' onClick={handleCloseLogin} >Cancelar</p>
               </div>
 
             </Typography>
