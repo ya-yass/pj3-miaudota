@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 //formulário
 import TextField from '@mui/material/TextField';
-import ButtonEnviar from '@mui/material/Button';
+// import ButtonEnviar from '@mui/material/Button';
 
 //componentes e files
 import CardPetPerfil from '../components/Card-pet-perfil'
@@ -60,9 +60,11 @@ const PerfilUsuario = () => {
         <Box sx={styles.Modal} className='selecionaTudo'>
           <Cancel className='botaoCancelModal' onClick={handleClose} />
           <Typography id="modal-modal-title">
-            <img src={logo} className='logoModal' alt='Logo do Modal'></img>
+            <img src={logo} className='logoModal' alt='MiauDota'></img>
           </Typography>
-          <span><h4>Editar Perfil</h4></span>
+          <div>
+            <h3 className='tituloModal'>Editar Perfil</h3>
+          </div>
           <hr />
 
           <Typography id="modal-modal-description"
@@ -76,94 +78,98 @@ const PerfilUsuario = () => {
               }
             }}>
 
-            <div className='BotõesImgs'>
+            <div className='BtnImagens'>
               <div className=' botãoFotoPerfil'>
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Foto de Perfil</label>
-                  <p>*</p>
                 </div>
                 <label className='tituloFile'>Adicionar foto</label>
                 <input type="file" />
               </div>
+
               <div className='botãoCapaPerfil'>
                 <div className='divTituloCampo'>
-                  <label className='titulocampo'>Foto de Perfil</label>
-                  <p>*</p>
+                  <label className='titulocampo'>Foto de capa</label>
                 </div>
                 <label className='tituloFile'>Adicionar foto</label>
                 <input type="file" />
               </div>
             </div>
 
-
-            <div className='nomePerfilUsuario'>
-              <div className='nome'>
+            <div className='editarNomeUser'>
+              <div className="nomeUsuarioEditar">
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Nome</label>
-                  <p>*</p>
                 </div>
                 <TextField
-                  sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
-                  placeholder='Nome Sobrenome'
+                  placeholder='Nome e sobrenome'
                   type="text"
-                  className='input'
+                  className='inputEditarPerfil'
                   InputLabelProps={{ shrink: true }}
+                  sx={{
+                    marginRight: '10px',
+                  }}
                 // onChange={handleFileChange}
                 />
               </div>
-              <div className='usuario'>
+
+              <div className="userUsuario">
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Usuário</label>
-                  <p>*</p>
                 </div>
                 <TextField
-                  sx={{ marginTop: '15px' }}
                   placeholder='@user123'
                   type="text"
-                  className='input'
-
+                  className='inputEditarPerfil'
                   InputLabelProps={{ shrink: true }}
-
+                  sx={{
+                    marginRight: '10px',
+                    width: '100%',
+                  }}
                 // onChange={handleFileChange}
                 />
               </div>
+
             </div>
 
-            <div className='divTituloCampo'>
-              <label className='titulocampo'>E-mail</label>
-              <p>*</p>
+            <div className="editarEmailUsuario">
+              <div className='divTituloCampo'>
+                <label className='titulocampo'>E-mail</label>
+              </div>
+              <TextField
+                placeholder='email@domain.com'
+                type="text"
+                className='inputEditarPerfil'
+                InputLabelProps={{ shrink: true }}
+                sx={{
+                  width: '100%',
+                }}
+              // onChange={handleFileChange}
+              />
             </div>
-            <TextField
-              sx={{ marginTop: '-10px' }}
-              placeholder='fulano2021@gmail.com'
-              type="text"
-              id='inputEmail'
 
-              InputLabelProps={{ shrink: true }}
-
-            // onChange={handleFileChange}
-            />
-
-            <div className='divTituloCampo labelSenha'>
-              <label className='titulocampo'>Senha</label>
-              <p>*</p>
+            <div className="editarSenhaUsuario">
+              <div className='divTituloCampo'>
+                <label className='titulocampo'>Senha</label>
+              </div>
+              <TextField
+                placeholder='******'
+                type="password"
+                className='inputEditarPerfil'
+                InputLabelProps={{ shrink: true }}
+                sx={{
+                  width: '100%',
+                }}
+              // onChange={handleFileChange}
+              />
             </div>
-            <TextField
-              sx={{ marginTop: '-10px' }}
-              placeholder='******'
-              type="password"
-              id='inputPass'
 
-              InputLabelProps={{ shrink: true }}
 
-            // onChange={handleFileChange}
-            />
-            <div className='idadeQtdAnimais'>
+            <div className='editarIdadeEAnimais'>
 
-              <div className='IdadeUser'>
+              <div className='IdadeUsuario'>
                 <div className='divTituloCampo '>
                   <label className='titulocampo'>Idade</label>
-                  <p>*</p>
                 </div>
                 <TextField
                   sx={{ marginTop: '-10px' }}
@@ -175,11 +181,10 @@ const PerfilUsuario = () => {
 
                 // onChange={handleFileChange}
                 />
-               </div>
-            <div className='QtdAnimais'>
+              </div>
+              <div className='QtdAnimais'>
                 <div className='divTituloCampo '>
                   <label className='titulocampo'>Quantos animais?</label>
-                  <p>*</p>
                 </div>
                 <TextField
                   sx={{ marginTop: '-10px' }}
@@ -191,13 +196,15 @@ const PerfilUsuario = () => {
 
                 // onChange={handleFileChange}
                 />
-            </div>
+              </div>
 
             </div>
 
 
-            <div className='Botoesmodal'>
-              <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar>
+            <div className='BotoesModal'>
+              <button className='btnCadastrarAdocao' variant="contained" >Cadastrar</button>
+
+              {/* <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar> */}
               <p className='botãoCancelarEditar' onClick={handleClose} >Cancelar</p>
             </div>
 
@@ -227,8 +234,6 @@ const styles = {
     borderRadius: '20px',
     fontSize: '15px',
     border: 'none'
-
-
   },
 
   Modal: {
@@ -243,9 +248,7 @@ const styles = {
     boxShadow: 24,
     p: 4,
     borderRadius: '20px',
-  }
-
-
+  },
 }
 
 export default PerfilUsuario

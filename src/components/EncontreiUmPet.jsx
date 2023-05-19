@@ -5,7 +5,7 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 //formulário
 import TextField from '@mui/material/TextField';
-import ButtonEnviar from '@mui/material/Button';
+// import ButtonEnviar from '@mui/material/Button';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -55,11 +55,12 @@ const EncontreiUmPet = () => {
 
         <Box sx={styles.Modal}>
           <Cancel className='botaoCancelModal' onClick={handleClose} />
+
           <Typography id="modal-modal-title" component="div">
-            <img src={logo} className='logoModal' alt='Logo do Modal'></img>
+            <img src={logo} className='logoModal' alt='MiauDota'></img>
             <div>
               <h3 className='tituloModal'>Encontrei um pet</h3>
-              <p>Anuncie um pet que você encontrou perdido na rua para que ele volte ao lar. </p>
+              <span className='informativo'>Nos ajude, tente ser específico nos campos do formulário para facilitar a adoção do pet.</span>
             </div>
           </Typography>
 
@@ -100,7 +101,7 @@ const EncontreiUmPet = () => {
               <div className="nomePet">
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Nome</label>
-                  <p>(Opcional)</p>
+                  <p className='opcional'>(Opcional)</p>
 
                 </div>
                 <TextField
@@ -118,7 +119,7 @@ const EncontreiUmPet = () => {
               <div className="idadePet">
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Idade</label>
-                  <p>(Opcional)</p>
+                  <p className='opcional'>(Opcional)</p>
 
                 </div>
                 <TextField
@@ -136,7 +137,7 @@ const EncontreiUmPet = () => {
               <div className="RacaPet">
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Raça</label>
-                  <p>(Opcional)</p>
+                  <p className='opcional'>(Opcional)</p>
 
                 </div>
                 <TextField
@@ -224,17 +225,19 @@ const EncontreiUmPet = () => {
               />
             </div>
 
-            <div className='divTituloCampo'>
-              <label className='titulocampo'>Foto do Pet</label>
-              <p>*</p>
+            <div className='BtnImagens'>
+              <div className=' btnFotoResgate'>
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Foto de Perfil</label>
+                </div>
+                <label className='tituloFile'>Adicionar foto</label>
+                <input type="file" />
+              </div>
             </div>
 
-            <label className='tituloFile'>Adicionar foto</label>
-            <input type="file" />
-
-
-
-            <ButtonEnviar variant="contained" id='btnAnunciarResgate' >Anunciar</ButtonEnviar>
+            <div className="divBtnCadastrarAdocao">
+              <button className='btnAnunciarResgate' variant="contained" >Anunciar</button>
+            </div>
 
           </Typography>
         </Box>

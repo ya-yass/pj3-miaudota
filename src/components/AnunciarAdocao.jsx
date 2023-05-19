@@ -5,7 +5,7 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 //formulario
 import TextField from '@mui/material/TextField';
-import ButtonEnviar from '@mui/material/Button';
+// import ButtonEnviar from '@mui/material/Button';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -17,6 +17,7 @@ import AdocaoFoto from './assets/img/card-pet-adotar.png'
 import logo from './assets/img/miaudota-logo.png'
 // import './EncontreiUmPet.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
+
 
 
 
@@ -56,7 +57,7 @@ const AnunciaraAdocao = () => {
         <Box sx={styles.Modal}>
           <Cancel className='botaoCancelModal' onClick={handleClose} />
           <Typography id="modal-modal-title" component="div">
-            <img src={logo} className='logoModal' alt='Logo do Modal'></img>
+            <img src={logo} className='logoModal' alt='MiauDota'></img>
             <div>
               <h3 className='tituloModal'>COLOQUE PARA ADOÇÃO</h3>
               <span className='informativo'>Nos ajude, tente ser específico nos campos do formulário para facilitar a adoção do pet.</span>
@@ -174,74 +175,91 @@ const AnunciaraAdocao = () => {
                 <div className="camposVacinas">
                   <FormControlLabel control={<Checkbox />} label="V3" className='labelV3' />
                   <FormControlLabel control={<Checkbox />} label="V4" className='labelV4' />
-                  <FormControlLabel control={<Checkbox />} label="V5" className='labelV5' />
-                  <FormControlLabel control={<Checkbox />} label="V8" className='labelV8' />
-                  <FormControlLabel control={<Checkbox />} label="V10" className='labelV10' />
                 </div>
 
                 <div className="camposVacinas">
+                  <FormControlLabel control={<Checkbox />} label="V10" className='labelV10' />
+                  <FormControlLabel control={<Checkbox />} label="V5" className='labelV5' />
+
+                </div>
+                <div className="camposVacinas">
+                  <FormControlLabel control={<Checkbox />} label="V8" className='labelV8' />
                   <FormControlLabel control={<Checkbox />} label="Raiva" className='labelRaiva' />
+                </div>
+
+                <div className="camposVacinas">
                   <FormControlLabel control={<Checkbox />} label="Giárdia" className='labelGiardia' />
                   <FormControlLabel control={<Checkbox />} label="Gripe canina" className='labelGripeCanina' />
+                </div>
+
+                <div className="camposVacinas">
                   <FormControlLabel control={<Checkbox />} label="Não vacinado" className='labelNaoVacinado' />
                   <FormControlLabel control={<Checkbox />} label="Outro" className='labelOutro' />
                 </div>
               </div>
-
             </FormGroup>
 
-            <FormControl >
-              <RadioGroup
-                aria-labelledby="demo-controlled-radio-buttons-group"
-                name="sexoAnimal"
-                value={sexo}
-                onChange={handleChange}
-              >
-                <div className='divTituloCampo'>
-                  <label className='titulocampo'>Sexo</label>
-                  <p>*</p>
-                </div>
+            <div>
+              <FormControl sx={{ marginRight: '43px' }}>
+                <RadioGroup
+                  aria-labelledby="demo-controlled-radio-buttons-group"
+                  name="sexoAnimal"
+                  value={sexo}
+                  onChange={handleChange}
+                >
+                  <div className='divTituloCampo'>
+                    <label className='titulocampo'>Sexo</label>
+                    <p>*</p>
+                  </div>
 
-                <div className='radioSelect'>
-                  <FormControlLabel value="femea" control={<Radio />} label="Fêmea" className='labelFemea' />
-                  <FormControlLabel value="macho" control={<Radio />} label="Macho" className='labelMacho' />
-                </div>
-              </RadioGroup>
-            </FormControl>
+                  <div className='radioSelect'>
+                    <FormControlLabel value="femea" control={<Radio />} label="Fêmea" className='labelFemea' />
+                    <FormControlLabel value="macho" control={<Radio />} label="Macho" className='labelMacho' />
+                  </div>
+                </RadioGroup>
+              </FormControl>
 
-            <FormControl >
-              <RadioGroup
-                aria-labelledby="demo-controlled-radio-buttons-group"
-                name="controlled-radio-buttons-group"
-                value={castrado}
-                onChange={handleChange}
-              >
-                <div className='divTituloCampo'>
-                  <label className='titulocampo'>Castrado</label>
-                  <p>*</p>
-                </div>
+              <FormControl >
+                <RadioGroup
+                  aria-labelledby="demo-controlled-radio-buttons-group"
+                  name="controlled-radio-buttons-group"
+                  value={castrado}
+                  onChange={handleChange}
+                >
+                  <div className='divTituloCampo'>
+                    <label className='titulocampo'>Castrado</label>
+                    <p>*</p>
+                  </div>
 
-                <div className='radioSelect'>
-                  <FormControlLabel value="sim" control={<Radio />} label="Sim" className='labelNao' />
-                  <FormControlLabel value="nao" control={<Radio />} label="Não" className='labelSim' />
-                </div>
-              </RadioGroup>
-            </FormControl>
-
-            <div className='divTituloCampo'>
-              <label className='titulocampo'>Foto do Pet</label>
-              <p>*</p>
+                  <div className='radioSelect'>
+                    <FormControlLabel value="sim" control={<Radio />} label="Sim" className='labelNao' />
+                    <FormControlLabel value="nao" control={<Radio />} label="Não" className='labelSim' />
+                  </div>
+                </RadioGroup>
+              </FormControl>
             </div>
 
-            <label className='tituloFile'>Adicionar foto</label>
-            <input type="file" />
+            <div className='BtnImagens'>
+              <div className=' btnFotoAdocao'>
+                <div className='divTituloCampo'>
+                  <label className='titulocampo'>Foto de Perfil</label>
+                </div>
+                <label className='tituloFile'>Adicionar foto</label>
+                <input type="file" />
+              </div>
+            </div>
 
-            <ButtonEnviar variant="contained" id='botaoEnviar' >Cadastrar</ButtonEnviar>
+            <div className="divBtnCadastrarAdocao">
+              <button className='btnCadastrarAdocao' variant="contained" >Cadastrar</button>
+            </div>
 
+
+
+            {/* <ButtonEnviar variant="contained" id='botaoEnviar' >Cadastrar</ButtonEnviar> */}
           </Typography>
         </Box>
-      </Modal>
-    </Box>
+      </Modal >
+    </Box >
   )
 }
 

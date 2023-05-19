@@ -43,10 +43,6 @@
   margin-top: 20px;
 }
 
-.editarENome {
-  display: flex;
-}
-
 .iconPet {
   display: flex;
   align-items: center;
@@ -87,11 +83,7 @@ span h4 {
 
 }
 
-#modal-modal-description {
-  display: flex;
-  flex-direction: column;
-}
-
+#modal-modal-description,
 .css-ix1f03-MuiTypography-root {
   display: flex;
   flex-direction: column;
@@ -150,22 +142,19 @@ span h4 {
 
 /*Label geral*/
 
-.titulocampo {
-  font-size: 13px;
-  margin-bottom: -5px;
-  margin-top: 5px;
-  font-weight: 600;
-}
-
-.divTituloCampo {
+.divTituloCampo,
+.editarIdadeEAnimais,
+.editarENome,
+.BtnImagens {
   display: flex;
-  margin: 0px;
-  margin-bottom: -20px;
-
 }
+
 
 .divTituloCampo p {
-  color: red;
+  margin-bottom: 0;
+  color: #F6823F;
+  margin-left: 5px;
+  /* margin-top: 4px !important; */
 }
 
 /*Idade campos*/
@@ -190,11 +179,6 @@ span h4 {
 }
 
 /*Quantidade de animais e idade juntos*/
-
-.idadeQtdAnimais {
-  display: flex;
-  margin-top: 15px;
-}
 
 /*botão editar*/
 
@@ -225,14 +209,13 @@ span h4 {
 }
 
 /*Botão div cancelar e editar*/
-.Botoesmodal {
+.BotoesModal {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 /*botão de adicionar foto*/
-
 .tituloFile {
   padding: 10px;
   border-radius: 20px;
@@ -249,35 +232,29 @@ span h4 {
 
 input[type="file"] {
   opacity: 0;
-
-  cursor: pointer;
-  z-index: 2;
   margin-top: -35px;
-  margin-left: -140px;
+  width: 119px;
+  cursor: pointer;
+  content: 'Select some files' !important;
+  z-index: 2;
 }
 
-.BotõesImgs {
-  display: flex;
-  margin-bottom: 20px;
-  margin-top: 7px;
-
-}
-
-.botãoFotoPerfil {
-  display: flex;
-  flex-direction: column;
-}
-
+.botãoFotoPerfil,
 .botãoCapaPerfil {
   display: flex;
   flex-direction: column;
-  margin-left: -60px;
-
+  margin-right: 45px;
 }
 
 /*Nome e usuário*/
 
-.nomePerfilUsuario {
+.editarNomeUser {
   display: flex;
   margin-top: 10px;
+}
+
+.inputEditarPerfil {
+  border: 1px solid rgb(228, 224, 224) !important;
+  border-radius: 10px !important;
+  margin-left: 0px;
 }

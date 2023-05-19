@@ -90,7 +90,7 @@
 button.btnEncontrei {
   background-color: #F6823F;
   color: #FFF;
-  font-weight: bold;
+  font-weight: bold !important;
   width: 195px;
   box-shadow: none;
   padding: 10px;
@@ -161,7 +161,8 @@ button.btnEncontrei:hover {
 }
 
 .titulocampo {
-  font-size: 16px;
+  margin-bottom: 7px;
+  font-weight: bold;
 }
 
 .emailUsuario {

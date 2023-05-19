@@ -50,10 +50,6 @@
   margin-top: 10px;
 }
 
-#modal-modal-title p {
-  font-size: 14px;
-
-}
 
 .logoModal {
   width: 200px !important;
@@ -78,12 +74,12 @@
 }
 
 /*Campo nome*/
-.camposTextos p {
+/* .camposTextos p {
   color: #f6823f;
   font-size: small;
   margin-left: 2px;
   margin-top: 7px;
-}
+} */
 
 .titulocampoNome {
   font-weight: bold;
@@ -105,22 +101,28 @@
   padding: 6px 0px 6px 6px !important;
 }
 
-#btnAnunciarResgate {
+.btnAnunciarResgate {
   font-weight: bold;
-  box-shadow: none;
   padding: 10px;
   border-radius: 30px;
   text-transform: uppercase;
   background-color: #F6823F !important;
   width: 150px;
-  border-radius: 30px;
-  font-weight: bolder;
-  margin-top: 20px;
-  margin: auto;
-  left: 36%;
+  /* margin: auto; */
+  position: relative;
+  left: 76%;
+  border: none;
+  color: #fff;
+  transition: 0.2s;
 }
 
-#btnAnunciarResgate:hover {
+.btnAnunciarResgate:hover {
   color: white;
   background-color: #f07a35 !important;
+}
+
+.btnFotoResgate {
+  display: flex;
+  flex-direction: column;
+  margin-right: 45px;
 }
