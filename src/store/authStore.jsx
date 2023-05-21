@@ -3,12 +3,16 @@ import { create } from 'zustand'
 const useAuthStore = create((set) => ({
     isLogged: false,
     token: '',
-    name: '',
+    fotoperfil: '',
+    fotocapa: '',
+    nome: '',
+    usuario: '',
     email: '',
-    avatar: '',
+    idade: '',
+    qtdanimais: '',
     roles: '',
-  login: (token, user) => set({ isLogged: true, token: token, name: user.name, email: user.email, avatar: user.avatar, roles: user.roles }),
-  logout: () => set({ isLogged: false, token: '', name: '', email: '', avatar: '', roles: ''}),
+  login: (token, user) => set({ isLogged: true, token: token, fotoperfil: user.fotoperfil, fotocapa: user.fotocapa, nome: user.nome, usuario: user.usuario, email: user.email, idade: user.idade, qtdanimais: user.qtdanimais, roles: user.roles }),
+  logout: () => set({ isLogged: false, token: '', fotoperfil: '', fotocapa: '', nome: '', usuario: '', email: '', idade: '', qtdanimais: '', roles: ''}),
 }))
 
 export default useAuthStore
