@@ -258,3 +258,7 @@ input[type="file"] {
   border-radius: 10px !important;
   margin-left: 0px;
 }
+
+.btnCadastrarAdocao{
+  left: 0px !important;
+}
