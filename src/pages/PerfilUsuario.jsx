@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import ContentPerfil from '../components/ContentPerfil';
+import ContentPerfilUsuario from '../components/ContentPerfilUsuario';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 
@@ -9,7 +9,7 @@ const PerfilUsuario = () => {
     <>
       <Navbar />
       <Box>
-        <ContentPerfil />
+        <ContentPerfilUsuario />
       </Box>
       <Footer />
     </>
