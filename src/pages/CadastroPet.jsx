@@ -1,14 +1,14 @@
 import Box from "@mui/material/Box"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import AnunciarPet from "../components/AnunciarPet"
+import SecaoAnunciarPet from "../components/SecaoAnunciarPet"
 
 const CadastroPet = () => {
   return (
     <>
       <Box>
         < Navbar />
-        <AnunciarPet />
+        <SecaoAnunciarPet />
         <Footer></Footer>
       </Box>
     </>

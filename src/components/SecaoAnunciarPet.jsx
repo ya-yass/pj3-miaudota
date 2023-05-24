@@ -3,7 +3,7 @@ import AnunciarResgate from './AnunciarResgate'
 import AnunciarAdocao from './AnunciarAdocao'
 import './AnunciarAdocao.css'
 
-const AnunciarPet = () => {
+const SecaoAnunciarPet = () => {
   return (
     <Box sx={{
       display: 'flex',
@@ -19,4 +19,4 @@ const AnunciarPet = () => {
   )
 }
 
-export default AnunciarPet
+export default SecaoAnunciarPet
