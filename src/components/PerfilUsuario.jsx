@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 // import ButtonEnviar from '@mui/material/Button';
 
 //componentes e files
-import CardPetPerfil from '../components/Card-pet-perfil'
+import CardPetPerfil from '../components/CardPetPerfil'
 import './PerfilUsuario.css'
 //imagens e icones
 import logo from './assets/img/miaudota-logo.png'
