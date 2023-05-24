@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Fera from './assets/img/fera.avif';
-import './CardPetResgate.css' //para importar jsx sempre é com letra maíuscula
+import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -12,7 +12,7 @@ import {
 	FaPaw as Raca,
 } from 'react-icons/fa'
 
-const CardPetResgate = () => {
+const CardPetInicialResgate = () => {
 	const responsive = { //para editar a responsividade do carousel
 		desktop: {
 			breakpoint: { max: 2500, min: 1501 },
@@ -182,4 +182,4 @@ const CardPetResgate = () => {
 	)
 }
 
-export default CardPetResgate
+export default CardPetInicialResgate
