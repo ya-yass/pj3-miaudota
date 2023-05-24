@@ -13,13 +13,13 @@ import FormControl from '@mui/material/FormControl';
 import Autocomplete from '@mui/material/Autocomplete';
 //imagens e files
 import AchadoFoto from './assets/img/achado-foto.png';
-import './EncontreiUmPet.css'
+import './AnunciarResgate.css'
 import logo from './assets/img/miaudota-logo.png'
 import { BsXLg as Cancel } from 'react-icons/bs'
 
 
 
-const EncontreiUmPet = () => {
+const AnunciarResgate = () => {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -332,5 +332,5 @@ const styles = {
 
 }
 
-export default EncontreiUmPet
+export default AnunciarResgate
 

@@ -15,7 +15,7 @@ import Checkbox from '@mui/material/Checkbox';
 //imagens e files
 import AdocaoFoto from './assets/img/card-pet-adotar.png'
 import logo from './assets/img/miaudota-logo.png'
-// import './EncontreiUmPet.css'
+// import './AnunciarResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 
 

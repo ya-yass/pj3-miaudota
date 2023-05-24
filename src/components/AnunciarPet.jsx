@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import EncontreiUmPet from './EncontreiUmPet'
+import AnunciarResgate from './AnunciarResgate'
 import AnunciarAdocao from './AnunciarAdocao'
 import './AnunciarAdocao.css'
 
@@ -9,11 +9,11 @@ const AnunciarPet = () => {
       display: 'flex',
       margin: '120px 450px 120px 450px',
       justifyContent: 'space-evenly',
-      borderRadius:'20px'
+      borderRadius: '20px'
     }}>
-      
-        <AnunciarAdocao/>
-        <EncontreiUmPet/>
+
+      <AnunciarAdocao />
+      <AnunciarResgate />
 
     </Box>
   )

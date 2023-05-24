@@ -6,7 +6,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './SecaoAdocao.css'
-import CarouselSlide from "../components/Carousel"
+import CarouselSlide from "./CarouselMiaudota"
 
 
 import Checkbox from '@mui/material/Checkbox';
