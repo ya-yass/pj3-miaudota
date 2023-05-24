@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Navbar from '../components/Navbar';
-import Content from '../components/Content';
+import ContentHome from '../components/ContentHome';
 import Footer from '../components/Footer'
 
 //TODO npm i react-slick
@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <Navbar />
       <Box>
-        <Content />
+        <ContentHome />
 
       </Box>
       <Footer />

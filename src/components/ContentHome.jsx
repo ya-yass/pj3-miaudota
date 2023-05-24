@@ -1,11 +1,11 @@
 import Box from '@mui/material/Box';
-import CardPet from '../components/Card-pet'
+import CardPet from './Card-pet'
 import CarouselSlide from './CarouselMiaudota';
-import EntendaMiauDota from '../components/EntendaMiauDota'
-import CardPetInicialResgate from '../components/CardPetInicialResgate'
-import './Content.css'
+import EntendaMiauDota from './EntendaMiauDota'
+import CardPetInicialResgate from './CardPetInicialResgate'
+import './ContentHome.css'
 
-const Content = () => {
+const ContentHome = () => {
 
   return (
     <Box
@@ -20,4 +20,4 @@ const Content = () => {
   )
 }
 
-export default Content
+export default ContentHome
