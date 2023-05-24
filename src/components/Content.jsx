@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import CardPet from '../components/Card-pet'
 import CarouselSlide from './CarouselMiaudota';
-import Entenda from '../components/Entenda'
+import EntendaMiauDota from '../components/EntendaMiauDota'
 import CardPetInicialResgate from '../components/CardPetInicialResgate'
 import './Content.css'
 
@@ -14,7 +14,7 @@ const Content = () => {
       }}>
       <CarouselSlide />
       <CardPet />
-      <Entenda />
+      <EntendaMiauDota />
       <CardPetInicialResgate />
     </Box>
   )

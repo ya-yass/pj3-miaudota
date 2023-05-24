@@ -1,15 +1,15 @@
 import Box from '@mui/material/Box'
-import './Entenda.css'
+import './EntendaMiauDota.css'
 import Encontre from './assets/img/encontre.png'
 import Processo from './assets/img/processo.png'
 import Perdi from './assets/img/perdi.png'
 import Parcerias from './assets/img/parcerias.png'
 
-const Entenda = () => {
+const EntendaMiauDota = () => {
   return (
     <Box>
       <div className="container">
-        <h2 id='titulo'>Entenda mais sobre o miaudota</h2>
+        <h2 id='titulo'>EntendaMiauDota mais sobre o miaudota</h2>
         <div className="topicos">
           <div className="topico encontre">
             <img src={Encontre} alt="Encontre seu pet" className='imgEncontre imagem' />
@@ -37,4 +37,4 @@ const Entenda = () => {
   )
 }
 
-export default Entenda
+export default EntendaMiauDota
