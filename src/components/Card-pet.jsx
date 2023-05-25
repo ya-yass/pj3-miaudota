@@ -3,6 +3,7 @@ import Foto from './assets/img/pet1.jpg';
 import './Card-pet.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ModalDescricao from './ModalDescricao';
 
 import {
 	FaVenus as Femea,
@@ -60,7 +61,7 @@ const CardPet = () => {
 							<span><Castrado />Castrado</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							< ModalDescricao />
 						</div>
 					</div>
 				</div>

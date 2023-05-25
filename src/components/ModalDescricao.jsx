@@ -140,7 +140,10 @@ const ModalDescricao = () => {
   return (
     <>
       <Box>
-        <button onClick={handleOpen1}>Abrir modal</button>
+        <div className="sobre">
+          <button className='btnSobrePet' onClick={handleOpen1}>SOBRE O PET</button>
+        </div>
+
         <Modal
           open={open}
           onClose={handleClose1}

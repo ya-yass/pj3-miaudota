@@ -1,10 +1,10 @@
 import './Navbar.css'
 import Box from '@mui/material/Box'
-import logo from './assets/img/miaudota-logotipo.png'
+import logo from './assets/img/miaudota-logo.png'
 // import { FaUserAlt as User } from 'react-icons/fa'
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
-import ButtonEnviar from '@mui/material/Button';
+// import ButtonEnviar from '@mui/material/Button';
 import * as React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -28,9 +28,9 @@ const Navbar = () => {
 
 
   //abrir e fechar o modal de cadastro
-  const [open, setOpen] = React.useState(false);
-  const handleOpenSignUp = () => setOpen(true);
-  const handleCloseSignUp = () => setOpen(false);
+  const [open, setOpenSignUp] = React.useState(false);
+  const handleOpenSignUp = () => setOpenSignUp(true);
+  const handleCloseSignUp = () => setOpenSignUp(false);
 
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -68,103 +68,7 @@ const Navbar = () => {
 
         {/* Modal Cadastrar-se */}
 
-        <Modal
-          open={open}
-          onClose={handleCloseSignUp}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description">
-
-          <Box sx={styles.Modal}>
-            <Cancel className='botaoCancelModal' onClick={handleCloseSignUp} />
-            <Typography id="modal-modal-title" component="div">
-              <img src={logo} className='logoModal' alt='Logo do Modal'></img>
-              <div>
-                <h3>CADASTRE-SE</h3>
-                <p>Já tem uma conta? Faça seu login</p>
-              </div>
-            </Typography>
-
-
-            <div className='divTituloCampo tituloCampoNome'>
-              <label className='titulocampoNome'>Nome</label>
-              <p>*</p>
-            </div>
-            <TextField
-              sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
-              placeholder='Digite seu nome'
-              type="text"
-              className='input'
-              InputLabelProps={{ shrink: true }}
-
-            // onChange={handleFileChange}
-            />
-
-            <Typography id="modal-modal-description" component="div"
-              sx={{
-                mt: 2,
-                '& fieldset': {
-                  display: 'none',
-                },
-                '& legend': {
-                  display: 'none',
-                }
-              }}>
-
-              <div className='divTituloCampo tituloCampoNome'>
-                <label className='titulocampoNome'>Usuário</label>
-                <p>*</p>
-              </div>
-              <TextField
-                sx={{ borderRadius: '20px', height: '40px', width: '200px', marginBottom: '15px' }}
-                placeholder='Digite seu usuário'
-                type="text"
-                className='input'
-                InputLabelProps={{ shrink: true }}
-
-              // onChange={handleFileChange}
-              />
-
-              <div className='divTituloCampo'>
-                <label className='titulocampo'>E-mail</label>
-                <p>*</p>
-              </div>
-              <TextField
-                sx={{ marginTop: '15px' }}
-                placeholder='Digite um e-mail válido'
-                type="text"
-                className='input'
-
-                InputLabelProps={{ shrink: true }}
-
-              // onChange={handleFileChange}
-              />
-              <div className='divTituloCampo'>
-                <label className='titulocampo'>Senha</label>
-                <p>*</p>
-              </div>
-              <TextField
-                sx={{ marginTop: '-10px' }}
-                placeholder='Crie uma senha'
-                type="text"
-                className='input'
-
-                InputLabelProps={{ shrink: true }}
-
-              // onChange={handleFileChange}
-              />
-
-              <div className='Botoesmodal'>
-                <ButtonEnviar variant="contained" id='botaoEnviar' >Cadastrar</ButtonEnviar>
-                <p className='botãoCancelarEditar' onClick={handleCloseSignUp} >Cancelar</p>
-              </div>
-
-            </Typography>
-          </Box>
-
-          {/* Modal Avatar */}
-        </Modal>
-
-        <Modal
+        <Modal //modal login
           open={openLogin}
           onClose={handleCloseLogin}
           aria-labelledby="modal-modal-title"
@@ -172,13 +76,15 @@ const Navbar = () => {
 
           <Box sx={styles.Modal}>
             <Cancel className='botaoCancelModal' onClick={handleCloseLogin} />
+
             <Typography id="modal-modal-title" component="div">
               <img src={logo} className='logoModal' alt='MiauDota'></img>
+              <div>
+                <h3 className='tituloModal'>Login</h3>
+                <span className='informativo'>Não tem uma conta? Cadastre-se</span>
+              </div>
             </Typography>
-            <div>
-              <h3 className='tituloModal'>Login</h3>
-              <span>Não tem uma conta? Cadastre-se</span>
-            </div>
+
             <hr />
 
             <Typography id="modal-modal-description" component="div"
@@ -192,19 +98,22 @@ const Navbar = () => {
                 }
               }}>
 
-              <div className="loginEmailUser">
-                <div className='divTituloCampo'>
-                  <label className='titulocampo'>E-mail ou usuário</label>
+              <div className="camposTextosCadastro">
+                <div className="loginEmailUser">
+                  <div className='divTituloCampo'>
+                    <label className='titulocampo'>E-mail ou usuário</label>
+                  </div>
+                  <TextField
+                    placeholder='Digite seu e-mail ou usuário'
+                    type="text"
+                    className='inputLogin'
+                    InputLabelProps={{ shrink: true }}
+                    sx={{
+                      marginRight: '10px',
+                    }}
+                  // onChange={handleFileChange}
+                  />
                 </div>
-                <TextField
-                  placeholder='Digite seu e-mail ou usuário'
-                  type="text"
-                  className='inputLogin'
-                  InputLabelProps={{ shrink: true }}
-                  sx={{
-                    width: '100%',
-                  }}
-                />
               </div>
 
               <div className="loginSenha">
@@ -223,8 +132,123 @@ const Navbar = () => {
               </div>
 
               <div className='BotoesModal'>
-                <button className='btnLogar' variant="contained" >Login</button>
+                <button className='btnLoginUsuario' variant="contained" >Login</button>
+
                 <p className='btnCancelarLogin' onClick={handleCloseLogin} >Cancelar</p>
+              </div>
+
+            </Typography>
+          </Box>
+
+          {/* Modal Avatar */}
+        </Modal>
+
+        <Modal //modal cadastrar-se
+          open={open}
+          onClose={handleCloseSignUp}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description">
+
+          <Box sx={styles.Modal}>
+            <Cancel className='botaoCancelModal' onClick={handleCloseSignUp} />
+
+            <Typography id="modal-modal-title" component="div">
+              <img src={logo} className='logoModal' alt='MiauDota'></img>
+              <div>
+                <h3 className='tituloModal'>Cadastre-se</h3>
+                <span className='informativo'>Já tem uma conta? Faça seu login</span>
+              </div>
+            </Typography>
+
+            <hr />
+
+
+            <Typography id="modal-modal-description" component="div"
+              sx={{
+                mt: 2,
+                '& fieldset': {
+                  display: 'none',
+                },
+                '& legend': {
+                  display: 'none',
+                }
+              }}>
+
+              <div className="camposTextosCadastro">
+                <div className="nomeCadastroUser">
+                  <div className='divTituloCampo'>
+                    <label className='titulocampo'>Nome</label>
+                    <p className='obrigatorio'>*</p>
+                  </div>
+                  <TextField
+                    placeholder='Digite o seu nome'
+                    type="text"
+                    className='inputCadastro'
+                    InputLabelProps={{ shrink: true }}
+                    sx={{
+                      marginRight: '10px',
+                    }}
+                  // onChange={handleFileChange}
+                  />
+                </div>
+
+                <div className="usuarioCadastroUser">
+                  <div className='divTituloCampo'>
+                    <label className='titulocampo'>Usuário</label>
+                    <p className='obrigatorio'>*</p>
+                  </div>
+                  <TextField
+                    placeholder='Digite seu nome de usuário'
+                    type="text"
+                    className='inputCadastro'
+                    InputLabelProps={{ shrink: true }}
+                    sx={{
+                      marginRight: '10px',
+                    }}
+                  // onChange={handleFileChange}
+                  />
+                </div>
+
+                <div className="emailCadastroUser">
+                  <div className='divTituloCampo'>
+                    <label className='titulocampo'>E-mail</label>
+                    <p className='obrigatorio'>*</p>
+                  </div>
+                  <TextField
+                    placeholder='Digite um e-mail válido'
+                    type="text"
+                    className='inputCadastro'
+                    InputLabelProps={{ shrink: true }}
+                    sx={{
+                      marginRight: '10px',
+                    }}
+                  // onChange={handleFileChange}
+                  />
+                </div>
+
+                <div className="SenhaCadastroUser">
+                  <div className='divTituloCampo'>
+                    <label className='titulocampo'>Senha</label>
+                    <p className='obrigatorio'>*</p>
+                  </div>
+                  <TextField
+                    placeholder='Crie uma senha'
+                    type="text"
+                    className='inputCadastro'
+                    InputLabelProps={{ shrink: true }}
+                    sx={{
+                      marginRight: '10px',
+                    }}
+                  // onChange={handleFileChange}
+                  />
+                </div>
+
+              </div>
+
+              <div className='BotoesModal'>
+                <button className='btnCadastroUsuario' variant="contained" >Cadastrar</button>
+
+                <p className='btnCancelarCadastro' onClick={handleCloseSignUp} >Cancelar</p>
               </div>
 
             </Typography>
@@ -276,33 +300,17 @@ const Navbar = () => {
 const styles = {
 
   Modal: {
-
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 673,
+    width: 420,
     bgcolor: 'background.paper',
     border: 'none',
-    boxShadow: 24,
+    // boxShadow: 24,
     p: 4,
     borderRadius: '20px',
   }
-
-
 }
 
-// const style = {
-//   position: 'absolute',
-//   top: '50%',
-//   left: '50%',
-//   transform: 'translate(-50%, -50%)',
-//   width: 400,
-//   bgcolor: 'background.paper',
-//   border: '2px solid #000',
-//   boxShadow: 24,
-//   pt: 2,
-//   px: 4,
-//   pb: 3,
-// };
 export default Navbar;

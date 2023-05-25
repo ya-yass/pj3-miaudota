@@ -78,3 +78,54 @@ nav {
   background-color: #f07a35 !important;
   color: #FFF;
 }
+
+.inputCadastro,
+.inputLogin {
+  border: 1px solid rgb(228, 224, 224) !important;
+  border-radius: 10px !important;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.camposTextosCadastro {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnLoginUsuario {
+  left: 0px !important;
+}
+
+.btnCancelarLogin {
+  margin-top: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button.btnLoginUsuario,
+button.btnCadastroUsuario {
+  background-color: #F6823F;
+  color: #FFF;
+  font-weight: bold !important;
+  width: 150px;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  margin-top: 19px;
+  transition: 0.2s;
+}
+
+button.btnLoginUsuario:hover,
+button.btnCadastroUsuario:hover {
+  background-color: #f07a35 !important;
+  color: #FFF;
+}
+
+.btnCancelarCadastro,
+.btnCancelarLogin {
+  margin-top: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
