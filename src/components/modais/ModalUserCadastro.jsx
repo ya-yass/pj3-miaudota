@@ -1,5 +1,7 @@
 import Box from "@mui/material/Box"
 import * as React from 'react';
+import { useState } from 'react'
+
 
 //componentes materia ui
 import Modal from '@mui/material/Modal';
@@ -19,11 +21,42 @@ import { BsXLg as Cancel } from 'react-icons/bs'
 
 
 
-const ModalUserCadastro = () => {
+const ModalUserCadastro = (user) => {
 
    //abrir e fechar o modal de cadastro
    const [open, setOpenSignUp] = React.useState(false);
    const handleCloseSignUp = () => setOpenSignUp(false);
+
+   const [nome, setNome] = useState(user.nome)
+   const [email, setEmail] = useState(user.email)
+   const [senha, setSenha] = useState(user.senha)
+   const [usuario, setusuario] = useState(user.usuario)
+ 
+
+   const handleSubmit = async (event) => {
+    event.preventDefault()
+    console.log('Minha funcao de submit')
+    const nome = event.target.nome.value 
+    const usuario = event.target.usuario.value
+    const email = event.target.email.value
+    const senha = event.target.senha.value
+    const user = {nome, usuario, email, senha}
+    try {
+      const response = await fetch('http://localhost:3100/user',
+      {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user), 
+      })
+      const data = await response.json()
+      console.log(data)
+      setOpenSignUp(false)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
 
   return(
@@ -32,7 +65,7 @@ const ModalUserCadastro = () => {
       <div className="sobre">
         <button className="btnCadastroUser" onClick={setOpenSignUp}>Cadastrar</button>
       </div>
-        <Modal //modal cadastrar-se
+        <Modal  //modal cadastrar-se
               open={open}
               onClose={handleCloseSignUp}
               aria-labelledby="modal-modal-title"
@@ -66,7 +99,7 @@ const ModalUserCadastro = () => {
                   <div className="camposTextosCadastro">
                     <div className="nomeCadastroUser">
                       <div className='divTituloCampo'>
-                        <label className='titulocampo'>Nome</label>
+                        <label className='titulocampo' name="nome">Nome</label>
                         <p className='obrigatorio'>*</p>
                       </div>
                       <TextField
@@ -83,7 +116,7 @@ const ModalUserCadastro = () => {
 
                     <div className="usuarioCadastroUser">
                       <div className='divTituloCampo'>
-                        <label className='titulocampo'>Usuário</label>
+                        <label className='titulocampo' name="usuario">Usuário</label>
                         <p className='obrigatorio'>*</p>
                       </div>
                       <TextField
@@ -100,7 +133,7 @@ const ModalUserCadastro = () => {
 
                     <div className="emailCadastroUser">
                       <div className='divTituloCampo'>
-                        <label className='titulocampo'>E-mail</label>
+                        <label className='titulocampo'  name="email">E-mail</label>
                         <p className='obrigatorio'>*</p>
                       </div>
                       <TextField
@@ -117,7 +150,7 @@ const ModalUserCadastro = () => {
 
                     <div className="SenhaCadastroUser">
                       <div className='divTituloCampo'>
-                        <label className='titulocampo'>Senha</label>
+                        <label className='titulocampo' name="senha">Senha</label>
                         <p className='obrigatorio'>*</p>
                       </div>
                       <TextField
@@ -135,7 +168,7 @@ const ModalUserCadastro = () => {
                   </div>
 
                   <div className='BotoesModal'>
-                    <button className='btnCadastroUsuario' variant="contained" >Cadastrar</button>
+                    <button className='btnCadastroUsuario' variant="contained" onSubmit={handleSubmit} type="submit">Cadastrar</button>
 
                     <p className='btnCancelarCadastro' onClick={handleCloseSignUp} >Cancelar</p>
                   </div>
