@@ -1,15 +1,14 @@
 import Box from "@mui/material/Box"
 import Navbar from "../components/Navbar"
-import ModalDescricao from "../components/ModalDescricao"
 import Footer from "../components/Footer"
+import SecaoResgate from "../components/SecaoResgate"
 
 const Resgatados = () => {
   return (
     <>
       <Box>
         < Navbar />
-        <h2>Funcionou Resgatados</h2>
-        <ModalDescricao/>
+        <SecaoResgate />
         <Footer></Footer>
       </Box>
     </>

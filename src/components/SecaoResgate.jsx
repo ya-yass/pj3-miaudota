@@ -1,28 +1,28 @@
 import Box from '@mui/material/Box';
-import Foto from './assets/img/pet1.jpg';
-import './Card-pet.css' //para importar jsx sempre é com letra maíuscula
+import Fera from './assets/img/fera.avif';
+import './SecaoResgate.css' //para importar jsx sempre é com letra maíuscula
 import "react-multi-carousel/lib/styles.css";
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './SecaoAdocao.css'
 import CarouselSlide from "./CarouselMiaudota"
-
+import ModalDescricao from './ModalDescricao';
 
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
-
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 
 import {
   FaVenus as Femea,
   // FaMars as Macho,
   FaHeart as Idade,
-  FaSyringe as Vacina,
+  FaMapMarkerAlt as Local, //https://react-icons.github.io/react-icons/icons?name=fa
   FaPaw as Raca,
-  FaClinicMedical as Castrado
 } from 'react-icons/fa'
 
-const CardPet = () => {
+const SecaoResgate = () => {
   return (
     <Box className='div' sx={{
       margin: '0 70px'
@@ -34,201 +34,196 @@ const CardPet = () => {
         <button className='btnCachorro' >Cachorro</button>
       </Stack>
 
-      <h1>Adoção | resultado da busca</h1>
+      <h1>Resgatados | resultado da busca</h1>
 
       <div className="conteudo">
         <div className="pets">
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
 
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
 
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
 
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
 
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
+
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
+
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
+
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
+
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
+
           <div className="card">
-            <img src={Foto} alt="pet" className='pet' />
+            <img src={Fera} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Nana</h3>
+                <h3 className="nome">Fera</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />03 meses</span>
-                <span className="vacinas"><Vacina />V3, V4, V5 e Raiva</span>
-                <span><Raca />Sem raça definida</span>
-                <span><Castrado />Castrado</span>
+                <span className="idade"><Idade />Não informado</span>
+                <span><Raca />Pittbull</span>
+                <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                <button className='btnSobrePet'>SOBRE O PET</button>
+                < ModalDescricao />
               </div>
             </div>
           </div>
@@ -253,7 +248,7 @@ const CardPet = () => {
             </div>
           </div>
 
-          <div className="porte">
+          <div className="idade">
             <span className='labelName'>Idade</span>
             <div className="opcoes">
               <FormControlLabel control={<Checkbox />} label="Filhote" className='labelFilhote' />
@@ -262,13 +257,19 @@ const CardPet = () => {
             </div>
           </div>
 
-          <div className="porte">
-            <span className='labelName'>Saúde</span>
-            <div className="opcoes">
-              <FormControlLabel control={<Checkbox />} label="Castrado" className='labelCastrado' />
-              <FormControlLabel control={<Checkbox />} label="Vermifugado" className='labelVermifugado' />
-              <FormControlLabel control={<Checkbox />} label="Vacinado" className='labelVacinado' />
+          <div className="bairroPet">
+            <div className='divTituloCampo'>
+              <label className='titulocampo'>Bairro onde se perdeu</label>
+              <p>*</p>
             </div>
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              className='inputResgateBuscar'
+              options={bairros}
+              sx={{ width: 300 }}
+              renderInput={(params) => <TextField {...params} label="Bairros" />}
+            />
           </div>
 
           <div className="botaoos">
@@ -277,9 +278,76 @@ const CardPet = () => {
 
         </div>
       </div>
-
     </Box>
   )
 }
 
-export default CardPet
+const bairros = [
+  { label: 'Balneário California' },
+  { label: 'Balneário Copacabana' },
+  { label: 'Balneário Golfinhos' },
+  { label: 'Balneário Forest' },
+  { label: 'Balneário Recando do Sol' },
+  { label: 'Barranco Alto' },
+  { label: 'Benfica' },
+  { label: 'Canta Galo' },
+  { label: 'Capricónio' },
+  { label: 'Caputera' },
+  { label: 'Centro' },
+  { label: 'Cidade Jardim' },
+  { label: 'Costa Nova' },
+  { label: 'Delfim Verde' },
+  { label: "Estrela D'Alva" },
+  { label: 'Getuba' },
+  { label: 'Indaiá' },
+  { label: 'Ipiranga' },
+  { label: 'Itaúna' },
+  { label: 'Jaraguá' },
+  { label: 'Jaraguazinho' },
+  { label: 'Jardim Aruan' },
+  { label: 'Jardim Britânia' },
+  { label: 'Jardim Califórnia' },
+  { label: 'Jardim Capricórnio' },
+  { label: 'Jardim Casa Branca' },
+  { label: 'Jardim das Gaivotas' },
+  { label: 'Jardim Jaqueira' },
+  { label: 'Jardim Manari' },
+  { label: 'Jardim Mariella' },
+  { label: 'Jardim Maristela' },
+  { label: 'Jardim Olaria' },
+  { label: 'Jardim Primavera' },
+  { label: 'Jardim Rio Santos' },
+  { label: 'Jardim Santa Rosa' },
+  { label: 'Jardim Tarumãs' },
+  { label: 'Jardim Terralão' },
+  { label: 'Mar Azul' },
+  { label: 'Martim de Sá' },
+  { label: 'Massaguaçu' },
+  { label: 'Mirante da Orla' },
+  { label: 'Morro do Algodão' },
+  { label: 'Park Imperial' },
+  { label: 'Parque Balneário Poiares' },
+  { label: 'Pegorelli' },
+  { label: 'Perequê Mirim' },
+  { label: 'Poiares' },
+  { label: 'Pontal de Santa Marina' },
+  { label: 'Ponte Seca' },
+  { label: 'Portal da Fazendinha' },
+  { label: 'Porto Novo' },
+  { label: 'Praia da Cocanha' },
+  { label: 'Praia da Mococa' },
+  { label: 'Praia das Palmeiras' },
+  { label: 'Prainha' },
+  { label: 'Recanto Som do Mar' },
+  { label: 'Rio Claro' },
+  { label: 'Rio do Ouro' },
+  { label: 'Sumaré' },
+  { label: 'Tabatinga' },
+  { label: 'Tinga' },
+  { label: 'Travessão' },
+  { label: 'Vapapesca' },
+  { label: 'Vila Nossa Senhora Aparecida' },
+  { label: 'Vila Ponte Seca' },
+];
+
+export default SecaoResgate

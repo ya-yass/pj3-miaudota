@@ -94,3 +94,10 @@ button.filtro:hover {
   background-color: #f07a35 !important;
   box-shadow: none !important;
 }
+
+.inputResgateBuscar {
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 10px !important;
+  padding: 0;
+}
