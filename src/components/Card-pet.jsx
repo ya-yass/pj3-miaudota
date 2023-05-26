@@ -3,7 +3,7 @@ import Foto from './assets/img/pet1.jpg';
 import './Card-pet.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ModalDescricao from './ModalDescricao';
+import ModalDescricao from './modais/ModalDescricao';
 
 import {
 	FaVenus as Femea,

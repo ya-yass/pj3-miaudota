@@ -9,11 +9,12 @@ import TextField from '@mui/material/TextField';
 
 
 //files
-import './ModalDescricao.css'
+import '../modais/ModalDescricao.css'
 
 //icons e imagens
-import fotoPerfilCao from './assets/img/fotoPerfilCao.jpg'
-import fotoAnunciante from './assets/img/fotoAnunciante.jpg'
+import fotoPerfilCao from '../assets/img/fotoPerfilCao.jpg'
+import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
+
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   FaVenus as Femea,

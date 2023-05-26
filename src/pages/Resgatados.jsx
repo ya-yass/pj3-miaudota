@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box"
 import Navbar from "../components/Navbar"
-import ModalDescricao from "../components/ModalDescricao"
+import ModalDescricao from "../components/modais/ModalDescricao"
 import Footer from "../components/Footer"
 
 const Resgatados = () => {

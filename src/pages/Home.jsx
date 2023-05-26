@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import Navbar from '../components/Navbar';
-import ContentHome from '../components/ContentHome';
 import Footer from '../components/Footer'
 import CarouselSlide from '../components/CarouselMiaudota';
 import CardPet from '../components/Card-pet';
