@@ -64,7 +64,7 @@ const AnunciarResgate = () => {
             </div>
           </Typography>
 
-          {/* teste */}
+          <hr />
 
           <FormControl >
             <RadioGroup

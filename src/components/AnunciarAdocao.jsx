@@ -64,7 +64,7 @@ const AnunciaraAdocao = () => {
             </div>
           </Typography>
 
-          {/* teste */}
+          <hr />
 
           <FormControl >
             <RadioGroup
@@ -242,7 +242,7 @@ const AnunciaraAdocao = () => {
             <div className='BtnImagens'>
               <div className=' btnFotoAdocao'>
                 <div className='divTituloCampo'>
-                  <label className='titulocampo'>Foto de Perfil</label>
+                  <label className='titulocampo'>Foto do pet</label>
                 </div>
                 <label className='tituloFile'>Adicionar foto</label>
                 <input type="file" />

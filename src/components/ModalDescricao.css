@@ -233,8 +233,10 @@ button.btnEncontrei:hover {
   color: #FFF;
   font-weight: bold;
   border-radius: 30px !important;
+  transition: 0.2s;
 }
 
-button:hover {
-  color: #575353;
+.btnSobrePet:hover {
+  color: white;
+  background-color: #f07a35 !important;
 }
