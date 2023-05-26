@@ -100,3 +100,19 @@
   flex-direction: column;
   margin-right: 45px;
 }
+
+hr {
+  margin: 15px 0 !important;
+  color: #D9D9D9 !important;
+}
+
+.divBtnCadastrarAdocao {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.tituloFile {
+  width: 100%;
+  background-color: #e7e7e7;
+}

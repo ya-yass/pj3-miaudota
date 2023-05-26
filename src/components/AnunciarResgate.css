@@ -64,8 +64,11 @@
 
 }
 
-.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+
+.Mui-checked {
   color: #f6823f !important;
+  background: #FCDBC7 !important;
+  border-color: #F6823F !important;
 }
 
 .css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {

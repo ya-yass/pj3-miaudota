@@ -87,10 +87,6 @@ span svg {
   border-radius: 30px !important;
 }
 
-button:hover {
-  color: #575353;
-}
-
 .sobre {
   display: flex;
   flex-direction: column;

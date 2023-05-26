@@ -25,10 +25,10 @@ h1 {
   transition: 0.1s;
 }
 
-.card:hover {
+/* .card:hover {
   background-color: #eeeeee;
   border: 1px solid #eeeeee;
-}
+} */
 
 .card .pet {
   width: 250px;
@@ -87,10 +87,6 @@ span svg {
   color: #FFF;
   font-weight: bold;
   border-radius: 30px !important;
-}
-
-button:hover {
-  color: #575353;
 }
 
 .sobre {

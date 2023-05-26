@@ -3,6 +3,7 @@ import Fera from './assets/img/fera.avif';
 import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ModalDescricao from './ModalDescricao';
 
 import {
 	FaVenus as Femea,
@@ -58,7 +59,7 @@ const CardPetInicialResgate = () => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							< ModalDescricao />
 						</div>
 					</div>
 				</div>
@@ -77,7 +78,7 @@ const CardPetInicialResgate = () => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							< ModalDescricao />
 						</div>
 					</div>
 				</div>
@@ -96,7 +97,7 @@ const CardPetInicialResgate = () => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							< ModalDescricao />
 						</div>
 					</div>
 				</div>
@@ -115,7 +116,7 @@ const CardPetInicialResgate = () => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							< ModalDescricao />
 						</div>
 					</div>
 				</div>
@@ -134,7 +135,7 @@ const CardPetInicialResgate = () => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							< ModalDescricao />
 						</div>
 					</div>
 				</div>
@@ -153,7 +154,7 @@ const CardPetInicialResgate = () => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							< ModalDescricao />
 						</div>
 					</div>
 				</div>
@@ -172,7 +173,7 @@ const CardPetInicialResgate = () => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							< ModalDescricao />
 						</div>
 					</div>
 				</div>
