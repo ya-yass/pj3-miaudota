@@ -22,7 +22,7 @@ import PerfilUsuario from "../PerfilUsuario";
 
 
 
-const ModalUserCadastro = (user) => {
+const ModalUserCadastro = () => {
 
    //abrir e fechar o modal de cadastro
    const [users, setUsers] = useState(false);
@@ -31,8 +31,8 @@ const ModalUserCadastro = (user) => {
  
 
    const handleSubmit = async (event) => {
-    event.preventDefault()
     console.log('Minha funcao de submit')
+    event.preventDefault()
     const nome = event.target.nome.value 
     const usuario = event.target.usuario.value
     const email = event.target.email.value
@@ -69,7 +69,7 @@ const ModalUserCadastro = (user) => {
           }
         </div>
       </Box>
-
+        
         <Modal  //modal cadastrar-se
               open={modalOpen}
               aria-labelledby="modal-modal-title"
@@ -80,11 +80,12 @@ const ModalUserCadastro = (user) => {
                 <Cancel className='botaoCancelModal' onClick={() => setModalOpen(false)} />
 
                 
+              <form onSubmit={handleSubmit}>
 
                 <Typography id="modal-modal-title" component="div">
                   <img src={logo} className='logoModal' alt='MiauDota'></img>
                   <div>
-                    <h3 className='tituloModal'>Cadastre-se</h3>
+                    <h3 className='tituloModal'>Cadadstre-se</h3>
                     <span className='informativo'>Já tem uma conta? Faça seu login</span>
                   </div>
                 </Typography>
@@ -140,7 +141,7 @@ const ModalUserCadastro = (user) => {
 
                     <div className="emailCadastroUser">
                       <div className='divTituloCampo'>
-                        <label className='titulocampo'  name="email">E-mail</label>
+                        <label className='titulocampo' name="email">E-mail</label>
                         <p className='obrigatorio'>*</p>
                       </div>
                       <TextField
@@ -175,12 +176,13 @@ const ModalUserCadastro = (user) => {
                   </div>
 
                   <div className='BotoesModal'>
-                    <button className='btnCadastroUsuario' variant="contained" onSubmit={handleSubmit} type="submit">Cadastrar</button>
+                    <button className='btnCadastroUsuario' variant="contained"  type="submit">Cadastrar</button>
 
                     <p className='btnCancelarCadastro'  onClick={() => setModalOpen(false)} >Cancelar</p>
                   </div>
 
                 </Typography>
+                </form>
               </Box>
               {/* Modal Avatar */}
           </Modal>
