@@ -1,0 +1,242 @@
+.entrarContato {
+  margin-bottom: 8px;
+}
+
+.fotoPet {
+  width: 180px;
+  height: 180px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+
+.femea,
+.macho {
+  background: #F6823F;
+  padding: 5px;
+  border-radius: 20px;
+  color: #FFF;
+  margin-left: 15px;
+}
+
+.nomeIcon,
+.infoPeteUser {
+  display: flex;
+  align-items: center;
+}
+
+.infopet .nomepet {
+  color: #F6823F;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.textpet {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fotoAnunciante {
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+
+.infoAnunciante {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+
+.nomeAnunciante {
+  margin-top: -20px;
+
+}
+
+.tituloAnunciante {
+  font-weight: bold;
+}
+
+.quemAnunciou {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.infoDopet {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 8px;
+}
+
+.infoDopet span {
+  margin-right: 25px;
+}
+
+.infoDopet svg {
+  color: #434343;
+}
+
+.Iconsinfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 21px;
+}
+
+button.btnEncontrei {
+  background-color: #F6823F;
+  color: #FFF;
+  font-weight: bold !important;
+  width: 195px;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+button.btnEncontrei:hover {
+  background-color: #f07a35 !important;
+  color: #FFF;
+  font-weight: bold;
+  width: 195px;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.maisFotos img {
+  width: 140px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+  width: 158px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.maisFotos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botaoChild {
+  float: right;
+  display: flex;
+  margin-top: 19px;
+}
+
+.botaoChild span {
+  margin-right: 10px;
+}
+
+.btnCancelar {
+  cursor: pointer;
+}
+
+.modalContato {
+  width: 460px;
+  height: 570px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #FFF;
+  transform: translate(-50%, -50%);
+
+  border-radius: 20px;
+}
+
+.inputContato {
+  width: 100%;
+  border: 1px solid rgb(228, 224, 224) !important;
+  border-radius: 10px !important;
+  margin: 14px;
+  margin-left: 0px;
+}
+
+.titulocampo {
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.emailUsuario {
+  margin: 0 !important;
+}
+
+.emailUsuario,
+.nomeUsuario,
+.descricaoUsuario {
+  margin-top: 26px;
+}
+
+.informativo {
+  color: #797979;
+}
+
+.tituloDescricao,
+.infopet {
+  display: flex;
+}
+
+.divDescricao,
+.descPet {
+  display: flex;
+  flex-direction: column;
+}
+
+.divDescricao .informativo {
+  margin-top: -7px;
+}
+
+.divTituloCampo,
+#modal-modal-description,
+#modal-modal-description .input {
+  margin: 15px 0 0 0 !important;
+}
+
+.btnContatos {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.divVacinas {
+  display: flex;
+}
+
+.camposVacinas {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnSobrePet {
+  background: #F6823F;
+  border: none;
+  padding: 15px 40px;
+  margin-top: 15px !important;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 30px !important;
+  transition: 0.2s;
+}
+
+.btnSobrePet:hover {
+  color: white;
+  background-color: #f07a35 !important;
+}
