@@ -109,7 +109,6 @@ hr {
 .divBtnCadastrarAdocao {
   display: flex;
   align-items: flex-end;
-  flex-direction: column;
 }
 
 .tituloFile {
