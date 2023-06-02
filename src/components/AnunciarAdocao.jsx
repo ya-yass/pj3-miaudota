@@ -23,7 +23,7 @@ import { BsXLg as Cancel } from 'react-icons/bs'
 
 
 const AnunciaraAdocao = () => {
-  const [open, setOpen] = React.useState(false);
+  const [modalOpen, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -49,7 +49,7 @@ const AnunciaraAdocao = () => {
       </div>
 
       <Modal
-        open={open}
+        open={modalOpen}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description">

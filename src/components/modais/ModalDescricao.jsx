@@ -30,13 +30,13 @@ import {
 const ModalDescricao = () => {
 
   //abrir e fechar o modal principal
-  const [open, setOpen] = React.useState(false);
+  const [modalOpen, setOpen] = React.useState(false);
   const handleOpen1 = () => setOpen(true);
   const handleClose1 = () => setOpen(false);
 
   //Modal Child
   function ChildModal() {
-    const [open, setOpen] = React.useState(false);
+    const [modalOpen, setOpen] = React.useState(false);
     const handleOpen = () => {
       setOpen(true);
     };
@@ -51,7 +51,7 @@ const ModalDescricao = () => {
           <Button onClick={handleOpen} variant="contained" className="btnEncontrei">ENCONTREI MEU PET</Button>
         </div>
         <Modal
-          open={open}
+          open={modalOpen}
           onClose={handleClose}
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
@@ -146,7 +146,7 @@ const ModalDescricao = () => {
         </div>
 
         <Modal
-          open={open}
+          open={modalOpen}
           onClose={handleClose1}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description">

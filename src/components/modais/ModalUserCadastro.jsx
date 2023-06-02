@@ -31,8 +31,8 @@ const ModalUserCadastro = () => {
  
 
    const handleSubmit = async (event) => {
+     event.preventDefault()
     console.log('Minha funcao de submit')
-    event.preventDefault()
     const nome = event.target.nome.value 
     const usuario = event.target.usuario.value
     const email = event.target.email.value
@@ -113,6 +113,7 @@ const ModalUserCadastro = () => {
                       <TextField
                         placeholder='Digite o seu nome'
                         type="text"
+                        name="nome"
                         className='inputCadastro'
                         InputLabelProps={{ shrink: true }}
                         sx={{
@@ -127,9 +128,11 @@ const ModalUserCadastro = () => {
                         <label className='titulocampo' name="usuario">Usuário</label>
                         <p className='obrigatorio'>*</p>
                       </div>
+
                       <TextField
                         placeholder='Digite seu nome de usuário'
                         type="text"
+                        name="usuario"
                         className='inputCadastro'
                         InputLabelProps={{ shrink: true }}
                         sx={{
@@ -147,6 +150,7 @@ const ModalUserCadastro = () => {
                       <TextField
                         placeholder='Digite um e-mail válido'
                         type="text"
+                        name="email"
                         className='inputCadastro'
                         InputLabelProps={{ shrink: true }}
                         sx={{
@@ -164,6 +168,7 @@ const ModalUserCadastro = () => {
                       <TextField
                         placeholder='Crie uma senha'
                         type="text"
+                        name="senha"
                         className='inputCadastro'
                         InputLabelProps={{ shrink: true }}
                         sx={{
