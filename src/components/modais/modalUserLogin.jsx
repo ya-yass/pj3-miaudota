@@ -5,14 +5,12 @@ import * as React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
-import IconButton from '@mui/material/IconButton';
-import Avatar from '@mui/material/Avatar';
-import Tooltip from '@mui/material/Tooltip';
 
 import logo from '../assets/img/miaudota-logo.png'
 
 //files
 import useAuthStore from '../../store/authStore'
+import DropDownPerfil from '../DropDownPerfil'
 
 
 // import './ModalUserLogin.css'
@@ -26,12 +24,6 @@ import { BsXLg as Cancel } from 'react-icons/bs'
 
 const ModalUserlogin = () => {
 
-  
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   //abrir e fechar o modal principal
   const [modalOpen, setOpen] = React.useState(false);
@@ -41,12 +33,7 @@ const ModalUserlogin = () => {
 
 
   const isLogged = useAuthStore((state) => state.isLogged)
-  const fotoperfilUserLogged = useAuthStore((state) => state.fotoperfil)
-  const nomeUserLogged = useAuthStore((state) => state.nome)
-  const emailUserLogged = useAuthStore((state) => state.email)
-  const tokenUserLogged = useAuthStore((state) => state.token)
   const login = useAuthStore((state) => state.login)
-  const logout = useAuthStore((state) => state.logout)
 
   const handleSubmit = async (event) => {
     event.preventDefault() 
@@ -81,50 +68,17 @@ const ModalUserlogin = () => {
   }
 
 
-  const handleLogout = async () => {
-    try {
-      const response = await fetch('http://localhost:3100/auth/logout',
-      {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({email: emailUserLogged, token: tokenUserLogged}), 
-      })
-      const data = await response.json()
-      console.log(data)
-      if(response.status === 200) {
-        logout()
-        localStorage.removeItem('token')
-        localStorage.removeItem('user')
-      } else{
-        alert(data.message)
-      }
-      
-    } catch (error) {
-      console.log(error)
-    }
-  }
+ 
 
   return(
     <>
     <Box>
       <div className="sobre">
       {isLogged ? (
-        <img onClick={() => handleLogout()} src={fotoperfilUserLogged} alt={nomeUserLogged} />
+        <DropDownPerfil/>
         ) : (<button onClick={openLogin} >Logar</button>) }
       </div>
-      <Box sx={{ flexGrow: 0 }}>
-          <Tooltip title="Open settings">
-            <IconButton onClick={handleOpenUserMenu}
-              className='avatar'
-              sx={{
-                p: 0,
-              }}>
-              <Avatar src="/broken-image.jpg" />
-            </IconButton>
-          </Tooltip>
-        </Box>
+    
 
       <Modal //modal login
         open={modalOpen}
