@@ -16,7 +16,7 @@ import DropDownPerfil from '../DropDownPerfil'
 // import './ModalUserLogin.css'
 import '../Navbar.css'
 
-import { BsXLg as Cancel } from 'react-icons/bs'
+import { BsXLg as Cancel } from 'react-icons/bs' 
 
 
 

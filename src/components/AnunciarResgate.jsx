@@ -36,6 +36,39 @@ const AnunciarResgate = () => {
     setValue3(event.target.portePetResgate);
   };
 
+  const handleSubmitResgatado = async (event) => {
+    event.preventDefault()
+   console.log('Minha funcao de submit')
+   const tipo = event.target.tipo.value
+   const nome = event.target.nome.value 
+   const idade = event.target.idade.value
+   const raca = event.target.raca.value
+   const sexo = event.target.sexo.value
+   const porte = event.target.porte.value
+   const foto = event.target.foto.value
+  //  const bairro = event.target.bairro.value
+  // TODO resolver o problema de bibilioteca de autocomplete
+   const descricao = event.target.descricao.value
+
+   const perdido = {tipo, nome, idade, raca, sexo, porte, foto, descricao}
+   try {
+     const response = await fetch('http://localhost:3100/perdido',
+     {
+       method: 'POST',
+       headers: {
+         "Content-Type": "application/json",
+       },
+       body: JSON.stringify(perdido), 
+     })
+     const data = await response.json()
+     console.log(data)
+     setOpen(false)
+   } catch (error) {
+     console.log(error)
+   }
+ }
+
+
   return (
     <Box>
       <div className='cards'>
@@ -56,6 +89,8 @@ const AnunciarResgate = () => {
         <Box sx={styles.Modal}>
           <Cancel className='botaoCancelModal' onClick={handleClose} />
 
+          <form onSubmit={handleSubmitResgatado}>
+
           <Typography id="modal-modal-title" component="div">
             <img src={logo} className='logoModal' alt='MiauDota'></img>
             <div>
@@ -69,7 +104,7 @@ const AnunciarResgate = () => {
           <FormControl >
             <RadioGroup
               aria-labelledby="demo-controlled-radio-buttons-group"
-              name="tipoAnimalResgate"
+              name="tipo"
               value={tipoAnimalResgate}
               onChange={handleChange}
             >
@@ -79,9 +114,9 @@ const AnunciarResgate = () => {
               </div>
 
               <div className='radioBtn'>
-                <FormControlLabel value="cachorro" control={<Radio />} label="Cachorro" className='labelCachorro' />
+                <FormControlLabel  value="cachorro" name='tipo' control={<Radio />} label="Cachorro" className='labelCachorro' />
 
-                <FormControlLabel value="gato" className='labelGato' control={<Radio />} label="Gato" />
+                <FormControlLabel value="gato" name='tipo' className='labelGato' control={<Radio />} label="Gato" />
               </div>
             </RadioGroup>
           </FormControl>
@@ -107,6 +142,7 @@ const AnunciarResgate = () => {
                 <TextField
                   placeholder='Digite aqui o nome do pet'
                   type="text"
+                  name='nome'
                   className='inputResgate'
                   InputLabelProps={{ shrink: true }}
                   sx={{
@@ -126,6 +162,7 @@ const AnunciarResgate = () => {
                   placeholder='Ex: aproximadamente 3 meses'
                   type="text"
                   className='inputResgate'
+                  name='idade'
                   InputLabelProps={{ shrink: true }}
                   sx={{
                     marginRight: '10px',
@@ -143,6 +180,7 @@ const AnunciarResgate = () => {
                 <TextField
                   placeholder='Ex: sem raça'
                   type="text"
+                  name='raca'
                   className='inputResgate'
                   InputLabelProps={{ shrink: true }}
                   sx={{
@@ -162,6 +200,7 @@ const AnunciarResgate = () => {
               <TextField
                 sx={{ width: '100%', height: '200px' }}
                 placeholder='Encontrei esse cachorro próximo do supermercado Silva Indaía, estava assustado tentando atravessar a rua, ainda estava com a guia de passeio.'
+                name='descricao'
                 type="text"
                 className='inputAdocao'
 
@@ -174,7 +213,6 @@ const AnunciarResgate = () => {
             <FormControl >
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
-                name="sexoAnimalResgate"
                 value={sexoAnimalResgate}
                 onChange={handleChange}
               >
@@ -184,8 +222,8 @@ const AnunciarResgate = () => {
                 </div>
 
                 <div>
-                  <FormControlLabel value="femea" control={<Radio />} label="Fêmea" className='labelFemea' />
-                  <FormControlLabel value="macho" control={<Radio />} label="Macho" className='labelMacho' />
+                  <FormControlLabel value="femea" name="sexo" control={<Radio />} label="Fêmea" className='labelFemea' />
+                  <FormControlLabel value="macho" name="sexo" control={<Radio />} label="Macho" className='labelMacho' />
                 </div>
               </RadioGroup>
             </FormControl>
@@ -193,7 +231,6 @@ const AnunciarResgate = () => {
             <FormControl >
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
-                name="portePetResgate"
                 value={portePetResgate}
                 onChange={handleChange}
               >
@@ -203,14 +240,14 @@ const AnunciarResgate = () => {
                 </div>
 
                 <div className='radioSelect'>
-                  <FormControlLabel value="pequeno" control={<Radio />} label="Pequeno" className='labelPequeno' />
-                  <FormControlLabel value="medio" control={<Radio />} label="Médio" className='labelMedio' />
-                  <FormControlLabel value="grande" control={<Radio />} label="Grande" className='labelGrande' />
+                  <FormControlLabel value="pequeno" control={<Radio />} label="Pequeno" name="porte" className='labelPequeno' />
+                  <FormControlLabel value="medio" control={<Radio />} label="Médio" name="porte" className='labelMedio' />
+                  <FormControlLabel value="grande" name="porte" control={<Radio />} label="Grande" className='labelGrande' />
                 </div>
               </RadioGroup>
             </FormControl>
 
-            <div className="bairroPet">
+            {/* <div className="bairroPet">
               <div className='divTituloCampo'>
                 <label className='titulocampo'>Bairro onde o animal foi encontrado</label>
                 <p>*</p>
@@ -220,18 +257,28 @@ const AnunciarResgate = () => {
                 id="combo-box-demo"
                 className='inputResgate'
                 options={bairros}
+                name='bairro'
                 sx={{ width: 300 }}
                 renderInput={(params) => <TextField {...params} label="Bairros" />}
               />
-            </div>
+            </div> */}
 
             <div className='BtnImagens'>
               <div className=' btnFotoResgate'>
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Foto de Perfil</label>
                 </div>
-                <label className='tituloFile'>Adicionar foto</label>
-                <input type="file" />
+                <TextField
+                  placeholder='Insira uma URL válida'
+                  type="text"
+                  className='inputResgate'
+                  name='foto'
+                  InputLabelProps={{ shrink: true }}
+                  sx={{
+                    marginRight: '10px',
+                  }}
+                // onChange={handleFileChange}
+                />
               </div>
             </div>
 
@@ -240,6 +287,7 @@ const AnunciarResgate = () => {
             </div>
 
           </Typography>
+          </form>
         </Box>
       </Modal>
 

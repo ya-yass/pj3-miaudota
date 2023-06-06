@@ -27,6 +27,8 @@ const AnunciaraAdocao = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+
+
   const [sexo, setValue1] = React.useState('');
   const [tipoAnimal, setValue2] = React.useState('');
   const [castrado, setValue3] = React.useState('');
@@ -36,6 +38,35 @@ const AnunciaraAdocao = () => {
     setValue2(event.target.tipoAnimal);
     setValue3(event.target.castrado);
   };
+
+  const handleSubmitAdotado = async (event) => {
+    event.preventDefault()
+   console.log('Minha funcao de submit')
+   const nome = event.target.nome.value 
+   const foto = event.target.foto.value
+   const idade = event.target.idade.value
+   const sexo = event.target.sexo.value
+   const vacinado = event.target.vacinado.value
+   const castrado = event.target.castrado.value
+   const raca = event.target.raca.value
+   const tipo = event.target.tipo.value
+   const adotado = {nome, foto, idade, sexo, vacinado, castrado, raca, tipo }
+   try {
+     const response = await fetch('http://localhost:3100/adocao',
+     {
+       method: 'POST',
+       headers: {
+         "Content-Type": "application/json",
+       },
+       body: JSON.stringify(adotado), 
+     })
+     const data = await response.json()
+     console.log(data)
+     setOpen(false)
+   } catch (error) {
+     console.log(error)
+   }
+ }
 
   return (
     <Box>
@@ -56,6 +87,9 @@ const AnunciaraAdocao = () => {
 
         <Box sx={styles.Modal}>
           <Cancel className='botaoCancelModal' onClick={handleClose} />
+
+        <form onSubmit={handleSubmitAdotado}>
+
           <Typography id="modal-modal-title" component="div">
             <img src={logo} className='logoModal' alt='MiauDota'></img>
             <div>
@@ -69,7 +103,7 @@ const AnunciaraAdocao = () => {
           <FormControl >
             <RadioGroup
               aria-labelledby="demo-controlled-radio-buttons-group"
-              name="tipoAnimal"
+              name="tipo"
               value={tipoAnimal}
               onChange={handleChange}
             >
@@ -80,7 +114,7 @@ const AnunciaraAdocao = () => {
 
               <div className='radioBtn'>
                 <FormControlLabel value="cachorro" control={<Radio />} label="Cachorro" className='labelCachorro' />
-
+                {/* TODO definir um valor para cachorro e gato para filtrar na página */}
                 <FormControlLabel value="gato" className='labelGato' control={<Radio />} label="Gato" />
               </div>
             </RadioGroup>
@@ -108,6 +142,7 @@ const AnunciaraAdocao = () => {
                   placeholder='Digite aqui o nome do pet'
                   type="text"
                   className='inputAdocao'
+                  name='nome'
                   InputLabelProps={{ shrink: true }}
                   sx={{
                     marginRight: '10px',
@@ -125,6 +160,7 @@ const AnunciaraAdocao = () => {
                   sx={{ width: '157px', marginRight: '10px', }}
                   placeholder='Ex: 4 meses'
                   type="text"
+                  name='idade'
                   className='inputAdocao'
                   InputLabelProps={{ shrink: true }}
                 // onChange={handleFileChange}
@@ -139,6 +175,7 @@ const AnunciaraAdocao = () => {
                 <TextField
                   placeholder='Ex: Sem raça'
                   type="text"
+                  name='raca'
                   className='inputAdocao'
 
                   InputLabelProps={{ shrink: true }}
@@ -158,6 +195,7 @@ const AnunciaraAdocao = () => {
                 sx={{ width: '100%', height: '200px' }}
                 placeholder='Ex: O pet é calmo, não tem costume em ficar sozinho em casa, fica assustado com uma grande quantidade de pessoas dentro de casa...'
                 type="text"
+                name='descricao'
                 className='inputAdocao'
 
                 InputLabelProps={{ shrink: true }}
@@ -169,32 +207,33 @@ const AnunciaraAdocao = () => {
             <FormGroup className='vacinasPet'>
               <div className='divTituloCampo'>
                 <label className='titulocampo'>Vacinas</label>
+                {/* TODO definir com o professor os campos de multipla escolha */}
                 <p>*</p>
               </div>
               <div className="divVacinas">
                 <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="V3" className='labelV3' />
-                  <FormControlLabel control={<Checkbox />} label="V4" className='labelV4' />
+                  <FormControlLabel control={<Checkbox />} label="V3" name='vacinado' className='labelV3' />
+                  <FormControlLabel control={<Checkbox />} label="V4" name='vacinado' className='labelV4' />
                 </div>
 
                 <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="V10" className='labelV10' />
-                  <FormControlLabel control={<Checkbox />} label="V5" className='labelV5' />
+                  <FormControlLabel control={<Checkbox />} label="V10" name='vacinado' className='labelV10' />
+                  <FormControlLabel control={<Checkbox />} label="V5" name='vacinado' className='labelV5' />
 
                 </div>
                 <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="V8" className='labelV8' />
-                  <FormControlLabel control={<Checkbox />} label="Raiva" className='labelRaiva' />
+                  <FormControlLabel control={<Checkbox />} label="V8" name='vacinado' className='labelV8' />
+                  <FormControlLabel control={<Checkbox />} label="Raiva" name='vacinado' className='labelRaiva' />
                 </div>
 
                 <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="Giárdia" className='labelGiardia' />
-                  <FormControlLabel control={<Checkbox />} label="Gripe canina" className='labelGripeCanina' />
+                  <FormControlLabel control={<Checkbox />} label="Giárdia" name='vacinado' className='labelGiardia' />
+                  <FormControlLabel control={<Checkbox />} label="Gripe canina" name='vacinado' className='labelGripeCanina' />
                 </div>
 
                 <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="Não vacinado" className='labelNaoVacinado' />
-                  <FormControlLabel control={<Checkbox />} label="Outro" className='labelOutro' />
+                  <FormControlLabel control={<Checkbox />} label="Não vacinado" name='vacinado' className='labelNaoVacinado' />
+                  <FormControlLabel control={<Checkbox />} label="Outro" name='vacinado' className='labelOutro' />
                 </div>
               </div>
             </FormGroup>
@@ -203,7 +242,7 @@ const AnunciaraAdocao = () => {
               <FormControl sx={{ marginRight: '43px' }}>
                 <RadioGroup
                   aria-labelledby="demo-controlled-radio-buttons-group"
-                  name="sexoAnimal"
+                  // name="sexoAnimal"
                   value={sexo}
                   onChange={handleChange}
                 >
@@ -213,8 +252,8 @@ const AnunciaraAdocao = () => {
                   </div>
 
                   <div className='radioSelect'>
-                    <FormControlLabel value="femea" control={<Radio />} label="Fêmea" className='labelFemea' />
-                    <FormControlLabel value="macho" control={<Radio />} label="Macho" className='labelMacho' />
+                    <FormControlLabel value="femea" name='sexo' control={<Radio />} label="Fêmea" className='labelFemea' />
+                    <FormControlLabel value="macho" name='sexo' control={<Radio />} label="Macho" className='labelMacho' />
                   </div>
                 </RadioGroup>
               </FormControl>
@@ -222,7 +261,7 @@ const AnunciaraAdocao = () => {
               <FormControl >
                 <RadioGroup
                   aria-labelledby="demo-controlled-radio-buttons-group"
-                  name="controlled-radio-buttons-group"
+                  // name="controlled-radio-buttons-group"
                   value={castrado}
                   onChange={handleChange}
                 >
@@ -232,8 +271,8 @@ const AnunciaraAdocao = () => {
                   </div>
 
                   <div className='radioSelect'>
-                    <FormControlLabel value="sim" control={<Radio />} label="Sim" className='labelNao' />
-                    <FormControlLabel value="nao" control={<Radio />} label="Não" className='labelSim' />
+                    <FormControlLabel value="sim" name='castrado' control={<Radio />} label="Sim" className='labelNao' />
+                    <FormControlLabel value="nao" name='castrado' control={<Radio />} label="Não" className='labelSim' />
                   </div>
                 </RadioGroup>
               </FormControl>
@@ -244,8 +283,17 @@ const AnunciaraAdocao = () => {
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Foto do pet</label>
                 </div>
-                <label className='tituloFile'>Adicionar foto</label>
-                <input type="file" />
+                <TextField
+                  placeholder='Insira uma URL válida'
+                  type="text"
+                  className='inputAdocao'
+                  name='foto'
+                  InputLabelProps={{ shrink: true }}
+                  sx={{
+                    marginRight: '10px',
+                  }}
+                // onChange={handleFileChange}
+                />
               </div>
             </div>
 
@@ -257,6 +305,7 @@ const AnunciaraAdocao = () => {
 
             {/* <ButtonEnviar variant="contained" id='botaoEnviar' >Cadastrar</ButtonEnviar> */}
           </Typography>
+          </form>
         </Box>
       </Modal >
     </Box >
