@@ -27,6 +27,7 @@ const ModalUserCadastro = () => {
    //abrir e fechar o modal de cadastro
    const [users, setUsers] = useState(false);
    const [modalOpen, setModalOpen] = useState(false) 
+   const handleCloseCadastro = () => setModalOpen(false);
 
  
 
@@ -72,12 +73,13 @@ const ModalUserCadastro = () => {
         
         <Modal  //modal cadastrar-se
               open={modalOpen}
+              onClose={handleCloseCadastro}
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description">
 
               <Box sx={styles.Modal}>
 
-                <Cancel className='botaoCancelModal' onClick={() => setModalOpen(false)} />
+                <Cancel className='botaoCancelModal' onClick={handleCloseCadastro} />
 
                 
               <form onSubmit={handleSubmit}>
