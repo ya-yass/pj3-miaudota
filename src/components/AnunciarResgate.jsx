@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import { useState, useEffect } from 'react';
 //modal
 import * as React from 'react';
 import Modal from '@mui/material/Modal';
@@ -19,6 +20,7 @@ import AchadoFoto from './assets/img/achado-foto.png';
 import './AnunciarResgate.css'
 import logo from './assets/img/miaudota-logo.png'
 import { BsXLg as Cancel } from 'react-icons/bs'
+import CardPetInicialResgate from './CardPetInicialResgate';
 
 
 
@@ -27,6 +29,8 @@ const AnunciarResgate = () => {
   const [modalOpen, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const[petRegastados, setPetRegastados] = useState(false)
 
   const [sexoAnimalResgate, setValue1] = React.useState('');
   const [tipoAnimalResgate, setValue2] = React.useState('');
@@ -48,6 +52,19 @@ const AnunciarResgate = () => {
 
   };
 
+  const loadPetsRegastados = async () => {
+    try{
+      const response = await fetch ('http://localhost:3100/perdido')
+      const data = await response.json()
+      setPetRegastados(data)
+      console.log(data)
+    }catch (error){
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {loadPetsRegastados()},[]
+  )
   const handleSubmitResgatado = async (event) => {
     event.preventDefault()
    console.log('Minha funcao de submit')
@@ -59,7 +76,6 @@ const AnunciarResgate = () => {
    const porte = event.target.porte.value
    const foto = event.target.foto.value
    const bairro = event.target.bairro.value
-  // TODO resolver o problema de bibilioteca de autocomplete
    const descricao = event.target.descricao.value
 
    const perdido = {tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao}
@@ -89,6 +105,12 @@ const AnunciarResgate = () => {
           <p>Encontrei um <br /> pet</p>
           <img src={AchadoFoto} alt="Anuncie um animal para adoção" className='imagemPet ' />
         </button>
+        { petRegastados && 
+          petRegastados.map(perdido => (
+            <CardPetInicialResgate key={perdido.id} perdido={perdido} setPetRegastados={setPetRegastados} petRegastados={petRegastados}/>
+          ))
+
+        }
       </div>
 
       <Modal
@@ -116,7 +138,7 @@ const AnunciarResgate = () => {
             <RadioGroup
               // aria-labelledby="demo-controlled-radio-buttons-group"
               name="tipo"
-              // value={tipoAnimalResgate}
+              value={tipoAnimalResgate}
               onChange={handleChange}
             >
             <div className='divTituloCampo'>
