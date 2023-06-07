@@ -10,7 +10,10 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import Autocomplete from '@mui/material/Autocomplete';
+
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 //imagens e files
 import AchadoFoto from './assets/img/achado-foto.png';
 import './AnunciarResgate.css'
@@ -29,11 +32,20 @@ const AnunciarResgate = () => {
   const [tipoAnimalResgate, setValue2] = React.useState('');
   const [portePetResgate, setValue3] = React.useState('');
 
+  const [bairros, setBairros] = React.useState('');
+
+  const handleChangeBairros = (event) => {
+    setBairros(event.target.value)
+  };
+
+
   const handleChange = (event) => {
     // setValue(event.target.value);
     setValue1(event.target.tipoAnimalResgate);
     setValue2(event.target.sexoAnimalResgate);
     setValue3(event.target.portePetResgate);
+
+
   };
 
   const handleSubmitResgatado = async (event) => {
@@ -46,11 +58,11 @@ const AnunciarResgate = () => {
    const sexo = event.target.sexo.value
    const porte = event.target.porte.value
    const foto = event.target.foto.value
-  //  const bairro = event.target.bairro.value
+   const bairro = event.target.bairro.value
   // TODO resolver o problema de bibilioteca de autocomplete
    const descricao = event.target.descricao.value
 
-   const perdido = {tipo, nome, idade, raca, sexo, porte, foto, descricao}
+   const perdido = {tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao}
    try {
      const response = await fetch('http://localhost:3100/perdido',
      {
@@ -72,7 +84,6 @@ const AnunciarResgate = () => {
   return (
     <Box>
       <div className='cards'>
-
         <button className="cardEncontrei" onClick={handleOpen}>
           <div className='mask'></div>
           <p>Encontrei um <br /> pet</p>
@@ -103,21 +114,21 @@ const AnunciarResgate = () => {
 
           <FormControl >
             <RadioGroup
-              aria-labelledby="demo-controlled-radio-buttons-group"
+              // aria-labelledby="demo-controlled-radio-buttons-group"
               name="tipo"
-              value={tipoAnimalResgate}
+              // value={tipoAnimalResgate}
               onChange={handleChange}
             >
-              <div className='divTituloCampo'>
-                <label className='titulocampo'>Qual animal você encontrou?</label>
-                <p>*</p>
-              </div>
+            <div className='divTituloCampo'>
+              <label className='titulocampo'>Qual animal você encontrou?</label>
+              <p>*</p>
+            </div>
 
-              <div className='radioBtn'>
-                <FormControlLabel  value="cachorro" name='tipo' control={<Radio />} label="Cachorro" className='labelCachorro' />
+            <div className='radioBtn'>
+              <FormControlLabel  value="cachorro" name='tipo' control={<Radio />} label="Cachorro" className='labelCachorro' />
 
-                <FormControlLabel value="gato" name='tipo' className='labelGato' control={<Radio />} label="Gato" />
-              </div>
+              <FormControlLabel value="gato" name='tipo' className='labelGato' control={<Radio />} label="Gato" />
+            </div>
             </RadioGroup>
           </FormControl>
 
@@ -137,7 +148,6 @@ const AnunciarResgate = () => {
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Nome</label>
                   <p className='opcional'>(Opcional)</p>
-
                 </div>
                 <TextField
                   placeholder='Digite aqui o nome do pet'
@@ -156,7 +166,6 @@ const AnunciarResgate = () => {
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Idade</label>
                   <p className='opcional'>(Opcional)</p>
-
                 </div>
                 <TextField
                   placeholder='Ex: aproximadamente 3 meses'
@@ -175,7 +184,6 @@ const AnunciarResgate = () => {
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Raça</label>
                   <p className='opcional'>(Opcional)</p>
-
                 </div>
                 <TextField
                   placeholder='Ex: sem raça'
@@ -189,7 +197,6 @@ const AnunciarResgate = () => {
                 // onChange={handleFileChange}
                 />
               </div>
-
             </div>
 
             <div className='sobrePet'>
@@ -203,19 +210,17 @@ const AnunciarResgate = () => {
                 name='descricao'
                 type="text"
                 className='inputAdocao'
-
                 InputLabelProps={{ shrink: true }}
-
               // onChange={handleFileChange}
               />
             </div>
 
             <FormControl >
               <RadioGroup
-                aria-labelledby="demo-controlled-radio-buttons-group"
+                // aria-labelledby="demo-controlled-radio-buttons-group"
                 value={sexoAnimalResgate}
-                onChange={handleChange}
-              >
+                onChange={handleChange}>
+
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Sexo</label>
                   <p>*</p>
@@ -230,10 +235,10 @@ const AnunciarResgate = () => {
 
             <FormControl >
               <RadioGroup
-                aria-labelledby="demo-controlled-radio-buttons-group"
+                // aria-labelledby="demo-controlled-radio-buttons-group"
                 value={portePetResgate}
-                onChange={handleChange}
-              >
+                onChange={handleChange}>
+                  
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Porte</label>
                   <p>*</p>
@@ -247,40 +252,102 @@ const AnunciarResgate = () => {
               </RadioGroup>
             </FormControl>
 
-            {/* <div className="bairroPet">
-              <div className='divTituloCampo'>
-                <label className='titulocampo'>Bairro onde o animal foi encontrado</label>
-                <p>*</p>
-              </div>
-              <Autocomplete
-                disablePortal
-                id="combo-box-demo"
-                className='inputResgate'
-                options={bairros}
-                name='bairro'
-                sx={{ width: 300 }}
-                renderInput={(params) => <TextField {...params} label="Bairros" />}
-              />
-            </div> */}
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Bairros</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={bairros}
+              name="bairro"
+              label="Bairros"
+              onChange={handleChangeBairros}>
 
-            <div className='BtnImagens'>
-              <div className=' btnFotoResgate'>
-                <div className='divTituloCampo'>
-                  <label className='titulocampo'>Foto de Perfil</label>
-                </div>
-                <TextField
-                  placeholder='Insira uma URL válida'
-                  type="text"
-                  className='inputResgate'
-                  name='foto'
-                  InputLabelProps={{ shrink: true }}
-                  sx={{
-                    marginRight: '10px',
-                  }}
-                // onChange={handleFileChange}
-                />
+              <MenuItem value={1}>Balneário California</MenuItem>
+              <MenuItem value={2}>Balneário Copacabana</MenuItem>
+              <MenuItem value={3}>Balneário Golfinhos</MenuItem>
+              <MenuItem value={4}>Balneário Forest</MenuItem>
+              <MenuItem value={5}>Balneário Recando do Sol</MenuItem>
+              <MenuItem value={6}>Barranco Alto</MenuItem>
+              <MenuItem value={7}>Benfica</MenuItem>
+              <MenuItem value={8}>Canta Galo</MenuItem>
+              <MenuItem value={9}>Capricórnio</MenuItem>
+              <MenuItem value={10}>Caputera</MenuItem>
+              <MenuItem value={11}>Centro</MenuItem>
+              <MenuItem value={12}>Cidade Jardim</MenuItem>
+              <MenuItem value={13}>Costa Nova</MenuItem>
+              <MenuItem value={14}>Delfim Verde</MenuItem>
+              <MenuItem value={15}>Estrela D'Alva</MenuItem>
+              <MenuItem value={16}>Getuba</MenuItem>
+              <MenuItem value={17}>Indaiá</MenuItem>
+              <MenuItem value={18}>Ipiranga</MenuItem>
+              <MenuItem value={19}>Itaúna</MenuItem>
+              <MenuItem value={20}>Jaraguá</MenuItem>
+              <MenuItem value={21}>Jaraguazinho</MenuItem>
+              <MenuItem value={22}>Jardim Aruan</MenuItem>
+              <MenuItem value={23}>Jardim Britânia</MenuItem>
+              <MenuItem value={24}>Jardim Califórnia</MenuItem>
+              <MenuItem value={25}>Jardim Capricórnio</MenuItem>
+              <MenuItem value={26}>Jardim Casa Branca</MenuItem>
+              <MenuItem value={27}>Jardim das Gaivotas</MenuItem>
+              <MenuItem value={28}>Jardim Jaqueira</MenuItem>
+              <MenuItem value={29}>Jardim Manari</MenuItem>
+              <MenuItem value={30}>Jardim Mariella</MenuItem>
+              <MenuItem value={31}>Jardim Maristela</MenuItem>
+              <MenuItem value={32}>Jardim Olaria</MenuItem>
+              <MenuItem value={33}>Jardim Primavera</MenuItem>
+              <MenuItem value={34}>Jardim Rio Santos</MenuItem>
+              <MenuItem value={35}>Jardim Santa Rosa</MenuItem>
+              <MenuItem value={36}>Jardim Tarumãs</MenuItem>
+              <MenuItem value={37}>Jardim Terralão</MenuItem>
+              <MenuItem value={38}>Mar Azul</MenuItem>
+              <MenuItem value={39}>Martim de Sá</MenuItem>
+              <MenuItem value={40}>Massaguaçu</MenuItem>
+              <MenuItem value={41}>Mirante da Orla</MenuItem>
+              <MenuItem value={42}>Morro do Algodão</MenuItem>
+              <MenuItem value={43}>Park Imperial</MenuItem>
+              <MenuItem value={44}>Parque Balneário Poiares</MenuItem>
+              <MenuItem value={45}>Pegorelli</MenuItem>
+              <MenuItem value={46}>Perequê Mirim</MenuItem>
+              <MenuItem value={47}>Poiares</MenuItem>
+              <MenuItem value={48}>Pontal de Santa Marina</MenuItem>
+              <MenuItem value={49}>Ponte Seca</MenuItem>
+              <MenuItem value={50}>Portal da Fazendinha</MenuItem>
+              <MenuItem value={51}>Porto Novo</MenuItem>
+              <MenuItem value={52}>Praia da Cocanha</MenuItem>
+              <MenuItem value={53}>Praia da Mococa</MenuItem>
+              <MenuItem value={54}>Praia das Palmeiras</MenuItem>
+              <MenuItem value={55}>Prainha</MenuItem>
+              <MenuItem value={56}>Recanto Som do Mar</MenuItem>
+              <MenuItem value={57}>Rio Claro</MenuItem>
+              <MenuItem value={58}>Rio do Ouro</MenuItem>
+              <MenuItem value={59}>Sumaré</MenuItem>
+              <MenuItem value={60}>Tabatinga</MenuItem>
+              <MenuItem value={61}>Tinga</MenuItem>
+              <MenuItem value={62}>Travessão</MenuItem>
+              <MenuItem value={63}>Vapapesca</MenuItem>
+              <MenuItem value={64}>Vila Nossa Senhora Aparecida</MenuItem>
+              <MenuItem value={65}>Vila Ponte Seca</MenuItem>
+            </Select>
+          </FormControl>
+
+          <div className='BtnImagens'>
+            <div className=' btnFotoResgate'>
+              <div className='divTituloCampo'>
+                <label className='titulocampo'>Foto de Perfil</label>
               </div>
+              <TextField
+                placeholder='Insira uma URL válida'
+                type="text"
+                className='inputResgate'
+                name='foto'
+                InputLabelProps={{ shrink: true }}
+                sx={{
+                  marginRight: '10px',
+                }}
+              // onChange={handleFileChange}
+              />
             </div>
+          </div>
 
             <div className="divBtnCadastrarAdocao">
               <button className='btnAnunciarResgate' variant="contained" >Anunciar</button>
@@ -295,73 +362,6 @@ const AnunciarResgate = () => {
   )
 }
 
-const bairros = [
-  { label: 'Balneário California' },
-  { label: 'Balneário Copacabana' },
-  { label: 'Balneário Golfinhos' },
-  { label: 'Balneário Forest' },
-  { label: 'Balneário Recando do Sol' },
-  { label: 'Barranco Alto' },
-  { label: 'Benfica' },
-  { label: 'Canta Galo' },
-  { label: 'Capricónio' },
-  { label: 'Caputera' },
-  { label: 'Centro' },
-  { label: 'Cidade Jardim' },
-  { label: 'Costa Nova' },
-  { label: 'Delfim Verde' },
-  { label: "Estrela D'Alva" },
-  { label: 'Getuba' },
-  { label: 'Indaiá' },
-  { label: 'Ipiranga' },
-  { label: 'Itaúna' },
-  { label: 'Jaraguá' },
-  { label: 'Jaraguazinho' },
-  { label: 'Jardim Aruan' },
-  { label: 'Jardim Britânia' },
-  { label: 'Jardim Califórnia' },
-  { label: 'Jardim Capricórnio' },
-  { label: 'Jardim Casa Branca' },
-  { label: 'Jardim das Gaivotas' },
-  { label: 'Jardim Jaqueira' },
-  { label: 'Jardim Manari' },
-  { label: 'Jardim Mariella' },
-  { label: 'Jardim Maristela' },
-  { label: 'Jardim Olaria' },
-  { label: 'Jardim Primavera' },
-  { label: 'Jardim Rio Santos' },
-  { label: 'Jardim Santa Rosa' },
-  { label: 'Jardim Tarumãs' },
-  { label: 'Jardim Terralão' },
-  { label: 'Mar Azul' },
-  { label: 'Martim de Sá' },
-  { label: 'Massaguaçu' },
-  { label: 'Mirante da Orla' },
-  { label: 'Morro do Algodão' },
-  { label: 'Park Imperial' },
-  { label: 'Parque Balneário Poiares' },
-  { label: 'Pegorelli' },
-  { label: 'Perequê Mirim' },
-  { label: 'Poiares' },
-  { label: 'Pontal de Santa Marina' },
-  { label: 'Ponte Seca' },
-  { label: 'Portal da Fazendinha' },
-  { label: 'Porto Novo' },
-  { label: 'Praia da Cocanha' },
-  { label: 'Praia da Mococa' },
-  { label: 'Praia das Palmeiras' },
-  { label: 'Prainha' },
-  { label: 'Recanto Som do Mar' },
-  { label: 'Rio Claro' },
-  { label: 'Rio do Ouro' },
-  { label: 'Sumaré' },
-  { label: 'Tabatinga' },
-  { label: 'Tinga' },
-  { label: 'Travessão' },
-  { label: 'Vapapesca' },
-  { label: 'Vila Nossa Senhora Aparecida' },
-  { label: 'Vila Ponte Seca' },
-];
 
 const styles = {
   Modal: {

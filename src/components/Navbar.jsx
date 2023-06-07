@@ -7,7 +7,7 @@ import * as React from 'react';
 
 import { Link } from 'react-router-dom'
 import ModalUserCadastro from './modais/ModalUserCadastro';
-import ModalUserLogin from './modais/ModalUserLogin'
+import ModalUserLogin from './modais/modalUserLogin'
 
 
 const settings = ['Entre', 'Cadastre-se'];

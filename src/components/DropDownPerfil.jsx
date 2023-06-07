@@ -11,7 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { Link } from 'react-router-dom';
 
-import Foto from './assets/img/pet1.jpg';
+// import Foto from './assets/img/pet1.jpg';
 import useAuthStore from '../store/authStore';
 
 
@@ -79,7 +79,7 @@ import useAuthStore from '../store/authStore';
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}><img src={Foto}></img></Avatar>
+            <Avatar sx={{ width: 32, height: 32 }}><img src={fotoperfil} alt='fotoPerfil'></img></Avatar>
           </IconButton>
         </Tooltip>
       </Box>
