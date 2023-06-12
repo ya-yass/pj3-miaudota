@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 
 
 //files
-import './ModalDescricao.css'
+import './ModalDescricaoResgate.css'
 
 //icons e imagens
 import fotoPerfilCao from './assets/img/fotoPerfilCao.jpg'
@@ -26,7 +26,7 @@ import {
 
 
 
-const ModalDescricao = () => {
+const ModalDescricaoResgate = () => {
 
   //abrir e fechar o modal principal
   const [open, setOpen] = React.useState(false);
@@ -246,4 +246,4 @@ const styles = {
 //   pb: 3,
 // };
 
-export default ModalDescricao
+export default ModalDescricaoResgate

@@ -3,7 +3,8 @@ import Fera from './assets/img/fera.avif';
 import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ModalDescricao from './ModalDescricao';
+import ModalDescricaoResgate from "./modais/ModalDescricaoResgate"
+
 import { useState } from 'react';
 
 import {
@@ -31,7 +32,7 @@ const CardPetInicialResgate = (petRegastado) => {
 			items: 5,
 			slidesToSlide: 3
 		},
-		tablet: {
+		tablet: { 
 			breakpoint: { max: 1500, min: 1101 },
 			items: 4,
 			slidesToSlide: 3
@@ -72,7 +73,7 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />{petRegastado.bairo}</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricao />
+							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -91,7 +92,7 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricao />
+							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -110,7 +111,7 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricao />
+							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -129,7 +130,7 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricao />
+							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -148,7 +149,7 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricao />
+							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -167,7 +168,7 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricao />
+							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -186,7 +187,7 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricao />
+							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>

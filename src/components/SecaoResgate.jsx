@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './SecaoAdocao.css'
 import CarouselSlide from "./CarouselMiaudota"
-import ModalDescricao from './ModalDescricao';
+import ModalDescricaoResgate from "./modais/ModalDescricaoResgate"
 
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -52,7 +52,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -185,7 +185,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@ const SecaoResgate = () => {
                 <span><Local />Martim de Sá</span>
               </div>
               <div className="sobre">
-                < ModalDescricao />
+                < ModalDescricaoResgate />
               </div>
             </div>
           </div>
