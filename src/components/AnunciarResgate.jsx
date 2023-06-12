@@ -204,7 +204,7 @@ const AnunciarResgate = () => {
                 <label className='titulocampo'>Sobre o pet</label>
                 <p>*</p>
               </div>
-              <TextField
+              <TextField //TODO mudar para textarea para rolar a quebra de linha
                 sx={{ width: '100%', height: '200px' }}
                 placeholder='Encontrei esse cachorro próximo do supermercado Silva Indaía, estava assustado tentando atravessar a rua, ainda estava com a guia de passeio.'
                 name='descricao'
