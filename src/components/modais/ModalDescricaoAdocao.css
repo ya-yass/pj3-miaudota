@@ -1,0 +1,21 @@
+button.btnQueroAdotar {
+  background-color: #F6823F;
+  color: #FFF;
+  font-weight: bold !important;
+  width: 195px;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+}
+
+button.btnQueroAdotar:hover {
+  background-color: #f07a35 !important;
+  color: #FFF;
+  font-weight: bold;
+  width: 195px;
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+}

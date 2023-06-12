@@ -8,25 +8,26 @@ import TextField from '@mui/material/TextField';
 
 
 //files
-import '../modais/ModalDescricaoResgate.css'
+import '../modais/ModalDescricaoAdocao.css'
 
 //icons e imagens
-import fotoPerfilCao from '../assets/img/fotoPerfilCao.jpg'
+import fotoGato from '../assets/img/pet1.jpg'
 import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-  FaVenus as Femea,
-  FaHeart as Idade,
-  FaPaw as Raca,
-  FaMapMarkerAlt as Local
-
+	FaVenus as Femea,
+	FaMars as Macho,
+	FaHeart as Idade,
+	FaSyringe as Vacina,
+	FaPaw as Raca,
+	FaClinicMedical as Castrado
 } from 'react-icons/fa'
 
 
 
 
-const ModalDescricaoResgate = () => {
+const ModalDescricaoAdocao = () => {
 
   //abrir e fechar o modal principal
   const [modalOpen, setOpen] = React.useState(false);
@@ -47,7 +48,7 @@ const ModalDescricaoResgate = () => {
       <React.Fragment>
         <div className="botaoChild">
           <span onClick={handleClose1} className="btnCancelar">Cancelar</span>
-          <button onClick={handleOpen} variant="contained" className="btnEncontrei">ENCONTREI MEU PET</button>
+          <button onClick={handleOpen} variant="contained" className="btnQueroAdotar">QUERO ADOTAR</button>
         </div>
         <Modal
           open={modalOpen}
@@ -113,7 +114,7 @@ const ModalDescricaoResgate = () => {
                   </div>
                   <TextField
                     sx={{ height: '123px' }}
-                    placeholder='“Olá! Vi o Mali para adoção e estou interessado em adotá-lo"'
+                    placeholder='“Olá! Vi o Mali para adoção e estou interessado em adotá-lo...”'
                     type="text"
                     className='inputContato'
 
@@ -126,7 +127,7 @@ const ModalDescricaoResgate = () => {
 
 
               <div className='btnContatos'>
-                <button onClick={handleOpen} variant="contained" className="btnEncontrei">ENVIAR</button>
+                <button onClick={handleOpen} variant="contained" className="btnQueroAdotar">ENVIAR</button>
               </div>
 
             </Typography>
@@ -135,7 +136,6 @@ const ModalDescricaoResgate = () => {
       </React.Fragment >
     );
   }//funcao modal child fechamento
-
 
   return (
     <>
@@ -167,12 +167,13 @@ const ModalDescricaoResgate = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img src={fotoPerfilCao} alt="FotoPet" className="fotoPet" />                    
+                    <img src={fotoGato} alt="FotoPet" className="fotoPet" />
                   </div>
+                  
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet">Belinha</p>
-                      <Femea className='femea' />
+                      <p className="nomepet">Mali</p>
+                      <Macho className='macho' />
                     </div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio aperiam nulla, eaque ipsum in quibusdam placeat aspernatur cum asperiores dolorum odio reiciendis vitae eius hic animi error dolore rerum quos.</p>
                   </div>
@@ -182,25 +183,26 @@ const ModalDescricaoResgate = () => {
                     <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
                     <div className="infoAnunciante">
                       <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Ana Luiza</p>
+                      <p className="nomeAnunciante">Gatinha Marrie</p>
                     </div>
                   </div>
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade"><Idade />03 meses</span>
-                      <span><Raca />Sem raça definida</span>
-                      <span> <Femea /> Fêmea</span>
-                      <span className="localPet"><Local /> Foi encontrado na Martim de Sá</span>
+                      <span className="idade"><Idade />07 meses</span>
+                      <span><Raca/>Sem raça definida</span>
+                      <span><Castrado/>Castrado</span>
+                      <span><Vacina/>V3, V4, V5 e raiva </span>
+                      <span><Macho/>Macho</span>
 
                     </div>
                   </div>
                 </div>
                 <div className="maisFotos">
-                  <img src={fotoPerfilCao} alt="" />
-                  <img src={fotoPerfilCao} alt="" />
-                  <img src={fotoPerfilCao} alt="" />
-                  <img src={fotoPerfilCao} alt="" />
+                  <img src={fotoGato} alt="" />
+                  <img src={fotoGato} alt="" />
+                  <img src={fotoGato} alt="" />
+                  <img src={fotoGato} alt="" />
 
                 </div>
               </div>
@@ -230,22 +232,6 @@ const styles = {
     p: 4,
     borderRadius: '20px',
   }
-
-
 }
 
-// const style = {
-//   position: 'absolute',
-//   top: '50%',
-//   left: '50%',
-//   transform: 'translate(-50%, -50%)',
-//   width: 400,
-//   bgcolor: 'background.paper',
-//   border: '2px solid #000',
-//   boxShadow: 24,
-//   pt: 2,
-//   px: 4,
-//   pb: 3,
-// };
-
-export default ModalDescricaoResgate
+export default ModalDescricaoAdocao

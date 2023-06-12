@@ -87,7 +87,7 @@
   margin-left: 21px;
 }
 
-button.btnEncontrei {
+.btnEncontrei {
   background-color: #F6823F;
   color: #FFF;
   font-weight: bold !important;
@@ -95,9 +95,10 @@ button.btnEncontrei {
   box-shadow: none;
   padding: 10px;
   border-radius: 30px;
+  border: none;
 }
 
-button.btnEncontrei:hover {
+.btnEncontrei:hover {
   background-color: #f07a35 !important;
   color: #FFF;
   font-weight: bold;
@@ -105,6 +106,7 @@ button.btnEncontrei:hover {
   box-shadow: none;
   padding: 10px;
   border-radius: 30px;
+  border: none;
 }
 
 .maisFotos img {
