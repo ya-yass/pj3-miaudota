@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -17,8 +17,7 @@ import useAuthStore from '../store/authStore';
 
 
 
- const DropDownPerfil = (user) =>  {
-
+ const DropDownPerfil = () =>  {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -29,12 +28,11 @@ import useAuthStore from '../store/authStore';
     setAnchorEl(null);
   };
 
-  const [fotoperfil] = useState(user.fotoperfil)
-
 
 
   const emailUserLogged = useAuthStore((state) => state.email)
   const tokenUserLogged = useAuthStore((state) => state.token)
+  const fotoperfil = useAuthStore((state) => state.fotoperfil)
   const logout = useAuthStore((state) => state.logout)
 
   const handleLogout = async () => {
@@ -79,7 +77,7 @@ import useAuthStore from '../store/authStore';
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}><img src={fotoperfil} alt='fotoPerfil'></img></Avatar>
+            <Avatar sx={{ width: 32, height: 32 }}><img src={fotoperfil} alt='fotoPerfil'/></Avatar>
           </IconButton>
         </Tooltip>
       </Box>

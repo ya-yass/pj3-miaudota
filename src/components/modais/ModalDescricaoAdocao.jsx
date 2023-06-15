@@ -16,7 +16,7 @@ import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-	FaVenus as Femea,
+	// FaVenus as Femea,
 	FaMars as Macho,
 	FaHeart as Idade,
 	FaSyringe as Vacina,

@@ -8,6 +8,7 @@ import Stack from '@mui/material/Stack';
 import './SecaoAdocao.css'
 import CarouselSlide from "./CarouselMiaudota"
 import ModalDescricaoResgate from "./modais/ModalDescricaoResgate"
+import useAuthStore from '../store/authStore';
 
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -23,6 +24,18 @@ import {
 } from 'react-icons/fa'
 
 const SecaoResgate = () => {
+
+  const foto =useAuthStore((state) => state.foto)
+  const nome =useAuthStore((state) => state.usuario)
+  const porte =useAuthStore((state) => state.porte)
+  const raca =useAuthStore((state) => state.raca)
+  const bairro =useAuthStore((state) => state.bairro)
+  const sexo =useAuthStore((state) => state.sexo)
+
+
+
+
+
   return (
     <Box className='div' sx={{
       margin: '0 70px'
@@ -39,17 +52,17 @@ const SecaoResgate = () => {
       <div className="conteudo">
         <div className="pets">
           <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
+            <img src={foto} alt="pet" className='pet' />
             <div className="info">
               <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
+                <h3 className="nome">{nome}</h3>
                 <Femea className='femea' />
                 {/* <Macho className='macho' /> */}
               </div>
               <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
+                <span className="idade"><Idade />{porte}</span>
+                <span><Raca />{raca}</span>
+                <span><Local />{bairro}</span>
               </div>
               <div className="sobre">
                 < ModalDescricaoResgate />

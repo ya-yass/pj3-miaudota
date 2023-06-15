@@ -75,7 +75,7 @@ const ModalUserlogin = () => {
     <Box>
       <div className="sobre">
       {isLogged ? (
-        <DropDownPerfil/>
+        <DropDownPerfil />
         ) : (<button onClick={openLogin} >Logar</button>) }
       </div>
     

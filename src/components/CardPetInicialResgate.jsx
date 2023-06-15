@@ -17,14 +17,6 @@ import {
 
 const CardPetInicialResgate = (petRegastado) => {
 
-	const [nome, setNome] = useState(petRegastado.nome)
-	const [raca, setRaca] = useState(petRegastado.raca)
-	const [idade, setIdade] = useState(petRegastado.idade)
-	const [sexo, setSexo] = useState(petRegastado.sexo)
-	const [foto, setFoto] = useState(petRegastado.foto)
-	const [bairro, setBairro] = useState(petRegastado.bairro)
-
-
 
 	const responsive = { //para editar a responsividade do carousel
 		desktop: {

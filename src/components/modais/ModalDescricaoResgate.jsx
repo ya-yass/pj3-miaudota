@@ -17,7 +17,7 @@ import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   FaVenus as Femea,
-  FaHeart as Idade,
+  FaHeart as Porte,
   FaPaw as Raca,
   FaMapMarkerAlt as Local
 
@@ -188,7 +188,7 @@ const ModalDescricaoResgate = () => {
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade"><Idade />03 meses</span>
+                      <span className="idade"><Porte/>Pequena</span>
                       <span><Raca />Sem raça definida</span>
                       <span> <Femea /> Fêmea</span>
                       <span className="localPet"><Local /> Foi encontrado na Martim de Sá</span>

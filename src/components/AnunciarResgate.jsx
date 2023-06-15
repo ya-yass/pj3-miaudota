@@ -20,7 +20,7 @@ import AchadoFoto from './assets/img/achado-foto.png';
 import './AnunciarResgate.css'
 import logo from './assets/img/miaudota-logo.png'
 import { BsXLg as Cancel } from 'react-icons/bs'
-import CardPetInicialResgate from './CardPetInicialResgate';
+import SecaoResgate from './SecaoResgate';
 
 
 
@@ -107,7 +107,7 @@ const AnunciarResgate = () => {
         </button>
         { petRegastados && 
           petRegastados.map(perdido => (
-            <CardPetInicialResgate key={perdido.id} perdido={perdido} setPetRegastados={setPetRegastados} petRegastados={petRegastados}/>
+            <SecaoResgate key={perdido.id} perdido={perdido} setPetRegastados={setPetRegastados} petRegastados={petRegastados}/>
           ))
 
         }

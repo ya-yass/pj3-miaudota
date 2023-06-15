@@ -21,7 +21,7 @@ import { BsXLg as Cancel } from 'react-icons/bs'
 
 
 
-const ModalEditarperfil= ({user, setUsers, users}) => {
+const ModalEditarperfil= () => {
 
    //abrir e fechar o modal de cadastro
    const [modalOpen, setModalOpen] = React.useState(false);
@@ -29,13 +29,15 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
   const handleClose = () => setModalOpen(false);
 
   
-  const [fotoperfil, setFotoperfil] = useState(user.fotoperfil)
-  const [nome, setNome] = useState(user.nome)
-  const [usuario, setUsuario] = useState(user.usuario)
-  const [email, setEmail] = useState(user.email)
-  const [senha, setSenha] = useState(user.senha)
-  const [idade, setIdade] = useState(user.idade)
-  const [qtdanimais, setQtdanimais] = useState(user.qtdanimais)
+  const fotoperfil =useAuthStore((state) => state.fotoperfil)
+  const id =useAuthStore((state) => state.id)
+  const nome =useAuthStore((state) => state.nome)
+  const email =useAuthStore((state) => state.email)
+  const senha =useAuthStore((state) => state.senha)
+  const idade =useAuthStore((state) => state.idade)
+  const qtdanimais =useAuthStore((state) => state.qtdanimais)
+  const usuario =useAuthStore((state) => state.usuario)
+
 
   const token = useAuthStore((state) => state.token)
   
@@ -64,7 +66,7 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
       if(response.status === 200) {
       console.log(data)
       const newUsers = users.map((user) => {
-        if(user.id === id) {
+        if(id === id) {
           return userEdited
         }
         return user
@@ -121,13 +123,13 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Foto de Perfil</label>
                 </div>
-                <input type="hidden" name="id" value={user.id}/>
+                <input type="hidden" name="id" value={id}/>
               </div>
 
               <TextField
                   name="fotoperfil"
                   value={fotoperfil}
-                  onChange={e => setFotoperfil (e.target.value)}
+                  onChange={e => fotoperfil (e.target.value)}
                   type="text"
                   className='inputEditarPerfil'
                   InputLabelProps={{ shrink: true }}
@@ -145,7 +147,7 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
                 <TextField
                   name="nome"
                   value={nome}
-                  onChange={e => setNome (e.target.value)}
+                  onChange={e => nome (e.target.value)}
                   type="text"
                   className='inputEditarPerfil'
                   InputLabelProps={{ shrink: true }}
@@ -163,7 +165,7 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
                 <TextField
                   nome="usuario"
                   value={usuario}
-                  onChange={e => setUsuario (e.target.value)}
+                  onChange={e => usuario (e.target.value)}
                   type="text"
                   className='inputEditarPerfil'
                   InputLabelProps={{ shrink: true }}
@@ -184,7 +186,7 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
               <TextField
                 nome="email"
                 value={email}
-                onChange={e => setEmail (e.target.value)}
+                onChange={e => email (e.target.value)}
                 
                 type="text"
                 className='inputEditarPerfil'
@@ -203,7 +205,7 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
               <TextField
                 nome="senha"
                 value={senha}
-                onChange={e => setSenha (e.target.value)}
+                onChange={e => senha (e.target.value)}
 
                 type="password"
                 className='inputEditarPerfil'
@@ -226,7 +228,7 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
                   sx={{ marginTop: '-10px' }}
                   nome="idade"
                   value={idade}
-                  onChange={e => setIdade (e.target.value)}
+                  onChange={e => idade (e.target.value)}
 
                   type="text"
                   id='idadeCampo'
@@ -245,7 +247,7 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
                   type="text"
                   id='qtdAnimaisCampo'
                   value={qtdanimais}
-                  onChange={e => setQtdanimais (e.target.value)}
+                  onChange={e => qtdanimais (e.target.value)}
 
 
                   InputLabelProps={{ shrink: true }}
@@ -260,7 +262,6 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
             <div className='BotoesModal'>
               <button className='btnCadastrarAdocao' variant="contained" type="submit" >Editar</button>
 
-              {/* <ButtonEnviar variant="contained" id='botaoEnviar' >Editar</ButtonEnviar> */}
               <p className='botãoCancelarEditar' onClick={handleClose} >Cancelar</p>
             </div>
 
@@ -280,7 +281,6 @@ const ModalEditarperfil= ({user, setUsers, users}) => {
 
    
 }
-
 const styles = {
 
   Button: {
