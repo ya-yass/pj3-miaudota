@@ -9,7 +9,7 @@ const CadastroPet = () => {
       <Box>
         < Navbar />
         <SecaoAnunciarPet />
-        <Footer></Footer>
+        <Footer />
       </Box>
     </>
   )

@@ -41,16 +41,17 @@ const AnunciaraAdocao = () => {
 
   const handleSubmitAdotado = async (event) => {
     event.preventDefault()
-   console.log('Minha funcao de submit')
+   console.log('função de submit adoção')
    const nome = event.target.nome.value 
    const foto = event.target.foto.value
    const idade = event.target.idade.value
    const sexo = event.target.sexo.value
+   const descricao = event.target.descricao.value
    const vacinado = event.target.vacinado.value
    const castrado = event.target.castrado.value
    const raca = event.target.raca.value
    const tipo = event.target.tipo.value
-   const adotado = {nome, foto, idade, sexo, vacinado, castrado, raca, tipo }
+   const adotado = {nome, foto, idade, sexo, descricao, vacinado, castrado, raca, tipo }
    try {
      const response = await fetch('http://localhost:3100/adocao',
      {

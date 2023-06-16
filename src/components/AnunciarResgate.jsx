@@ -20,7 +20,6 @@ import AchadoFoto from './assets/img/achado-foto.png';
 import './AnunciarResgate.css'
 import logo from './assets/img/miaudota-logo.png'
 import { BsXLg as Cancel } from 'react-icons/bs'
-import SecaoResgate from './SecaoResgate';
 
 
 
@@ -30,7 +29,6 @@ const AnunciarResgate = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const[petRegastados, setPetRegastados] = useState(false)
 
   const [sexoAnimalResgate, setValue1] = React.useState('');
   const [tipoAnimalResgate, setValue2] = React.useState('');
@@ -105,12 +103,6 @@ const AnunciarResgate = () => {
           <p>Encontrei um <br /> pet</p>
           <img src={AchadoFoto} alt="Anuncie um animal para adoção" className='imagemPet ' />
         </button>
-        { petRegastados && 
-          petRegastados.map(perdido => (
-            <SecaoResgate key={perdido.id} perdido={perdido} setPetRegastados={setPetRegastados} petRegastados={petRegastados}/>
-          ))
-
-        }
       </div>
 
       <Modal
