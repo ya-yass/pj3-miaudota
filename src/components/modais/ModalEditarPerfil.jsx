@@ -21,37 +21,56 @@ import { BsXLg as Cancel } from 'react-icons/bs'
 
 
 
-const ModalEditarperfil= () => {
+const ModalEditarperfil= (user, users) => {
 
    //abrir e fechar o modal de cadastro
    const [modalOpen, setModalOpen] = React.useState(false);
-  const handleOpen = () => setModalOpen(true);
-  const handleClose = () => setModalOpen(false);
 
-  
   const fotoperfil =useAuthStore((state) => state.fotoperfil)
-  const id =useAuthStore((state) => state.id)
   const nome =useAuthStore((state) => state.nome)
   const email =useAuthStore((state) => state.email)
-  const senha =useAuthStore((state) => state.senha)
   const idade =useAuthStore((state) => state.idade)
   const qtdanimais =useAuthStore((state) => state.qtdanimais)
   const usuario =useAuthStore((state) => state.usuario)
+
+  const  [nomeInput, setNomeInput ] = useState("")
+  const  [fotoperfilInput, setFotoperfilInput ] = useState("")
+  const  [emailInput, setEmailInput ] = useState("")
+  const  [idadeInput, setIdadeInput ] = useState("")
+  const  [qtdanimaisInput, setQtdanimaisInput ] = useState("")
+  const  [usuarioInput, setUsuarioInput ] = useState("")
+
+
+   const handleOpen = () => {
+
+    setNomeInput(nome)
+    setFotoperfilInput(fotoperfil)
+    setEmailInput(email)
+    setIdadeInput(idade)
+    setQtdanimaisInput(qtdanimais);
+    setUsuarioInput(usuario);
+
+    setModalOpen(true);
+  }
+  const handleClose = () => setModalOpen(false);
+
+
 
 
   const token = useAuthStore((state) => state.token)
   
   const handleEdit = async (event) => {
     event.preventDefault()
-    const id = parseInt(event.target.id.value)
+    console.log("teste")
     const nome = event.target.nome.value 
     const usuario = event.target.usuario.value
     const email = event.target.email.value
-    const senha = event.target.senha.value
     const idade = event.target.idade.value
+    const fotoperfil = event.target.fotoperfil.value
     const qtdanimais = event.target.qtdanimais.value
 
-    const userEdited = {id, nome, usuario, email, senha, idade, qtdanimais}
+    const userEdited = {nome, usuario, email,  idade, fotoperfil, qtdanimais}
+    console.log(userEdited)
     try {
       const response = await fetch('http://localhost:3100/user',
       {
@@ -65,13 +84,6 @@ const ModalEditarperfil= () => {
       const data = await response.json()
       if(response.status === 200) {
       console.log(data)
-      const newUsers = users.map((user) => {
-        if(id === id) {
-          return userEdited
-        }
-        return user
-      })
-      setUsers(newUsers)
       setModalOpen(false)
     } else {
       alert(data.message)
@@ -123,13 +135,12 @@ const ModalEditarperfil= () => {
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Foto de Perfil</label>
                 </div>
-                <input type="hidden" name="id" value={id}/>
               </div>
 
               <TextField
                   name="fotoperfil"
-                  value={fotoperfil}
-                  onChange={e => fotoperfil (e.target.value)}
+                  value={fotoperfilInput}
+                  onChange={e => setFotoperfilInput(e.target.value)}
                   type="text"
                   className='inputEditarPerfil'
                   InputLabelProps={{ shrink: true }}
@@ -142,12 +153,12 @@ const ModalEditarperfil= () => {
             <div className='editarNomeUser'>
               <div className="nomeUsuarioEditar">
                 <div className='divTituloCampo'>
-                  <label className='titulocampo'>Nome</label>
+                  <label className='titulocampo'>Nomee</label>
                 </div>
                 <TextField
                   name="nome"
-                  value={nome}
-                  onChange={e => nome (e.target.value)}
+                  value={nomeInput}
+                  onChange={e => setNomeInput(e.target.value)}
                   type="text"
                   className='inputEditarPerfil'
                   InputLabelProps={{ shrink: true }}
@@ -163,9 +174,9 @@ const ModalEditarperfil= () => {
                   <label className='titulocampo'>Usuário</label>
                 </div>
                 <TextField
-                  nome="usuario"
-                  value={usuario}
-                  onChange={e => usuario (e.target.value)}
+                  name="usuario"
+                  value={usuarioInput}
+                  onChange={e => setUsuarioInput(e.target.value)}
                   type="text"
                   className='inputEditarPerfil'
                   InputLabelProps={{ shrink: true }}
@@ -184,30 +195,11 @@ const ModalEditarperfil= () => {
                 <label className='titulocampo'>E-mail</label>
               </div>
               <TextField
-                nome="email"
-                value={email}
-                onChange={e => email (e.target.value)}
+                name="email"
+                value={emailInput}
+                onChange={e => setEmailInput(e.target.value)}
                 
                 type="text"
-                className='inputEditarPerfil'
-                InputLabelProps={{ shrink: true }}
-                sx={{
-                  width: '100%',
-                }}
-              // onChange={handleFileChange}
-              />
-            </div>
-
-            <div className="editarSenhaUsuario">
-              <div className='divTituloCampo'>
-                <label className='titulocampo'>Senha</label>
-              </div>
-              <TextField
-                nome="senha"
-                value={senha}
-                onChange={e => senha (e.target.value)}
-
-                type="password"
                 className='inputEditarPerfil'
                 InputLabelProps={{ shrink: true }}
                 sx={{
@@ -226,9 +218,9 @@ const ModalEditarperfil= () => {
                 </div>
                 <TextField
                   sx={{ marginTop: '-10px' }}
-                  nome="idade"
-                  value={idade}
-                  onChange={e => idade (e.target.value)}
+                  name="idade"
+                  value={idadeInput}
+                  onChange={e => setIdadeInput(e.target.value)}
 
                   type="text"
                   id='idadeCampo'
@@ -245,9 +237,10 @@ const ModalEditarperfil= () => {
                 <TextField
                   sx={{ marginTop: '-10px' }}
                   type="text"
+                  name="qtdanimais"
                   id='qtdAnimaisCampo'
-                  value={qtdanimais}
-                  onChange={e => qtdanimais (e.target.value)}
+                  value={qtdanimaisInput}
+                  onChange={e => setQtdanimaisInput(e.target.value)}
 
 
                   InputLabelProps={{ shrink: true }}

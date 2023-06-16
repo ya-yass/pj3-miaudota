@@ -3,7 +3,6 @@ import { create } from 'zustand'
 const useAuthStore = create((set) => ({
     isLogged: false,
     token: '',
-    id: '',
     fotoperfil: '',
     fotocapa: '',
     nome: '',

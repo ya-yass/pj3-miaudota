@@ -10,6 +10,7 @@ import logo from '../assets/img/miaudota-logo.png'
 
 //files
 import useAuthStore from '../../store/authStore'
+import ModalUserCadastro from "./ModalUserCadastro";
 import DropDownPerfil from '../DropDownPerfil'
 
 
@@ -76,7 +77,14 @@ const ModalUserlogin = () => {
       <div className="sobre">
       {isLogged ? (
         <DropDownPerfil />
-        ) : (<button onClick={openLogin} >Logar</button>) }
+
+        ) : (<button onClick={openLogin} >Logar</button> )
+      }
+
+    {isLogged ? (
+        console.log("loguei")
+        ) : (<ModalUserCadastro/> )
+      }
       </div>
     
 

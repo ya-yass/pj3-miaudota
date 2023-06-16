@@ -41,7 +41,7 @@ const Navbar = () => {
       <div id="botoes">
 
          <ModalUserLogin/>
-         <ModalUserCadastro/>
+         {/* <ModalUserCadastro/> */}
         
 
        

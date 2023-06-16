@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-// import { useState } from 'react';
+import { useEffect, useState } from 'react';
 //Modal
 import * as React from 'react';
 
@@ -16,6 +16,23 @@ import { FaPaw as Raca } from 'react-icons/fa'
 
 const PerfilUsuario = () => {
 
+  const [setUsers] = useState(false)
+
+  const loadUsers = async () => {
+    try {
+      const response = await fetch('http://localhost:3100/user')
+      const data = await response.json()
+      setUsers(data)
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    loadUsers()
+
+  })
 
 
 
