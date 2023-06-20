@@ -117,13 +117,13 @@ import useAuthStore from '../store/authStore';
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         <MenuItem onClick={handleClose}>
-          <Link to="/user"><Avatar /> Ver perfil</Link>
+          <Link to="/user" className='linkPerfil'> Ver perfil</Link>
         </MenuItem>
-        <Divider />
+        {/* <Divider /> */}
         <MenuItem onClick={handleClose}>
-          <ListItemIcon>
-            <p onClick={() => handleLogout()}>Logout</p>
-          </ListItemIcon>
+          {/* <ListItemIcon> */}
+            <span onClick={() => handleLogout()} >Logout</span>
+          {/* </ListItemIcon> */}
         </MenuItem>
       </Menu>
     </React.Fragment>

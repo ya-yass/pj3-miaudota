@@ -128,3 +128,12 @@ button.btnCadastroUsuario:hover {
   font-size: 13px;
   cursor: pointer;
 }
+
+.linkPerfil{
+  text-decoration: none;
+  color: #434343;
+}
+
+a.linkPerfil:hover{
+  color: #434343 !important;
+}
