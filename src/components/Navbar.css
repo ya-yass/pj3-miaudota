@@ -8,8 +8,7 @@ a:hover {
   color: #F6823F !important;
 }
 
-nav,
-#botoes {
+.botoes {
   display: flex;
   align-items: center;
 }
@@ -62,7 +61,7 @@ nav {
 }
 
 #adotar,
-.btnCadastrarSe {
+.btnCadastroUser {
   background-color: #F6823F;
   color: #fff;
   border: none;
@@ -74,7 +73,7 @@ nav {
 }
 
 #adotar:hover,
-.btnCadastrarSe:hover {
+.btnCadastroUser:hover {
   background-color: #f07a35 !important;
   color: #FFF;
 }

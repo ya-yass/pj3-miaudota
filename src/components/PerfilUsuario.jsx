@@ -69,13 +69,10 @@ const PerfilUsuario = () => {
 
   return (
     <>
-
-
       {/* {isLogged && (roles.includes('admin') || emailLogged === email) &&
         (<IconTrash style={{ width: '15px', height: '15px', position: 'absolute', top: '20px', right: '20px', padding: '10px', cursor: 'pointer' }}
           onClick={() => deleteUser(user.id)}
         />)} */}
-     
 
       <Box sx={{
         margin: '0px',
@@ -86,7 +83,6 @@ const PerfilUsuario = () => {
           <img src={fotoperfil} className='fotoperfil' alt='Foto de perfil'></img>
           <div className='infoNameUserIcon'>
             <div className='editarENome'>
-
               <h2 className='nomeusuario'>{nome}</h2>
               <ModalEditarperfil />
             </div>

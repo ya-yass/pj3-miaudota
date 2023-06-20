@@ -14,10 +14,10 @@
 .fotoperfil {
   width: 165px;
   height: 165px;
-  z-index: 100;
+  /* z-index: 100; */
   margin-left: 30px;
   margin-top: -65px;
-
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -261,4 +261,10 @@ input[type="file"] {
 
 .btnCadastrarAdocao{
   left: 0px !important;
+}
+
+.avatarUser{
+  object-fit: cover;
+  height: 40px;
+  width: 40px;
 }

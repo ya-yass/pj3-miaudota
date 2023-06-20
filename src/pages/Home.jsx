@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
+import CarouselParcerias from '../components/CarouselParcerias'
 import CarouselSlide from '../components/CarouselMiaudota';
 import CardPet from '../components/Card-pet';
 import EntendaMiauDota from '../components/EntendaMiauDota';
@@ -22,6 +23,7 @@ const Home = () => {
         <CardPet />
         <EntendaMiauDota />
         <CardPetInicialResgate />
+        <CarouselParcerias/>
       </Box>
       <Footer />
     </>

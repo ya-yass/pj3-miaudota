@@ -4,23 +4,13 @@ import logo from './assets/img/miaudota-logo.png'
 
 import * as React from 'react';
 
-
 import { Link } from 'react-router-dom'
 import ModalUserCadastro from './modais/ModalUserCadastro';
 import ModalUserLogin from './modais/ModalUserLogin'
 
-
 const settings = ['Entre', 'Cadastre-se'];
 
-
 const Navbar = () => {
-
-
- 
-
-
-
-
   return (
     <Box component='nav'>
 
@@ -38,17 +28,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div id="botoes">
-
+      <div className="botoes">
          <ModalUserLogin/>
          {/* <ModalUserCadastro/> */}
-        
-
-       
       </div>
-
-
-
     </Box >
   );
 }

@@ -8,19 +8,14 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 
-import logo from '../assets/img/miaudota-logo.png'
-
 //files
+import logo from '../assets/img/miaudota-logo.png'
 
 // import './ModalUserLogin.css'
 import '../Navbar.css'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import PerfilUsuario from "../PerfilUsuario";
-
-
-
-
 
 const ModalUserCadastro = () => {
 
@@ -60,15 +55,14 @@ const ModalUserCadastro = () => {
   return(
     <>
       <Box>
-        <div className="sobre">
+        {/* <div className="sobre"> */}
           <button className="btnCadastroUser" onClick={setModalOpen}>Cadastrar</button>
           {users &&
             users.map(user => (
               <PerfilUsuario key={user.id} user={user} setUsers={setUsers} users={users}/>
             ))
-
           }
-        </div>
+        {/* </div> */}
       </Box>
         
         <Modal  //modal cadastrar-se

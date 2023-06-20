@@ -77,16 +77,6 @@ span svg {
   margin-right: 8px;
 }
 
-.btnSobrePet {
-  background: #F6823F;
-  border: none;
-  padding: 15px 40px;
-  margin-top: 15px !important;
-  color: #FFF;
-  font-weight: bold;
-  border-radius: 30px !important;
-}
-
 .sobre {
   display: flex;
   flex-direction: column;

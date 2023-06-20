@@ -77,7 +77,7 @@ import useAuthStore from '../store/authStore';
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}><img src={fotoperfil} alt='fotoPerfil'/></Avatar>
+            <Avatar><img src={fotoperfil} alt='fotoPerfil' className='avatarUser'/></Avatar>
           </IconButton>
         </Tooltip>
       </Box>

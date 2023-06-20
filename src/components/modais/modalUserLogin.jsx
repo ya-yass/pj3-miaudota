@@ -68,26 +68,20 @@ const ModalUserlogin = () => {
     }
   }
 
-
- 
-
   return(
     <>
     <Box>
-      <div className="sobre">
-      {isLogged ? (
-        <DropDownPerfil />
-
-        ) : (<button onClick={openLogin} >Logar</button> )
-      }
-
-    {isLogged ? (
-        console.log("loguei")
-        ) : (<ModalUserCadastro/> )
-      }
+      <div className="botoes">
+        {isLogged ? (
+          <DropDownPerfil />
+          ) : (<button onClick={openLogin} className="btnLogin">Logar</button> )
+        }
+        {isLogged ? (
+            console.log("loguei")
+            ) : (<ModalUserCadastro/> )
+          }
       </div>
-    
-
+      
       <Modal //modal login
         open={modalOpen}
         onClose={handleCloseLogin}

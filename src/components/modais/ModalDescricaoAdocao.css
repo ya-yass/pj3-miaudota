@@ -1,10 +1,10 @@
-button.btnQueroAdotar {
+  button.btnQueroAdotar {
   background-color: #F6823F;
   color: #FFF;
   font-weight: bold !important;
   width: 195px;
   box-shadow: none;
-  padding: 10px;
+  padding: 8px;
   border-radius: 30px;
   border: none;
 }
@@ -15,7 +15,6 @@ button.btnQueroAdotar:hover {
   font-weight: bold;
   width: 195px;
   box-shadow: none;
-  padding: 10px;
   border-radius: 30px;
   border: none;
 }

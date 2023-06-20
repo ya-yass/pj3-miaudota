@@ -10,8 +10,6 @@ const Resgatados = () => {
       <Box>
         < Navbar />
         <SecaoResgate />
-        <ModalUserCadastro/>
-
         <Footer></Footer>
       </Box>
     </>

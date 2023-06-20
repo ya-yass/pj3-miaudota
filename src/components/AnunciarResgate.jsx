@@ -54,7 +54,6 @@ const AnunciarResgate = () => {
     try{
       const response = await fetch ('http://localhost:3100/perdido')
       const data = await response.json()
-      setPetRegastados(data)
       console.log(data)
     }catch (error){
       console.log(error)
