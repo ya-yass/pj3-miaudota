@@ -20,6 +20,7 @@ import AchadoFoto from './assets/img/achado-foto.png';
 import './AnunciarResgate.css'
 import logo from './assets/img/miaudota-logo.png'
 import { BsXLg as Cancel } from 'react-icons/bs'
+import CardResgate from './CardResgate';
 
 
 
@@ -28,6 +29,9 @@ const AnunciarResgate = () => {
   const [modalOpen, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const [perdidos, setPerdidos] = useState(false)
+
 
 
   const [sexoAnimalResgate, setValue1] = React.useState('');
@@ -54,6 +58,7 @@ const AnunciarResgate = () => {
     try{
       const response = await fetch ('http://localhost:3100/perdido')
       const data = await response.json()
+      setPerdidos(data)
       console.log(data)
     }catch (error){
       console.log(error)
@@ -64,7 +69,7 @@ const AnunciarResgate = () => {
   )
   const handleSubmitResgatado = async (event) => {
     event.preventDefault()
-   console.log('Minha funcao de submit')
+   console.log('Minha funcao de submit perdido')
    const tipo = event.target.tipo.value
    const nome = event.target.nome.value 
    const idade = event.target.idade.value
@@ -88,6 +93,7 @@ const AnunciarResgate = () => {
      const data = await response.json()
      console.log(data)
      setOpen(false)
+     loadPetsRegastados()
    } catch (error) {
      console.log(error)
    }
@@ -101,6 +107,11 @@ const AnunciarResgate = () => {
           <div className='mask'></div>
           <p>Encontrei um <br /> pet</p>
           <img src={AchadoFoto} alt="Anuncie um animal para adoção" className='imagemPet ' />
+          {perdidos && 
+              perdidos.map(perdido => (
+                <CardResgate key={perdido.id} perdido={perdido} setPerdidos={setPerdidos} perdidos={perdidos} />
+              ))
+            }
         </button>
       </div>
 

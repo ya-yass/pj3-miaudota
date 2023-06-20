@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Fera from './assets/img/fera.avif';
 import './SecaoResgate.css' //para importar jsx sempre é com letra maíuscula
 import "react-multi-carousel/lib/styles.css";
 import * as React from 'react';
@@ -7,33 +6,17 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './SecaoAdocao.css'
 import CarouselSlide from "./CarouselMiaudota"
-import ModalDescricaoResgate from "./modais/ModalDescricaoResgate"
 import useAuthStore from '../store/authStore';
+import CardResgate from './CardResgate';
 
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
-import {
-  FaVenus as Femea,
-  // FaMars as Macho,
-  FaHeart as Idade,
-  FaMapMarkerAlt as Local, //https://react-icons.github.io/react-icons/icons?name=fa
-  FaPaw as Raca,
-} from 'react-icons/fa'
+
 
 const SecaoResgate = () => {
-
-  const foto =useAuthStore((state) => state.foto)
-  const nome =useAuthStore((state) => state.usuario)
-  const porte =useAuthStore((state) => state.porte)
-  const raca =useAuthStore((state) => state.raca)
-  const bairro =useAuthStore((state) => state.bairro)
-  const sexo =useAuthStore((state) => state.sexo)
-
-
-
 
 
   return (
@@ -50,198 +33,8 @@ const SecaoResgate = () => {
       <h1>Resgatados | resultado da busca</h1>
 
       <div className="conteudo">
-        <div className="pets">
-          <div className="card">
-            <img src={foto} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">{nome}</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />{porte}</span>
-                <span><Raca />{raca}</span>
-                <span><Local />{bairro}</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <img src={Fera} alt="pet" className='pet' />
-            <div className="info">
-              <div className="cardHeader">
-                <h3 className="nome">Fera</h3>
-                <Femea className='femea' />
-                {/* <Macho className='macho' /> */}
-              </div>
-              <div className="detalhes">
-                <span className="idade"><Idade />Não informado</span>
-                <span><Raca />Pittbull</span>
-                <span><Local />Martim de Sá</span>
-              </div>
-              <div className="sobre">
-                < ModalDescricaoResgate />
-              </div>
-            </div>
-          </div>
-        </div>
-
+       
+        <CardResgate/>
         <div className="busca">
           <h2 className='tituloBusca'>BUSCA</h2>
           <div className="sexo">
