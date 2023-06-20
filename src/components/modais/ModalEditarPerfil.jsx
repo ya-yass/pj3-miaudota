@@ -8,13 +8,12 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 
-import logo from '../assets/img/miaudota-logo.png'
-
 //files
+import logo from '../assets/img/miaudota-logo.png'
 
 // import './ModalUserLogin.css'
 import '../Navbar.css'
-
+import './ModalEditarPerfil.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 
 
@@ -99,9 +98,7 @@ const ModalEditarperfil= (user, users) => {
     <>
       <Box>
 
-      <div className="sobre">
-        <button className="btnEditarPerfil" onClick={handleOpen}>Editar</button>
-      </div>
+      <button className="btnEditarPerfil" onClick={handleOpen}>Editar</button>
 
       <Modal
         open={modalOpen}
@@ -262,17 +259,9 @@ const ModalEditarperfil= (user, users) => {
         </form>
         </Box>
       </Modal>
-
         </Box>
     </>
-  
     )
-    
-
-  
-
-
-   
 }
 const styles = {
 

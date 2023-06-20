@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
 * {
   font-family: 'Poppins';
 }
-
+.nomeusuario{
+  margin-bottom: 0 !important;
+  font-weight: bold;
+}
 .capa {
   width: 100%;
   height: 100%;
@@ -147,6 +151,11 @@ span h4 {
 .editarENome,
 .BtnImagens {
   display: flex;
+}
+
+.editarENome{
+  display: flex;
+  align-items: center;
 }
 
 
