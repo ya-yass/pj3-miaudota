@@ -81,6 +81,8 @@ const AnunciarResgate = () => {
    const descricao = event.target.descricao.value
 
    const perdido = {tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao}
+   console.log(perdido)
+
    try {
      const response = await fetch('http://localhost:3100/perdido',
      {
@@ -99,7 +101,6 @@ const AnunciarResgate = () => {
    }
  }
 
-
   return (
     <Box>
       <div className='cards'>
@@ -107,11 +108,7 @@ const AnunciarResgate = () => {
           <div className='mask'></div>
           <p>Encontrei um <br /> pet</p>
           <img src={AchadoFoto} alt="Anuncie um animal para adoção" className='imagemPet ' />
-          {perdidos && 
-              perdidos.map(perdido => (
-                <CardResgate key={perdido.id} perdido={perdido} setPerdidos={setPerdidos} perdidos={perdidos} />
-              ))
-            }
+      
         </button>
       </div>
 

@@ -22,7 +22,7 @@ const CardResgate = ({perdido, setPerdidos, perdidos}) => {
   const [nome, setnome] = useState(perdido.nome)
   const [raca, setRaca] = useState(perdido.raca)
   const [sexo, setSexo] = useState(perdido.sexo)
-
+	console.log(foto)
 
 	const responsive = { //para editar a responsividade do carousel
 		desktop: {
