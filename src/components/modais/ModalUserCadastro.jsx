@@ -147,7 +147,7 @@ const ModalUserCadastro = () => {
                       </div>
                       <TextField
                         placeholder='Digite um e-mail válido'
-                        type="password"
+                        type="text"
                         name="email"
                         className='inputCadastro'
                         InputLabelProps={{ shrink: true }}
@@ -165,7 +165,7 @@ const ModalUserCadastro = () => {
                       </div>
                       <TextField
                         placeholder='Crie uma senha'
-                        type="text"
+                        type="password"
                         name="senha"
                         className='inputCadastro'
                         InputLabelProps={{ shrink: true }}
