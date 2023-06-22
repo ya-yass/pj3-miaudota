@@ -12,6 +12,7 @@ import logo from '../assets/img/miaudota-logo.png'
 import useAuthStore from '../../store/authStore'
 import ModalUserCadastro from "./ModalUserCadastro";
 import DropDownPerfil from '../DropDownPerfil'
+import { API_SERVER } from "../../config";
 
 
 // import './ModalUserLogin.css'
@@ -42,7 +43,7 @@ const ModalUserlogin = () => {
     const senha = event.target.senha.value
     const user = {email, senha}
     try {
-      const response = await fetch('http://localhost:3100/auth/login',
+      const response = await fetch(`${API_SERVER}/auth/login`,
       {
         method: 'POST',
         headers: {
@@ -139,7 +140,7 @@ const ModalUserlogin = () => {
               <TextField
                 name="senha"
                 placeholder='Digite sua senha'
-                type="text"
+                type="password"
                 className='inputLogin'
                 InputLabelProps={{ shrink: true }}
                 sx={{

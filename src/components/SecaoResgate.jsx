@@ -6,8 +6,9 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './SecaoAdocao.css'
 import CarouselSlide from "./CarouselMiaudota"
-import useAuthStore from '../store/authStore';
 import CardResgate from './CardResgate';
+import { useState, useEffect } from 'react';
+import { API_SERVER } from '../config';
 
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -17,6 +18,23 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 
 const SecaoResgate = () => {
+  const[perdidos, setPerdidos] = useState(false)
+
+  const loadPetsRegastados = async () => {
+    try{
+      const response = await fetch (`${API_SERVER}/perdido`)
+      const data = await response.json()
+      setPerdidos(data)
+      console.log(data)
+    }catch (error){
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    loadPetsRegastados()
+  },[]
+  )
 
 
   return (
@@ -33,8 +51,13 @@ const SecaoResgate = () => {
       <h1>Resgatados | resultado da busca</h1>
 
       <div className="conteudo">
-       
-        <CardResgate/>
+       {perdidos &&
+          perdidos.map(perdido => (
+            <CardResgate key={perdido.id} perdido={perdido} setPerdidos={setPerdidos} perdidos={perdidos}/>
+
+          ))
+
+       }
         <div className="busca">
           <h2 className='tituloBusca'>BUSCA</h2>
           <div className="sexo">

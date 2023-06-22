@@ -14,7 +14,7 @@ const Router = () => {
             <Route path="*" element={<Error404 />} />
             <Route path="/adocao" element={<Adocao />} />
             <Route path="/cadastrar-pet" element={<CadastroPet />} />
-            <Route path="/resgatados" element={<Resgatados />} />
+            <Route path="/perdido" element={<Resgatados />} />
         </Routes>
     )
 }

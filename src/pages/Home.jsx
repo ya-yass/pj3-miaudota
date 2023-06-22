@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 import CarouselParcerias from '../components/CarouselParcerias'
 import CarouselSlide from '../components/CarouselMiaudota';
-import CardPet from '../components/Card-pet';
+import CardPet from '../components/CardAdocao';
 import EntendaMiauDota from '../components/EntendaMiauDota';
 import CardPetInicialResgate from '../components/CardPetInicialResgate';
 

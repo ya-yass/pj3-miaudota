@@ -12,6 +12,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
+import { API_SERVER } from "../config";
+
 //imagens e files
 import AdocaoFoto from './assets/img/card-pet-adotar.png'
 import logo from './assets/img/miaudota-logo.png'
@@ -53,7 +55,7 @@ const AnunciaraAdocao = () => {
    const tipo = event.target.tipo.value
    const adotado = {nome, foto, idade, sexo, descricao, vacinado, castrado, raca, tipo }
    try {
-     const response = await fetch('http://localhost:3100/adocao',
+     const response = await fetch(`${API_SERVER}/adocao`,
      {
        method: 'POST',
        headers: {
@@ -70,7 +72,7 @@ const AnunciaraAdocao = () => {
  }
 
   return (
-    <Box>
+    <Box className='div'>
       <div className='cards'>
 
         <button className="cardAdocao" onClick={handleOpen}>

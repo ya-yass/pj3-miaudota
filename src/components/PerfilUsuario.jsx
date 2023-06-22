@@ -8,6 +8,8 @@ import CardPetPerfil from '../components/CardPetPerfil'
 import './PerfilUsuario.css'
 import ModalEditarperfil from './modais/ModalEditarPerfil';
 import useAuthStore from '../store/authStore'
+import { API_SERVER } from "../config";
+
 //imagens e icones
 import capaexemplo from './assets/img/capaexemplo.png'
 import { FaPaw as Raca } from 'react-icons/fa'
@@ -20,7 +22,7 @@ const PerfilUsuario = () => {
 
   const loadUsers = async () => {
     try {
-      const response = await fetch('http://localhost:3100/user')
+      const response = await fetch(`${API_SERVER}/user`)
       const data = await response.json()
       setUsers(data)
       console.log(data)

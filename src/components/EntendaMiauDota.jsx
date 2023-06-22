@@ -9,7 +9,7 @@ const EntendaMiauDota = () => {
   return (
     <Box>
       <div className="container">
-        <h2 id='titulo'>EntendaMiauDota mais sobre o miaudota</h2>
+        <h2 id='titulo'>Entenda mais sobre o miaudota</h2>
         <div className="topicos">
           <div className="topico encontre">
             <img src={Encontre} alt="Encontre seu pet" className='imgEncontre imagem' />

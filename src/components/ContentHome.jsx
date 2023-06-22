@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import CardPet from './Card-pet'
+import CardPet from './CardAdocao'
 import CarouselSlide from './CarouselMiaudota';
 import EntendaMiauDota from './EntendaMiauDota'
 import CardPetInicialResgate from './CardPetInicialResgate'

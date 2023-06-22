@@ -10,6 +10,8 @@ import TextField from '@mui/material/TextField';
 
 //files
 import logo from '../assets/img/miaudota-logo.png'
+import { API_SERVER } from "../../config";
+
 
 // import './ModalUserLogin.css'
 import '../Navbar.css'
@@ -35,7 +37,7 @@ const ModalUserCadastro = () => {
     const senha = event.target.senha.value
     const user = {nome, usuario, email, senha}
     try {
-      const response = await fetch('http://localhost:3100/user',
+      const response = await fetch(`${API_SERVER}/user`,
       {
         method: 'POST',
         headers: {
@@ -145,7 +147,7 @@ const ModalUserCadastro = () => {
                       </div>
                       <TextField
                         placeholder='Digite um e-mail válido'
-                        type="text"
+                        type="password"
                         name="email"
                         className='inputCadastro'
                         InputLabelProps={{ shrink: true }}

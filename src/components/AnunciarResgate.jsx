@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import { useState, useEffect } from 'react';
 //modal
-import * as React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 //formulário
@@ -12,61 +11,38 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 
+
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
+import Select from '@mui/material/Select'
 //imagens e files
 import AchadoFoto from './assets/img/achado-foto.png';
 import './AnunciarResgate.css'
 import logo from './assets/img/miaudota-logo.png'
 import { BsXLg as Cancel } from 'react-icons/bs'
-import CardResgate from './CardResgate';
+import {API_SERVER} from '../config'
+import { useNavigate } from 'react-router-dom';
+
+
+// import CardResgate from './CardResgate';
 
 
 
 const AnunciarResgate = () => {
 
-  const [modalOpen, setOpen] = React.useState(false);
+  const [modalOpen, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [perdidos, setPerdidos] = useState(false)
+  const [bairro, setBairro] = useState(2);
 
-
-
-  const [sexoAnimalResgate, setValue1] = React.useState('');
-  const [tipoAnimalResgate, setValue2] = React.useState('');
-  const [portePetResgate, setValue3] = React.useState('');
-
-  const [bairros, setBairros] = React.useState('');
-
-  const handleChangeBairros = (event) => {
-    setBairros(event.target.value)
-  };
-
+  const navigate = useNavigate()
 
   const handleChange = (event) => {
-    // setValue(event.target.value);
-    setValue1(event.target.tipoAnimalResgate);
-    setValue2(event.target.sexoAnimalResgate);
-    setValue3(event.target.portePetResgate);
-
-
+    setBairro(event.target.value);
   };
 
-  const loadPetsRegastados = async () => {
-    try{
-      const response = await fetch ('http://localhost:3100/perdido')
-      const data = await response.json()
-      setPerdidos(data)
-      console.log(data)
-    }catch (error){
-      console.log(error)
-    }
-  }
 
-  useEffect(() => {loadPetsRegastados()},[]
-  )
   const handleSubmitResgatado = async (event) => {
     event.preventDefault()
    console.log('Minha funcao de submit perdido')
@@ -81,34 +57,34 @@ const AnunciarResgate = () => {
    const descricao = event.target.descricao.value
 
    const perdido = {tipo, nome, idade, raca, sexo, porte, foto, bairro, descricao}
-   console.log(perdido)
+
 
    try {
-     const response = await fetch('http://localhost:3100/perdido',
-     {
-       method: 'POST',
-       headers: {
-         "Content-Type": "application/json",
-       },
-       body: JSON.stringify(perdido), 
-     })
+    const response = await fetch (`${API_SERVER}/perdido`,
+    {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(perdido)
+    })
+    console.log(perdido)
      const data = await response.json()
      console.log(data)
      setOpen(false)
-     loadPetsRegastados()
+     navigate('/perdido')
    } catch (error) {
      console.log(error)
    }
  }
 
   return (
-    <Box>
+    <Box className='div'>
       <div className='cards'>
         <button className="cardEncontrei" onClick={handleOpen}>
           <div className='mask'></div>
           <p>Encontrei um <br /> pet</p>
           <img src={AchadoFoto} alt="Anuncie um animal para adoção" className='imagemPet ' />
-      
         </button>
       </div>
 
@@ -137,8 +113,6 @@ const AnunciarResgate = () => {
             <RadioGroup
               // aria-labelledby="demo-controlled-radio-buttons-group"
               name="tipo"
-              value={tipoAnimalResgate}
-              onChange={handleChange}
             >
             <div className='divTituloCampo'>
               <label className='titulocampo'>Qual animal você encontrou?</label>
@@ -239,8 +213,8 @@ const AnunciarResgate = () => {
             <FormControl >
               <RadioGroup
                 // aria-labelledby="demo-controlled-radio-buttons-group"
-                value={sexoAnimalResgate}
-                onChange={handleChange}>
+                name="sexo"
+                >
 
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Sexo</label>
@@ -257,8 +231,7 @@ const AnunciarResgate = () => {
             <FormControl >
               <RadioGroup
                 // aria-labelledby="demo-controlled-radio-buttons-group"
-                value={portePetResgate}
-                onChange={handleChange}>
+                name="porte">
                   
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Porte</label>
@@ -278,11 +251,11 @@ const AnunciarResgate = () => {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={bairros}
               name="bairro"
               label="Bairros"
-              onChange={handleChangeBairros}>
-
+              value={bairro}
+              onChange={handleChange}
+              >
               <MenuItem value={1}>Balneário California</MenuItem>
               <MenuItem value={2}>Balneário Copacabana</MenuItem>
               <MenuItem value={3}>Balneário Golfinhos</MenuItem>
@@ -371,7 +344,7 @@ const AnunciarResgate = () => {
           </div>
 
             <div className="divBtnCadastrarAdocao">
-              <button className='btnAnunciarResgate' variant="contained" >Anunciar</button>
+              <button className='btnAnunciarResgate' variant="contained" type='submit' >Anunciar</button>
             </div>
 
           </Typography>

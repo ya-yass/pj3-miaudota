@@ -8,8 +8,11 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 
+
 //files
 import logo from '../assets/img/miaudota-logo.png'
+import { API_SERVER } from "../../config";
+
 
 // import './ModalUserLogin.css'
 import '../Navbar.css'
@@ -20,7 +23,7 @@ import { BsXLg as Cancel } from 'react-icons/bs'
 
 
 
-const ModalEditarperfil= (user, users) => {
+const ModalEditarperfil= () => {
 
    //abrir e fechar o modal de cadastro
    const [modalOpen, setModalOpen] = React.useState(false);
@@ -53,14 +56,10 @@ const ModalEditarperfil= (user, users) => {
   }
   const handleClose = () => setModalOpen(false);
 
-
-
-
   const token = useAuthStore((state) => state.token)
   
   const handleEdit = async (event) => {
     event.preventDefault()
-    console.log("teste")
     const nome = event.target.nome.value 
     const usuario = event.target.usuario.value
     const email = event.target.email.value
@@ -71,7 +70,7 @@ const ModalEditarperfil= (user, users) => {
     const userEdited = {nome, usuario, email,  idade, fotoperfil, qtdanimais}
     console.log(userEdited)
     try {
-      const response = await fetch('http://localhost:3100/user',
+      const response = await fetch(`${API_SERVER}/user`,
       {
         method: 'PUT',
         headers: {
@@ -96,7 +95,7 @@ const ModalEditarperfil= (user, users) => {
 
   return(
     <>
-      <Box>
+      <Box component='div'>
 
       <button className="btnEditarPerfil" onClick={handleOpen}>Editar</button>
 
@@ -106,7 +105,7 @@ const ModalEditarperfil= (user, users) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description">
 
-        <Box sx={styles.Modal} className='selecionaTudo'>
+        <Box sx={styles.Modal} className='selecionaTudo' component='div'>
           <Cancel className='botaoCancelModal' onClick={handleClose} />
           <Typography id="modal-modal-title">
             <img src={logo} className='logoModal' alt='MiauDota'></img>

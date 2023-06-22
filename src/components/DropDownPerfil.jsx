@@ -5,11 +5,11 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { Link } from 'react-router-dom';
+import { API_SERVER } from "../config";
+
 
 // import Foto from './assets/img/pet1.jpg';
 import useAuthStore from '../store/authStore';
@@ -37,7 +37,7 @@ import useAuthStore from '../store/authStore';
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:3100/auth/logout',
+      const response = await fetch(`${API_SERVER}/auth/logout`,
 
       {
 

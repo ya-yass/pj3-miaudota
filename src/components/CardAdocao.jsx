@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Foto from './assets/img/pet1.jpg';
-import './Card-pet.css' //para importar jsx sempre é com letra maíuscula
+import './CardAdocao.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ModalDescricaoAdocao from "./modais/ModalDescricaoAdocao"

@@ -5,7 +5,6 @@ import logo from './assets/img/miaudota-logo.png'
 import * as React from 'react';
 
 import { Link } from 'react-router-dom'
-import ModalUserCadastro from './modais/ModalUserCadastro';
 import ModalUserLogin from './modais/ModalUserLogin'
 
 const settings = ['Entre', 'Cadastre-se'];
@@ -22,7 +21,7 @@ const Navbar = () => {
         <div className="links">
           <Link to="/" className='pgInicial link' >Página inicial</Link>
           {/* <a href='*' className='encontrePet'>Encontre seu pet</a> */}
-          <Link to="/resgatados" className='resgatados link'>Resgatados</Link>
+          <Link to="/perdido" className='resgatados link'>Resgatados</Link>
           <Link to="/adocao" className='adocao link'>Adoção</Link>
           <Link to="/cadastrar-pet" className='cadastroPet link'>Cadastrar um pet</Link>
         </div>

@@ -38,7 +38,7 @@ const CardPetPerfil = () => {
 	};
 
 	return (
-		<Box sx={{ marginTop: '50px' }}>
+		<Box sx={{ marginTop: '50px' }} className='div'>
 			<h1>Pets divulgados</h1>
 			<Carousel
 				responsive={responsive}

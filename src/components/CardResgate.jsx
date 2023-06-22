@@ -51,34 +51,24 @@ const CardResgate = ({perdido, setPerdidos, perdidos}) => {
 
 	return (
 		<Box className='div'>
-			<h1>Resgatados</h1>
-			<Carousel
-				className='carrossel'
-				responsive={responsive}
-				ssr={true} // means to render carousel on server-side.
-			>
-				<div className="card">
-					<img src={perdido.foto} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">{perdido.nome}</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />{perdido.idade}</span>
-							<span><Raca />{perdido.raca}</span>
-							<span><Local />{perdido.bairo}</span>
-						</div>
-						<div className="sobre">
-							< ModalDescricaoResgate />
-						</div>
+			<div className="card">
+				<img src={perdido.foto} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">{perdido.nome}</h3>
+						<Femea className='femea' />
+						{/* <Macho className='macho' /> */}
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />{perdido.idade}</span>
+						<span><Raca />{perdido.raca}</span>
+						<span><Local />{perdido.bairro}</span>
+					</div>
+					<div className="sobre">
+						< ModalDescricaoResgate />
 					</div>
 				</div>
-
-				
-
-			</Carousel >
+			</div>
 		</Box>
 	)
 }
