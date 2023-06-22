@@ -1,11 +1,9 @@
 import Box from '@mui/material/Box';
 //modal
-import * as React from 'react';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 //formulario
 import TextField from '@mui/material/TextField';
-// import ButtonEnviar from '@mui/material/Button';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -19,27 +17,18 @@ import AdocaoFoto from './assets/img/card-pet-adotar.png'
 import logo from './assets/img/miaudota-logo.png'
 // import './AnunciarResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 
 const AnunciaraAdocao = () => {
-  const [modalOpen, setOpen] = React.useState(false);
+  const [modalOpen, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-
-
-  const [sexo, setValue1] = React.useState('');
-  const [tipoAnimal, setValue2] = React.useState('');
-  const [castrado, setValue3] = React.useState('');
-
-  const handleChange = (event) => {
-    setValue1(event.target.sexo);
-    setValue2(event.target.tipoAnimal);
-    setValue3(event.target.castrado);
-  };
+  const navigate = useNavigate()
 
   const handleSubmitAdotado = async (event) => {
     event.preventDefault()

@@ -34,6 +34,7 @@ const ModalEditarperfil= () => {
   const idade =useAuthStore((state) => state.idade)
   const qtdanimais =useAuthStore((state) => state.qtdanimais)
   const usuario =useAuthStore((state) => state.usuario)
+  const updateUser =useAuthStore((state) => state.updateUser)
 
   const  [nomeInput, setNomeInput ] = useState("")
   const  [fotoperfilInput, setFotoperfilInput ] = useState("")
@@ -83,6 +84,7 @@ const ModalEditarperfil= () => {
       if(response.status === 200) {
       console.log(data)
       setModalOpen(false)
+      updateUser(userEdited)
     } else {
       alert(data.message)
       console.log(data)

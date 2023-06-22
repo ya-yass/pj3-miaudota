@@ -18,25 +18,6 @@ import { FaPaw as Raca } from 'react-icons/fa'
 
 const PerfilUsuario = () => {
 
-  const [setUsers] = useState(false)
-
-  const loadUsers = async () => {
-    try {
-      const response = await fetch(`${API_SERVER}/user`)
-      const data = await response.json()
-      setUsers(data)
-      console.log(data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  useEffect(() => {
-    loadUsers()
-
-  })
-
-
 
   // const id =useAuthStore((state) => state.id)
   const fotoperfil =useAuthStore((state) => state.fotoperfil)
