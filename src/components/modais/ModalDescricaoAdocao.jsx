@@ -16,7 +16,7 @@ import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-	// FaVenus as Femea,
+	FaVenus as Femea,
 	FaMars as Macho,
 	FaHeart as Idade,
 	FaSyringe as Vacina,
@@ -27,7 +27,9 @@ import {
 
 
 
-const ModalDescricaoAdocao = () => {
+const ModalDescricaoAdocao = (adocao, user) => {
+
+  console.log(adocao.descricao)
 
   //abrir e fechar o modal principal
   const [modalOpen, setOpen] = React.useState(false);
@@ -172,38 +174,34 @@ const ModalDescricaoAdocao = () => {
                   
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet">Mali</p>
-                      <Macho className='macho' />
+                      <p className="nomepet">{adocao.nome}</p>
+                      {adocao.sexo === 'femea' ? (
+          			        <Femea/>
+          		        	) : (<Macho/> )
+       			          }
                     </div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio aperiam nulla, eaque ipsum in quibusdam placeat aspernatur cum asperiores dolorum odio reiciendis vitae eius hic animi error dolore rerum quos.</p>
+                    <p>{adocao.descricao}</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
                   <div className="quemAnunciou">
-                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
+                    <img src={user.fotoperfil} alt="Foto Anunciante" className="fotoAnunciante" />
                     <div className="infoAnunciante">
                       <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Gatinha Marrie</p>
+                      <p className="nomeAnunciante">{user.nome}</p>
                     </div>
                   </div>
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade"><Idade />07 meses</span>
-                      <span><Raca/>Sem raça definida</span>
-                      <span><Castrado/>Castrado</span>
-                      <span><Vacina/>V3, V4, V5 e raiva </span>
-                      <span><Macho/>Macho</span>
+                      <span className="idade"><Idade />{adocao.idade}</span>
+                      <span><Raca/>{adocao.raca}</span>
+                      <span><Castrado/>{adocao.castrado}</span>
+                      {/* <span><Vacina/>V3, V4, V5 e raiva </span> */}
+                      <span><Macho/>{adocao.sexo}</span>
 
                     </div>
                   </div>
-                </div>
-                <div className="maisFotos">
-                  <img src={fotoGato} alt="" />
-                  <img src={fotoGato} alt="" />
-                  <img src={fotoGato} alt="" />
-                  <img src={fotoGato} alt="" />
-
                 </div>
               </div>
             </Typography>

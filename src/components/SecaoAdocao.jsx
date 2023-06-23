@@ -1,44 +1,64 @@
 import Box from '@mui/material/Box';
-import Foto from './assets/img/pet1.jpg';
 import './CardAdocao.css' //para importar jsx sempre é com letra maíuscula
 import "react-multi-carousel/lib/styles.css";
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './SecaoAdocao.css'
+import { useState, useEffect } from 'react';
 import CarouselSlide from "./CarouselMiaudota"
+import { API_SERVER } from '../config';
+import CardAdocao from './CardAdocao'
 
 
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
-import {
-  FaVenus as Femea,
-  // FaMars as Macho,
-  FaHeart as Idade,
-  FaSyringe as Vacina,
-  FaPaw as Raca,
-  FaClinicMedical as Castrado
-} from 'react-icons/fa'
+const SecaoAdocao = () => {
 
-const CardPet = () => {
+  const[adocoes, setAdocoes] = useState(false)
+
+  const loadPetsAdocoes = async () => {
+    try{
+      const response = await fetch (`${API_SERVER}/adocao`)
+      const data = await response.json()
+      setAdocoes(data)
+      console.log(data)
+    }catch (error){
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    loadPetsAdocoes()
+  },[]
+  )
+  
   return (
     <Box className='div' sx={{
       margin: '0 70px'
     }}>
       <CarouselSlide />
-      <Stack direction="row" spacing={2} className='gatoCachorroBtn'>
+      {/* <Stack direction="row" spacing={2} className='gatoCachorroBtn'>
 
         <button className='btnGato' >Gato</button>
         <button className='btnCachorro' >Cachorro</button>
-      </Stack>
+      </Stack> */}
 
-      <h1>Adoção | resultado da busca</h1>
+      <h1>Adoção</h1>
 
       <div className="conteudo">
+
+      {adocoes &&
+          adocoes.map(adocao => (
+            <CardAdocao key={adocao.id} adocao={adocao} setAdocoes={setAdocoes} adocoes={adocoes}/>
+
+          ))
+
+       }
        
-        <div className="busca">
+        {/* <div className="busca">
           <h2 className='tituloBusca'>BUSCA</h2>
           <div className="sexo">
             <span className='labelName'>Sexo</span>
@@ -79,11 +99,11 @@ const CardPet = () => {
             <Button className='filtro'>FILTRAR</Button>
           </div>
 
-        </div>
+        </div> */}
       </div>
 
     </Box>
   )
 }
 
-export default CardPet
+export default SecaoAdocao

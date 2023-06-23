@@ -3,6 +3,7 @@ import CardPet from './CardAdocao'
 import CarouselSlide from './CarouselMiaudota';
 import EntendaMiauDota from './EntendaMiauDota'
 import CardPetInicialResgate from './CardPetInicialResgate'
+// import CardPetInicialAdocao from './CardPetInicialAdocao'
 import './ContentHome.css'
 
 const ContentHome = () => {
@@ -13,7 +14,7 @@ const ContentHome = () => {
         margin: '0 70px'
       }}>
       <CarouselSlide />
-      <CardPet />
+      {/* <CardPetInicialAdocao /> */}
       <EntendaMiauDota />
       <CardPetInicialResgate />
     </Box>

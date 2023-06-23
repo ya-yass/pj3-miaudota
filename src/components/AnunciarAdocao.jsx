@@ -11,6 +11,7 @@ import FormControl from '@mui/material/FormControl';
 import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
 import { API_SERVER } from "../config";
+import { useState } from 'react';
 
 //imagens e files
 import AdocaoFoto from './assets/img/card-pet-adotar.png'
@@ -18,8 +19,6 @@ import logo from './assets/img/miaudota-logo.png'
 // import './AnunciarResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom';
-
-
 
 
 
@@ -42,7 +41,7 @@ const AnunciaraAdocao = () => {
    const castrado = event.target.castrado.value
    const raca = event.target.raca.value
    const tipo = event.target.tipo.value
-   const adotado = {nome, foto, idade, sexo, descricao, vacinado, castrado, raca, tipo }
+   const adocao = {nome, foto, idade, sexo, descricao, vacinado, castrado, raca, tipo }
    try {
      const response = await fetch(`${API_SERVER}/adocao`,
      {
@@ -50,11 +49,12 @@ const AnunciaraAdocao = () => {
        headers: {
          "Content-Type": "application/json",
        },
-       body: JSON.stringify(adotado), 
+       body: JSON.stringify(adocao), 
      })
      const data = await response.json()
      console.log(data)
      setOpen(false)
+     navigate('/adocao')
    } catch (error) {
      console.log(error)
    }
@@ -96,8 +96,6 @@ const AnunciaraAdocao = () => {
             <RadioGroup
               aria-labelledby="demo-controlled-radio-buttons-group"
               name="tipo"
-              value={tipoAnimal}
-              onChange={handleChange}
             >
               <div className='divTituloCampo'>
                 <label className='titulocampo'>Qual animal você está anunciando?</label>
@@ -234,9 +232,7 @@ const AnunciaraAdocao = () => {
               <FormControl sx={{ marginRight: '43px' }}>
                 <RadioGroup
                   aria-labelledby="demo-controlled-radio-buttons-group"
-                  // name="sexoAnimal"
-                  value={sexo}
-                  onChange={handleChange}
+                  name='sexo'
                 >
                   <div className='divTituloCampo'>
                     <label className='titulocampo'>Sexo</label>
@@ -253,9 +249,7 @@ const AnunciaraAdocao = () => {
               <FormControl >
                 <RadioGroup
                   aria-labelledby="demo-controlled-radio-buttons-group"
-                  // name="controlled-radio-buttons-group"
-                  value={castrado}
-                  onChange={handleChange}
+                  name='castrado'
                 >
                   <div className='divTituloCampo'>
                     <label className='titulocampo'>Castrado</label>

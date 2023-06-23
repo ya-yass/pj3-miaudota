@@ -27,7 +27,6 @@ import { useNavigate } from 'react-router-dom';
 // import CardResgate from './CardResgate';
 
 
-
 const AnunciarResgate = () => {
 
   const [modalOpen, setOpen] = useState(false);

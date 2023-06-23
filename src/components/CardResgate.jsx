@@ -14,6 +14,17 @@ import {
 	FaPaw as Raca,
 } from 'react-icons/fa'
 
+
+
+const bairroTratado ={
+  0:['shdsa'],
+  1:['2'],
+  2:['3'],
+  3:['4']
+  
+}
+
+
 const CardResgate = ({perdido, setPerdidos, perdidos}) => {
 
 
@@ -22,7 +33,7 @@ const CardResgate = ({perdido, setPerdidos, perdidos}) => {
   const [nome, setnome] = useState(perdido.nome)
   const [raca, setRaca] = useState(perdido.raca)
   const [sexo, setSexo] = useState(perdido.sexo)
-	console.log(foto)
+  const [bairro, setBairro] = useState(perdido.bairro)
 
 	const responsive = { //para editar a responsividade do carousel
 		desktop: {
@@ -52,17 +63,17 @@ const CardResgate = ({perdido, setPerdidos, perdidos}) => {
 	return (
 		<Box className='div'>
 			<div className="card">
-				<img src={perdido.foto} alt="pet" className='pet' />
+				<img src={foto} alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
-						<h3 className="nome">{perdido.nome}</h3>
+						<h3 className="nome">{nome}</h3>
 						<Femea className='femea' />
 						{/* <Macho className='macho' /> */}
 					</div>
 					<div className="detalhes">
-						<span className="idade"><Idade />{perdido.idade}</span>
-						<span><Raca />{perdido.raca}</span>
-						<span><Local />{perdido.bairro}</span>
+						<span className="idade"><Idade />{idade}</span>
+						<span><Raca />{raca}</span>
+						<span><Local />{bairroTratado[bairro]}</span>
 					</div>
 					<div className="sobre">
 						< ModalDescricaoResgate />
