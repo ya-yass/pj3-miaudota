@@ -19,7 +19,6 @@ import {
 	FaVenus as Femea,
 	FaMars as Macho,
 	FaHeart as Idade,
-	FaSyringe as Vacina,
 	FaPaw as Raca,
 	FaClinicMedical as Castrado
 } from 'react-icons/fa'
@@ -29,8 +28,7 @@ import {
 
 const ModalDescricaoAdocao = (adocao, user) => {
 
-  console.log(adocao.descricao)
-
+console.log(adocao)
   //abrir e fechar o modal principal
   const [modalOpen, setOpen] = React.useState(false);
   const handleOpen1 = () => setOpen(true);
@@ -197,7 +195,6 @@ const ModalDescricaoAdocao = (adocao, user) => {
                       <span className="idade"><Idade />{adocao.idade}</span>
                       <span><Raca/>{adocao.raca}</span>
                       <span><Castrado/>{adocao.castrado}</span>
-                      {/* <span><Vacina/>V3, V4, V5 e raiva </span> */}
                       <span><Macho/>{adocao.sexo}</span>
 
                     </div>

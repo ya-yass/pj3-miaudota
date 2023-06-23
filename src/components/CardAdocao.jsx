@@ -8,14 +8,13 @@ import {
 	FaVenus as Femea,
 	FaMars as Macho,
 	FaHeart as Idade,
-	FaSyringe as Vacina,
 	FaPaw as Raca,
 	FaClinicMedical as Castrado
 } from 'react-icons/fa'
 
 const CardAdocao = ({adocao, setAdocoes, adocoes}) => {
 
-
+	console.log()
 	return (
 		<Box className='div'>
 
@@ -35,7 +34,6 @@ const CardAdocao = ({adocao, setAdocoes, adocoes}) => {
 						</div>
 						<div className="detalhes">
 							<span className="idade"><Idade />{adocao.idade}</span>
-							<span className="vacinas"><Vacina /> {adocao.vacinado} </span>
 							<span><Raca />{adocao.raca}</span>
 							<span><Castrado />
 							{adocao.castrado === 'nao' ? (

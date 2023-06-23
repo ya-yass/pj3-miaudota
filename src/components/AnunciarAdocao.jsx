@@ -194,40 +194,6 @@ const AnunciaraAdocao = () => {
               />
             </div>
 
-            <FormGroup className='vacinasPet'>
-              <div className='divTituloCampo'>
-                <label className='titulocampo'>Vacinas</label>
-                {/* TODO definir com o professor os campos de multipla escolha */}
-                <p>*</p>
-              </div>
-              <div className="divVacinas">
-                <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="V3" name='vacinado' className='labelV3' />
-                  <FormControlLabel control={<Checkbox />} label="V4" name='vacinado' className='labelV4' />
-                </div>
-
-                <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="V10" name='vacinado' className='labelV10' />
-                  <FormControlLabel control={<Checkbox />} label="V5" name='vacinado' className='labelV5' />
-
-                </div>
-                <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="V8" name='vacinado' className='labelV8' />
-                  <FormControlLabel control={<Checkbox />} label="Raiva" name='vacinado' className='labelRaiva' />
-                </div>
-
-                <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="Giárdia" name='vacinado' className='labelGiardia' />
-                  <FormControlLabel control={<Checkbox />} label="Gripe canina" name='vacinado' className='labelGripeCanina' />
-                </div>
-
-                <div className="camposVacinas">
-                  <FormControlLabel control={<Checkbox />} label="Não vacinado" name='vacinado' className='labelNaoVacinado' />
-                  <FormControlLabel control={<Checkbox />} label="Outro" name='vacinado' className='labelOutro' />
-                </div>
-              </div>
-            </FormGroup>
-
             <div>
               <FormControl sx={{ marginRight: '43px' }}>
                 <RadioGroup
