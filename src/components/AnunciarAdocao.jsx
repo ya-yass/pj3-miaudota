@@ -37,11 +37,10 @@ const AnunciaraAdocao = () => {
    const idade = event.target.idade.value
    const sexo = event.target.sexo.value
    const descricao = event.target.descricao.value
-   const vacinado = event.target.vacinado.value
    const castrado = event.target.castrado.value
    const raca = event.target.raca.value
    const tipo = event.target.tipo.value
-   const adocao = {nome, foto, idade, sexo, descricao, vacinado, castrado, raca, tipo }
+   const adocao = {nome, foto, idade, sexo, descricao, castrado, raca, tipo }
    try {
      const response = await fetch(`${API_SERVER}/adocao`,
      {

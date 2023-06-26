@@ -34,30 +34,20 @@ console.log(adocao)
   const handleOpen1 = () => setOpen(true);
   const handleClose1 = () => setOpen(false);
 
-  //Modal Child
-  function ChildModal() {
-    const [modalOpen, setOpen] = React.useState(false);
-    const handleOpen = () => {
-      setOpen(true);
-    };
-    const handleClose = () => {
-      setOpen(false);
-    };
 
     return (
       <React.Fragment>
         <div className="botaoChild">
-          <span onClick={handleClose1} className="btnCancelar">Cancelar</span>
-          <button onClick={handleOpen} variant="contained" className="btnQueroAdotar">QUERO ADOTAR</button>
+          <button onClick={handleOpen1} variant="contained" className="btnQueroAdotar">QUERO ADOTAR</button>
         </div>
         <Modal
           open={modalOpen}
-          onClose={handleClose}
+          onClose={handleClose1}
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
         >
           <Box className='modalContato'>
-            <Cancel className='botaoCancelModal' onClick={handleClose} />
+            <Cancel className='botaoCancelModal' onClick={handleClose1} />
             <span><h4 className="entrarContato">Entrar em contatos</h4></span>
             <span className="informativo">Para a segurança dos usuários, não compartilhamos informações pessoais.</span>
             <Typography id="modal-modal-description"
@@ -127,7 +117,7 @@ console.log(adocao)
 
 
               <div className='btnContatos'>
-                <button onClick={handleOpen} variant="contained" className="btnQueroAdotar">ENVIAR</button>
+                <button variant="contained" className="btnQueroAdotar">ENVIAR</button>
               </div>
 
             </Typography>
@@ -136,81 +126,6 @@ console.log(adocao)
       </React.Fragment >
     );
   }//funcao modal child fechamento
-
-  return (
-    <>
-      <Box>
-        <div className="sobre">
-          <button className='btnSobrePet' onClick={handleOpen1}>SOBRE O PET</button>
-        </div>
-
-        <Modal
-          open={modalOpen}
-          onClose={handleClose1}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description">
-
-          <Box sx={styles.Modal} className='selecionaTudo'>
-            <Cancel className='botaoCancelModal' onClick={handleClose1} />
-
-            <Typography id="modal-modal-description"
-              sx={{
-                mt: 2,
-                '& fieldset': {
-                  display: 'none',
-                },
-                '& legend': {
-                  display: 'none',
-                }
-              }}>
-
-              <div className="infoModal">
-                <div className="infopet">
-                  <div className="fotoPetDiv">
-                    <img src={fotoGato} alt="FotoPet" className="fotoPet" />
-                  </div>
-                  
-                  <div className="textpet">
-                    <div className="nomeIcon">
-                      <p className="nomepet">{adocao.nome}</p>
-                      {adocao.sexo === 'femea' ? (
-          			        <Femea/>
-          		        	) : (<Macho/> )
-       			          }
-                    </div>
-                    <p>{adocao.descricao}</p>
-                  </div>
-                </div>
-                <div className="infoPeteUser">
-                  <div className="quemAnunciou">
-                    <img src={user.fotoperfil} alt="Foto Anunciante" className="fotoAnunciante" />
-                    <div className="infoAnunciante">
-                      <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">{user.nome}</p>
-                    </div>
-                  </div>
-
-                  <div className="Iconsinfo">
-                    <div className="infoDopet">
-                      <span className="idade"><Idade />{adocao.idade}</span>
-                      <span><Raca/>{adocao.raca}</span>
-                      <span><Castrado/>{adocao.castrado}</span>
-                      <span><Macho/>{adocao.sexo}</span>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Typography>
-            <ChildModal />
-
-          </Box>
-        </Modal>
-
-      </Box>
-    </>
-  )
-}
 
 const styles = {
 

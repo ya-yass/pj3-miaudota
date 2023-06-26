@@ -12,7 +12,7 @@ import {
 	FaClinicMedical as Castrado
 } from 'react-icons/fa'
 
-const CardAdocao = ({adocao, setAdocoes, adocoes}) => {
+const CardAdocao = ({adocao}) => {
 
 	console.log()
 	return (
