@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 import {
   FaVenus as Femea,
-  // FaMars as Macho,
+  FaMars as Macho,
   FaHeart as Idade,
   FaMapMarkerAlt as Local, //https://react-icons.github.io/react-icons/icons?name=fa
   FaPaw as Raca,
@@ -94,8 +94,10 @@ const CardResgate = ({perdido, setPerdidos, perdidos}) => {
         <div className="info">
           <div className="cardHeader">
             <h3 className="nome">{perdido.nome}</h3>
-            <Femea className='femea' />
-            {/* <Macho className='macho' /> */}
+            {perdido.sexo === 'femea' ? (
+          			<Femea/>
+          			) : (<Macho/> )
+       			  }
           </div>
           <div className="detalhes">
             <span className="idade"><Idade />{perdido.idade}</span>

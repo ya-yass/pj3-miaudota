@@ -22,6 +22,8 @@ import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   FaVenus as Femea,
+	FaMars as Macho,
+
   FaHeart as Idade,
   FaPaw as Raca,
   FaMapMarkerAlt as Local
@@ -266,7 +268,12 @@ const ModalDescricaoResgate = (props) => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">{props.data.nome}</p>
-                      <Femea className='femea' />
+                      <span> 
+                        {props.data.sexo === 'femea' ? (
+                        <Femea/>
+                        ) : (<Macho/> )
+                      } 
+                      </span>
                     </div>
                     <p>{props.data.descricao}</p>
                   </div>
@@ -286,7 +293,12 @@ const ModalDescricaoResgate = (props) => {
                       <span className="idade porte"><Idade/>{props.data.idade}</span>
                       <span className="idade"><Idade/>{props.data.porte}</span>
                       <span><Raca />{props.data.raca}</span>
-                      <span> <Femea /> {props.data.sexo}</span>
+                      <span> 
+                        {props.data.sexo === 'femea' ? (
+                        <Femea/>
+                        ) : (<Macho/> )
+                      } 
+                      </span>
                       <span className="localPet"><Local /> Foi encontrado no bairro {bairroTratado[props.data.bairro]}</span>
 
 
