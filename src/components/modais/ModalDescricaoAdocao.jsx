@@ -11,7 +11,6 @@ import TextField from '@mui/material/TextField';
 import '../modais/ModalDescricaoAdocao.css'
 
 //icons e imagens
-import fotoGato from '../assets/img/pet1.jpg'
 import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
@@ -26,28 +25,37 @@ import {
 
 
 
-const ModalDescricaoAdocao = (adocao, user) => {
+const ModalDescricaoAdocao = (props) => {
 
-console.log(adocao)
   //abrir e fechar o modal principal
   const [modalOpen, setOpen] = React.useState(false);
   const handleOpen1 = () => setOpen(true);
   const handleClose1 = () => setOpen(false);
 
+  //Modal Child
+  function ChildModal() {
+    const [modalOpen, setOpen] = React.useState(false);
+    const handleOpen = () => {
+      setOpen(true);
+    };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
     return (
       <React.Fragment>
         <div className="botaoChild">
-          <button onClick={handleOpen1} variant="contained" className="btnQueroAdotar">QUERO ADOTAR</button>
+          <span onClick={handleClose1} className="btnCancelar">Cancelar</span>
+          <button onClick={handleOpen} variant="contained" className="btnQueroAdotar">QUERO ADOTAR</button>
         </div>
         <Modal
           open={modalOpen}
-          onClose={handleClose1}
+          onClose={handleClose}
           aria-labelledby="child-modal-title"
           aria-describedby="child-modal-description"
         >
           <Box className='modalContato'>
-            <Cancel className='botaoCancelModal' onClick={handleClose1} />
+            <Cancel className='botaoCancelModal' onClick={handleClose} />
             <span><h4 className="entrarContato">Entrar em contatos</h4></span>
             <span className="informativo">Para a segurança dos usuários, não compartilhamos informações pessoais.</span>
             <Typography id="modal-modal-description"
@@ -117,7 +125,7 @@ console.log(adocao)
 
 
               <div className='btnContatos'>
-                <button variant="contained" className="btnQueroAdotar">ENVIAR</button>
+                <button onClick={handleOpen} variant="contained" className="btnQueroAdotar">ENVIAR</button>
               </div>
 
             </Typography>
@@ -126,6 +134,81 @@ console.log(adocao)
       </React.Fragment >
     );
   }//funcao modal child fechamento
+
+  return (
+    <>
+      <Box>
+        <div className="sobre">
+          <button className='btnSobrePet' onClick={handleOpen1}>SOBRE O PET</button>
+        </div>
+
+        <Modal
+          open={modalOpen}
+          onClose={handleClose1}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description">
+
+          <Box sx={styles.Modal} className='selecionaTudo'>
+            <Cancel className='botaoCancelModal' onClick={handleClose1} />
+
+            <Typography id="modal-modal-description"
+              sx={{
+                mt: 2,
+                '& fieldset': {
+                  display: 'none',
+                },
+                '& legend': {
+                  display: 'none',
+                }
+              }}>
+
+              <div className="infoModal">
+                <div className="infopet">
+                  <div className="fotoPetDiv">
+                    <img src={props.data.foto} alt="FotoPet" className="fotoPet" />
+                  </div>
+                  
+                  <div className="textpet">
+                    <div className="nomeIcon">
+                      <p className="nomepet">{props.data.nome}</p>
+                      {props.data.sexo === 'femea' ? (
+          			        <Femea/>
+          		        	) : (<Macho/> )
+       			          }
+                    </div>
+                    <p>{props.data.descricao}</p>
+                  </div>
+                </div>
+                <div className="infoPeteUser">
+                  <div className="quemAnunciou">
+                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
+                    <div className="infoAnunciante">
+                      <p className="tituloAnunciante">Anunciante</p>
+                      <p className="nomeAnunciante">Bla</p>
+                    </div>
+                  </div>
+
+                  <div className="Iconsinfo">
+                    <div className="infoDopet">
+                      <span className="idade"><Idade />{props.data.idade}</span>
+                      <span><Raca/>{props.data.raca}</span>
+                      <span><Castrado/>{props.data.castrado}</span>
+                      <span><Macho/>{props.data.sexo}</span>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Typography>
+            <ChildModal />
+
+          </Box>
+        </Modal>
+
+      </Box>
+    </>
+  )
+}
 
 const styles = {
 

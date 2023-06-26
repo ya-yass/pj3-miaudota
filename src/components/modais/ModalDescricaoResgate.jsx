@@ -15,7 +15,6 @@ import '../modais/ModalDescricaoResgate.css'
 
 
 //icons e imagens
-import fotoPerfilCao from '../assets/img/fotoPerfilCao.jpg'
 import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 

@@ -42,7 +42,7 @@ const CardAdocao = ({adocao}) => {
        			  }</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricaoAdocao />
+							< ModalDescricaoAdocao data={adocao} />
 						</div>
 					</div>
 				</div>
