@@ -3,9 +3,7 @@ import Fera from './assets/img/fera.avif';
 import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ModalDescricaoResgate from "./modais/ModalDescricaoResgate"
 
-import { useState } from 'react';
 
 import {
 	FaVenus as Femea,
@@ -51,21 +49,21 @@ const CardPetInicialResgate = (petRegastado) => {
 				responsive={responsive}
 				ssr={true} // means to render carousel on server-side.
 			>
+				
 				<div className="card">
-					<img src={petRegastado.foto} alt="pet" className='pet' />
+					<img src={Fera} alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
-							<h3 className="nome">{petRegastado.nome}</h3>
+							<h3 className="nome">Fera</h3>
 							<Femea className='femea' />
 							{/* <Macho className='macho' /> */}
 						</div>
 						<div className="detalhes">
-							<span className="idade"><Idade />{petRegastado.idade}</span>
-							<span><Raca />{petRegastado.raca}</span>
-							<span><Local />{petRegastado.bairo}</span>
+							<span className="idade"><Idade />Não informado</span>
+							<span><Raca />Pittbull</span>
+							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -84,7 +82,6 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -103,7 +100,6 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -122,7 +118,6 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -141,7 +136,6 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -160,7 +154,6 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>
@@ -179,7 +172,6 @@ const CardPetInicialResgate = (petRegastado) => {
 							<span><Local />Martim de Sá</span>
 						</div>
 						<div className="sobre">
-							< ModalDescricaoResgate />
 						</div>
 					</div>
 				</div>

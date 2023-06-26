@@ -2,7 +2,6 @@ import Box from '@mui/material/Box';
 import './CardAdocao.css' //para importar jsx sempre é com letra maíuscula
 import "react-multi-carousel/lib/styles.css";
 import ModalDescricaoAdocao from "./modais/ModalDescricaoAdocao"
-import { useState } from 'react';
 
 import {
 	FaVenus as Femea,
