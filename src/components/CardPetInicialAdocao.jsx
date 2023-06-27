@@ -3,6 +3,7 @@ import Fera from './assets/img/fera.avif';
 import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ModalInicialAdocaoMandy from '../components/modelo_modal/modalInicialAdocaoMandy'
 
 import {
 	FaVenus as Femea,
@@ -58,6 +59,7 @@ const CardPetInicialAdocao = () => {
 					<span><Raca />Mestiço pitbull</span>
 					<span><Castrado />Castrado</span>
 				</div>
+				<ModalInicialAdocaoMandy/>				
 				</div>
 			</div>
 

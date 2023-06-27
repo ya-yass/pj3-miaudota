@@ -3,6 +3,7 @@ import Fera from './assets/img/fera.avif';
 import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ModalInicialResgateDavi from './modelo_modal/modalInicialResgateDavi'
 
 import {
 	FaVenus as Femea,
@@ -59,7 +60,7 @@ const CardPetInicialResgate = (petRegastado) => {
 						<span><Local />Martim de Sá</span>
 					</div>
 					<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							<ModalInicialResgateDavi/>
 						</div>
 				</div>
 			</div>
