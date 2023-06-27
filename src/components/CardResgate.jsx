@@ -3,9 +3,6 @@ import './CardPetInicialResgate.css' //para importar jsx sempre √© com letra ma√
 import ModalDescricaoResgate from "./modais/ModalDescricaoResgate"
 
 
-import { useState } from 'react';
-
-
 import {
   FaVenus as Femea,
   FaMars as Macho,

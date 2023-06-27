@@ -7,8 +7,6 @@ import * as React from 'react';
 import { Link } from 'react-router-dom'
 import ModalUserLogin from './modais/ModalUserLogin'
 
-const settings = ['Entre', 'Cadastre-se'];
-
 const Navbar = () => {
   return (
     <Box component='nav'>
