@@ -1,10 +1,9 @@
 import Box from '@mui/material/Box';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 //modal
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 //formulário
-import TextField from '@mui/material/TextField';
 // import ButtonEnviar from '@mui/material/Button';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -145,7 +144,6 @@ const AnunciarResgate = () => {
                 <input
                   type="text"
                   placeholder='Digite o nome do pet'
-                  type="text"
                   className='inputResgate inputNome'
                   name='nome'
                   InputLabelProps={{ shrink: true }}
@@ -162,7 +160,6 @@ const AnunciarResgate = () => {
                 </div>
                 <input type="text" sx={{ width: '157px', marginRight: '10px', }}
                     placeholder='Ex: 4 meses'
-                    type="text"
                     name='idade'
                     className='inputResgate inputIdade'
                     InputLabelProps={{ shrink: true }}/>
@@ -174,7 +171,6 @@ const AnunciarResgate = () => {
                   <p className='opcional'>(Opcional)</p>
                 </div>
                 <input type="text" placeholder='Ex: Sem raça'
-                  type="text"
                   name='raca'
                   className='inputResgate inputRaca'
                   InputLabelProps={{ shrink: true }}
@@ -309,7 +305,6 @@ const AnunciarResgate = () => {
               <textarea
                 rows="1" type="text"
                 placeholder='Insira uma URL válida'
-                type="text"
                 className='inputAdocao inputFotoPet'
                 name='foto'
                 InputLabelProps={{ shrink: true }}

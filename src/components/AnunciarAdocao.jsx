@@ -5,7 +5,6 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 
 //formulario
-import TextField from '@mui/material/TextField';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -123,7 +122,6 @@ const AnunciaraAdocao = () => {
                   </div>
 
                   <input type="text" placeholder='Digite o nome do pet'
-                    type="text"
                     className='inputAdocao inputNome'
                     name='nome'
                     InputLabelProps={{ shrink: true }}
@@ -151,7 +149,6 @@ const AnunciaraAdocao = () => {
                   </div>
                   <input type="text" sx={{ width: '157px', marginRight: '10px', }}
                     placeholder='Ex: 4 meses'
-                    type="text"
                     name='idade'
                     className='inputAdocao inputIdade'
                     InputLabelProps={{ shrink: true }}/>
@@ -164,7 +161,6 @@ const AnunciaraAdocao = () => {
                   </div>
 
                   <input type="text" placeholder='Ex: Sem raça'
-                    type="text"
                     name='raca'
                     className='inputAdocao inputRaca'
                     InputLabelProps={{ shrink: true }}
@@ -223,7 +219,6 @@ const AnunciaraAdocao = () => {
                   <textarea
                     rows="1" type="text"
                     placeholder='Insira uma URL válida'
-                    type="text"
                     className='inputAdocao inputFotoPet'
                     name='foto'
                     InputLabelProps={{ shrink: true }}
