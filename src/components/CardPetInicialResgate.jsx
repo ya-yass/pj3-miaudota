@@ -4,18 +4,15 @@ import './CardPetInicialResgate.css' //para importar jsx sempre é com letra ma�
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-
 import {
 	FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 	FaHeart as Idade,
 	FaMapMarkerAlt as Local, //https://react-icons.github.io/react-icons/icons?name=fa
 	FaPaw as Raca,
 } from 'react-icons/fa'
 
 const CardPetInicialResgate = (petRegastado) => {
-
-
 	const responsive = { //para editar a responsividade do carousel
 		desktop: {
 			breakpoint: { max: 2500, min: 1501 },
@@ -39,8 +36,6 @@ const CardPetInicialResgate = (petRegastado) => {
 		}
 	};
 
-
-
 	return (
 		<Box className='div'>
 			<h1>Resgatados</h1>
@@ -50,132 +45,123 @@ const CardPetInicialResgate = (petRegastado) => {
 				ssr={true} // means to render carousel on server-side.
 			>
 				
-				<div className="card">
-					<img src={Fera} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Fera</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />Não informado</span>
-							<span><Raca />Pittbull</span>
-							<span><Local />Martim de Sá</span>
-						</div>
-						<div className="sobre">
-						</div>
+			<div className="card">
+				<img src={Fera} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">Davi</h3>
+						{/* <Femea className='femea' /> */}
+						<Macho className='macho' />
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />Não informado</span>
+						<span><Raca />Raça não informada</span>
+						<span><Local />Martim de Sá</span>
 					</div>
 				</div>
-
-				<div className="card">
-					<img src={Fera} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Fera</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />Não informado</span>
-							<span><Raca />Pittbull</span>
-							<span><Local />Martim de Sá</span>
-						</div>
-						<div className="sobre">
-						</div>
+			</div>
+			
+			<div className="card">
+				<img src={Fera} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">Nana</h3>
+						<Femea className='femea' />
+						{/* <Macho className='macho' /> */}
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />Filhote</span>
+						<span><Raca />Caramelo</span>
+						<span><Local />Pontal de Santa Marina</span>
 					</div>
 				</div>
-
-				<div className="card">
-					<img src={Fera} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Fera</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />Não informado</span>
-							<span><Raca />Pittbull</span>
-							<span><Local />Martim de Sá</span>
-						</div>
-						<div className="sobre">
-						</div>
+			</div>
+			
+			<div className="card">
+				<img src={Fera} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">Sabão</h3>
+						{/* <Femea className='femea' /> */}
+						<Macho className='macho' />
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />Adulto</span>
+						<span><Raca />Sem raça informada</span>
+						<span><Local />Centro</span>
 					</div>
 				</div>
+			</div>
 
-				<div className="card">
-					<img src={Fera} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Fera</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />Não informado</span>
-							<span><Raca />Pittbull</span>
-							<span><Local />Martim de Sá</span>
-						</div>
-						<div className="sobre">
-						</div>
+			<div className="card">
+				<img src={Fera} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">Bubu</h3>
+						{/* <Femea className='femea' /> */}
+						<Macho className='macho' />
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />Adutlo</span>
+						<span><Raca />Pittbull</span>
+						<span><Local />Boxer</span>
 					</div>
 				</div>
+			</div>
 
-				<div className="card">
-					<img src={Fera} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Fera</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />Não informado</span>
-							<span><Raca />Pittbull</span>
-							<span><Local />Martim de Sá</span>
-						</div>
-						<div className="sobre">
-						</div>
+			<div className="card">
+				<img src={Fera} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">Chaves</h3>
+						{/* <Femea className='femea' /> */}
+						<Macho className='macho' />
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />Filhote</span>
+						<span><Raca />Raça não informada</span>
+						<span><Local />Martim de Sá</span>
+					</div>
+					<div className="sobre">
 					</div>
 				</div>
+			</div>
 
-				<div className="card">
-					<img src={Fera} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Fera</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />Não informado</span>
-							<span><Raca />Pittbull</span>
-							<span><Local />Martim de Sá</span>
-						</div>
-						<div className="sobre">
-						</div>
+			<div className="card">
+				<img src={Fera} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">Vivi</h3>
+						<Femea className='femea' />
+						{/* <Macho className='macho' /> */}
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />Adulta</span>
+						<span><Raca />Caramelo</span>
+						<span><Local />Prainha</span>
+					</div>
+					<div className="sobre">
 					</div>
 				</div>
+			</div>
 
-				<div className="card">
-					<img src={Fera} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Fera</h3>
-							<Femea className='femea' />
-							{/* <Macho className='macho' /> */}
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />Não informado</span>
-							<span><Raca />Pittbull</span>
-							<span><Local />Martim de Sá</span>
-						</div>
-						<div className="sobre">
-						</div>
+			<div className="card">
+				<img src={Fera} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">Cuca</h3>
+						<Femea className='femea' />
+						{/* <Macho className='macho' /> */}
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />Não informado</span>
+						<span><Raca />Raça não infomada</span>
+						<span><Local />Morro do algodão</span>
+					</div>
+					<div className="sobre">
 					</div>
 				</div>
-
+			</div>
 			</Carousel >
 		</Box>
 	)

@@ -12,41 +12,34 @@ import {
 } from 'react-icons/fa'
 
 const CardAdocao = ({adocao}) => {
-
 	console.log()
 	return (
 		<Box className='div'>
-
-				<div className="card">
-					<img src={adocao.foto} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">{adocao.nome}</h3>
-
-							{adocao.sexo === 'femea' ? (
-          			<Femea/>
-          			) : (<Macho/> )
-       			  }
-
-
-      
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />{adocao.idade}</span>
-							<span><Raca />{adocao.raca}</span>
-							<span><Castrado />
+			<div className="card">
+				<img src={adocao.foto} alt="pet" className='pet' />
+				<div className="info">
+					<div className="cardHeader">
+						<h3 className="nome">{adocao.nome}</h3>
+						{adocao.sexo === 'femea' ? (
+							<Femea/>
+							) : (<Macho/> )
+						}
+					</div>
+					<div className="detalhes">
+						<span className="idade"><Idade />{adocao.idade}</span>
+						<span><Raca />{adocao.raca}</span>
+						<span><Castrado />
 							{adocao.castrado === 'nao' ? (
-          			'Não castrado'
-          			) : ('Castrado' )
-       			  }</span>
-						</div>
-						<div className="sobre">
-							< ModalDescricaoAdocao data={adocao} />
-						</div>
+							'Não castrado'
+							) : ('Castrado' )
+							}
+						</span>
+					</div>
+					<div className="sobre">
+						< ModalDescricaoAdocao data={adocao} />
 					</div>
 				</div>
-		
-
+			</div>
 		</Box>
 	)
 }

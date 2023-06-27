@@ -2,5 +2,6 @@
   "explorer.compactFolders": false,
   "editor.wordWrap": "on",
   "editor.mouseWheelZoom": true,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay"
 }
