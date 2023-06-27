@@ -58,6 +58,9 @@ const CardPetInicialResgate = (petRegastado) => {
 						<span><Raca />Raça não informada</span>
 						<span><Local />Martim de Sá</span>
 					</div>
+					<div className="sobre">
+							<button className='btnSobrePet'>SOBRE O PET</button>
+						</div>
 				</div>
 			</div>
 			

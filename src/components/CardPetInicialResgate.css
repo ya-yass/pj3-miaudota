@@ -1,5 +1,6 @@
 * {
   box-sizing: revert !important;
+  font-family: 'Poppins', sans-serif;
 }
 
 .div {
@@ -18,22 +19,6 @@ h1 {
 
 .carrossel {
   padding-bottom: 4px;
-}
-
-.card {
-  height: 100%;
-  width: 250px;
-  background-color: #FFF;
-  border: 1px solid #E7E7E7;
-  border-radius: 34px !important;
-  display: inline-block;
-}
-
-.card .pet {
-  width: 250px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 34px 34px 0 0;
 }
 
 .info {

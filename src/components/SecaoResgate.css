@@ -1,15 +1,8 @@
-.conteudo {
-  display: flex;
-}
+
 
 .pets {
   display: flex;
   flex-wrap: wrap;
-}
-
-.card {
-  margin-right: 39px;
-  margin-bottom: 30px;
 }
 
 .opcoes {

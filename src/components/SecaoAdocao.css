@@ -1,15 +1,12 @@
 .conteudo {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .pets {
   display: flex;
   flex-wrap: wrap;
-}
-
-.card {
-  margin-right: 39px;
-  margin-bottom: 30px;
 }
 
 .opcoes {
@@ -93,4 +90,8 @@ button.filtro:hover {
   color: white;
   background-color: #f07a35 !important;
   box-shadow: none !important;
+}
+
+.tituloSecoes{
+  margin: 30px 0 0 0 !important;
 }

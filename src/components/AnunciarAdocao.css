@@ -60,10 +60,32 @@
   flex-direction: column;
 }
 
-.inputAdocao {
+.inputAdocao, .inputResgate {
   border: 1px solid rgb(228, 224, 224) !important;
   border-radius: 10px !important;
   margin-left: 0px;
+  margin-right: 10px;
+  padding: 10px;
+  outline: none
+}
+
+.inputDescricao{
+  width: 96%;
+  outline: none
+}
+
+.inputFotoPet{
+  width: 270%;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+.inputIdade, .inputRaca{
+  width: 150px;
+}
+
+.inputAdocao::placeholder, .inputResgate::placeholder {
+  color: #aaaaaa !important;
 }
 
 .input:checked {

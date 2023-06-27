@@ -37,21 +37,14 @@ const SecaoAdocao = () => {
       margin: '0 70px'
     }}>
       <CarouselSlide />
-
-      <h1>Adoção</h1>
-
+      <h1 className='tituloSecoes'>Adoção</h1>
       <div className="conteudo">
-
       {adocoes &&
           adocoes.map(adocao => (
             <CardAdocao key={adocao.id} adocao={adocao} setAdocoes={setAdocoes} adocoes={adocoes}/>
-
           ))
-
        }
-       
       </div>
-
     </Box>
   )
 }

@@ -110,7 +110,6 @@ const AnunciarResgate = () => {
 
           <FormControl >
             <RadioGroup
-              // aria-labelledby="demo-controlled-radio-buttons-group"
               name="tipo"
             >
             <div className='divTituloCampo'>
@@ -143,17 +142,17 @@ const AnunciarResgate = () => {
                   <label className='titulocampo'>Nome</label>
                   <p className='opcional'>(Opcional)</p>
                 </div>
-                <TextField
-                  placeholder='Digite aqui o nome do pet'
+                <input
                   type="text"
+                  placeholder='Digite o nome do pet'
+                  type="text"
+                  className='inputResgate inputNome'
                   name='nome'
-                  className='inputResgate'
                   InputLabelProps={{ shrink: true }}
                   sx={{
                     marginRight: '10px',
-                  }}
-                // onChange={handleFileChange}
-                />
+                    width:'100px'
+                  }}/>
               </div>
 
               <div className="idadePet">
@@ -161,17 +160,12 @@ const AnunciarResgate = () => {
                   <label className='titulocampo'>Idade</label>
                   <p className='opcional'>(Opcional)</p>
                 </div>
-                <TextField
-                  placeholder='Ex: aproximadamente 3 meses'
-                  type="text"
-                  className='inputResgate'
-                  name='idade'
-                  InputLabelProps={{ shrink: true }}
-                  sx={{
-                    marginRight: '10px',
-                  }}
-                // onChange={handleFileChange}
-                />
+                <input type="text" sx={{ width: '157px', marginRight: '10px', }}
+                    placeholder='Ex: 4 meses'
+                    type="text"
+                    name='idade'
+                    className='inputResgate inputIdade'
+                    InputLabelProps={{ shrink: true }}/>
               </div>
 
               <div className="RacaPet">
@@ -179,16 +173,11 @@ const AnunciarResgate = () => {
                   <label className='titulocampo'>Raça</label>
                   <p className='opcional'>(Opcional)</p>
                 </div>
-                <TextField
-                  placeholder='Ex: sem raça'
+                <input type="text" placeholder='Ex: Sem raça'
                   type="text"
                   name='raca'
-                  className='inputResgate'
+                  className='inputResgate inputRaca'
                   InputLabelProps={{ shrink: true }}
-                  sx={{
-                    marginRight: '10px',
-                  }}
-                // onChange={handleFileChange}
                 />
               </div>
             </div>
@@ -198,23 +187,13 @@ const AnunciarResgate = () => {
                 <label className='titulocampo'>Sobre o pet</label>
                 <p>*</p>
               </div>
-              <TextField //TODO mudar para textarea para rolar a quebra de linha
-                sx={{ width: '100%', height: '200px' }}
-                placeholder='Encontrei esse cachorro próximo do supermercado Silva Indaía, estava assustado tentando atravessar a rua, ainda estava com a guia de passeio.'
-                name='descricao'
-                type="text"
-                className='inputAdocao'
-                InputLabelProps={{ shrink: true }}
-              // onChange={handleFileChange}
-              />
+              <textarea name="descricao" rows="6" type="text" className='inputAdocao inputDescricao' InputLabelProps={{ shrink: true }} placeholder='Ex: Encontrei esse cachorro próximo do supermercado Silva Indaía, estava assustado tentando atravessar a rua, ainda estava com a guia de passeio.' />
             </div>
 
             <FormControl >
               <RadioGroup
-                // aria-labelledby="demo-controlled-radio-buttons-group"
                 name="sexo"
                 >
-
                 <div className='divTituloCampo'>
                   <label className='titulocampo'>Sexo</label>
                   <p>*</p>
@@ -229,7 +208,6 @@ const AnunciarResgate = () => {
 
             <FormControl >
               <RadioGroup
-                // aria-labelledby="demo-controlled-radio-buttons-group"
                 name="porte">
                   
                 <div className='divTituloCampo'>
@@ -324,20 +302,22 @@ const AnunciarResgate = () => {
           </FormControl>
 
           <div className='BtnImagens'>
-            <div className=' btnFotoResgate'>
+            <div className=' btnFotoAdocao'>
               <div className='divTituloCampo'>
-                <label className='titulocampo'>Foto de Perfil</label>
+                <label className='titulocampo'>Foto do pet</label>
               </div>
-              <TextField
+              <textarea
+                rows="1" type="text"
                 placeholder='Insira uma URL válida'
                 type="text"
-                className='inputResgate'
+                className='inputAdocao inputFotoPet'
                 name='foto'
                 InputLabelProps={{ shrink: true }}
                 sx={{
                   marginRight: '10px',
+                  width:'257%',
+                  marginBottom:'30px'
                 }}
-              // onChange={handleFileChange}
               />
             </div>
           </div>

@@ -12,11 +12,10 @@ import {
 } from 'react-icons/fa'
 
 const CardAdocao = ({adocao}) => {
-	console.log()
 	return (
 		<Box className='div'>
 			<div className="card">
-				<img src={adocao.foto} alt="pet" className='pet' />
+				<img src={adocao.foto} alt={adocao.nome} className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">{adocao.nome}</h3>

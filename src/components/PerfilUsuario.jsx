@@ -11,26 +11,16 @@ import useAuthStore from '../store/authStore'
 //imagens e icones
 import capaexemplo from './assets/img/capaexemplo.png'
 import { FaPaw as Raca } from 'react-icons/fa'
-// import { FaTrash as IconTrash } from 'react-icons/fa';
-
 
 const PerfilUsuario = () => {
-
-
   const fotoperfil =useAuthStore((state) => state.fotoperfil)
   const nome =useAuthStore((state) => state.nome)
   const usuario =useAuthStore((state) => state.usuario)
   const qtdanimais =useAuthStore((state) => state.qtdanimais)
- 
-
   return (
     <>
-
-      <Box sx={{
-        margin: '0px',
-      }}>
+      <Box sx={{margin: '0px',}}>
         <img src={capaexemplo} className='capa' alt='Foto de capa'></img>
-
         <div className='informacaoUsuario'>
           <img src={fotoperfil} className='fotoperfil' alt='Foto de perfil'></img>
           <div className='infoNameUserIcon'>
@@ -38,7 +28,6 @@ const PerfilUsuario = () => {
               <h2 className='nomeusuario'>{nome}</h2>
               <ModalEditarperfil />
             </div>
-
             <div className='userAndPet'>
               <p>{usuario}</p>
               <div className='iconPet'>
@@ -49,14 +38,10 @@ const PerfilUsuario = () => {
           </div>
         </div>
 
-
-
-        <CardPetPerfil />
-
+        <CardPetPerfil/>
       </Box>
     </>
   )
 }
-
 
 export default PerfilUsuario

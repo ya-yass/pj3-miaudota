@@ -1,5 +1,6 @@
 * {
   box-sizing: revert !important;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -22,13 +23,8 @@ h1 {
   border: 1px solid #E7E7E7;
   border-radius: 34px !important;
   display: inline-block;
-  transition: 0.1s;
+  margin-bottom: 30px;
 }
-
-/* .card:hover {
-  background-color: #eeeeee;
-  border: 1px solid #eeeeee;
-} */
 
 .card .pet {
   width: 250px;
