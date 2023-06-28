@@ -5,9 +5,9 @@ import * as React from 'react';
 
 import './SecaoAdocao.css'
 import { useState, useEffect } from 'react';
-import CarouselSlide from "./CarouselMiaudota"
 import { API_SERVER } from '../config';
 import CardAdocao from './CardAdocao'
+import banner1 from './assets/img/banner1.png'
 
 
 
@@ -36,7 +36,11 @@ const SecaoAdocao = () => {
     <Box className='div' sx={{
       margin: '0 70px'
     }}>
-      <CarouselSlide />
+        <img
+          className="d-block w-100"
+          src={banner1}
+          alt="First slide"
+        />
       <h1 className='tituloSecoes'>Adoção</h1>
       <div className="conteudo">
       {adocoes &&

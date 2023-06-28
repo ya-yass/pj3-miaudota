@@ -3,11 +3,11 @@ import './SecaoResgate.css' //para importar jsx sempre é com letra maíuscula
 import "react-multi-carousel/lib/styles.css";
 import * as React from 'react';
 import './SecaoAdocao.css'
-import CarouselSlide from "./CarouselMiaudota"
+// import CarouselSlide from "./CarouselMiaudota"
 import CardResgate from './CardResgate';
 import { useState, useEffect } from 'react';
 import { API_SERVER } from '../config';
-
+import banner2 from './assets/img/banner2.png'
 
 
 
@@ -36,9 +36,13 @@ const SecaoResgate = () => {
     <Box className='div' sx={{
       margin: '0 70px'
     }}>
-      <CarouselSlide />
+      <img
+          className="d-block w-100"
+          src={banner2}
+          alt="First slide"
+        />
 
-      <h1>Resgatados</h1>
+      <h1 className='tituloSecoes'>Resgatados</h1>
 
       <div className="conteudo">
        {perdidos &&
