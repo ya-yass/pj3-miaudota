@@ -7,15 +7,8 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 
-
-
-
 //files
 import '../modais/ModalDescricaoResgate.css'
-
-
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 
 import { BsXLg as Cancel } from 'react-icons/bs'
@@ -130,7 +123,7 @@ const ModalInicialResgateNana = () => {
                   </div>
                   <TextField
                     sx={{ height: '123px' }}
-                    placeholder='“Olá! Vi o Mali para adoção e estou interessado em adotá-lo"'
+                    placeholder='“Olá! Meu pet estava desaparecido a 2 semanas..."'
                     type="text"
                     className='inputContato'
 
@@ -195,29 +188,29 @@ const ModalInicialResgateNana = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img alt="FotoPet" className="fotoPet" />
+                    <img src="https://amparanimal.org.br/wp-content/webp-express/webp-images/uploads/2022/07/lobinho.jpg.webp" alt="FotoPet" className="fotoPet" />
                   </div>
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet"></p>
+                      <p className="nomepet">Nana</p>
                       <span> 
                         
                       </span>
                     </div>
-                    <p>descrição</p>
+                    <p>Eu e meu marido encontramos ela perto da avenida, ela parecia estar bastante assustada e com medo quando a gente se aproximava. Conseguimos colocar ela no carro em segurança e estamos cuidando até o tutor dela aparecer!</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade porte"><Idade/>idade</span>
-                      <span className="idade"><Idade/>porte</span>
-                      <span><Raca />raça</span>
+                      <span className="idade porte"><Idade/>Parece ter 1 ano</span>
+                      <span className="idade"><Idade/>Grande</span>
+                      <span><Raca />Sem raça</span>
                       <span> 
                         
                       </span>
-                      <span className="localPet"><Local /> Foi encontrado no bairro </span>
+                      <span className="localPet"><Local /> Foi encontrado no bairro Pontal de Santa Marina</span>
 
 
                     </div>

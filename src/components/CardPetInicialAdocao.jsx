@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Fera from './assets/img/fera.avif';
 import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -62,7 +61,7 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />4 meses</span>
-					<span><Raca />Mestiço pitbull</span>
+					<span><Raca />Mestiço Pitbull</span>
 					<span><Castrado />Castrado</span>
 				</div>
 				<ModalInicialAdocaoMandy/>				
@@ -79,7 +78,7 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />7 meses</span>
-					<span><Raca />pitbull</span>
+					<span><Raca />Pitbull</span>
 					<span><Castrado />Não castrado</span>
 				</div>
 				<ModalInicialAdocaoFera/>
@@ -96,7 +95,7 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />2 anos</span>
-					<span><Raca />Sem raça informada</span>
+					<span><Raca />Sem raça</span>
 					<span><Castrado />Castrado</span>
 				</div>
 				<ModalInicialAdocaoOlaf/>
@@ -113,7 +112,7 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />10 meses</span>
-					<span><Raca />Sem raça informada</span>
+					<span><Raca />Sem raça</span>
 					<span><Castrado />Castrado</span>
 				</div>
 				<ModalInicialAdocaoDopo/>
@@ -147,7 +146,7 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />1 mês</span>
-					<span><Raca />Sem raça informada</span>
+					<span><Raca />Sem raça</span>
 					<span><Castrado />Castrado</span>
 				</div>
 				<ModalInicialAdocaoPança/>
@@ -164,7 +163,7 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />3 meses</span>
-					<span><Raca />Sem </span>
+					<span><Raca />Sem raça</span>
 					<span><Castrado />Castrado</span>
 				</div>
 				<ModalInicialAdocaoSid/>

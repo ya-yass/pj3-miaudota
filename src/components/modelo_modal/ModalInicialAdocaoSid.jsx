@@ -10,13 +10,9 @@ import TextField from '@mui/material/TextField';
 //files
 import '../modais/ModalDescricaoAdocao.css'
 
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
-
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-	FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 	FaHeart as Idade,
 	FaPaw as Raca,
 	FaClinicMedical as Castrado
@@ -170,7 +166,7 @@ const ModalInicialAdocaoSid = () => {
                   
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet">Mandy</p>
+                      <p className="nomepet">Sid</p>
                       
                     </div>
                     <p>Mandy é uma cachorrinha bem ativa que adora brincar. Ela é muito dócil, gosta de colo e se dá bem com crianças. Ela é porte médio e tem 4 meses. Se quiser encher sua casa de alegria é a companhia perfeita!</p>
@@ -181,10 +177,10 @@ const ModalInicialAdocaoSid = () => {
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade"><Idade />4 meses</span>
-                      <span><Raca/>Mestiço pitbull</span>
-                      <span><Castrado/>castrado</span>
-                      <span><Femea/> Fêmea</span>
+                      <span className="idade"><Idade />3 meses</span>
+                      <span><Raca/>Sem raça</span>
+                      <span><Castrado/>Castrado</span>
+                      <span><Macho/> Macho</span>
 
                     </div>
                   </div>

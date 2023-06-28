@@ -53,11 +53,10 @@ const CardPetInicialResgate = (petRegastado) => {
 			>
 				
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=A244315" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Davi</h3>
-						{/* <Femea className='femea' /> */}
 						<Macho className='macho' />
 					</div>
 					<div className="detalhes">
@@ -72,7 +71,7 @@ const CardPetInicialResgate = (petRegastado) => {
 			</div>
 			
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://amparanimal.org.br/wp-content/webp-express/webp-images/uploads/2022/07/lobinho.jpg.webp" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Nana</h3>
@@ -81,7 +80,7 @@ const CardPetInicialResgate = (petRegastado) => {
 					</div>
 					<div className="detalhes">
 						<span className="idade"><Idade />Filhote</span>
-						<span><Raca />Caramelo</span>
+						<span><Raca />Sem raça</span>
 						<span><Local />Pontal de Santa Marina</span>
 					</div>
 					<ModalInicialResgateNana/>
@@ -89,7 +88,7 @@ const CardPetInicialResgate = (petRegastado) => {
 			</div>
 			
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://images.unsplash.com/photo-1614178730713-4badc749c333?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhY2hvcnJvJTIwZmlsaG90ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Sabão</h3>
