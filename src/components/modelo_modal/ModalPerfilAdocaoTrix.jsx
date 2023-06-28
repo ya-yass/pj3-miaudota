@@ -178,13 +178,7 @@ const ModalPerfilAdocaoTrix = () => {
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  <div className="quemAnunciou">
-                    <img src="" alt="Foto Anunciante" className="fotoAnunciante" />
-                    <div className="infoAnunciante">
-                      <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Julia Santos</p>
-                    </div>
-                  </div>
+                 
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">

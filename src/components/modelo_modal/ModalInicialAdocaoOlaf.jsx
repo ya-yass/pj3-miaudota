@@ -176,13 +176,6 @@ const ModalInicialAdocaoOlaf = () => {
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  <div className="quemAnunciou">
-                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
-                    <div className="infoAnunciante">
-                      <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Bla</p>
-                    </div>
-                  </div>
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
