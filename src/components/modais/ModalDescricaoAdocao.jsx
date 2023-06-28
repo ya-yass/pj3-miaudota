@@ -193,8 +193,10 @@ const ModalDescricaoAdocao = (props) => {
                       <span className="idade"><Idade />{props.data.idade}</span>
                       <span><Raca/>{props.data.raca}</span>
                       <span><Castrado/>{props.data.castrado}</span>
-                      <span><Macho/>{props.data.sexo}</span>
-
+                      {props.data.sexo === 'femea' ? (
+          			        <span><Femea /> Fêmea</span>
+          		        	) : (<span><Macho /> Macho</span> )
+       			          }
                     </div>
                   </div>
                 </div>
