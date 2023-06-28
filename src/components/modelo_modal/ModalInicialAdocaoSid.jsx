@@ -165,7 +165,7 @@ const ModalInicialAdocaoSid = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img src="https://s3.amazonaws.com/petz-cdm-stg/d34a9137-328e-4623-a2bf-b4b21b1ac0c8.jpeg"alt="FotoPet" className="fotoPet" />
+                    <img src="https://s3.amazonaws.com/petz-cdm-stg/cb868905-f5a3-4c9a-a792-324b3bb6f0b5.jpeg"alt="FotoPet" className="fotoPet" />
                   </div>
                   
                   <div className="textpet">

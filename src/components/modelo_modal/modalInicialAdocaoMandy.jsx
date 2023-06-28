@@ -10,8 +10,6 @@ import TextField from '@mui/material/TextField';
 //files
 import '../modais/ModalDescricaoAdocao.css'
 
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {

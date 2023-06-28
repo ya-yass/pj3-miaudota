@@ -165,15 +165,15 @@ const ModalInicialAdocaoPança = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img src="https://s3.amazonaws.com/petz-cdm-stg/d34a9137-328e-4623-a2bf-b4b21b1ac0c8.jpeg"alt="FotoPet" className="fotoPet" />
+                    <img src="https://s3.amazonaws.com/petz-cdm-stg/3b73e39d-243e-48f4-8f67-4531af3a1949.jpeg"alt="FotoPet" className="fotoPet" />
                   </div>
                   
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet">Mandy</p>
+                      <p className="nomepet">Pança</p>
                       
                     </div>
-                    <p>Mandy é uma cachorrinha bem ativa que adora brincar. Ela é muito dócil, gosta de colo e se dá bem com crianças. Ela é porte médio e tem 4 meses. Se quiser encher sua casa de alegria é a companhia perfeita!</p>
+                    <p>Pança é uma cachorrinha bem ativa que adora brincar.  Ela tem 8 anos e tem de porte médio. Pedrita é carinhosa e não vê a hora de encontrar uma família para chamar de sua!</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
@@ -181,11 +181,10 @@ const ModalInicialAdocaoPança = () => {
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade"><Idade />4 meses</span>
-                      <span><Raca/>Mestiço pitbull</span>
-                      <span><Castrado/>castrado</span>
+                      <span className="idade"><Idade />1 meses</span>
+                      <span><Raca/>Sem raça informada</span>
+                      <span><Castrado/>Castrado</span>
                       <span><Femea/> Fêmea</span>
-
                     </div>
                   </div>
                 </div>

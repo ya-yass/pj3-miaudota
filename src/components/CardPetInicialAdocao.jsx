@@ -138,7 +138,7 @@ const CardPetInicialAdocao = () => {
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://s3.amazonaws.com/petz-cdm-stg/3b73e39d-243e-48f4-8f67-4531af3a1949.jpeg" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Pança</h3>
@@ -146,7 +146,7 @@ const CardPetInicialAdocao = () => {
 						{/* <Macho className='macho' /> */}
 					</div>
 					<div className="detalhes">
-					<span className="idade"><Idade />2 anos</span>
+					<span className="idade"><Idade />1 mês</span>
 					<span><Raca />Sem raça informada</span>
 					<span><Castrado />Castrado</span>
 				</div>
@@ -155,7 +155,7 @@ const CardPetInicialAdocao = () => {
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://s3.amazonaws.com/petz-cdm-stg/cb868905-f5a3-4c9a-a792-324b3bb6f0b5.jpeg" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Sid</h3>
@@ -164,7 +164,7 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />3 meses</span>
-					<span><Raca />Mestiço Beagle</span>
+					<span><Raca />Sem </span>
 					<span><Castrado />Castrado</span>
 				</div>
 				<ModalInicialAdocaoSid/>

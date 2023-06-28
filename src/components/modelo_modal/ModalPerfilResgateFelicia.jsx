@@ -14,13 +14,9 @@ import TextField from '@mui/material/TextField';
 import '../modais/ModalDescricaoResgate.css'
 
 
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
-
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-  FaVenus as Femea,
 	// FaMars as Macho,
   FaClinicMedical as Porte,
   FaHeart as Idade,
