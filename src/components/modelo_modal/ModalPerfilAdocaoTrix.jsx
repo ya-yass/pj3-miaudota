@@ -170,6 +170,8 @@ const ModalPerfilAdocaoTrix = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Trix</p>
+                      <Femea className="femea"/>
+
                       
                     </div>
                     <p>Uma menina de 3 meses, muito boazinha, dócil e tranquila. Ela só quer uma caminha fofinha e uma família para encher de carinho, não dá trabalho nenhum.</p>

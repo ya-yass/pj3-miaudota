@@ -18,7 +18,7 @@ import '../modais/ModalDescricaoResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   // FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 
   FaHeart as Idade,
   FaPaw as Raca,
@@ -197,11 +197,11 @@ const ModalInicialResgateCuca = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Cuca</p>
-                      <span> 
-                        
-                      </span>
+                      <Macho className="macho"/>
+
+                
                     </div>
-                    <p>Ela estava brincando com uma latinha que estava na rua do mercado Dia e demosntra ser bastante dócil, passo todo dia por esse mercado e ela estava lá nessa ultima semana, resolvi levar ela pra casa e esperar a tutora aparecer.</p>
+                    <p>Ela estava brincando com uma latinha que estava na rua do mercado Dia e demonstra ser bastante dócil, passo todo dia por esse mercado e ela estava lá nessa ultima semana, resolvi levar ela pra casa e esperar a tutora aparecer.</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">

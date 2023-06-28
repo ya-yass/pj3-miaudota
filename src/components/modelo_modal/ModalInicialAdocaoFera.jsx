@@ -11,12 +11,11 @@ import TextField from '@mui/material/TextField';
 import '../modais/ModalDescricaoAdocao.css'
 
 //icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
 	FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 	FaHeart as Idade,
 	FaPaw as Raca,
 	FaClinicMedical as Castrado
@@ -171,19 +170,14 @@ const ModalInicialAdocaoFera = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Fera</p>
+                      <Macho className="macho"/>
                       
                     </div>
                     <p>Fera é um cachorro dócil de 7 meses, bem tranquilão, perfeito para ser companhia, quase não late. Ele é porte médio, é um pouco seletivo com amizades caninas, então para ter um irmão precisa de uma adaptação.</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  {/* <div className="quemAnunciou">
-                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
-                    <div className="infoAnunciante">
-                      <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Bla</p>
-                    </div>
-                  </div> */}
+               
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">

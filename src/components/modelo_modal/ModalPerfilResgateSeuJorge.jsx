@@ -18,7 +18,7 @@ import '../modais/ModalDescricaoResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   // FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 
   FaHeart as Idade,
   FaClinicMedical as Porte,
@@ -198,6 +198,8 @@ const ModalPerfilResgateSeuJorge = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Seu Jorge</p>
+                      <Macho className="macho"/>
+
                       <span> 
                         
                       </span>

@@ -167,6 +167,8 @@ const ModalInicialAdocaoSid = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Sid</p>
+                      <Macho className="macho"/>
+
                       
                     </div>
                     <p>Mandy é uma cachorrinha bem ativa que adora brincar. Ela é muito dócil, gosta de colo e se dá bem com crianças. Ela é porte médio e tem 4 meses. Se quiser encher sua casa de alegria é a companhia perfeita!</p>

@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Foto from './assets/img/pet1.jpg';
 import './CardPetPerfil.css'
 import "react-multi-carousel/lib/styles.css";
 import ModalPerfilAdocaoNana from './modelo_modal/ModalPerfilAdocaoNana'

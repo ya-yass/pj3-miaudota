@@ -11,8 +11,6 @@ import TextField from '@mui/material/TextField';
 import '../modais/ModalDescricaoAdocao.css'
 
 //icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
-
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
 	FaMars as Macho,
@@ -170,19 +168,14 @@ const ModalInicialAdocaoDopo = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Dopo</p>
+                      <Macho className="macho"/>
                       
                     </div>
                     <p>Dopo é um menino de 10 meses que se dá bem com pessoas e animais, porém é um pouco bagunceiro. Ele ama um carinho e não vê a hora de ter uma família para chamar de sua. É de porte médio.</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  {/* <div className="quemAnunciou">
-                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
-                    <div className="infoAnunciante">
-                      <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Bla</p>
-                    </div>
-                  </div> */}
+              
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">

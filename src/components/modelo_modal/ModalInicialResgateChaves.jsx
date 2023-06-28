@@ -15,7 +15,7 @@ import '../modais/ModalDescricaoResgate.css'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-	// FaMars as Macho,
+	FaMars as Macho,
 
   FaHeart as Idade,
   FaPaw as Raca,
@@ -194,9 +194,8 @@ const ModalInicialResgateChaves = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Chaves</p>
-                      <span> 
-                        
-                      </span>
+                      <Macho className="macho"/>
+
                     </div>
                     <p>Ele estava andando na praça dos bombeiros, estava bem vazia. Quando eu passei o barulho das minhas chaves interessou ele. É muito brincalhão e se distrai mutio fácil.</p>
                   </div>

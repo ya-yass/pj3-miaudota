@@ -168,6 +168,8 @@ const ModalInicialAdocaoMarco = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Marco</p>
+                      <Macho className="macho"/>
+
                       
                     </div>
                     <p>Marco é um menino muito tranquilo, tem 1 ano. É muito bonzinho e dócil, ele se dá bem com pessoas e animais e espera há anos por um lar!</p>

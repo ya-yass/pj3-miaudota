@@ -169,19 +169,14 @@ const ModalInicialAdocaoMandy = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Mandy</p>
+                      <Femea className="femea"/>
                       
                     </div>
                     <p>Mandy é uma cachorrinha bem ativa que adora brincar. Ela é muito dócil, gosta de colo e se dá bem com crianças. Ela é porte médio e tem 4 meses. Se quiser encher sua casa de alegria é a companhia perfeita!</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  {/* <div className="quemAnunciou">
-                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
-                    <div className="infoAnunciante">
-                      <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Bla</p>
-                    </div>
-                  </div> */}
+                  
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">

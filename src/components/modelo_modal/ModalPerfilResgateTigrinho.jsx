@@ -18,7 +18,7 @@ import '../modais/ModalDescricaoResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   // FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 
   FaHeart as Idade,
   FaPaw as Raca,
@@ -198,9 +198,8 @@ const ModalPerfilResgateRuivo = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Tigrinho</p>
-                      <span> 
-                        
-                      </span>
+                      <Macho className="macho"/>
+
                     </div>
                     <p>Tigrinho foi encontrado em uma calçada assustado e machucado. Resgatei ele e levei-o para casa com medo de ser atropelado. Agora ele espera ansiosamente que seu dono possa identiica-lo</p>
                   </div>
@@ -215,7 +214,7 @@ const ModalPerfilResgateRuivo = () => {
                       <span> 
                         
                       </span>
-                      <span className="localPet"><Local /> Foi encontrado no bairro Jardim Gaivotas </span>
+                      <span className="localPet"><Local />bairro Jardim Gaivotas </span>
 
 
                     </div>

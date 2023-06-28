@@ -11,7 +11,6 @@ import TextField from '@mui/material/TextField';
 import '../modais/ModalDescricaoAdocao.css'
 
 //icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
@@ -170,6 +169,7 @@ const ModalInicialAdocaoOlaf = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Olaf</p>
+                      <Macho className="macho"/>
                       
                     </div>
                     <p>Olaf é super tranquilo, um gatinho perfeito para companhia. É dócil com pessoas e animais. Tem aproximadamente 2 anos. Gostaria de adotar essa fofura?</p>

@@ -17,7 +17,7 @@ import '../modais/ModalDescricaoResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   // FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 
   FaHeart as Idade,
   FaPaw as Raca,
@@ -196,9 +196,8 @@ const ModalInicialResgateDavi = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Davi</p>
-                      <span> 
-                        
-                      </span>
+                      <Macho className="macho"/>
+
                     </div>
                     <p>Ele foi encontrado andando pela avenida da praia, estava com coleira e andava perto do Quiosque 12 para o lado da Pedra da Freira.</p>
                   </div>

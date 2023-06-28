@@ -265,37 +265,23 @@ const ModalDescricaoResgate = (props) => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">{props.data.nome}</p>
-                      <span> 
-                        {props.data.sexo === 'femea' ? (
-                        <Femea/>
-                        ) : (<Macho/> )
-                      } 
-                      </span>
+                      {props.data.sexo === 'femea' ? (
+          			        <Femea className="femea"/>
+          		        	) : (<Macho className="macho"/> )
+       			          }
                     </div>
                     <p>{props.data.descricao}</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  {/* <div className="quemAnunciou">
-                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
-                    <div className="infoAnunciante">
-                      <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Ana Luiza</p>
-                    </div>
-                  </div> */}
-
+                  
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
                       <span className="idade porte"><Idade/>{props.data.idade}</span>
                       <span className="idade"><Idade/>{props.data.porte}</span>
                       <span><Raca />{props.data.raca}</span>
-                      <span> 
-                        {props.data.sexo === 'femea' ? (
-                        <span ><Femea className="femea"/>Fêmea</span>
-                        ) : (<span ><Macho className="macho"/>Macho</span> )
-                      } 
-                      </span>
+                 
                       <span className="localPet"><Local /> Foi encontrado no bairro {bairroTratado[props.data.bairro]}</span>
 
 

@@ -13,7 +13,7 @@ import '../modais/ModalDescricaoResgate.css'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-  // FaVenus as Femea,
+  FaVenus as Femea,
 	// FaMars as Macho,
 
   FaHeart as Idade,
@@ -193,9 +193,8 @@ const ModalInicialResgateNana = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Nana</p>
-                      <span> 
-                        
-                      </span>
+                      <Femea className="femea"/>
+
                     </div>
                     <p>Eu e meu marido encontramos ela perto da avenida, ela parecia estar bastante assustada e com medo quando a gente se aproximava. Conseguimos colocar ela no carro em segurança e estamos cuidando até o tutor dela aparecer!</p>
                   </div>

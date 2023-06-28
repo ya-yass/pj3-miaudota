@@ -18,7 +18,7 @@ import '../modais/ModalDescricaoResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   // FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 
   FaHeart as Idade,
   FaPaw as Raca,
@@ -197,9 +197,9 @@ const ModalInicialResgateBubu = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Bubu</p>
-                      <span> 
-                        
-                      </span>
+                      <Macho className="macho"/>
+
+                    
                     </div>
                     <p>Foi encontrada no estacionamento do IFSP, ela estava perto da rua e eu e meu marido ficamos preocupados, conseguimos colocar ela no carro para cuidar até p tutor aparecer. Ela é muito dócil!</p>
                   </div>

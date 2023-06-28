@@ -15,7 +15,7 @@ import '../modais/ModalDescricaoResgate.css'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-  // FaVenus as Femea,
+  FaVenus as Femea,
 	// FaMars as Macho,
 
   FaHeart as Idade,
@@ -195,6 +195,8 @@ const ModalInicialResgateVivi = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet"></p>
+                      <Femea className="femea"/>
+
                       <span> 
                         
                       </span>

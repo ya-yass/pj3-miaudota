@@ -169,6 +169,8 @@ const ModalPerfilAdocaoPorsche = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Porsche</p>
+                      <Macho className="macho"/>
+
                       
                     </div>
                     <p>Porsche é um adulto, tem 1 aninho. É super tranquilo, se dá bem com outros animais e espera por uma família que o ame muito!</p>

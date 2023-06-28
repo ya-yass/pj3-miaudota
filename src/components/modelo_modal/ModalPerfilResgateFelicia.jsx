@@ -17,7 +17,7 @@ import '../modais/ModalDescricaoResgate.css'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-	// FaMars as Macho,
+	FaVenus as Femea,
   FaClinicMedical as Porte,
   FaHeart as Idade,
   FaPaw as Raca,
@@ -196,6 +196,8 @@ const ModalPerfilResgateFelicia = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Felicia</p>
+                      <Femea className="femea"/>
+
                     </div>
                     <p>Encontrei esse cachorrinho perto do da rodoviária dia 25/06, estava todo triste e deitado na chuva. Resgatei e o levei pra a casa, agora ele está aqui de lar temporário em busca do seu dono!</p>
                   </div>

@@ -172,6 +172,8 @@ const ModalPerfilAdocaoNana = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet">Nana</p>
+                      <Femea className="femea"/>
+
                       
                     </div>
                     <p>Perfeita para fazer companhia, é a cachorrinha mais dócil e calma que você vai conhecer. Ela tem 3 meses, é de porte médio, é super dócil e amigável com outros animais.</p>

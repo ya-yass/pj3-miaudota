@@ -170,21 +170,15 @@ const ModalDescricaoAdocao = (props) => {
                     <div className="nomeIcon">
                       <p className="nomepet">{props.data.nome}</p>
                       {props.data.sexo === 'femea' ? (
-          			        <Femea/>
-          		        	) : (<Macho/> )
+          			        <Femea className="femea"/>
+          		        	) : (<Macho className="macho"/> )
        			          }
                     </div>
                     <p>{props.data.descricao}</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  {/* <div className="quemAnunciou">
-                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
-                    <div className="infoAnunciante">
-                      <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Bla</p>
-                    </div>
-                  </div> */}
+                 
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
@@ -192,8 +186,8 @@ const ModalDescricaoAdocao = (props) => {
                       <span><Raca/>{props.data.raca}</span>
                       <span><Castrado/>{props.data.castrado}</span>
                       {props.data.sexo === 'femea' ? (
-          			        <span ><Femea className="femea"/> Fêmea</span>
-          		        	) : (<span ><Macho className="macho" /> Macho</span> )
+          			        <span ><Femea /> Fêmea</span>
+          		        	) : (<span ><Macho  /> Macho</span> )
        			          }
                     </div>
                   </div>

@@ -17,7 +17,7 @@ import '../modais/ModalDescricaoResgate.css'
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   // FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 
   FaHeart as Idade,
   FaPaw as Raca,
@@ -196,9 +196,8 @@ const ModalInicialResgateSabao = () => {
                   <div className="textpet">
                     <div className="nomeIcon">
                       <p className="nomepet"></p>
-                      <span> 
-                        
-                      </span>
+                      <Macho className="macho"/>
+
                     </div>
                     <p>Foi encontrado andando perto do Shibatta no estacionamento, aparentava estar com muito medo, os carros estavam deixando ele assustado e minha namorada conseguiu trazer ele para casa até o tutor aparecer</p>
                   </div>
