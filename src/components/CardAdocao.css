@@ -31,7 +31,7 @@ h1 {
   background: #F6823F;
   padding: 5px;
   border-radius: 20px;
-  color: #FFF;
+  color: #FFF !important;
 }
 
 .cardHeader {

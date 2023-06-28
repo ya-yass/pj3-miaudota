@@ -92,8 +92,8 @@ const CardResgate = ({perdido, setPerdidos, perdidos}) => {
           <div className="cardHeader">
             <h3 className="nome">{perdido.nome}</h3>
             {perdido.sexo === 'femea' ? (
-          			<Femea/>
-          			) : (<Macho/> )
+          			<Femea className="femea"/>
+          			) : (<Macho className="macho"/> )
        			  }
           </div>
           <div className="detalhes">

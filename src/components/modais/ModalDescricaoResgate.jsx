@@ -14,8 +14,6 @@ import TextField from '@mui/material/TextField';
 import '../modais/ModalDescricaoResgate.css'
 
 
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 
 import { BsXLg as Cancel } from 'react-icons/bs'
@@ -278,13 +276,13 @@ const ModalDescricaoResgate = (props) => {
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  <div className="quemAnunciou">
+                  {/* <div className="quemAnunciou">
                     <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
                     <div className="infoAnunciante">
                       <p className="tituloAnunciante">Anunciante</p>
                       <p className="nomeAnunciante">Ana Luiza</p>
                     </div>
-                  </div>
+                  </div> */}
 
 
                   <div className="Iconsinfo">
@@ -294,8 +292,8 @@ const ModalDescricaoResgate = (props) => {
                       <span><Raca />{props.data.raca}</span>
                       <span> 
                         {props.data.sexo === 'femea' ? (
-                        <Femea/>
-                        ) : (<Macho/> )
+                        <span ><Femea className="femea"/>Fêmea</span>
+                        ) : (<span ><Macho className="macho"/>Macho</span> )
                       } 
                       </span>
                       <span className="localPet"><Local /> Foi encontrado no bairro {bairroTratado[props.data.bairro]}</span>

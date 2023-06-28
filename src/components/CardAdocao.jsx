@@ -20,8 +20,8 @@ const CardAdocao = ({adocao}) => {
 					<div className="cardHeader">
 						<h3 className="nome">{adocao.nome}</h3>
 						{adocao.sexo === 'femea' ? (
-							<Femea/>
-							) : (<Macho/> )
+							<Femea className="femea"/>
+							) : (<Macho className="macho"/> )
 						}
 					</div>
 					<div className="detalhes">

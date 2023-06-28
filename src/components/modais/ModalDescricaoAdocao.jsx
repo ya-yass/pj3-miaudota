@@ -10,8 +10,6 @@ import TextField from '@mui/material/TextField';
 //files
 import '../modais/ModalDescricaoAdocao.css'
 
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
@@ -180,13 +178,13 @@ const ModalDescricaoAdocao = (props) => {
                   </div>
                 </div>
                 <div className="infoPeteUser">
-                  <div className="quemAnunciou">
+                  {/* <div className="quemAnunciou">
                     <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
                     <div className="infoAnunciante">
                       <p className="tituloAnunciante">Anunciante</p>
                       <p className="nomeAnunciante">Bla</p>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
@@ -194,8 +192,8 @@ const ModalDescricaoAdocao = (props) => {
                       <span><Raca/>{props.data.raca}</span>
                       <span><Castrado/>{props.data.castrado}</span>
                       {props.data.sexo === 'femea' ? (
-          			        <span><Femea /> Fêmea</span>
-          		        	) : (<span><Macho /> Macho</span> )
+          			        <span ><Femea className="femea"/> Fêmea</span>
+          		        	) : (<span ><Macho className="macho" /> Macho</span> )
        			          }
                     </div>
                   </div>
