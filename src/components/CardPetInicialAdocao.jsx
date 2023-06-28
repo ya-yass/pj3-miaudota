@@ -3,13 +3,13 @@ import Fera from './assets/img/fera.avif';
 import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ModalInicialAdocaoMandy from '../components/modelo_modal/ModalInicialAdocaoMandy'
 import ModalInicialAdocaoFera from './modelo_modal/ModalInicialAdocaoFera'
 import ModalInicialAdocaoOlaf from './modelo_modal/ModalInicialAdocaoOlaf'
 import ModalInicialAdocaoDopo from './modelo_modal/ModalInicialAdocaoDopo'
 import ModalInicialAdocaoMarco from './modelo_modal/ModalInicialAdocaoMarco'
 import ModalInicialAdocaoPança from './modelo_modal/ModalInicialAdocaoPança'
 import ModalInicialAdocaoSid from './modelo_modal/ModalInicialAdocaoSid'
+import ModalInicialAdocaoMandy from './modelo_modal/modalInicialAdocaoMandy'
 
 import {
 	FaVenus as Femea,
