@@ -5,7 +5,7 @@ import logo from './assets/img/miaudota-logo.png'
 import * as React from 'react';
 
 import { Link } from 'react-router-dom'
-import ModalUserLogin from './modais/ModalUserLogin'
+import ModalUserLogin from './modais/ModalUserLogiin'
 
 const Navbar = () => {
   return (
