@@ -15,8 +15,7 @@ import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-	FaVenus as Femea,
-	// FaMars as Macho,
+	FaMars as Macho,
 	FaHeart as Idade,
 	FaPaw as Raca,
 	FaClinicMedical as Castrado
@@ -25,7 +24,7 @@ import {
 
 
 
-const ModalPerfilAdocaoNana = () => {
+const ModalInicialAdocaoMarco = () => {
 
   //abrir e fechar o modal principal
   const [modalOpen, setOpen] = React.useState(false);
@@ -165,33 +164,32 @@ const ModalPerfilAdocaoNana = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img src="https://images.unsplash.com/photo-1447684808650-354ae64db5b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY4fHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60
-                    "alt="FotoPet" className="fotoPet" />
+                    <img src="https://s3.amazonaws.com/petz-cdm-stg/f41370d6-9ea3-49fe-9bba-6eb5808908c1.jpeg"alt="FotoPet" className="fotoPet" />
                   </div>
                   
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet">Nana</p>
+                      <p className="nomepet">Marco</p>
                       
                     </div>
-                    <p>Perfeita para fazer companhia, é a cachorrinha mais dócil e calma que você vai conhecer. Ela tem 3 meses, é de porte médio, é super dócil e amigável com outros animais.</p>
+                    <p>Marco é um menino muito tranquilo, tem 1 ano. É muito bonzinho e dócil, ele se dá bem com pessoas e animais e espera há anos por um lar!</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
                   <div className="quemAnunciou">
-                    <img src="" alt="Foto Anunciante" className="fotoAnunciante" />
+                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
                     <div className="infoAnunciante">
                       <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Fernanda Silva</p>
+                      <p className="nomeAnunciante">Bla</p>
                     </div>
                   </div>
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade"><Idade />03 meses</span>
-                      <span><Raca/>Não definida</span>
-                      <span><Castrado/>Não castrado</span>
-                      <span><Femea/>Fêmea</span>
+                      <span className="idade"><Idade />1 ano</span>
+                      <span><Raca/>Sem raça informada</span>
+                      <span><Castrado/> Não castrado</span>
+                      <span><Macho/> Macho</span>
 
                     </div>
                   </div>
@@ -225,4 +223,4 @@ const styles = {
   }
 }
 
-export default ModalPerfilAdocaoNana
+export default ModalInicialAdocaoMarco

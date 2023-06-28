@@ -6,7 +6,7 @@ import ModalPerfilAdocaoNana from './modelo_modal/ModalPerfilAdocaoNana'
 import ModalPerfilAdocaoTrix from './modelo_modal/ModalPerfilAdocaoTrix'
 import ModalPerfilAdocaoPorsche from './modelo_modal/ModalPerfilAdocaoPorsche'
 import ModalPerfilResgateSeuJorge from "./modelo_modal/ModalPerfilResgateSeuJorge"
-import ModalPerfilResgateRuivo from './modelo_modal/ModalPerfilResgateRuivo'
+import ModalPerfilResgateTigrinho from './modelo_modal/ModalPerfilResgateTigrinho'
 import ModalPerfilResgateFelicia from './modelo_modal/ModalPerfilResgateFelicia'
 
 
@@ -36,7 +36,7 @@ const CardPetPerfil = () => {
 						<div className="detalhes">
 							<span className="idade"><Idade />03 meses</span>
 							<span><Raca />Sem raça definida</span>
-							<span><Castrado />Castrado</span>
+							<span><Castrado />Não castrado</span>
 						</div>
 						<div className="sobre">
 							<ModalPerfilAdocaoNana/>
@@ -96,7 +96,7 @@ const CardPetPerfil = () => {
 							<span><Castrado />Castrado</span>
 						</div>
 						<div className="sobre">
-							<ModalPerfilResgateRuivo/>
+							<ModalPerfilResgateTigrinho/>
 						</div>
 					</div>
 				</div>

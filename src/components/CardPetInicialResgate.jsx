@@ -4,6 +4,12 @@ import './CardPetInicialResgate.css' //para importar jsx sempre é com letra ma�
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ModalInicialResgateDavi from './modelo_modal/ModalInicialResgateDavi'
+import ModalInicialResgateNana from './modelo_modal/ModalInicialResgateNana'
+import ModalInicialResgateSabao from './modelo_modal/ModalInicialResgateSabao'
+import ModalInicialResgateBubu from './modelo_modal/ModalInicialResgateBubu'
+import ModalInicialResgateChaves from './modelo_modal/ModalInicialResgateChaves'
+import ModalInicialResgateVivi from './modelo_modal/ModalInicialResgateVivi'
+import ModalInicialResgateCuca from './modelo_modal/ModalInicialResgateCuca'
 
 import {
 	FaVenus as Femea,
@@ -78,6 +84,7 @@ const CardPetInicialResgate = (petRegastado) => {
 						<span><Raca />Caramelo</span>
 						<span><Local />Pontal de Santa Marina</span>
 					</div>
+					<ModalInicialResgateNana/>
 				</div>
 			</div>
 			
@@ -94,6 +101,7 @@ const CardPetInicialResgate = (petRegastado) => {
 						<span><Raca />Sem raça informada</span>
 						<span><Local />Centro</span>
 					</div>
+					<ModalInicialResgateSabao/>
 				</div>
 			</div>
 
@@ -110,6 +118,7 @@ const CardPetInicialResgate = (petRegastado) => {
 						<span><Raca />Pittbull</span>
 						<span><Local />Boxer</span>
 					</div>
+					<ModalInicialResgateBubu/>
 				</div>
 			</div>
 
@@ -128,6 +137,7 @@ const CardPetInicialResgate = (petRegastado) => {
 					</div>
 					<div className="sobre">
 					</div>
+					<ModalInicialResgateChaves/>
 				</div>
 			</div>
 
@@ -146,6 +156,7 @@ const CardPetInicialResgate = (petRegastado) => {
 					</div>
 					<div className="sobre">
 					</div>
+					<ModalInicialResgateVivi/>
 				</div>
 			</div>
 
@@ -164,6 +175,7 @@ const CardPetInicialResgate = (petRegastado) => {
 					</div>
 					<div className="sobre">
 					</div>
+					<ModalInicialResgateCuca/>
 				</div>
 			</div>
 			</Carousel >

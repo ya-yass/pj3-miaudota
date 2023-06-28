@@ -15,7 +15,7 @@ import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-	// FaVenus as Femea,
+	FaVenus as Femea,
 	// FaMars as Macho,
 	FaHeart as Idade,
 	FaPaw as Raca,
@@ -165,15 +165,15 @@ const ModalInicialAdocaoMandy = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img alt="FotoPet" className="fotoPet" />
+                    <img src="https://images.unsplash.com/photo-1593750187391-6d1b45a3eb1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYwfHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"alt="FotoPet" className="fotoPet" />
                   </div>
                   
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet">nome</p>
+                      <p className="nomepet">Mandy</p>
                       
                     </div>
-                    <p>descricao</p>
+                    <p>Mandy é uma cachorrinha bem ativa que adora brincar. Ela é muito dócil, gosta de colo e se dá bem com crianças. Ela é porte médio e tem 4 meses. Se quiser encher sua casa de alegria é a companhia perfeita!</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
@@ -187,10 +187,10 @@ const ModalInicialAdocaoMandy = () => {
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade"><Idade />idade</span>
-                      <span><Raca/>raça</span>
+                      <span className="idade"><Idade />4 meses</span>
+                      <span><Raca/>Mestiço pitbull</span>
                       <span><Castrado/>castrado</span>
-                      <span>sexo</span>
+                      <span><Femea/> Fêmea</span>
 
                     </div>
                   </div>

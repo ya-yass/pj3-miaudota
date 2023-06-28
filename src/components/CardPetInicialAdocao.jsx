@@ -4,6 +4,12 @@ import './CardPetInicialResgate.css' //para importar jsx sempre é com letra ma�
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ModalInicialAdocaoMandy from '../components/modelo_modal/ModalInicialAdocaoMandy'
+import ModalInicialAdocaoFera from './modelo_modal/ModalInicialAdocaoFera'
+import ModalInicialAdocaoOlaf from './modelo_modal/ModalInicialAdocaoOlaf'
+import ModalInicialAdocaoDopo from './modelo_modal/ModalInicialAdocaoDopo'
+import ModalInicialAdocaoMarco from './modelo_modal/ModalInicialAdocaoMarco'
+import ModalInicialAdocaoPança from './modelo_modal/ModalInicialAdocaoPança'
+import ModalInicialAdocaoSid from './modelo_modal/ModalInicialAdocaoSid'
 
 import {
 	FaVenus as Femea,
@@ -47,7 +53,7 @@ const CardPetInicialAdocao = () => {
 				ssr={true} // means to render carousel on server-side.
 			>
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://images.unsplash.com/photo-1593750187391-6d1b45a3eb1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYwfHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Mandy</h3>
@@ -64,7 +70,7 @@ const CardPetInicialAdocao = () => {
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://images.unsplash.com/photo-1519963183664-2adcfeb55889?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjgxfHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Fera</h3>
@@ -73,14 +79,15 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />7 meses</span>
-					<span><Raca />Pastor alemão</span>
+					<span><Raca />pitbull</span>
 					<span><Castrado />Não castrado</span>
 				</div>
+				<ModalInicialAdocaoFera/>
 				</div>
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=365115" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Olaf</h3>
@@ -89,14 +96,15 @@ const CardPetInicialAdocao = () => {
 					</div>
 					<div className="detalhes">
 					<span className="idade"><Idade />2 anos</span>
-					<span><Raca />Angorá</span>
+					<span><Raca />Sem raça informada</span>
 					<span><Castrado />Castrado</span>
 				</div>
+				<ModalInicialAdocaoOlaf/>
 				</div>
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://images.unsplash.com/photo-1590856430047-45daca1d18c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY2fHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Dopo</h3>
@@ -108,11 +116,12 @@ const CardPetInicialAdocao = () => {
 					<span><Raca />Sem raça informada</span>
 					<span><Castrado />Castrado</span>
 				</div>
+				<ModalInicialAdocaoDopo/>
 				</div>
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://s3.amazonaws.com/petz-cdm-stg/f41370d6-9ea3-49fe-9bba-6eb5808908c1.jpeg" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Marco</h3>
@@ -124,6 +133,7 @@ const CardPetInicialAdocao = () => {
 					<span><Raca />Caramelo</span>
 					<span><Castrado />Não castrado</span>
 				</div>
+				<ModalInicialAdocaoMarco/>
 				</div>
 			</div>
 
@@ -140,6 +150,7 @@ const CardPetInicialAdocao = () => {
 					<span><Raca />Sem raça informada</span>
 					<span><Castrado />Castrado</span>
 				</div>
+				<ModalInicialAdocaoPança/>
 				</div>
 			</div>
 
@@ -156,6 +167,7 @@ const CardPetInicialAdocao = () => {
 					<span><Raca />Mestiço Beagle</span>
 					<span><Castrado />Castrado</span>
 				</div>
+				<ModalInicialAdocaoSid/>
 				</div>
 			</div>
 			</Carousel >

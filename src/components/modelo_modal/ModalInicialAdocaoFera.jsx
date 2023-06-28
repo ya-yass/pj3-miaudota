@@ -25,7 +25,7 @@ import {
 
 
 
-const ModalPerfilAdocaoNana = () => {
+const ModalInicialAdocaoFera = () => {
 
   //abrir e fechar o modal principal
   const [modalOpen, setOpen] = React.useState(false);
@@ -165,33 +165,32 @@ const ModalPerfilAdocaoNana = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img src="https://images.unsplash.com/photo-1447684808650-354ae64db5b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY4fHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60
-                    "alt="FotoPet" className="fotoPet" />
+                    <img src="https://images.unsplash.com/photo-1519963183664-2adcfeb55889?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjgxfHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"alt="FotoPet" className="fotoPet" />
                   </div>
                   
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet">Nana</p>
+                      <p className="nomepet">Fera</p>
                       
                     </div>
-                    <p>Perfeita para fazer companhia, é a cachorrinha mais dócil e calma que você vai conhecer. Ela tem 3 meses, é de porte médio, é super dócil e amigável com outros animais.</p>
+                    <p>Fera é um cachorro dócil de 7 meses, bem tranquilão, perfeito para ser companhia, quase não late. Ele é porte médio, é um pouco seletivo com amizades caninas, então para ter um irmão precisa de uma adaptação.</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
                   <div className="quemAnunciou">
-                    <img src="" alt="Foto Anunciante" className="fotoAnunciante" />
+                    <img src={fotoAnunciante} alt="Foto Anunciante" className="fotoAnunciante" />
                     <div className="infoAnunciante">
                       <p className="tituloAnunciante">Anunciante</p>
-                      <p className="nomeAnunciante">Fernanda Silva</p>
+                      <p className="nomeAnunciante">Bla</p>
                     </div>
                   </div>
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade"><Idade />03 meses</span>
-                      <span><Raca/>Não definida</span>
+                      <span className="idade"><Idade />7 meses</span>
+                      <span><Raca/>Pitbull</span>
                       <span><Castrado/>Não castrado</span>
-                      <span><Femea/>Fêmea</span>
+                      <span><Femea/> Fêmea</span>
 
                     </div>
                   </div>
@@ -225,4 +224,4 @@ const styles = {
   }
 }
 
-export default ModalPerfilAdocaoNana
+export default ModalInicialAdocaoFera
