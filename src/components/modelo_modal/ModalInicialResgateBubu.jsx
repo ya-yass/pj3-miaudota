@@ -14,9 +14,6 @@ import TextField from '@mui/material/TextField';
 import '../modais/ModalDescricaoResgate.css'
 
 
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
-
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
@@ -195,29 +192,29 @@ const ModalInicialResgateBubu = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img alt="FotoPet" className="fotoPet" />
+                    <img src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=365931" alt="FotoPet" className="fotoPet" />
                   </div>
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet"></p>
+                      <p className="nomepet">Bubu</p>
                       <span> 
                         
                       </span>
                     </div>
-                    <p>descrição</p>
+                    <p>Foi encontrada no estacionamento do IFSP, ela estava perto da rua e eu e meu marido ficamos preocupados, conseguimos colocar ela no carro para cuidar até p tutor aparecer. Ela é muito dócil!</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
         
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade porte"><Idade/>idade</span>
-                      <span className="idade"><Idade/>porte</span>
-                      <span><Raca />raça</span>
+                      <span className="idade porte"><Idade/>Adulto</span>
+                      <span className="idade"><Idade/>Médio</span>
+                      <span><Raca />Sem raça</span>
                       <span> 
                         
                       </span>
-                      <span className="localPet"><Local /> Foi encontrado no bairro </span>
+                      <span className="localPet"><Local /> Foi encontrado no bairro Indaiá</span>
 
 
                     </div>

@@ -13,14 +13,8 @@ import TextField from '@mui/material/TextField';
 //files
 import '../modais/ModalDescricaoResgate.css'
 
-
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
-
-
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
-  // FaVenus as Femea,
 	// FaMars as Macho,
 
   FaHeart as Idade,
@@ -195,16 +189,16 @@ const ModalInicialResgateChaves = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img alt="FotoPet" className="fotoPet" />
+                    <img src="https://images.unsplash.com/photo-1560150844-220a5b58df38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ3fHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="FotoPet" className="fotoPet" />
                   </div>
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet"></p>
+                      <p className="nomepet">Chaves</p>
                       <span> 
                         
                       </span>
                     </div>
-                    <p>descrição</p>
+                    <p>Ele estava andando na praça dos bombeiros, estava bem vazia. Quando eu passei o barulho das minhas chaves interessou ele. É muito brincalhão e se distrai mutio fácil.</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
@@ -213,13 +207,13 @@ const ModalInicialResgateChaves = () => {
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade porte"><Idade/>idade</span>
-                      <span className="idade"><Idade/>porte</span>
-                      <span><Raca />raça</span>
+                      <span className="idade porte"><Idade/>Filhote</span>
+                      <span className="idade"><Idade/>Pequeno</span>
+                      <span><Raca />Sem raça</span>
                       <span> 
                         
                       </span>
-                      <span className="localPet"><Local /> Foi encontrado no bairro </span>
+                      <span className="localPet"><Local /> Foi encontrado no bairro Martim de Sá</span>
 
 
                     </div>

@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Fera from './assets/img/fera.avif';
 import './CardPetInicialResgate.css' //para importar jsx sempre é com letra maíuscula
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -92,11 +91,10 @@ const CardPetInicialResgate = (petRegastado) => {
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Sabão</h3>
-						{/* <Femea className='femea' /> */}
 						<Macho className='macho' />
 					</div>
 					<div className="detalhes">
-						<span className="idade"><Idade />Adulto</span>
+						<span className="idade"><Idade />Filhote</span>
 						<span><Raca />Sem raça informada</span>
 						<span><Local />Centro</span>
 					</div>
@@ -105,24 +103,23 @@ const CardPetInicialResgate = (petRegastado) => {
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=365931" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Bubu</h3>
-						{/* <Femea className='femea' /> */}
-						<Macho className='macho' />
+						<Femea className='femea' />
 					</div>
 					<div className="detalhes">
 						<span className="idade"><Idade />Adutlo</span>
-						<span><Raca />Pittbull</span>
-						<span><Local />Boxer</span>
+						<span><Raca />Sem raça</span>
+						<span><Local />Indaiá</span>
 					</div>
 					<ModalInicialResgateBubu/>
 				</div>
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://images.unsplash.com/photo-1560150844-220a5b58df38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ3fHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Chaves</h3>
@@ -141,7 +138,7 @@ const CardPetInicialResgate = (petRegastado) => {
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://images.unsplash.com/photo-1605405809561-2ec85c966680?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYxfHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Vivi</h3>
@@ -160,7 +157,7 @@ const CardPetInicialResgate = (petRegastado) => {
 			</div>
 
 			<div className="card">
-				<img src={Fera} alt="pet" className='pet' />
+				<img src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=360519" alt="pet" className='pet' />
 				<div className="info">
 					<div className="cardHeader">
 						<h3 className="nome">Cuca</h3>
@@ -170,7 +167,7 @@ const CardPetInicialResgate = (petRegastado) => {
 					<div className="detalhes">
 						<span className="idade"><Idade />Não informado</span>
 						<span><Raca />Raça não infomada</span>
-						<span><Local />Morro do algodão</span>
+						<span><Local />Morro do Algodão</span>
 					</div>
 					<div className="sobre">
 					</div>

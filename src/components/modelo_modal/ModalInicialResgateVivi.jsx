@@ -13,11 +13,6 @@ import TextField from '@mui/material/TextField';
 //files
 import '../modais/ModalDescricaoResgate.css'
 
-
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
-
-
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
   // FaVenus as Femea,
@@ -195,7 +190,7 @@ const ModalInicialResgateVivi = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img alt="FotoPet" className="fotoPet" />
+                    <img src="https://images.unsplash.com/photo-1605405809561-2ec85c966680?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYxfHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="FotoPet" className="fotoPet" />
                   </div>
                   <div className="textpet">
                     <div className="nomeIcon">
@@ -204,7 +199,7 @@ const ModalInicialResgateVivi = () => {
                         
                       </span>
                     </div>
-                    <p>descrição</p>
+                    <p>Ela estava andando na avenida da praia perto do camaroeiro, não parecia estar com medo quando me aproximei, ela estava mexendo no lixo de um restaurante beira de praia e consegui deixar ela em casa até o tutor aparecer.</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
@@ -213,13 +208,13 @@ const ModalInicialResgateVivi = () => {
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade porte"><Idade/>idade</span>
-                      <span className="idade"><Idade/>porte</span>
-                      <span><Raca />raça</span>
+                      <span className="idade porte"><Idade/>Adulto</span>
+                      <span className="idade"><Idade/>Médio</span>
+                      <span><Raca />Caramelo</span>
                       <span> 
                         
                       </span>
-                      <span className="localPet"><Local /> Foi encontrado no bairro </span>
+                      <span className="localPet"><Local /> Foi encontrado no bairro Prainha</span>
 
 
                     </div>

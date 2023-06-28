@@ -14,9 +14,6 @@ import TextField from '@mui/material/TextField';
 import '../modais/ModalDescricaoResgate.css'
 
 
-//icons e imagens
-import fotoAnunciante from '../assets/img/fotoAnunciante.jpg'
-
 
 import { BsXLg as Cancel } from 'react-icons/bs'
 import {
@@ -195,16 +192,16 @@ const ModalInicialResgateCuca = () => {
               <div className="infoModal">
                 <div className="infopet">
                   <div className="fotoPetDiv">
-                    <img alt="FotoPet" className="fotoPet" />
+                    <img src="https://www.rspca.org.uk/GenericImage/CallGenericImage?source=petSearch&size=large&imageId=360519" alt="FotoPet" className="fotoPet" />
                   </div>
                   <div className="textpet">
                     <div className="nomeIcon">
-                      <p className="nomepet"></p>
+                      <p className="nomepet">Cuca</p>
                       <span> 
                         
                       </span>
                     </div>
-                    <p>descrição</p>
+                    <p>Ela estava brincando com uma latinha que estava na rua do mercado Dia e demosntra ser bastante dócil, passo todo dia por esse mercado e ela estava lá nessa ultima semana, resolvi levar ela pra casa e esperar a tutora aparecer.</p>
                   </div>
                 </div>
                 <div className="infoPeteUser">
@@ -212,13 +209,13 @@ const ModalInicialResgateCuca = () => {
 
                   <div className="Iconsinfo">
                     <div className="infoDopet">
-                      <span className="idade porte"><Idade/>idade</span>
-                      <span className="idade"><Idade/>porte</span>
+                      <span className="idade porte"><Idade/>Não informado</span>
+                      <span className="idade"><Idade/>Pequeno</span>
                       <span><Raca />raça</span>
                       <span> 
                         
                       </span>
-                      <span className="localPet"><Local /> Foi encontrado no bairro </span>
+                      <span className="localPet"><Local /> Foi encontrado no bairro Morro do Algodão</span>
 
 
                     </div>
