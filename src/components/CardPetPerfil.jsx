@@ -2,6 +2,14 @@ import Box from '@mui/material/Box';
 import Foto from './assets/img/pet1.jpg';
 import './CardPetPerfil.css'
 import "react-multi-carousel/lib/styles.css";
+import ModalPerfilAdocaoNana from './modelo_modal/ModalPerfilAdocaoNana'
+import ModalPerfilAdocaoTrix from './modelo_modal/ModalPerfilAdocaoTrix'
+import ModalPerfilAdocaoPorsche from './modelo_modal/ModalPerfilAdocaoPorsche'
+import ModalPerfilResgateSeuJorge from "./modelo_modal/ModalPerfilResgateSeuJorge"
+import ModalPerfilResgateRuivo from './modelo_modal/ModalPerfilResgateRuivo'
+import ModalPerfilResgateFelicia from './modelo_modal/ModalPerfilResgateFelicia'
+
+
 
 import {
 	FaVenus as Femea,
@@ -18,7 +26,7 @@ const CardPetPerfil = () => {
       <h1>Cadastrados recentemente</h1>
 			<div className="conteudo" >
 				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
+					<img src="https://images.unsplash.com/photo-1447684808650-354ae64db5b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY4fHxjYWNob3JybyUyMGZpbGhvdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
 							<h3 className="nome">Nana</h3>
@@ -31,13 +39,13 @@ const CardPetPerfil = () => {
 							<span><Castrado />Castrado</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							<ModalPerfilAdocaoNana/>
 						</div>
 					</div>
 				</div>
 
 				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
+					<img src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
 							<h3 className="nome">Trix</h3>
@@ -45,18 +53,18 @@ const CardPetPerfil = () => {
 							{/* <Macho className='macho' /> */}
 						</div>
 						<div className="detalhes">
-							<span className="idade"><Idade />10 meses</span>
-							<span><Raca />Frajola</span>
+							<span className="idade"><Idade />3 meses</span>
+							<span><Raca />yorkshire</span>
 							<span><Castrado />Castrado</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							<ModalPerfilAdocaoTrix/>
 						</div>
 					</div>
 				</div>
 
 				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
+					<img src="https://s3.amazonaws.com/petz-cdm-stg/7182ab81-1f6c-4068-b3bc-ba3b124b3b35.jpeg" alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
 							<h3 className="nome">Seu Jorge</h3>
@@ -64,21 +72,21 @@ const CardPetPerfil = () => {
 							<Macho className='macho' />
 						</div>
 						<div className="detalhes">
-							<span className="idade"><Idade />2 anos</span>
-							<span><Raca />Sem raça definida</span>
+							<span className="idade"><Idade />Adulto</span>
+							<span><Raca />Persa</span>
 							<span><Castrado />Castrado</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							<ModalPerfilResgateSeuJorge/>
 						</div>
 					</div>
 				</div>
 
 				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
+					<img src="https://s3.amazonaws.com/petz-cdm-stg/f3ebabe6-8459-44b1-a94f-e8ba4838142e.jpeg" alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
-							<h3 className="nome">Ruivo</h3>
+							<h3 className="nome">Tigrinho</h3>
 							{/* <Femea className='femea' /> */}
 							<Macho className='macho' />
 						</div>
@@ -88,32 +96,31 @@ const CardPetPerfil = () => {
 							<span><Castrado />Castrado</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							<ModalPerfilResgateRuivo/>
 						</div>
 					</div>
 				</div>
 
 				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
+					<img src="https://s3.amazonaws.com/petz-cdm-stg/10d2fe5c-d299-4c09-ae42-a43fdf3bdd95.jpeg" alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
 							<h3 className="nome">Porsche</h3>
-							{/* <Femea className='femea' /> */}
 							<Macho className='macho' />
 						</div>
 						<div className="detalhes">
 							<span className="idade"><Idade />1 ano</span>
-							<span><Raca />Pastor alemão</span>
+							<span><Raca />Não definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							<ModalPerfilAdocaoPorsche/>
 						</div>
 					</div>
 				</div>
 
 				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
+					<img src="https://s3.amazonaws.com/petz-cdm-stg/90b563b2-eaed-432c-8082-879528b41ecd.jpeg" alt="pet" className='pet' />
 					<div className="info">
 						<div className="cardHeader">
 							<h3 className="nome">Felicia</h3>
@@ -121,34 +128,17 @@ const CardPetPerfil = () => {
 							<Macho className='macho' />
 						</div>
 						<div className="detalhes">
-							<span className="idade"><Idade />5 meses</span>
+							<span className="idade"><Idade />Adulto</span>
 							<span><Raca />Sem raça definida</span>
 							<span><Castrado />Castrado</span>
 						</div>
 						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
+							<ModalPerfilResgateFelicia/>
 						</div>
 					</div>
 				</div>
 
-				<div className="card">
-					<img src={Foto} alt="pet" className='pet' />
-					<div className="info">
-						<div className="cardHeader">
-							<h3 className="nome">Mario</h3>
-							{/* <Femea className='femea' /> */}
-							<Macho className='macho' />
-						</div>
-						<div className="detalhes">
-							<span className="idade"><Idade />7 meses</span>
-							<span><Raca />Sem raça definida</span>
-							<span><Castrado />Castrado</span>
-						</div>
-						<div className="sobre">
-							<button className='btnSobrePet'>SOBRE O PET</button>
-						</div>
-					</div>
-				</div>
+			
 			</div>
 		</Box>
 	)
